@@ -7,19 +7,19 @@ $(function() {
             resize();
         }
     })
-    $('.bam-book-scroll-wrap').scroll(function() {
-        if($('.bam-book-right-lottery').hasClass('active')) {
-            if($('.bam-book-scroll-wrap').scrollTop() > $('.bam-book-guess').offset().top + $('.bam-book-scroll-wrap').scrollTop() + window.innerHeight*0.25) {
-                if(!$('.fake-bam-book-q-gift').hasClass('active')) {
-                    $('.fake-bam-book-q-gift').css('display', 'block').css('left', $('.bam-book-q-gift').offset().left ).css('top', $('.bam-book-q-gift').offset().top)
-                    setTimeout(function() {
-                        $('.fake-bam-book-q-gift').addClass('active');
-                        $('.bam-book-badge-close').stop().delay(750).fadeIn();
-                    }, 100)
-                }
-            }
-        }
-    })
+    // $('.bam-book-scroll-wrap').scroll(function() {
+    //     if($('.bam-book-right-lottery').hasClass('active')) {
+    //         if($('.bam-book-scroll-wrap').scrollTop() > $('.bam-book-guess').offset().top + $('.bam-book-scroll-wrap').scrollTop() + window.innerHeight*0.25) {
+    //             if(!$('.fake-bam-book-q-gift').hasClass('active')) {
+    //                 $('.fake-bam-book-q-gift').css('display', 'block').css('left', $('.bam-book-q-gift').offset().left ).css('top', $('.bam-book-q-gift').offset().top)
+    //                 setTimeout(function() {
+    //                     $('.fake-bam-book-q-gift').addClass('active');
+    //                     $('.bam-book-badge-close').stop().delay(750).fadeIn();
+    //                 }, 100)
+    //             }
+    //         }
+    //     }
+    // })
 })
 function resize() {
     $('.bam-book-scroll-wrap').css('height', window.innerHeight)
@@ -40,7 +40,7 @@ var qArray = [
         'questionresult': '根據調查結果，受訪者中的年輕<br>族群(18~30歲)覺得自己身體<br class="for-m">比實際年齡？'
     },
     {
-        'question': '根據調查結果，<br class="for-m">受訪者中覺得長照需多少準備金？',
+        'question': '根據調查結果，<br>受訪者中覺得長照需多少準備金？',
         'option': ['990萬','716萬','510萬'],
         'correct': ['wrong', 'right', 'wrong'],
         'br': '',
@@ -61,7 +61,7 @@ var qArray = [
         'questionresult': '根據調查結果，受訪者<br class="for-m">偏好的青銀共好活動為？'
     },
     {
-        'question': '根據調查結果，受訪者覺得老年的時候<br class="for-m">需要的服務的前三名組合是什麼？',
+        'question': '根據調查結果，受訪者覺得老年的時候<br>需要的服務的前三名組合是什麼？',
         'option': ['樂活運動/生活照護/飲食營養','健康護理/對抗失智/居家環境','飲食營養/對抗失智/心理支持'],
         'correct': ['right', 'wrong', 'wrong'],
         'br': '<br>',
@@ -107,20 +107,19 @@ function showCorrect() {
         $('.bam-book-right-wrap').show();
         // 抽獎期間
         $('.bam-book-right-lottery').show().addClass('active');
+        setTimeout(function() {
+            $('.fake-bam-book-q-gift').css('display', 'block').css('left', $('.bam-book-q-gift').offset().left ).css('top', $('.bam-book-q-gift').offset().top);
+            setTimeout(function() {
+                $('.fake-bam-book-q-gift').addClass('active');
+                $('.bam-book-badge-close').stop().delay(750).fadeIn();
+            }, 100)
+        }, 500)
         // 非抽獎期間
         // $('.bam-book-right-none').show();
     }
 }
 
 $(document)
-.on('click', '.bam-book-circle-btn', function() {
-    $('.bam-book-lightbox-account').fadeIn();
-    $('.bam-book-scroll-wrap').addClass('fix');
-})
-.on('click', '.bam-book-lightbox-close', function() {
-    $('.bam-book-lightbox-account').fadeOut();
-    $('.bam-book-scroll-wrap').removeClass('fix');
-})
 .on('click', '.bam-book-guess-btn-guess', function() {
     $('.bam-book-guess-intro, .bam-book-wrong-wrap').hide();
     $('.bam-book-guess-question').show();
@@ -145,6 +144,25 @@ $(document)
 })
 .on('click', '.bam-book-guess-btn-result', function() {
     $('.bam-book-scroll-wrap').animate({scrollTop: $('.bam-book-balloon').offset().top + $('.bam-book-scroll-wrap').scrollTop()}, 1000)
+})
+.on('mouseover', '.bam-book-balloon-balloon-href a', function() {
+    if(window.innerWidth > 1024) {
+        $('.bam-book-balloon-balloon').css('z-index', '0');
+        $('.bam-book-balloon-balloon-'+ parseInt($(this).index() + 1)).css('z-index', '1')
+    }
+})
+.on('mouseout', '.bam-book-balloon-balloon-href a', function() {
+    if(window.innerWidth > 1024) {
+        $('.bam-book-balloon-balloon').css('z-index', '0');
+    }
+})
+.on('click', '.bam-book-balloon-balloon-href a', function() {
+    $('.bam-book-scroll-wrap').addClass('fix');
+    $('.bam-book-rate-lightbox').stop().fadeIn();
+})
+.on('click', '.bam-book-rate-lightbox-close', function() {
+    $('.bam-book-scroll-wrap').removeClass('fix');
+    $('.bam-book-rate-lightbox').stop().fadeOut();
 })
 
 // guess end

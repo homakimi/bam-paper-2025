@@ -2,6 +2,7 @@
 
 $blue: #55a4f1
 $sky: #eaf8ff
+$shadow: #d2edfb
 $yellow: #f5e593
 $gray: #999999
 $light: #CCCCCC
@@ -57,23 +58,32 @@ $bg: #f6f6f6
         display: block
     .bam-book-kv-title
         position: absolute
-        width: 25%
-        top: 25%
-        left: 12%
+        width: 27%
+        top: 18%
+        left: 10%
     .bam-book-kv-des
         position: absolute
-        bottom: 31%
-        left: 13%
-        width: 9%
+        bottom: 2%
+        left: 57%
+        width: 14%
     .bam-book-kv-video-block
         position: absolute
-        width: 25%
-        height: 33%
-        bottom: 8%
-        left: 17%
-        border: 0.7vw solid $yellow
+        width: 45%
+        height: 44%
+        bottom: 0
+        left: 14%
+        border: 0.5vw solid $yellow
         border-radius: 2.5vw
-        background: #FFF
+        background: $bg
+        overflow: hidden
+        .ytVideo
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
 
 .bam-book-guess
     position: relative
@@ -94,15 +104,6 @@ $bg: #f6f6f6
             h4
                 color: $blue
                 font-size: 2rem
-                span
-                    display: inline-block
-                    color: #FFF
-                    font-style: italic
-                    background: $blue
-                    border-radius: 50px
-                    font-size: 1.75rem
-                    padding: 0 0.75rem
-                    margin: 0 0.5rem
             article
                 width: 100%
                 line-height: 200%
@@ -132,7 +133,7 @@ $bg: #f6f6f6
                     border-radius: 5px
                     padding: 0 0.5rem
                     font-size: 1.1rem
-                    margin-bottom: 1.5rem
+                    margin-bottom: 1rem
                     &::before
                         counter-increment: num-q
                         content: counter(num-q) '.'
@@ -227,9 +228,6 @@ $bg: #f6f6f6
             display: block
             width: 250px
             margin: 5% auto 15% auto
-            p
-                color: $pink
-                margin-top: 1rem
             
     .bam-book-guess-left,
     .bam-book-guess-right
@@ -395,7 +393,7 @@ $bg: #f6f6f6
         width: 100%
         // height: 100vh
         height: 100%
-        background: $bg
+        overflow: hidden
     .bam-book-detail-wrap
         position: relative
         width: 100%
@@ -431,9 +429,9 @@ $bg: #f6f6f6
                 color: $blue
                 background: #FFF
                 border-radius: 10px
-                font-size: 3rem
+                font-size: 2.5rem
                 letter-spacing: 5px
-                padding: 0.5rem 1.5rem
+                padding: 0.25rem 1.5rem
                 transform: translate(-50%, -50%)
                 white-space: nowrap
             p
@@ -455,23 +453,22 @@ $bg: #f6f6f6
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
-            transition: top 1s, left 1s
+            transition: top 1s, left 1s, opacity 0.5s 0.5s
         .bam-book-detail-rec-1.active
             top: 0
             left: 20%
-            animation: fadeoutandin 1.25s forwards
         .bam-book-detail-rec-2.active
             top: 100%
             left: 17%
-            animation: fadeoutandin 1.25s forwards
         .bam-book-detail-rec-3.active
             top: 0
             left: 80%
-            animation: fadeoutandin 1.25s forwards
-        @keyframes fadeoutandin
-            50%, 80%
+        .bam-book-detail-rec-close
+            &.active
                 opacity: 0
-            0%, 30%, 100%
+        .bam-book-detail-rec-open
+            opacity: 0
+            &.active
                 opacity: 1
 
         .bam-book-detail-content
@@ -480,107 +477,142 @@ $bg: #f6f6f6
             left: 0
             width: 100%
             height: 100%
+            .bam-book-detail-flip
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 95%
+                max-width: 1440px
+                height: 100%
+                margin: auto
+                .flip-card
+                    perspective: 1000px
+                    width: 32%
+                    height: 100%
+                    position: relative
+                    margin: 0 auto
+                    text-align: center
+                .flip-card-inner
+                    width: 100%
+                    height: 100%
+                    transition: transform 0.5s 
+                    transform-style: preserve-3d 
+                .flip-card-front,
+                .flip-card-back
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    backface-visibility: hidden 
+                    border-radius: 35px
+                    overflow: hidden
+                .flip-card-front
+                    h4
+                        position: absolute
+                        width: 80%
+                        margin: auto
+                        bottom: 0
+                        left: 0
+                        right: 0
+                        background: #FFF
+                        color: $blue
+                        font-size: 1.5rem
+                        padding: 1rem 0
+                        border-radius: 25px 25px 0 0
+
+                .flip-card-back
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    transform: rotateY(180deg)
+                    .flip-card-bg
+                        opacity: 0.5
+                
+                .flip-card
+                    transform: scale(0)
+                    &.show
+                        transform: scale(1)
+                    &:nth-child(1)
+                        transition: transform 1s 0.5s
+                    &:nth-child(2)
+                        transition: transform 1s 0.75s
+                    &:nth-child(3)
+                        transition: transform 1s 1s
+
+                    &.active
+                        .flip-card-inner
+                            transform: rotateY(180deg)
+                        &:nth-child(1) .flip-card-inner
+                            transition: transform 1s
+                        &:nth-child(2) .flip-card-inner
+                            transition: transform 1s 0.25s
+                        &:nth-child(3) .flip-card-inner
+                            transition: transform 1s 0.5s
+
+            .bam-book-detail-btn-wrap
+                display: none
+                text-align: center
+                color: $blue
+                margin-top: 1rem
+                a
+                    display: inline-block
+                    padding: 0.5rem 1.5rem
+                    margin-top: 0.5rem
+                    color: #FFF
+                    font-size: 1.2rem
+                    background: $blue
+                    border-radius: 50px
             .swiper
                 height: 100%
             .swiper-slide
                 display: flex
                 justify-content: center
                 align-items: center
-            .slide-content
-                display: flex
-                justify-content: center
-                align-items: center
-                flex-direction: column
-                flex: 1 0 0
-                height: 100%
-                padding: 0 1.5rem
-                border-radius: 35px
-                background: #FFF
-                text-align: center
-                h3
-                    position: relative
-                    font-size: 2.5rem
-                    line-height: 3rem
-                    p
-                        transform: skew(-12deg)
-                > span
-                    display: block
-                    width: 1px
-                    height: 75px
-                    margin: 1rem auto
-                    background: $light
-                h4
-                    color: $blue
-                    font-size: 1rem
-                > p
-                    width: 70%
-                    margin: 3rem auto 0 auto
-                    padding: 1rem
-                    border: 1px solid $blue
-                    border-radius: 20px
-                    color: $gray
-                    font-weight: bold
-            .slide-bg-left,
-            .slide-bg-right
-                flex: 1 0 0
-                width: 100%
-                height: 100%
-                background-position: center left! important
-                background-repeat: no-repeat! important
-                background-size: cover! important
-                border-radius: 0 35px 35px 0
-                opacity: 0.5
-            .slide-bg-right
-                background-position: center right! important
-                border-radius: 35px 0 0 35px
-
-    .swiper-button-prev-arrow,
-    .swiper-button-next-arrow
-        z-index: 1
-        position: absolute
-        top: 50%
-        width: 0
-        height: 0 
-        border-top: 15px solid transparent
-        border-bottom: 15px solid transparent
-        transform: translateY(-50%)
-        &::after
-            display: none
-    .swiper-button-prev-arrow
-        left: calc( 32% - 20px)
-        border-right: 15px solid #FFF
-    .swiper-button-next-arrow
-        right: calc( 32% - 20px)
-        border-left: 15px solid #FFF
-
-    .swiper-button-prev-full,
-    .swiper-button-next-full
-        display: none
-        z-index: 3
-        width: 32.5%
-        height: 100%
-        top: 0
-        margin: 0
-        transform: none
-        &::after
-            display: none
-        &:hover
-            cursor: none
-    .swiper-button-prev-full
-        left: 0
-        border-radius: 0 35px 35px 0
-    .swiper-button-next-full
-        right: 0
-        border-radius: 35px 0 0 35px
-    .bam-book-cursor-prev,
-    .bam-book-cursor-next
-        display: none
-        z-index: 1
-        position: fixed
-        width: 100px
-        top: 0
-        left: 0
-        transform: translate(-50%, -50%)
+                   
+        .flip-card-bg,
+        .slide-content-bg
+            z-index: -1
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-repeat: no-repeat! important
+            background-position: center center! important
+            background-size: cover! important
+        .slide-content-bg
+            opacity: 0.5
+        .flip-card-back-content,
+        .slide-content
+            position: absolute
+            top: 50%
+            left: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            width: calc(100% - 70px)
+            height: calc(100% - 70px)
+            background: #FFF
+            border-radius: 25px
+            transform: translate(-50%, -50%)
+            text-align: center
+            h5
+                font-size: 2.5rem
+            > span
+                display: block
+                width: 1px
+                height: 20%
+                margin: 8% 0
+                background: $gray
+            article
+                width: 90%
+                margin: 0 auto
+                padding: 1rem
+                color: $blue
+                line-height: 175%
+                font-size: 0.9rem
+                border: 1px solid $blue
+                border-radius: 15px
 
 .bam-book-link
     padding-top: 5%
@@ -619,7 +651,7 @@ $bg: #f6f6f6
                     padding: 0.25rem 1rem
                     border-radius: 8px
                     margin: 0.25rem 0
-                    box-shadow: -3px 3px 0 #d2edfb
+                    box-shadow: -3px 3px 0 $shadow
             p.des
                 font-size: 0.75rem
                 color: $light
@@ -654,7 +686,7 @@ $bg: #f6f6f6
                 text-align: left
                 margin-left: -50px
                 p
-                    box-shadow: 3px 3px 0 #d2edfb
+                    box-shadow: 3px 3px 0 $shadow
             p.des
                 margin: 10px 0 0 0
             p.notice
@@ -775,36 +807,58 @@ $bg: #f6f6f6
                 transform: rotate(180deg)
 
 
-.bam-book-lightbox-account
+.bam-book-rate-lightbox
     z-index: 9
     display: none
     position: fixed
-    width: 100%
-    // height: 100vh
-    height: 100%
     top: 0
     left: 0
-    background: rgba(125, 125, 125, 0.75)
-    > div
-        position: relative
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-direction: column
+    width: 100%
+    height: 100%
+    .bam-book-rate-lightbox-gray
+        position: absolute
+        top: 0
+        left: 0
         width: 100%
         height: 100%
-        a
-            display: block
-            width: 300px
-            margin: 5px auto
-        .bam-book-lightbox-close
-            position: absolute
-            width: 75px
-            top: calc(50% - 250px)
-            left: calc(50% + 175px)
-            transform: translate(-50%, -50%)
+        background: rgba(100, 100, 100, 0.75)
+    .bam-book-rate-lightbox-close
+        position: absolute
+        display: block
+        width: 50px
+        top: 15%
+        right: calc(50% - 512px - 60px)
+    .bam-book-rate-lightbox-wrap
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 90%
+        max-width: 1024px
+        height: 70%
+        background: url('../img/bam-book-grid-bg.svg') #FFF repeat center center
+        background-size: 25px 25px
+        border-radius: 35px
+        box-shadow: -8px 8px 0 $shadow
+        transform: translate(-50%, -50%)
+
 
 // animation
+.bam-book-banner
+    opacity: 0
+    transform: translateY(100px)
+    animation: show 1s forwards
+    .bam-book-kv-title
+        opacity: 0
+        transform: translateY(100px)
+        animation: show 1s 0.75s forwards
+    .bam-book-kv-des
+        transform: scale(0)
+        animation: pop 0.35s 1.5s forwards
+    .bam-book-kv-video-block
+        opacity: 0
+        transform: translateY(100px)
+        animation: show 1s 1s forwards
+
 .bam-book-guess
     .bam-book-wrap
         opacity: 0
@@ -824,12 +878,17 @@ $bg: #f6f6f6
         &.scrollShowActive
             transition: transform 1s
             transform: scale(1)
-    .bam-book-q-gift
-        transform: rotate(0deg)
-        animation: shake 1.5s infinite
-        img
-            transform: scale(0)
-            animation: pop 0.5s forwards
+    // .bam-book-q-gift
+    //     transform: rotate(0deg)
+    //     animation: shake 1.5s infinite
+    //     img
+    //         transform: scale(0)
+    //         animation: pop 0.5s forwards
+
+@keyframes show
+    to
+        opacity: 1
+        transform: translate(0)
 
 @keyframes pop
     to
@@ -939,8 +998,8 @@ $bg: #f6f6f6
 
     .bam-book-guess
         .bam-book-guess-circle
-            width: 650px
-            height: 650px
+            width: 675px
+            height: 675px
             > div
                 article
                     margin: 3% 0
@@ -991,16 +1050,22 @@ $bg: #f6f6f6
                             color: #FFF
 
 @media only screen and (max-width: 1024px)
+    .bam-book-badge-close,
+    .bam-book-badge-open
+        width: 125px
+        bottom: -15px
+        right: 5px
+        
     .bam-book-banner
         padding-bottom: 30%
         .bam-book-kv-title
             width: 60%
-            top: 43.5%
+            top: 42%
             left: 35%
         .bam-book-kv-des
-            bottom: 21%
-            left: 10%
-            width: 22%
+            bottom: 22%
+            left: 5%
+            width: 27%
         .bam-book-kv-video-block
             width: 72%
             height: 29%
@@ -1152,10 +1217,10 @@ $bg: #f6f6f6
                         top: 24%
                         left: 40%
                     &:nth-child(5)
-                        width: 24%
-                        height: 15%
-                        top: 37%
-                        left: 29%
+                        width: 26%
+                        height: 16%
+                        top: 29%
+                        left: 5%
                     &:nth-child(6)
                         width: 26%
                         height: 16%
@@ -1177,10 +1242,10 @@ $bg: #f6f6f6
                         top: 52%
                         left: 68%
                     &:nth-child(10)
-                        width: 26%
-                        height: 16%
-                        top: 29%
-                        left: 5%
+                        width: 24%
+                        height: 15%
+                        top: 37%
+                        left: 29%
             .bam-book-balloon-house
                 position: absolute
                 bottom: 0
@@ -1207,14 +1272,16 @@ $bg: #f6f6f6
         .bam-book-detail-wrap
             height: 75%
             .bam-book-detail-open-title
+                text-align: center
                 h2
-                    font-size: 1.75rem
-                    letter-spacing: 2px
-                    padding: 0.35rem 0.75rem
+                    font-size: 1.2rem
+                    letter-spacing: 1px
+                    padding: 0.5rem 0.5rem
+                    border-radius: 5px
                 p
                     top: 60%
-                    font-size: 1.1rem
-                    letter-spacing: 8px
+                    font-size: 1rem
+                    letter-spacing: 3px
             .bam-book-detail-rec-1,
             .bam-book-detail-rec-2,
             .bam-book-detail-rec-3
@@ -1229,75 +1296,51 @@ $bg: #f6f6f6
                 top: 0
                 left: calc(100% - 150px)
 
-            .bam-book-detail-content
-                .slide-content
-                    flex: none
+            .slide-content
+                width: 90%
+                max-width: 480px
+                height: 70%
+                background: #FFF
+                border-radius: 25px
+                h5
+                    font-size: 2rem
+                > span
+                    height: 20%
+                    margin: 3% 0
+                p
+                    font-size: 0.9rem
+                article
                     width: 80%
-                    height: 80%
-                    max-width: 500px
-                    max-height: 500px
-                    padding: 0 1.5rem
-                    border-radius: 25px
-                    h3
-                        font-size: 2rem
-                        line-height: 2.5rem
-                    > span
-                        height: 15%
-                        margin: 0.5rem auto
-                    h4
-                        color: $blue
-                        font-size: 1rem
-                    > p
-                        width: 100%
-                        max-width: 480px
-                        margin: 12% auto 0 auto
-                        border-radius: 12px
-                .slide-bg-left,
-                .slide-bg-right
-                    z-index: -1
-                    position: absolute
-                    top: 0
-                    left: 0
-                    flex: none
-                    border-radius: 0
-                    opacity: 0.5
-                    background-position: center center! important
-                .slide-bg-right
-                    display: none
+                    padding: 0.5rem 0.75rem
+                > a
+                    display: inline-block
+                    padding: 0.5rem 1.5rem
+                    color: #FFF
+                    background: $blue
+                    border-radius: 50px
 
-        .swiper-button-prev-arrow,
-        .swiper-button-next-arrow
-            z-index: 1
-            position: absolute
-            top: 50%
-            width: 0
-            height: 0 
-            border-top: 15px solid transparent
-            border-bottom: 15px solid transparent
-        .swiper-button-prev-arrow
-            left: 12px
-        .swiper-button-next-arrow
-            right: 12px
-        .swiper-button-prev-full,
-        .swiper-button-next-full
+        .swiper-button-prev,
+        .swiper-button-next
             display: block
-            width: 80px
-            height: 80px
+            width: 70px
+            height: 70px
             top: auto
-            bottom: -50px
+            bottom: 15px
             border-radius: 50%
             p
                 position: absolute
                 top: 30%
                 transform: skewX(-10deg)
                 font-size: 12px
-        .swiper-button-prev-full
+            &::after
+                display: none
+        .swiper-button-prev
             left: 10%
             background: url('../img/bam-book-cursor-prev-m.png') no-repeat center center
             background-size: contain
             p
                 right: 20px
-        .swiper-button-next-full
+        .swiper-button-next
             right: 10%
             background: url('../img/bam-book-cursor-next-m.png') no-repeat center center
             background-size: contain
@@ -1394,15 +1437,18 @@ $bg: #f6f6f6
                 padding: 3.5rem 1rem
                 border-radius: 25px
 
-    .bam-book-lightbox-account
-        > div
-            a
-                width: 250px
-            .bam-book-lightbox-close
-                width: 50px
-                top: calc(50% - 225px)
-                left: calc(50% + 125px)
 
+    .bam-book-rate-lightbox
+        .bam-book-rate-lightbox-close
+            top: calc(10% - 25px)
+            right: 5%
+            width: 45px
+        .bam-book-rate-lightbox-wrap
+            height: 80%
+            top: calc( 50% + 25px)
+            background-size: 20px 20px
+            border-radius: 25px
+            box-shadow: -5px 5px 0 $shadow
 
 @media only screen and (max-width: 480px)
     .bam-book-banner
