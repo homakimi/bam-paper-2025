@@ -147,7 +147,7 @@ input[type="radio"]:checked + label p::after {
 }
 
 .fake-bam-book-q-gift.active {
-  top: 100% !important;
+  top: 105% !important;
   left: 100% !important;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -697,7 +697,7 @@ input[type="radio"]:checked + label p::after {
 .bam-book-detail .bam-book-detail-wrap {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 500px;
 }
 
 .bam-book-detail .bam-book-detail-wrap .bam-book-detail-open {
@@ -741,7 +741,7 @@ input[type="radio"]:checked + label p::after {
   color: #55a4f1;
   background: #FFF;
   border-radius: 10px;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   letter-spacing: 5px;
   padding: 0.25rem 1.5rem;
   -webkit-transform: translate(-50%, -50%);
@@ -754,8 +754,8 @@ input[type="radio"]:checked + label p::after {
   top: 70%;
   left: 50%;
   color: #FFF;
-  font-size: 1.2rem;
-  letter-spacing: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 8px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   white-space: nowrap;
@@ -767,7 +767,7 @@ input[type="radio"]:checked + label p::after {
   z-index: 1;
   display: block;
   position: absolute;
-  width: 500px;
+  width: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -854,7 +854,9 @@ input[type="radio"]:checked + label p::after {
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   border-radius: 35px;
   overflow: hidden;
 }
@@ -883,8 +885,8 @@ input[type="radio"]:checked + label p::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .bam-book-detail .bam-book-detail-wrap .bam-book-detail-content .bam-book-detail-flip .flip-card-back .flip-card-bg {
@@ -923,8 +925,8 @@ input[type="radio"]:checked + label p::after {
 }
 
 .bam-book-detail .bam-book-detail-wrap .bam-book-detail-content .bam-book-detail-flip .flip-card.active .flip-card-inner {
+  transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .bam-book-detail .bam-book-detail-wrap .bam-book-detail-content .bam-book-detail-flip .flip-card.active:nth-child(1) .flip-card-inner {
@@ -1035,7 +1037,7 @@ input[type="radio"]:checked + label p::after {
   display: block;
   width: 1px;
   height: 20%;
-  margin: 8% 0;
+  margin: 5% 0;
   background: #999999;
 }
 
@@ -1457,6 +1459,13 @@ input[type="radio"]:checked + label p::after {
           transform: scale(1);
 }
 
+.bam-book-guess .bam-book-q-gift {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-animation: shake 1.5s -0.75s forwards;
+          animation: shake 1.5s -0.75s forwards;
+}
+
 @-webkit-keyframes show {
   to {
     opacity: 1;
@@ -1489,12 +1498,12 @@ input[type="radio"]:checked + label p::after {
 
 @-webkit-keyframes shake {
   70%, 80%, 90% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   75%, 85%, 95% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   0%, 65%, 100% {
     -webkit-transform: rotate(0deg);
@@ -1504,12 +1513,12 @@ input[type="radio"]:checked + label p::after {
 
 @keyframes shake {
   70%, 80%, 90% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   75%, 85%, 95% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   0%, 65%, 100% {
     -webkit-transform: rotate(0deg);
@@ -1833,29 +1842,29 @@ input[type="radio"]:checked + label p::after {
     right: 5px;
   }
   .bam-book-banner {
-    padding-bottom: 30%;
+    padding-bottom: 49%;
   }
   .bam-book-banner .bam-book-kv-title {
-    width: 60%;
-    top: 42%;
-    left: 35%;
+    width: 65%;
+    top: 37%;
+    left: 30%;
   }
   .bam-book-banner .bam-book-kv-des {
-    bottom: 22%;
-    left: 5%;
-    width: 27%;
+    bottom: 27%;
+    left: 7%;
+    width: 35%;
   }
   .bam-book-banner .bam-book-kv-video-block {
-    width: 72%;
-    height: 29%;
+    width: 94%;
+    height: 30%;
     bottom: 0;
-    left: 22%;
+    left: 3%;
     border: 10px solid #f5e593;
     border-radius: 35px;
   }
   .bam-book-guess {
     overflow: hidden;
-    padding-bottom: 10%;
+    padding: 10% 0;
   }
   .bam-book-guess .bam-book-wrap {
     padding: 20% 0;
@@ -2126,7 +2135,7 @@ input[type="radio"]:checked + label p::after {
   .bam-book-detail .bam-book-detail-wrap .slide-content {
     width: 90%;
     max-width: 480px;
-    height: 70%;
+    height: 75%;
     background: #FFF;
     border-radius: 25px;
   }
@@ -2134,14 +2143,14 @@ input[type="radio"]:checked + label p::after {
     font-size: 2rem;
   }
   .bam-book-detail .bam-book-detail-wrap .slide-content > span {
-    height: 20%;
+    height: 15%;
     margin: 3% 0;
   }
   .bam-book-detail .bam-book-detail-wrap .slide-content p {
     font-size: 0.9rem;
   }
   .bam-book-detail .bam-book-detail-wrap .slide-content article {
-    width: 80%;
+    width: 75%;
     padding: 0.5rem 0.75rem;
   }
   .bam-book-detail .bam-book-detail-wrap .slide-content > a {
@@ -2153,7 +2162,7 @@ input[type="radio"]:checked + label p::after {
   }
   .bam-book-detail .swiper-button-prev,
   .bam-book-detail .swiper-button-next {
-    display: block;
+    display: none;
     width: 70px;
     height: 70px;
     top: auto;
@@ -2281,7 +2290,7 @@ input[type="radio"]:checked + label p::after {
     line-height: 150%;
   }
   .bam-book-notice {
-    padding: 3% 0 35% 0;
+    padding: 12% 0 35% 0;
     background-size: 200% auto;
   }
   .bam-book-notice .bam-book-notice-wrap {

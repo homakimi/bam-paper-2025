@@ -23,7 +23,7 @@ $(function() {
                 $('.bam-book-detail-cover-left, .bam-book-detail-cover-right').addClass('scrollShowActive')
                 $('.bam-book-detail-open-title').fadeOut();
                 $('.bam-book-detail-rec-close, .bam-book-detail-rec-open').addClass('active');
-                // $('.swiper-button-prev-full, .swiper-button-next-full').show();
+                $('.swiper-button-prev, .swiper-button-next').delay(500).fadeIn();
                 $('.flip-card').addClass('show');
             }
             if(window.innerWidth > 1024) {

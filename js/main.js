@@ -70,6 +70,7 @@ var qArray = [
 ]
 var selectedNumbers = [];
 function randomQuestion() {
+    $('.bam-book-guess-btn-send').removeClass('active');
     selectedNumbers = [];
     $('.bam-book-guess-q').remove();
     while (selectedNumbers.length < 3) {
@@ -113,7 +114,7 @@ function showCorrect() {
                 $('.fake-bam-book-q-gift').addClass('active');
                 $('.bam-book-badge-close').stop().delay(750).fadeIn();
             }, 100)
-        }, 500)
+        }, 750)
         // 非抽獎期間
         // $('.bam-book-right-none').show();
     }
