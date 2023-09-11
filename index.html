@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/index.css" />
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/scrollEffect.js"></script>
+    </head>
+    <body>
+
+        <div class="bam-book-scroll-wrap">
+            <a class="fake-bam-book-q-gift" href=""><img class="fullimg" src="img/bam-book-q-gift.png"></a>
+            <a class="bam-book-badge-close" href=""><img class="fullimg" src="img/bam-book-badge-close.png"></a>
+            <a class="bam-book-badge-open" href=""><img class="fullimg" src="img/bam-book-badge-open.png"></a>
+
+            <section class="bam-book-banner">
+                <img class="fullimg for-pc" src="img/bam-book-kv.jpg">
+                <img class="fullimg for-m" src="img/bam-book-kv-m.jpg">
+                <img class="bam-book-kv-title" src="img/bam-book-kv-title.png">
+                <div class="bam-book-kv-video-block"></div>
+                <img class="bam-book-kv-des" src="img/bam-book-kv-des.png">
+            </section>
+
+            <section class="bam-book-guess" data-scroll-show-parent>
+                <div class="bam-book-wrap" data-scroll-show>
+                    <div class="bam-book-guess-circle" data-scroll-show="750">
+
+                        <div class="bam-book-guess-intro">
+                            <h4>迎向<span>2026</span>年<br>超高齡社會<br>保戶大調查結果猜猜看</h4>
+                            <article>
+                                <div>
+                                    <h5>2023 / 10 / 1 ~ 2023 / 11 / 10 活動期間</h5><br>
+                                    看調查結果之前，<br>先來一起猜猜看受訪者們面對超高齡社會有什麼看法？<br>只要3題全部答對，就有機會抽中<span class="yellow"> LINE POINTS 20點</span>，<br>每人每日限抽獎一次。<br><span class="small">(本活動限南山人壽網路會員參加，若您尚未加入會員，請先 <a class="bam-book-circle-btn" href="">由此註冊</a>。)</span>
+                                </div>
+                                <div class="btn-block">
+                                    <a class="bam-book-guess-btn-guess" href="">我要猜看看</a>
+                                    <a class="bam-book-guess-btn-result" href="">直接看結果</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="bam-book-guess-question">
+                            <div class="bam-book-guess-question-random">
+                                <div class="bam-book-guess-q">
+                                    <h6>根據調查結果，受訪者最擔心罹患的疾病為？</h6>
+                                    <div>
+                                        <input type="radio" id="ans-1-1" name="ans-1" value="right">
+                                        <label for="ans-1-1"><p></p>癌症</label>
+                                        <input type="radio" id="ans-1-2" name="ans-1" value="wrong">
+                                        <label for="ans-1-2"><p></p>失智</label>
+                                        <input type="radio" id="ans-1-3" name="ans-1" value="wrong">
+                                        <label for="ans-1-3"><p></p>糖尿病</label>
+                                    </div>
+                                </div>
+                                <div class="bam-book-guess-q">
+                                    <h6>根據調查結果，受訪者中的年輕群族(18-30歲)覺得自己身體比實際年齡？</h6>
+                                    <div>
+                                        <input type="radio" id="ans-2-1" name="ans-2" value="wrong">
+                                        <label for="ans-2-1"><p></p>樂活運動/生活照護/飲食營養</label><br>
+                                        <input type="radio" id="ans-2-2" name="ans-2" value="right">
+                                        <label for="ans-2-2"><p></p>健康護理/對抗失智/居家環境</label><br>
+                                        <input type="radio" id="ans-2-3" name="ans-2" value="wrong">
+                                        <label for="ans-2-3"><p></p>飲食營養/對抗失智/心理支持</label><br>
+                                    </div>
+                                </div>
+                                <div class="bam-book-guess-q">
+                                    <h6>根據調查結果，受訪者中覺得長照需要多少準備金？</h6>
+                                    <div>
+                                        <input type="radio" id="ans-3-1" name="ans-3" value="right">
+                                        <label for="ans-3-1"><p></p>990萬</label>
+                                        <input type="radio" id="ans-3-2" name="ans-3" value="wrong">
+                                        <label for="ans-3-2"><p></p>716萬</label>
+                                        <input type="radio" id="ans-3-3" name="ans-3" value="wrong">
+                                        <label for="ans-3-3"><p></p>510萬</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-block">
+                                <a class="bam-book-guess-btn-send" href="">送出</a>
+                                <a class="bam-book-guess-btn-back" href="">返回說明</a>
+                            </div>
+                        </div>
+
+                        <div class="bam-book-wrong-wrap">
+                            <img class="bam-book-q-wrong for-pc" src="img/bam-book-q-wrong.png">
+                            <img class="bam-book-q-wrong for-m" src="img/bam-book-q-wrong-m.png">
+                            <div class="bam-book-wrong-content">
+                                <div class="bam-book-wrong-block wrong"><h6>大家最擔心罹患的疾病為？</h6></div>
+                                <div class="bam-book-wrong-block right"><h6>年輕族群覺得自己身體比實際年齡？</h6></div>
+                                <div class="bam-book-wrong-block wrong"><h6>根據調查結果，受訪者中覺得長照需要多少準備金？</h6></div>
+                            </div>
+                            <a class="bam-book-guess-btn-guess" href="">點我繼續猜</a>
+                            <a class="bam-book-guess-btn-result" href="">直接看結果</a>
+                            <a class="bam-book-guess-btn-back" href="">返回說明</a>
+                        </div>
+
+                        <div class="bam-book-right-wrap">
+                            <div class="bam-book-right-lottery">
+                                <img class="bam-book-q-right" src="img/bam-book-q-right.png">
+                                <a class="bam-book-q-gift" href=""><img class="fullimg" src="img/bam-book-q-gift.png"><p>點我去抽獎</p></a>
+                                <a class="bam-book-guess-btn-back" href="">返回說明</a>
+                            </div>
+                            <div class="bam-book-right-none">
+                                <img class="bam-book-q-right" src="img/bam-book-q-correct.png">
+                                <img class="bam-book-q-gift" src="img/bam-book-q-dance.png">
+                                <a class="bam-book-guess-btn-result" href="">看完整結果</a>
+                                <a class="bam-book-guess-btn-back" href="">返回說明</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bam-book-guess-left for-pc" data-scroll-show style="background: url('img/bam-book-guess-left-bg.png')"><div data-scroll-show="500" style="background: url('img/bam-book-guess-left-1.png')"></div></div>
+                    <div class="bam-book-guess-right for-pc" data-scroll-show style="background: url('img/bam-book-guess-right-bg.png')"><div data-scroll-show="500" style="background: url('img/bam-book-guess-right-1.png')"></div></div>
+                    <div class="bam-book-guess-left for-m" style="background: url('img/bam-book-guess-top-bg-m.png')"></div>
+                    <div class="bam-book-guess-right for-m" style="background: url('img/bam-book-guess-bottom-bg-m.png')"></div>
+                </div>
+            </section>
+
+            <section class="bam-book-balloon" data-scroll-show-parent>
+                <div class="bam-book-wrap">
+                    <img class="bam-book-balloon-title for-pc" data-scroll-show src="img/bam-book-balloon-title.png">
+                    <img class="bam-book-balloon-img for-pc" data-scroll-show="250" src="img/bam-book-balloon-img.png">
+                    <img class="bam-book-balloon-title for-m" data-scroll-show src="img/bam-book-balloon-title-m.png">
+                    <img class="bam-book-balloon-img for-m" data-scroll-show="250" src="img/bam-book-balloon-img-m.png">
+                    <div class="bam-book-balloon-wrap" data-scroll-show="500">
+                        <img class="fullimg for-pc" src="img/bam-book-balloon-bg.png">
+                        <img class="fullimg for-m" src="img/bam-book-balloon-bg-m.png">
+
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-1"><img class="fullimg for-pc" src="img/bam-book-balloon-1.svg"><img class="fullimg for-m" src="img/bam-book-balloon-1-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-2"><img class="fullimg for-pc" src="img/bam-book-balloon-2.svg"><img class="fullimg for-m" src="img/bam-book-balloon-2-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-3"><img class="fullimg for-pc" src="img/bam-book-balloon-3.svg"><img class="fullimg for-m" src="img/bam-book-balloon-3-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-4"><img class="fullimg for-pc" src="img/bam-book-balloon-4.svg"><img class="fullimg for-m" src="img/bam-book-balloon-4-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-5"><img class="fullimg for-pc" src="img/bam-book-balloon-5.svg"><img class="fullimg for-m" src="img/bam-book-balloon-5-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-6"><img class="fullimg for-pc" src="img/bam-book-balloon-6.svg"><img class="fullimg for-m" src="img/bam-book-balloon-6-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-7"><img class="fullimg for-pc" src="img/bam-book-balloon-7.svg"><img class="fullimg for-m" src="img/bam-book-balloon-7-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-8"><img class="fullimg for-pc" src="img/bam-book-balloon-8.svg"><img class="fullimg for-m" src="img/bam-book-balloon-8-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-9"><img class="fullimg for-pc" src="img/bam-book-balloon-9.svg"><img class="fullimg for-m" src="img/bam-book-balloon-9-m.svg"></div>
+                        <div class="bam-book-balloon-balloon bam-book-balloon-balloon-10"><img class="fullimg for-pc" src="img/bam-book-balloon-10.svg"><img class="fullimg for-m" src="img/bam-book-balloon-10-m.svg"></div>
+
+                        <div class="bam-book-balloon-balloon-href">
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+
+                        <img class="fullimg bam-book-balloon-house for-pc" src="img/bam-book-balloon-house.png">
+                        <img class="fullimg bam-book-balloon-house for-m" src="img/bam-book-balloon-house-m.png">
+                        <img class="bam-book-balloon-des" src="img/bam-book-balloon-des.png">
+                    </div>
+                </div>
+            </section>
+
+            <section class="bam-book-detail">
+                <div class="bam-book-detail-sticky">
+                    <div class="bam-book-detail-center">
+                        <div class="bam-book-detail-wrap">
+                            <div class="bam-book-detail-content">
+                                <div class="swiper swiper-bam-book">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="slide-bg-left swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                            <div class="slide-content">
+                                                <h3>觀點<p>1</p></h3>
+                                                <span></span>
+                                                <h4>面對超高齡社會</h4>
+                                                <p>攜手跨業健康照護夥伴，所有長照服務這裡都找得到。</p>
+                                            </div>
+                                            <div class="slide-bg-right swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="slide-bg-left swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                            <div class="slide-content">
+                                                <h3>觀點<p>2</p></h3>
+                                                <span></span>
+                                                <h4>面對超高齡社會</h4>
+                                                <p>攜手跨業健康照護夥伴，所有長照服務這裡都找得到。</p>
+                                            </div>
+                                            <div class="slide-bg-right swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="slide-bg-left swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                            <div class="slide-content">
+                                                <h3>觀點<p>3</p></h3>
+                                                <span></span>
+                                                <h4>面對超高齡社會</h4>
+                                                <p>攜手跨業健康照護夥伴，所有長照服務這裡都找得到。</p>
+                                            </div>
+                                            <div class="slide-bg-right swiper-lazy" data-background="img/bam-book-detail-img-1.jpg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev-arrow"></div>
+                            <div class="swiper-button-next-arrow"></div>
+
+                            <div class="bam-book-detail-open">
+                                <div class="bam-book-detail-cover-left"></div>
+                                <div class="bam-book-detail-cover-right"></div>
+                            </div>
+                            <img class="bam-book-detail-rec-1" src="img/bam-book-detail-rec-1.png">
+                            <img class="bam-book-detail-rec-2" src="img/bam-book-detail-rec-2.png">
+                            <img class="bam-book-detail-rec-3" src="img/bam-book-detail-rec-3.png">
+                            <div class="bam-book-detail-open-title">
+                                <h2>白皮書重點摘要大解析</h2>
+                                <p>迎戰超高齡社會解方全剖析</p>
+                            </div>
+
+                            <div class="swiper-button-prev swiper-button-prev-full"><p class="for-m"></p></div>
+                            <div class="swiper-button-next swiper-button-next-full"><p class="for-m">2</p></div>
+                        </div>
+                        <div class="bam-book-cursor-prev"><img class="fullimg" src="img/bam-book-cursor-prev.png"></div>
+                        <div class="bam-book-cursor-next"><img class="fullimg" src="img/bam-book-cursor-next.png"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bam-book-link">
+                <div class="bam-book-wrap">
+                    <div class="bam-book-link-1">
+                        <article data-scroll-show>
+                            <h3><p>每7位65歲以上長者</p><br><p>就有1位需要長照服務</p></h3>
+                            <p class="des">（主計總處統計專區 人口及住宅普查統計表）</p>
+                            <p class="notice">面對2026超高齡社會，<br>不只需要長照險補足財務缺口，<br>更需要好的長照服務，<br>一路伴隨您健康變老。</p>
+                        </article>
+                        <div data-scroll-show style="background: url('img/bam-book-link-1.jpg')"></div>
+                    </div>
+                    <div class="bam-book-link-btn" data-scroll-show>
+                        <a href="">
+                            <p><img class="fullimg" src="img/bam-book-link-btn-des-1.png"></p>
+                            <div class="bam-book-link-btn-icon"><div style="background-image: url('img/bam-book-link-btn-1.png')"></div></div>
+                            <div class="bam-book-link-btn-info"><h3>健康樂活地圖</h3><p>攜手跨業健康照護夥伴，所有長照服務這裡都找得到。</p></div>
+                        </a>
+                        <a href="">
+                            <p><img class="fullimg" src="img/bam-book-link-btn-des-2.png"></p>
+                            <div class="bam-book-link-btn-icon"><div style="background-image: url('img/bam-book-link-btn-2.png')"></div></div>
+                            <div class="bam-book-link-btn-info"><h3>長照保險推薦</h3><p>為自己和家人及早規劃，不再因失能、照護問題煩惱。</p></div>
+                        </a>
+                    </div>
+                    <div class="bam-book-link-2">
+                        <article data-scroll-show>
+                            <h3><p>腦活性檢驗免費申請</p></h3>
+                            <p class="notice">每13位65歲以上長者即有1位罹患失智症*，南山人壽獨家引進日本腦活性總和研究室檢測機制，提供給保戶測量風險。</p>
+                            <p class="des">*註：台灣失智症協會</p>
+                            <a class="for-pc" href="">點我立即申請</a>
+                        </article>
+                        <div data-scroll-show style="background: url('img/bam-book-link-2.jpg')"></div>
+                        <article data-scroll-show class="for-m">
+                            <a href="">點我立即申請</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bam-book-notice">
+                <div class="bam-book-notice-wrap">
+                    <h3><p>注意事項</p></h3>
+                    <article>
+                        <ol>
+                            <li>活動時間：2023/10/01～2023/11/10，參加者參加活動，即視為同意接受本活動辦法、注意及聲明事項之規範；如有違反，則自動喪失得獎資格。</li>
+                            <li>南山人壽得因本活動之需要，依個人資料保護相關規定，於參加者同意之期間內，以電子檔或紙本形式於我國境內蒐集、處理、利用其個人資料。但南山人壽於未經參加者之同意下，不得利用參加者之個人資料進行其他商業行銷行為。參加者可自由選擇是否提供完整個人資訊，惟若資訊不完整者，將無法參加本活動。</li>
+                            <li>為確保線上抽獎流程不中斷，若您已有一段時間未登入網路會員，請先確認您的會員帳號可以正常登入。</li>
+                            <li>本活動參加者需保證所有輸入提供之資料均為真實且正確(包含姓名、地址、手機號碼)，並同意南山人壽於活動範圍內進行蒐集、處理及利用參加者之個人資訊，做為抽獎、檢核、及本活動相關通知之用。參加者可自由選擇是否提供完整個人資訊，惟若資訊錯誤或不完整者，將無法參加本活動及喪失領取獎品權利。為保護您的權益，請詳閱南山人壽個人資料保護聲明。</li>
+                            <li>本活動參加者必須遵守南山人壽的活動規範及其他有關之規定，如有違反，立即自動喪失參加資格，如為得獎者，立即喪失得獎資格。</li>
+                            <li>本活動參加者保證未冒用或盜用任何第三人之資料，且如因此致生損害於本公司或任何第三人時，參加者應負一切相關責任。</li>
+                            <li>獎項以「電腦隨機」方式抽出，如得獎人未於得獎通知期限內完成相關作業，或獎項無法成功投遞/匯入者，視同放棄本次中獎機會，本獎項將不再遞補，且南山人壽無須負任何責任。寄送地址限台澎金馬，海外地區恕無法配送。如本活動因不可抗拒之特殊原因無法執行時，本公司有權決定取消、終止、修改或暫停本活動。</li>
+                            <li>本活動屬機會中獎性質，依中華民國所得稅法及各類所得扣繳率標準規定，全年度中獎獎項價值達新臺幣1,001元(含)以上者需計入個人所得，中獎者為本國境內居住之個人或本國境內有固定營業場所之營利事業且獎項價值達新臺幣20,010元(含)以上者，則南山人壽需代扣繳10%稅金；倘中獎者非中華民國境內居住之個人或無固定營業場所之營利事業時，無論獎項價值多寡，均須計入所得並由南山人壽代為扣繳20%稅金，並開具扣繳憑單向該管稽徵機關申報核驗後，寄發予中獎者。南山人壽將於確認中獎者應繳稅款收訖後始發送獎項。</li>
+                            <li>活動內容如有任何異動將公佈於南山人壽企業網站，不另行個別通知；南山人壽保有對本活動辦法之最終解釋、更改、取消、終止或暫停之權利；非現金獎項不得要求折換現金，南山人壽保留更換為等值獎項之權利。</li>
+                            <li>本活動如有任何因電腦、網路、電話、技術或其他不可歸責於南山人壽之事由，致參加者所寄出、填寫或登錄之資料有遺失、錯誤、無法辨識或毀損等情形，南山人壽不負任何法律責任，參加者亦不得異議。</li>
+                            <li>參加者以惡意之電腦程式、詐欺、其他不正當行為或違反活動公平性之方式參加活動者，南山人壽有權取消其參加資格；如致南山人壽受有損害，將依法追究。</li>
+                            <li>專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
+                            <li>健康守護圈之加值服務或合作廠商提供之產品、服務或優惠訊息等，均非屬保險契約權利義務之一部分。本公司與合作廠商間無代理或類似關係，合作廠商提供之商品、服務或優惠，係由合作廠商各自提供及負責。</li>
+                            <li>參加本專案者，必須遵守本專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
+                            <li>參加本專案者保證所有填寫或提出之資料均為真實且正確，並未有冒用或盜用任何第三人之資料，如有不實或不正確之情事時，將自動喪失本專案資格，南山人壽不負任何責任，且如因此致生損害於南山人壽或任何第三人時，參加本專案者應負一切相關責任。</li>
+                            <li>如有因不可歸責於南山人壽之事由，致參加本專案者所登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況時，南山人壽不負任何法律或賠償責任，參加者亦不得因此異議。</li>
+                        </ol>
+                    </article>
+                    <a class="bam-book-icon-more" href=""><img class="fullimg" src="img/bam-book-icon-more.png"></a>
+                </div>
+            </section>
+
+
+            <section class="bam-book-lightbox-account">
+                <div>
+                    <a class="bam-book-lightbox-close" href=""><img class="fullimg" src="img/bam-book-icon-close.png"></a>
+                    <a href=""><img class="fullimg" src="img/bam-book-sign.png"></a>
+                    <a href=""><img class="fullimg" src="img/bam-book-login.png"></a>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script>
+        $(document)
+        .on('click', 'a', function(e) {
+            if($(this).attr('href').length == 0) {
+                e.preventDefault();
+            }
+        })
+        .on('mousedown', 'img', function(e) {
+            e.preventDefault();
+        })
+
+        var swiper = new Swiper('.swiper-bam-book', {
+            effect: 'fade',
+            crossFade: true,
+            speed: 1000,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: '.bam-book-detail .swiper-button-next-full',
+                prevEl: '.bam-book-detail .swiper-button-prev-full',
+            },
+            lazy: {
+                loadPrevNext: true
+            }
+        });
+        swiper.on('slideChangeTransitionStart', function() {
+            $('.swiper-button-prev-full p').text(swiper.activeIndex)
+            $('.swiper-button-next-full p').text(swiper.activeIndex + 2)
+            if( swiper.activeIndex == 0) {
+                $('.swiper-button-prev-full p').text('')
+            }
+            if( swiper.activeIndex == swiper.slides.length - 1) {
+                $('.swiper-button-next-full p').text('')
+            }
+        })
+
+        var cursorType;
+        $(document)
+        .on('click', '.bam-book-icon-more', function() {
+            $('.bam-book-notice-wrap article, .bam-book-icon-more').toggleClass('active');
+        })
+        .on('mouseover', '.swiper-button-prev-full', function(e) {
+            if(window.innerWidth > 1024) {
+                cursorType = 'prev';
+                $('.bam-book-cursor-prev').show();
+            }
+        })
+        .on('mouseover', '.swiper-button-next-full', function(e) {
+            if(window.innerWidth > 1024) {
+                cursorType = 'next';
+                $('.bam-book-cursor-next').show();
+            }
+        })
+        .on('mouseout', '.swiper-button-prev-full, .swiper-button-next-full', function() {
+            if(window.innerWidth > 1024) {
+                cursorType = '';
+                $('.bam-book-cursor-prev, .bam-book-cursor-next').hide();
+            }
+        })
+        .on('mousemove', function(e) {
+            if(window.innerWidth > 1024) {
+                if( cursorType == 'prev' ) {
+                    $('.bam-book-cursor-prev').css('left', e.clientX).css('top', e.clientY)
+                } else if( cursorType == 'next' ) {
+                    $('.bam-book-cursor-next').css('left', e.clientX).css('top', e.clientY)
+                }
+            }
+        })
+        
+    </script>
+</html>

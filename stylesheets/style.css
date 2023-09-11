@@ -1,0 +1,51 @@
+@import url(notosanstc.css);
+/* line 4, ../sass/style.sass */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../sass/style.sass */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 12, ../sass/style.sass */
+.fullimg {
+  display: block;
+  width: 100%;
+}
+
+/* line 16, ../sass/style.sass */
+.fullimgHeight {
+  display: block;
+  height: 100%;
+  margin: auto;
+}
+
+/* line 21, ../sass/style.sass */
+html {
+  font-size: 20px;
+}
+
+/* line 24, ../sass/style.sass */
+body {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  background: #FFF;
+  font-family: "Noto Sans TC";
+}
+
+/* line 32, ../sass/style.sass */
+.sss {
+  background: #111;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+}
