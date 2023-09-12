@@ -1304,6 +1304,10 @@ input[type="radio"]:checked + label p::after {
   text-align: justify;
 }
 
+.bam-book-notice .bam-book-notice-wrap article a {
+  color: #55a4f1;
+}
+
 .bam-book-notice .bam-book-notice-wrap article::after {
   position: absolute;
   display: block;
