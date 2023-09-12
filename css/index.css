@@ -1973,27 +1973,27 @@ input[type="radio"]:checked + label p::after {
     width: 56%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-1 {
-    top: 13%;
-    left: 31%;
+    top: 15%;
+    left: 32%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-2 {
     top: 16%;
-    left: 8%;
+    left: 10%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-3 {
     top: 19%;
-    left: 38%;
+    left: 40%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-4 {
     top: 20%;
-    left: 27%;
+    left: 29%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-5 {
-    top: 10%;
-    left: -10%;
+    top: 9%;
+    left: -12%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-6 {
-    top: 27%;
+    top: 26%;
     left: 13%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-7 {
@@ -2005,12 +2005,12 @@ input[type="radio"]:checked + label p::after {
     left: 25%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-9 {
-    top: 30%;
-    left: 0%;
+    top: 29%;
+    left: -5%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon.bam-book-balloon-balloon-10 {
-    top: 30%;
-    left: 50%;
+    top: 29%;
+    left: 52%;
   }
   .bam-book-balloon .bam-book-balloon-wrap .bam-book-balloon-balloon-href a:nth-child(1) {
     width: 26%;
