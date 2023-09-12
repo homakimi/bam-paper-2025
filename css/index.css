@@ -1790,7 +1790,8 @@ input[type="radio"]:checked + label p::after {
   .bam-book-guess-btn-guess,
   .bam-book-guess-btn-result,
   .bam-book-guess-btn-send.active,
-  .bam-book-link-2 a {
+  .bam-book-link-2 a,
+  .bam-book-detail-btn-wrap a {
     -webkit-transition: -webkit-filter 0.5s;
     transition: -webkit-filter 0.5s;
     transition: filter 0.5s;
@@ -1799,7 +1800,8 @@ input[type="radio"]:checked + label p::after {
   .bam-book-guess-btn-guess:hover,
   .bam-book-guess-btn-result:hover,
   .bam-book-guess-btn-send.active:hover,
-  .bam-book-link-2 a:hover {
+  .bam-book-link-2 a:hover,
+  .bam-book-detail-btn-wrap a:hover {
     -webkit-filter: brightness(1.2);
             filter: brightness(1.2);
   }
