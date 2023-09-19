@@ -12,25 +12,444 @@
     </head>
     <body>
 
-        <div class="bam-village-scroll-wrap">
+        <div class="bam-village-outer">
+
+            <section class="bam-village-banner">
+                <img class="banner-bg fullimg" src="img/bam-village-banner-bg.png">
+                <div class="bam-village-title-wrap">
+                    <img src="img/bam-village-banner-title.png">
+                </div>
+                <div class="banner-talk">
+                    <img class="fullimg" src="img/bam-village-banner-talk.png">
+                    <article>歡迎來到南山樂活村，<br>我是這裡的村長郝健康。<br>讓我來跟您介紹一下樂活村裡的每個角落吧!</article>
+                </div>
+            </section>
+
+            <section class="bam-village-map">
+                <div class="bam-village-wrap">
+                    <h2 class="bam-village-h2-title"><p>南山樂活村</p><span>帶你一覽健康樂活村地圖</span></h2>
+                    <div class="bam-village-map-wrap">
+                        <img class="fullimg" src="img/bam-village-map.png">
+                        
+                        <!-- click block fake -->
+                        <div class="bam-village-map-click-fake">
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-1.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-2.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-3.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-4.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-5.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-6.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-7.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-8.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-9.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-10.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-11.png"></a>
+                            <a href=""><img class="fullimg" src="img/bam-village-map-house-12.png"></a>
+                        </div>
+                        <!-- active border -->
+                        <div>
+                            <img class="bam-village-map-border fullimg" src="img/bam-village-map-border-red.png">
+                            <img class="bam-village-map-border fullimg" src="img/bam-village-map-border-blue.png">
+                            <img class="bam-village-map-border fullimg" src="img/bam-village-map-border-green.png">
+                        </div>
+                        <!-- click block true and shine light -->
+                        <div class="bam-village-map-click">
+                            <a data-category="0" data-select="0" href=""><img class="fullimg house-light" src="img/bam-village-map-house-1-light.png"></a>
+                            <a data-category="0" data-select="1" href=""><img class="fullimg house-light" src="img/bam-village-map-house-2-light.png"></a>
+                            <a data-category="0" data-select="2" href=""><img class="fullimg house-light" src="img/bam-village-map-house-3-light.png"></a>
+                            <a data-category="0" data-select="3" href=""><img class="fullimg house-light" src="img/bam-village-map-house-4-light.png"></a>
+                            <a data-category="0" data-select="4" href=""><img class="fullimg house-light" src="img/bam-village-map-house-5-light.png"></a>
+                            <a data-category="0" data-select="5" href=""><img class="fullimg house-light" src="img/bam-village-map-house-6-light.png"></a>
+                            <a data-category="1" data-select="0" href=""><img class="fullimg house-light" src="img/bam-village-map-house-7-light.png"></a>
+                            <a data-category="1" data-select="1" href=""><img class="fullimg house-light" src="img/bam-village-map-house-8-light.png"></a>
+                            <a data-category="1" data-select="2" href=""><img class="fullimg house-light" src="img/bam-village-map-house-9-light.png"></a>
+                            <a data-category="2" data-select="0" href=""><img class="fullimg house-light" src="img/bam-village-map-house-10-light.png"></a>
+                            <a data-category="2" data-select="1" href=""><img class="fullimg house-light" src="img/bam-village-map-house-11-light.png"></a>
+                            <a data-category="2" data-select="2" href=""><img class="fullimg house-light" src="img/bam-village-map-house-12-light.png"></a>
+                        </div>
+                        <!-- shine block -->
+                        <!-- <div class="bam-village-map-shine">
+                            <div>
+                                <img class="fullimg" src="img/bam-village-map-house-1.png">
+                            </div>
+
+                        </div> -->
+                    </div>
+                    <div class="bam-village-select-wrap">
+                        <div class="bam-village-map-talk">
+                            <img class="fullimg" src="img/bam-village-map-talk.png">
+                            <article>我們樂活村主要分成3個區塊，<br>點擊上方目錄可以快速找到對應區域；<br>點擊房子可以看更多服務內容。</article>
+                        </div>
+                        <div class="bam-village-select-block">
+                            <div class="bam-village-select-a">
+                                <a href=""><img class="fullimg" src="img/bam-village-map-select-1.png"></a>
+                                <a href=""><img class="fullimg" src="img/bam-village-map-select-2.png"></a>
+                                <a href=""><img class="fullimg" src="img/bam-village-map-select-3.png"></a>
+                            </div>
+                            <div class="bam-village-select-drop">
+                                <div class="bam-village-select-drop-wrap">
+                                    <a class="bam-village-select-drop-active disable" href="">請先選擇想去的三大區域</a>
+                                    <div>
+                                        <!-- 疾病照護下拉 -->
+                                        <article>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-1.png">飲食營養</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-2.png">疾病照護</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-3.png">對抗失智</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-4.png">復健復能</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-5.png">輔具支持</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-1-6.png">生活照顧</a>
+                                        </article>
+                                        <!-- 生活支持 -->
+                                        <article>
+                                            <a href=""><img src="img/bam-village-map-a-icon-2-1.png">居家環境</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-2-2.png">交通接送</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-2-3.png">樂活運動</a>
+                                        </article>
+                                        <!-- 健康樂活 -->
+                                        <article>
+                                            <a href=""><img src="img/bam-village-map-a-icon-3-1.png">心靈健康</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-3-2.png">社會參與</a>
+                                            <a href=""><img src="img/bam-village-map-a-icon-3-3.png">健康管理</a>
+                                        </article>
+                                    </div>
+                                </div>
+                                <a class="bam-village-map-select-full" href=""><img class="fullimg" src="img/bam-village-map-select-full.png"></a>
+                            </div>
+                            <div class="bam-village-select-logo">
+                                <h3>待選擇</h3>
+                                <div>
+                                    <!-- 疾病照護-飲食營養 -->
+                                    <article data-logo="0-0">
+                                        <a href=""><p>奇力愛</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>雀巢</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>cofit</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>桂冠</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 疾病照護-疾病照護 -->
+                                    <article data-logo="0-1">
+                                        <a href=""><p>健管中心</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>和豐國際</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 疾病照護-對抗失智 -->
+                                    <article data-logo="0-2">
+                                        <a href="" class="bam-village-select-new"><p>樂齡智造</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>失智症協會</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>遠傳電信</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href="" class="bam-village-select-new"><p>WaCare</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 疾病照護-復健復能 -->
+                                    <article data-logo="0-3">
+                                        <a href=""><p>愛迪樂</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>中化銀髮</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>鉑適</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href="" class="bam-village-select-new"><p>梅科科技<span>(生生優動)</span></p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 疾病照護-輔具支持 -->
+                                    <article data-logo="0-4">
+                                        <a href=""><p>科林</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>福寶科技</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>輔具家</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 疾病照護-生活照顧 -->
+                                    <article data-logo="0-5">
+                                        <a href=""><p>家天使</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>早安健康</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 生活支持-居家環境 -->
+                                    <article data-logo="1-0">
+                                        <a href=""><p>生活大管家</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>福樂多</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>中保科技</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 生活支持-交通接送 -->
+                                    <article data-logo="1-1">
+                                        <a href=""><p>多扶</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 生活支持-樂活運動 -->
+                                    <article data-logo="1-2">
+                                        <a href=""><p>Wondercise</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>阿瘦</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>聯新運醫</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 健康樂活-心靈健康 -->
+                                    <article data-logo="2-0">
+                                        <a href="" class="bam-village-select-coming"><p>佑全藥品</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>醫聯網</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href=""><p>基因檢測醫院<br>-健檢</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 健康樂活-社會參與 -->
+                                    <article data-logo="2-1">
+                                        <a href=""><p>FarHugs</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                    <!-- 健康樂活-健康管理 -->
+                                    <article data-logo="2-2">
+                                        <a href=""><p>大人社團</p><img src="img/bam-village-map-select-1.png"></a>
+                                        <a href="" class="bam-village-select-new"><p>揚生</p><img src="img/bam-village-map-select-1.png"></a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bam-village-service">
+                <div class="bam-village-wrap">
+                    <h2 class="bam-village-h2-title"><p>村民服務處</p><span>快速瀏覽8大便民服務</span></h2>
+
+                    <div class="bam-village-service-tab">
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-1.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-2.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-3.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-4.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-5.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-6.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-7.png"></a>
+                        <a href=""><img class="fullimg" src="img/bam-village-service-tab-8.png"></a>
+                    </div>
+                    <div class="bam-village-service-content">
+                        <div class="bam-village-servie-person">
+                            <p>我們服務處有8大便民服務，選擇需要的服務項目後可以看到3個常駐服務方案，隨時專業應援。</p>
+                            <img class="fullimg" src="img/bam-village-servie-person.png">
+                        </div>
+                        <img class="fullimg" src="img/bam-village-service-bg.png">
+
+                        <div class="bam-village-service-door-wrap">
+                            <!-- 有空出門走走 -->
+                            <div>
+                                <a href="https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E8%B5%B0BAM%E4%B8%96%E7%95%8C" class="bam-village-service-door bam-village-service-door-1">
+                                    <h3>BAM活力洋溢APP</h3>
+                                    <img class="fullimg" src="img/bam-village-service-door-out.png">
+                                    <img class="bam-village-service-door-inside" src="img/bam-village-service-door-inside.png">
+                                    <article>
+                                        <p>線上心靈諮詢</p>
+                                        <img class="fullimg" src="img/bam-village-service-talk.png">
+                                    </article>
+                                </a>
+                                <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E5%9C%8B%E5%85%A7%E7%84%A1%E9%9A%9C%E7%A4%99%E6%97%85%E9%81%8A%E8%A1%8C%E7%A8%8B%E5%84%AA%E6%83%A0" class="bam-village-service-door bam-village-service-door-2">
+                                    <h3>多扶假期-國內無障礙旅遊行程優惠</h3>
+                                    <img class="fullimg" src="img/bam-village-service-door-out.png">
+                                    <img class="bam-village-service-door-inside" src="img/bam-village-service-door-inside.png">
+                                    <article>
+                                        <p>輔具情報平台<br>－ 保護專屬優惠</p>
+                                        <img class="fullimg" src="img/bam-village-service-talk.png">
+                                    </article>
+                                </a>
+                                <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E8%B6%B3%E5%81%A5%E5%BA%B7%E7%85%A7%E8%AD%B7%E5%84%AA%E6%83%A0%E6%96%B9%E6%A1%88" class="bam-village-service-door bam-village-service-door-3">
+                                    <h3>阿瘦皮鞋-足健康照護優惠方案</h3>
+                                    <img class="fullimg" src="img/bam-village-service-door-out.png">
+                                    <img class="bam-village-service-door-inside" src="img/bam-village-service-door-inside.png">
+                                    <article>
+                                        <p>專業管家到府清潔<br>專屬優惠</p>
+                                        <img class="fullimg" src="img/bam-village-service-talk.png">
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bam-village-library">
+                <div class="bam-village-wrap">
+                    <h2 class="bam-village-h2-title"><p>村民圖書館</p><span>長照必讀文章看這裡</span></h2>
+                    <div class="bam-village-library-image">
+                        <article>
+                            <h4>精選書摘</h4>
+                            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+                        </article>
+                        <img class="fullimg" src="img/bam-village-library-bg.png">
+                        <a class="bam-village-library-btn" href=""><img class="fullimg" src="img/bam-village-library-btn.png"></a>
+                        <a class="bam-village-library-book" href=""><img class="fullimg" src="img/bam-village-library-book.png"></a>
+                    </div>
+                    <div class="bam-village-library-person">
+                        <p>為了告訴大家超高齡社會即將來襲，指引村民們及早規劃與準備，今年全新落成這個閱覽室。相信多多閱讀一定能更清楚該如何在人生不同階段都有信心迎接老年生活。<br><br>此外，佈告欄時不時會貼上新的長照消息，想要健康變老必讀！</p>
+                        <img class="fullimg" src="img/bam-village-library-person.png">
+                    </div>
+                    <div class="bam-village-library-content">
+                        <h3>釋出新文章!<p>閱讀越健康</p></h3>
+                        <div>
+                            <a href="">
+                                <div class=""></div>
+                                <article>
+                                    <h4>閱讀越健康</h4>
+                                    <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+                                </article>
+                            </a>
+                            <a href="">
+                                <div class=""></div>
+                                <article>
+                                    <h4>閱讀越健康</h4>
+                                    <p>文字文字文字文字文字文字文字文字文字文字文字</p>
+                                </article>
+                            </a>
+                            <a href="">
+                                <div class=""></div>
+                                <article>
+                                    <h4>閱讀越健康</h4>
+                                    <p>文字文字文字文字文字文字文字文字文字文字文字</p>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="bam-village-notice">
+                <div class="bam-village-wrap">
+                    <article>
+                        <h4>注意事項</h4>
+                        <ul>
+                            <li>各專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
+                            <li>健康守護圈之加值服務或合作廠商所提供之商品、服務及優惠，均非屬保險契約權利義務之一部分，本公司與合作廠商間亦無代理或類似關係，如遇使用問題請洽詢合作廠商取得相關協助。</li>
+                            <li>參加本專案者，必須遵守本專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
+                            <li>參加本專案者保證所有填寫或提出之資料均為真實且正確，並未有冒用或盜用任何第三人之資料，如有不實或不正確之情事時，將自動喪失本專案資格，南山人壽不負任何責任，且如因此致生損害於南山人壽或任何第三人時，參加本專案者應負一切相關責任。</li>
+                            <li>為保護您的權益，請詳閱<a href="">南山人壽個人資料保護聲明</a>。</li>
+                            <li>如有因不可歸責於南山人壽之事由，致參加本專案者所登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況時，南山人壽不負任何法律或賠償責任，參加者亦不得因此異議。</li>
+                            <li>遠距健康管理服務倘屬南山人壽健康e守護終身保險(MSAE)提供之e守護服務者，則其相關事宜以e守護服務同意書及e守護服務辦法之約定為準。</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
             <!-- 手機版 -->
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"></div>
                 </div>
             </div>
+
+
+            <div class="bam-village-gray">
+                <a class="bam-village-close" href=""><img class="fullimg" src="img/bam-village-close.png"></a>
+                <a class="bam-village-back" href=""><img class="fullimg" src="img/bam-village-back.png"></a>
+            </div>
+
+            <!-- lightbox map all -->
+            <section class="bam-village-lightbox-map">
+                <div>
+                    <article class="pink">
+                        <h4><img src="img/bam-village-map-all-1.png"><p>疾病照護</p></h4>
+                        <div class="bam-village-lightbox-map-flex">
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-1.png">飲食營養</h5>
+                                <a href="">奇力愛</a>
+                                <a href="">健雀巢管中心</a>
+                                <a href="">cofit</a>
+                                <a href="">桂冠</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-2.png">疾病照護</h5>
+                                <a href="">健管中心</a>
+                                <a href="">和豐國際</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-3.png">對抗失智</h5>
+                                <a href="" class="map-all-new">樂齡智造</a>
+                                <a href="">失智症協會</a>
+                                <a href="">遠傳電信</a>
+                                <a href="" class="map-all-new">WaCare</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-4.png">復健復能</h5>
+                                <a href="">愛迪樂</a>
+                                <a href="">中化銀髮</a>
+                                <a href="">鉑適</a>
+                                <a href="" class="map-all-new">梅科科技<span>(生生優動)</span></a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-5.png">輔具支持</h5>
+                                <a href="">科林</a>
+                                <a href="">福寶科技</a>
+                                <a href="">輔具家</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-1-6.png">生活照顧</h5>
+                                <a href="">家天使</a>
+                                <a href="">早安健康</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="blue">
+                        <h4><img src="img/bam-village-map-all-2.png"><p>生活支持</p></h4>
+                        <div class="bam-village-lightbox-map-flex">
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-2-1.png">居家環境</h5>
+                                <a href="" target="_blank">生活大管家</a>
+                                <a href="" target="_blank">福樂多</a>
+                                <a href="" target="_blank">中保科技</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-2-2.png">交通接送</h5>
+                                <a href="" target="_blank">多扶</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-2-3.png">樂活運動</h5>
+                                <a href="" target="_blank">Wondercise</a>
+                                <a href="" target="_blank">阿瘦</a>
+                                <a href="" target="_blank">聯新運醫</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="green">
+                        <h4><img src="img/bam-village-map-all-3.png"><p>健康樂活</p></h4>
+                        <div class="bam-village-lightbox-map-flex">
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-3-1.png">心靈健康</h5>
+                                <a href="" class="map-all-coming" target="_blank">佑全藥品</a>
+                                <a href="" target="_blank">醫聯網</a>
+                                <a href="" target="_blank">基因檢測醫院<br>-健檢</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-3-2.png">社會參與</h5>
+                                <a href="" target="_blank">FarHugs</a>
+                            </div>
+                            <div>
+                                <h5><img src="img/bam-village-map-a-icon-3-3.png">健康管理</h5>
+                                <a href="" target="_blank">大人社團</a>
+                                <a href="" class="map-all-new" target="_blank">揚生</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bam-village-lightbox-detail">
+                <div data-detail-lightbox="愛迪樂">
+                    <h2>愛迪樂</h2>
+                    <div class="bam-village-lightbox-detail-flex">
+                        <div>
+                            <img class="bam-village-logo" src="img/bam-village-logo-1.png">
+                            <p>愛迪樂治療所，由專業治療師組成。<br>所內提供一對一復健服務、銀髮族體適能訓練，<br>由治療師量身打造的復能計畫，手把手的帶領個案<br>改善生活品質，活出快樂精彩人生</p>
+                            <br><br>
+                            <ul>
+                                <li>依照個案狀況與家屬共同討論</li>
+                                <li>依個案疾病和意願設計並規劃內容</li>
+                                <li>服務內容包含在行走計畫、手功能OK計畫、好聽力保健計畫及其他評估及指導服務</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>方案介紹</h4>
+                            <article>單次居家復能服務，享有南山專案價</article>
+                            <br><br>
+                            <h5>服務時間</h5>
+                            週一～週五 8:30-18:00<br><br>
+                            <h5>客服專線</h5>
+                            02-2521-6043<br><br>
+                            <h5>聯絡客服</h5>
+                            請使用 LINE 加入 @platinumphysio<br>請於訊息輸入「南山保戶」，以利客服人員接洽。
+                            <a class="bam-village-lightbox-btn-line" href="">加入LINE好友</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
+
     </body>
     <script>
-        $(document)
-        .on('click', 'a', function(e) {
-            if($(this).attr('href').length == 0) {
-                e.preventDefault();
-            }
-        })
-        .on('mousedown', 'img', function(e) {
-            e.preventDefault();
-        })
 
         var swiper = new Swiper('.swiper', {
             speed: 750,
