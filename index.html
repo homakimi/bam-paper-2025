@@ -276,7 +276,7 @@
                                 </div>
                                 <div class="swiper-button-next for-m"><img class="fullimg" src="img/bam-village-icon-next.png"></div>
                                 <div class="swiper-button-prev for-m"><img class="fullimg" src="img/bam-village-icon-prev.png"></div>
-                                <div class="swiper-pagination"></div>
+                                <div class="swiper-pagination for-m"></div>
                             </div>
                         </div>
                         <img class="bam-village-service-deco for-m" src="img/bam-village-service-deco.png">
@@ -539,6 +539,7 @@
             $(this).addClass('door-swiper-'+index);
             new Swiper('.door-swiper-'+index+' .swiper', {
                 speed: 500,
+                allowTouchMove: false,
                 navigation: {
                     nextEl: '.door-swiper-'+index+' .swiper-button-next',
                     prevEl: '.door-swiper-'+index+' .swiper-button-prev',
