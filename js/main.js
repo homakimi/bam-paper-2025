@@ -133,6 +133,7 @@ $(document)
     $('.bam-village-lightbox-category').removeClass('active').fadeOut();
     $('.bam-village-lightbox-area').fadeIn().addClass('active');
 })
+// 手機點地圖區域再點分類再點細項
 .on('click', '.bam-village-lightbox-category article a', function() {
     $('.bam-village-lightbox-category').removeClass('active').fadeOut();
     $('.bam-village-lightbox-detail').fadeIn().addClass('active');
