@@ -1,4 +1,43 @@
+$(function() {
 
+    // detect device change start
+    var isMobile, isMobileFirst, widthPC;
+    if(window.innerWidth > 1024) {
+        widthPC = true;
+    } else {
+        widthPC = false;
+    }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobileFirst = true;
+    } else {
+        isMobileFirst = false;
+    }
+    $(window).resize(function() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            isMobile = true;
+        } else {
+            isMobile = false;
+        }
+        if(isMobileFirst != isMobile) {
+            reset()
+        }
+        if(widthPC && window.innerWidth <= 1024) {
+            reset()
+        } else if(!widthPC && window.innerWidth > 1024) {
+            reset()
+        }
+    })
+    // detect device change end
+
+})
+
+
+function reset() {
+    $('body').removeClass('fix');
+    $('.bam-village-back').fadeOut();
+    $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
+    $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
+}
 var mapCategory, mapSelect, mobileFromMap;
 $(document)
 .on('click', 'a', function(e) {
@@ -110,10 +149,6 @@ $(document)
     $('.bam-village-gray').stop().fadeIn();
     $('.bam-village-lightbox-map').fadeIn().addClass('active');
 })
-.on('click', '.bam-village-close, .bam-village-back-v', function() {
-    $('body').removeClass('fix');
-    $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-area, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
-})
 // 手機點地圖區域
 .on('click', '.bam-village-map-area a', function() {
     $('body').addClass('fix');
@@ -145,11 +180,12 @@ $(document)
     $('.bam-village-lightbox-detail').removeClass('active').fadeOut();
     $('.bam-village-lightbox-category').fadeIn().addClass('active');
 })
-
-
-.on('click', '.bam-village-gray', function() {
-    $('body').removeClass('fix');
-    $('.bam-village-back').fadeOut();
+.on('click', '.bam-village-gray, .bam-village-close, .bam-village-back-v', function() {
+    reset();
+})
+.on('click', 'body', function() {
     $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
-    $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
+})
+.on('click', '.bam-village-map .bam-village-select-drop-wrap article', function(e) {
+    e.stopPropagation();
 })
