@@ -51,6 +51,21 @@ $bg: #f6f6f6
 .bam-village-banner
     position: relative
     background: $sky
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        width: 100%
+        height: 150px
+        bottom: 0
+        left: 0
+        background: linear-gradient(to bottom, rgba(234, 248, 255, 0), $sky 75%)
+    .banner-bg-front
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        transition: transform 1s, opacity 1s! important
     .bam-village-title-wrap
         position: absolute
         left: 30vw
@@ -899,7 +914,7 @@ $bg: #f6f6f6
 .bam-village-banner
     .bam-village-title-wrap
         > div
-            animation: cut 1s 0.5s forwards
+            animation: cut 1s 1.5s forwards
 
 .bam-village-library
     .bam-village-library-book
@@ -1058,6 +1073,8 @@ $bg: #f6f6f6
         
     .bam-village-banner
         background: #fff1e8
+        &::after
+            display: none
         .bam-village-title-wrap
             left: 5vw
             width: 90vw
