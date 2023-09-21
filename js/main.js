@@ -28,12 +28,19 @@ $(function() {
         }
     })
     // detect device change end
-
+    $('.bam-book-guess-question, .bam-book-wrong-wrap, .bam-book-right-wrap, .bam-book-right-lottery, .bam-book-right-none').hide();
+    resize();
+    $(window).resize(function() {
+        resize();
+    })
 })
+function resize() {
+    $('.bam-village-scroll-wrap').css('height', window.innerHeight)
+}
 
 
 function reset() {
-    $('body').removeClass('fix');
+    $('.bam-village-scroll-wrap').removeClass('fix');
     $('.bam-village-back').fadeOut();
     $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
     $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-area, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
@@ -86,20 +93,28 @@ $(document)
 })
 // 從選擇區點logo
 .on('click', '[data-logo] a', function() {
-    $('body').addClass('fix');
-    $('.bam-village-gray').stop().fadeIn();
-    $('.bam-village-lightbox-detail').fadeIn().addClass('active');
-    $('[data-detail-lightbox]').hide();
-    $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+    if(!$(this).hasClass('bam-village-disable')) {
+        $('.bam-village-scroll-wrap').addClass('fix');
+        $('.bam-village-gray').stop().fadeIn();
+        $('.bam-village-lightbox-detail').fadeIn().addClass('active');
+        $('[data-detail-lightbox]').hide();
+        $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+    } else {
+        return false;
+    }
 })
 // 從all map點logo
 .on('click', '.bam-village-lightbox-map .bam-village-lightbox-map-flex a', function() {
-    $('.bam-village-lightbox-map').removeClass('active');
-    $('.bam-village-lightbox-detail').fadeIn().addClass('active');
-    $('[data-detail-lightbox]').hide();
-    $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
-    $('.bam-village-back').show();
-    $('.bam-village-back-a-map').show();
+    if(!$(this).hasClass('bam-village-disable')) {
+        $('.bam-village-lightbox-map').removeClass('active');
+        $('.bam-village-lightbox-detail').fadeIn().addClass('active');
+        $('[data-detail-lightbox]').hide();
+        $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+        $('.bam-village-back').show();
+        $('.bam-village-back-a-map').show();
+    } else {
+        return false;
+    }
 })
 .on('click', '.bam-village-back', function() {
     $('.bam-village-lightbox-map').addClass('active');
@@ -140,13 +155,13 @@ $(document)
 })
 // 點開全地圖
 .on('click', '.bam-village-map-select-full', function() {
-    $('body').addClass('fix');
+    $('.bam-village-scroll-wrap').addClass('fix');
     $('.bam-village-gray').stop().fadeIn();
     $('.bam-village-lightbox-map').fadeIn().addClass('active');
 })
 // 手機點地圖區域
 .on('click', '.bam-village-map-area a', function() {
-    $('body').addClass('fix');
+    $('.bam-village-scroll-wrap').addClass('fix');
     $('.bam-village-gray').stop().fadeIn();
     $('.bam-village-lightbox-area').fadeIn().addClass('active');
     $('.bam-village-lightbox-area-flex').hide();
@@ -165,11 +180,15 @@ $(document)
 })
 // 手機點地圖區域再點分類再點細項
 .on('click', '.bam-village-lightbox-category article a', function() {
-    $('.bam-village-lightbox-category').removeClass('active').fadeOut();
-    $('.bam-village-lightbox-detail').fadeIn().addClass('active');
-    $('[data-detail-lightbox]').hide();
-    $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
-    $('.bam-village-back-a-map').hide();
+    if(!$(this).hasClass('bam-village-disable')) {
+        $('.bam-village-lightbox-category').removeClass('active').fadeOut();
+        $('.bam-village-lightbox-detail').fadeIn().addClass('active');
+        $('[data-detail-lightbox]').hide();
+        $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+        $('.bam-village-back-a-map').hide();
+    } else {
+        return false;
+    }
 })
 .on('click', '.bam-village-lightbox-detail .bam-village-back-a', function() {
     $('.bam-village-lightbox-detail').removeClass('active').fadeOut();

@@ -4,7 +4,7 @@ $(function() {
 
     effect_fadein();
     typeEffect();
-    $(document).scroll(function() {
+    $('.bam-village-scroll-wrap').scroll(function() {
         effect_fadein();
         typeEffect();
     })
@@ -12,7 +12,7 @@ $(function() {
     function effect_fadein() {
         // scroll show effect starts
         $('[data-scroll-show-parent]').each(function() {
-            if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
+            if($('.bam-village-scroll-wrap').scrollTop() > $(this).offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
                 if($(this).data('scroll-show-parent').length != '') {
                     $(this).find('[data-scroll-show]').each(function(index) {
                         setTimeout(function() {
@@ -33,7 +33,7 @@ $(function() {
             }
         })
         $('[data-scroll-show]').each(function() {
-            if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
+            if($('.bam-village-scroll-wrap').scrollTop() > $(this).offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
                 if($(this).closest('[data-scroll-show-parent]').length == 0) {
                     if($(this).data('scroll-show').length === 0) {
                         $(this).addClass('scrollShowActive');
@@ -63,7 +63,7 @@ $(function() {
                 $(this).html(_newTextHTML)
                 $(this).find('span').css('opacity', '0');
             }
-            if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
+            if($('.bam-village-scroll-wrap').scrollTop() > $(this).offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
                 if(!$(this).hasClass('active')) {
                     setTimeout(function() {
                         $(this).addClass('active').css('opacity', '1');
