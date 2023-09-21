@@ -160,6 +160,22 @@ input[type="radio"]:checked + label p::after {
   margin-left: 1rem;
 }
 
+.bam-village-gradient-1,
+.bam-village-gradient-2 {
+  width: 100%;
+  height: 50px;
+}
+
+.bam-village-gradient-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#eaf8ff), to(#FFF));
+  background: linear-gradient(to bottom, #eaf8ff, #FFF);
+}
+
+.bam-village-gradient-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#eaf8ff));
+  background: linear-gradient(to bottom, #FFF, #eaf8ff);
+}
+
 .bam-village-banner {
   position: relative;
   background: #eaf8ff;
@@ -696,6 +712,39 @@ input[type="radio"]:checked + label p::after {
 }
 
 .bam-village-service .bam-village-service-tab a.active {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.bam-village-service .bam-village-service-drop-wrap .bam-village-service-drop-active {
+  display: none;
+}
+
+.bam-village-service .bam-village-service-drop-wrap article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: 3rem auto 1.5rem auto;
+}
+
+.bam-village-service .bam-village-service-drop-wrap article a {
+  display: block;
+  width: 10%;
+  margin: 0 0.5%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.bam-village-service .bam-village-service-drop-wrap article a.active {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
 }
@@ -1438,6 +1487,16 @@ input[type="radio"]:checked + label p::after {
           animation: cut 1s 0.5s forwards;
 }
 
+.bam-village-library .bam-village-library-book {
+  -webkit-animation: shake 4s infinite;
+          animation: shake 4s infinite;
+}
+
+.bam-village-library .bam-village-library-btn {
+  -webkit-animation: shake 4s 2s infinite;
+          animation: shake 4s 2s infinite;
+}
+
 [data-scroll-show] {
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -1466,7 +1525,42 @@ input[type="radio"]:checked + label p::after {
   }
 }
 
+@-webkit-keyframes shake {
+  42%, 46%, 50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  44%, 48%, 52% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  0%, 40%, 54%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  42%, 46%, 50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  44%, 48%, 52% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  0%, 40%, 54%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 @media only screen and (min-width: 1025px) {
+  .bam-village-service-drop-wrap article {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   .bam-village-select-a a,
   .bam-village-map-select-full,
   .bam-village-service-tab a,
@@ -1623,6 +1717,10 @@ input[type="radio"]:checked + label p::after {
   .bam-village-h2-title span {
     display: block;
     margin: 0.5rem 0 0 0;
+  }
+  .bam-village-gradient-1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff1e8), to(#FFF));
+    background: linear-gradient(to bottom, #fff1e8, #FFF);
   }
   .bam-village-banner {
     background: #fff1e8;
@@ -1869,14 +1967,21 @@ input[type="radio"]:checked + label p::after {
     border-radius: 25px;
     background: #FFF;
     text-align: center;
+    margin: 0;
     max-height: 300px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
   .bam-village-service .bam-village-service-drop-wrap article a {
     display: block;
+    width: 100%;
+    margin: 0;
     border-top: 1px solid #d2edfb;
     padding: 0.75rem 0;
+  }
+  .bam-village-service .bam-village-service-drop-wrap article a.active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .bam-village-service .bam-village-service-drop-wrap article a:first-child {
     border: 0;
