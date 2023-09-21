@@ -170,6 +170,10 @@ input[type="radio"]:checked + label p::after {
   left: 30vw;
   width: 40vw;
   top: 5%;
+}
+
+.bam-village-banner .bam-village-title-wrap > div {
+  width: 0;
   overflow: hidden;
 }
 
@@ -1427,6 +1431,64 @@ input[type="radio"]:checked + label p::after {
 
 .bam-village-lightbox-detail .bam-village-lightbox-detail-flex div .bam-village-lightbox-btn-more {
   background: #55a4f1;
+}
+
+.bam-village-banner .bam-village-title-wrap > div {
+  -webkit-animation: cut 1s 0.5s forwards;
+          animation: cut 1s 0.5s forwards;
+}
+
+[data-scroll-show] {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+[data-scroll-show].scrollShowActive {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@-webkit-keyframes cut {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cut {
+  to {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .bam-village-select-a a,
+  .bam-village-map-select-full,
+  .bam-village-service-tab a,
+  .bam-village-service-door,
+  .bam-village-library-btn,
+  .bam-village-library-book,
+  .bam-village-library-content > div a {
+    -webkit-transition: -webkit-filter 0.5s, -webkit-transform 0.5s !important;
+    transition: -webkit-filter 0.5s, -webkit-transform 0.5s !important;
+    transition: filter 0.5s, transform 0.5s !important;
+    transition: filter 0.5s, transform 0.5s, -webkit-filter 0.5s, -webkit-transform 0.5s !important;
+  }
+  .bam-village-select-a a:hover,
+  .bam-village-map-select-full:hover,
+  .bam-village-service-tab a:hover,
+  .bam-village-service-door:hover,
+  .bam-village-library-btn:hover,
+  .bam-village-library-book:hover,
+  .bam-village-library-content > div a:hover {
+    -webkit-filter: brightness(1.05) contrast(1.05);
+            filter: brightness(1.05) contrast(1.05);
+  }
 }
 
 @media only screen and (max-width: 1440px) {

@@ -114,8 +114,9 @@ $(document)
 .on('click', '.bam-village-service-tab a', function() {
     $('.bam-village-service-tab a').removeClass('active');
     $(this).addClass('active');
-    $('.bam-village-service-door-wrap .swiper').hide();
-    $('.bam-village-service-door-wrap .swiper').eq($(this).index()).show();
+    $('.bam-village-service-drop-wrap article a').eq($(this).index()).trigger('click');
+    $('.bam-village-service-door-wrap .bam-village-service-door-block').hide();
+    $('.bam-village-service-door-wrap .bam-village-service-door-block').eq($(this).index()).show();
 })
 // 開門
 .on('click', '.bam-village-service-door', function(e) {
@@ -137,8 +138,9 @@ $(document)
         $('.bam-village-service-drop-active').html($(this).html());
         $('.bam-village-service-drop-wrap article a').removeClass('active');
         $(this).addClass('active');
-        $('.bam-village-service-door-wrap .swiper').hide();
-        $('.bam-village-service-door-wrap .swiper').eq($(this).index()).show();
+        $('.bam-village-service-tab a').eq($(this).index()).trigger('click')
+        $('.bam-village-service-door-wrap .bam-village-service-door-block').hide();
+        $('.bam-village-service-door-wrap .bam-village-service-door-block').eq($(this).index()).show();
     }
     $('.bam-village-service-drop-wrap article').stop().slideUp();
 

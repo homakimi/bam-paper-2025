@@ -65,14 +65,16 @@ $(function() {
             }
             if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
                 if(!$(this).hasClass('active')) {
-                    $(this).addClass('active').css('opacity', '1');
-                    var _length = 0;
-                    setInterval(function() {
-                        if(_length < $(this).find('span').length) {
-                            $(this).find('span').eq(_length).css('opacity', '1');
-                            _length += 1;
-                        }
-                    }.bind(this), 50)
+                    setTimeout(function() {
+                        $(this).addClass('active').css('opacity', '1');
+                        var _length = 0;
+                        setInterval(function() {
+                            if(_length < $(this).find('span').length) {
+                                $(this).find('span').eq(_length).css('opacity', '1');
+                                _length += 1;
+                            }
+                        }.bind(this), 50)
+                    }.bind(this), $(this).data('type-effect'));
                 }
             }
         })

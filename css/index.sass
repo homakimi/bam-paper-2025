@@ -46,7 +46,9 @@ $bg: #f6f6f6
         left: 30vw
         width: 40vw
         top: 5%
-        overflow: hidden
+        > div
+            width: 0
+            overflow: hidden
         img
             display: block
             width: 40vw
@@ -862,6 +864,39 @@ $bg: #f6f6f6
                 margin: 0.5rem 0.5rem 0.5rem 0
             .bam-village-lightbox-btn-more
                 background: $blue
+
+
+// animation
+
+.bam-village-banner
+    .bam-village-title-wrap
+        > div
+            animation: cut 1s 0.5s forwards
+[data-scroll-show]
+    opacity: 0
+    transform: translateY(50px)
+    transition: opacity 0.5s, transform 0.5s
+    &.scrollShowActive
+        opacity: 1
+        transform: translateY(0)
+@keyframes cut
+    to
+        width: 100%
+
+
+@media only screen and (min-width: 1025px)
+    
+    .bam-village-select-a a,
+    .bam-village-map-select-full,
+    .bam-village-service-tab a,
+    .bam-village-service-door,
+    .bam-village-library-btn,
+    .bam-village-library-book,
+    .bam-village-library-content > div a
+        transition: filter 0.5s, transform 0.5s! important
+        &:hover
+            filter: brightness(1.05) contrast(1.05)
+
 
 @media only screen and (max-width: 1440px)
     .bam-village-wrap
