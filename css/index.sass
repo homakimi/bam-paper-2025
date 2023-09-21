@@ -98,24 +98,24 @@ $bg: #f6f6f6
                     opacity: 0
                 &:nth-child(1)
                     width: 17%
-                    top: 4%
-                    left: 4%
-                &:nth-child(2)
-                    width: 17%
                     top: 5%
                     left: 32%
-                &:nth-child(3)
-                    width: 17%
-                    top: 5%
-                    left: 47%
-                &:nth-child(4)
+                &:nth-child(2)
                     width: 16%
                     top: 16%
                     left: 19%
-                &:nth-child(5)
+                &:nth-child(3)
                     width: 17%
                     top: 35%
                     left: 8%
+                &:nth-child(4)
+                    width: 17%
+                    top: 5%
+                    left: 47%
+                &:nth-child(5)
+                    width: 17%
+                    top: 4%
+                    left: 4%
                 &:nth-child(6)
                     width: 17%
                     top: 28%
@@ -571,9 +571,9 @@ $bg: #f6f6f6
                 align-items: center
                 margin: 1rem 0
                 div
-                    width: 40%
+                    width: 45%
                     padding-top: 35%
-                    margin-right: 3%
+                    margin-right: 5%
                     background-color: #CCC
                     background-repeat: no-repeat! important
                     background-position: center center! important
@@ -581,11 +581,9 @@ $bg: #f6f6f6
                 article
                     flex: 1 0 0
                     text-align: justify
-                    h4
-                        color: $blue
-                        font-size: 1.1rem
                     p
-                        font-size: 0.9rem
+                        color: $blue
+                        font-size: 1rem
                         display: -webkit-box
                         -webkit-line-clamp: 3
                         -webkit-box-orient: vertical
@@ -830,6 +828,7 @@ $bg: #f6f6f6
         justify-content: center
         align-items: flex-start
         div
+            width: 50%
             padding: 3rem 1.5rem
             &:nth-child(1)
                 border-right: 1px solid $shadow
@@ -853,6 +852,7 @@ $bg: #f6f6f6
                 color: $blue
             h5
                 font-size: 1rem
+            .bam-village-lightbox-btn-more,
             .bam-village-lightbox-btn-line
                 display: inline-block
                 padding: 0.5rem 1rem
@@ -860,6 +860,8 @@ $bg: #f6f6f6
                 background: #3fc100
                 border-radius: 5px
                 margin: 0.5rem 0.5rem 0.5rem 0
+            .bam-village-lightbox-btn-more
+                background: $blue
 
 @media only screen and (max-width: 1440px)
     .bam-village-wrap
@@ -947,11 +949,6 @@ $bg: #f6f6f6
                 padding: 0 8%
                 a
                     margin: 0.5rem 0
-                    article
-                        h4
-                            font-size: 1rem
-                        p
-                            font-size: 0.85rem
         
 @media only screen and (min-width: 1025px)
     .bam-village-service-door
@@ -1284,15 +1281,8 @@ $bg: #f6f6f6
                 a
                     margin: 1rem 0
                     article
-                        h4
-                            font-size: 1rem
                         p
-                            font-size: 0.9rem
-                            display: -webkit-box
-                            -webkit-line-clamp: 3
-                            -webkit-box-orient: vertical
-                            overflow: hidden
-                            text-overflow: ellipsis
+                            font-size: 1rem
 
     .bam-village-notice
         &::before
@@ -1616,6 +1606,10 @@ $bg: #f6f6f6
                 p
                     margin-right: 0.5rem
                     white-space: nowrap
+                    span
+                        position: static
+                        display: block
+                        font-size: 0.8rem
                 img
                     display: block
                     flex: 1 0 0

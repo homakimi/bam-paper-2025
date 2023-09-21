@@ -36,7 +36,7 @@ function reset() {
     $('body').removeClass('fix');
     $('.bam-village-back').fadeOut();
     $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
-    $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
+    $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-area, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
 }
 var mapCategory, mapSelect, mobileFromMap;
 $(document)
