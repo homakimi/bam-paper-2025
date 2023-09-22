@@ -33,6 +33,13 @@ $(function() {
     $(window).resize(function() {
         resize();
     })
+    // detect anchor from url
+    var url = window.location.href;
+    if( url.indexOf('?scrollto=') > 0 || url.indexOf('&scrollto=') > 0 ) {
+        var _getParam = url.substring(url.lastIndexOf('scrollto='));
+        var _getIndex = _getParam.substring(_getParam.indexOf('=')+1)
+        $('.bam-village-scroll-wrap').animate({ scrollTop: $('[data-pin="'+_getIndex+'"]').offset().top - 50 }, 1000);
+    }
 })
 function resize() {
     $('.bam-village-scroll-wrap').css('height', window.innerHeight)
