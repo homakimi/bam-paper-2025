@@ -624,7 +624,6 @@ input[type="radio"]:checked + label p::after {
 
 .bam-village-map .bam-village-select-wrap .bam-village-select-logo article {
   display: none;
-  font-size: 1.1rem;
 }
 
 .bam-village-map .bam-village-select-wrap .bam-village-select-logo article a {
@@ -1327,7 +1326,7 @@ input[type="radio"]:checked + label p::after {
   top: -2px;
   width: 2rem;
   vertical-align: middle;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .bam-village-lightbox-map > div article .bam-village-lightbox-map-flex div a {
@@ -1345,13 +1344,15 @@ input[type="radio"]:checked + label p::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 85%;
-  height: 50px;
+  width: 120px;
+  height: 45px;
   margin: 0.5rem auto;
   font-size: 0.9rem;
+  line-height: 1rem;
   border: 1px solid var(--main-color);
   border-radius: 50px;
   background: #FFF;
+  text-align: center;
 }
 
 .bam-village-lightbox-map > div article .bam-village-lightbox-map-flex div a.map-all-new::after {
@@ -1634,9 +1635,6 @@ input[type="radio"]:checked + label p::after {
   }
   .bam-village-map .bam-village-select-wrap .bam-village-select-logo {
     height: 368px;
-  }
-  .bam-village-map .bam-village-select-wrap .bam-village-select-logo article {
-    font-size: 1rem;
   }
   .bam-village-map .bam-village-select-wrap .bam-village-select-logo article div {
     height: 55px;
@@ -2288,7 +2286,6 @@ input[type="radio"]:checked + label p::after {
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 100px;
-    height: 45px;
     margin: 0.25rem 1px;
     font-size: 0.8rem;
   }
@@ -2595,10 +2592,8 @@ input[type="radio"]:checked + label p::after {
   }
   .bam-village-lightbox-category article > a img {
     display: block;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 0px;
-            flex: 1 0 0;
     max-width: 150px;
+    max-height: 100%;
   }
 }
 /*# sourceMappingURL=index.css.map */
