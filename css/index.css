@@ -927,6 +927,11 @@ input[type="radio"]:checked + label p::after {
   text-align: center;
 }
 
+.bam-village-service .bam-village-service-content .bam-village-service-door-wrap .bam-village-service-door article p span {
+  color: #AAA;
+  font-size: 0.8rem;
+}
+
 .bam-village-service .bam-village-service-content .bam-village-service-door-1 {
   left: 22%;
   opacity: 0;
@@ -1424,17 +1429,17 @@ input[type="radio"]:checked + label p::after {
 }
 
 .bam-village-lightbox-detail h2 {
+  display: inline-block;
   position: relative;
   font-size: 1.25rem;
   border: 2px solid #55a4f1;
   border-left: 0;
-  width: 15rem;
-  line-height: 1.25rem;
-  padding: 0.5rem 1rem 0.5rem 4rem;
+  padding: 0.75rem 1rem 0.75rem 4rem;
   text-align: center;
   border-radius: 0 50px 50px 0;
   background: #FFF;
-  margin: 0 25px;
+  margin: 0 0 0 50px;
+  white-space: nowrap;
 }
 
 .bam-village-lightbox-detail h2::after {
@@ -1503,6 +1508,11 @@ input[type="radio"]:checked + label p::after {
   font-size: 1rem;
 }
 
+.bam-village-lightbox-detail .bam-village-lightbox-detail-flex div a {
+  background: #eaf8ff;
+  border-bottom: 2px solid #d2edfb;
+}
+
 .bam-village-lightbox-detail .bam-village-lightbox-detail-flex div .bam-village-lightbox-btn-more,
 .bam-village-lightbox-detail .bam-village-lightbox-detail-flex div .bam-village-lightbox-btn-line {
   display: inline-block;
@@ -1511,6 +1521,7 @@ input[type="radio"]:checked + label p::after {
   background: #3fc100;
   border-radius: 5px;
   margin: 0.5rem 0.5rem 0.5rem 0;
+  border: 0;
 }
 
 .bam-village-lightbox-detail .bam-village-lightbox-detail-flex div .bam-village-lightbox-btn-more {
@@ -2004,7 +2015,7 @@ input[type="radio"]:checked + label p::after {
     background: #FFF;
     text-align: center;
     margin: 0;
-    max-height: 300px;
+    max-height: 265px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -2331,13 +2342,12 @@ input[type="radio"]:checked + label p::after {
   }
   .bam-village-lightbox-detail h2 {
     font-size: 1rem;
-    width: 10rem;
-    padding: 0.25rem 1rem 0.25rem 2.5rem;
-    margin: 0 25px 0 50px;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    margin: 0 0 0 40px;
   }
   .bam-village-lightbox-detail h2::after {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
   .bam-village-lightbox-detail .bam-village-lightbox-detail-flex {
     display: block;
