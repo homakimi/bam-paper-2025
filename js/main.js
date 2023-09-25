@@ -40,6 +40,17 @@ $(function() {
         var _getIndex = _getParam.substring(_getParam.indexOf('=')+1)
         $('.bam-village-scroll-wrap').animate({ scrollTop: $('[data-pin="'+_getIndex+'"]').offset().top - 50 }, 1000);
     }
+
+    $('.bam-village-scroll-wrap').scroll(function() {
+        if($('.bam-village-scroll-wrap').scrollTop() > $('.bam-village-service').offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
+            if(!$('.bam-village-service').hasClass('alreadyTrigger')) {
+                $('.bam-village-service').addClass('alreadyTrigger')
+                $('.bam-village-service-drop-wrap article a').eq(0).trigger('click');
+            }
+        }
+    })
+
+    
 })
 function resize() {
     $('.bam-village-scroll-wrap').css('height', window.innerHeight)
@@ -105,7 +116,7 @@ $(document)
         $('.bam-village-gray').stop().fadeIn();
         $('.bam-village-lightbox-detail').fadeIn().addClass('active');
         $('[data-detail-lightbox]').hide();
-        $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+        $('[data-detail-lightbox="'+$(this).prev('p').text()+'"]').show();
     } else {
         return false;
     }
@@ -138,7 +149,7 @@ $(document)
         $('.bam-village-service-drop-wrap article').stop().slideToggle();
     }
 })
-// 選擇子項目
+// 服務處選擇子項目
 .on('click', '.bam-village-service-drop-wrap article a', function() {
     if(!$(this).hasClass('active')) {
         $('.bam-village-service-drop-active').html($(this).html());
@@ -152,7 +163,7 @@ $(document)
     }
 })
 // 開門
-.on('click', '.bam-village-service-door', function(e) {
+.on('click', '.bam-village-service-door:not(.coming)', function(e) {
     $('.bam-village-service-door-inside').stop().removeClass('active');
     $(this).find('.bam-village-service-door-inside').stop().addClass('active');
     e.preventDefault();
@@ -191,7 +202,7 @@ $(document)
         $('.bam-village-lightbox-category').removeClass('active').fadeOut();
         $('.bam-village-lightbox-detail').fadeIn().addClass('active');
         $('[data-detail-lightbox]').hide();
-        $('[data-detail-lightbox="'+$(this).find('p').text()+'"]').show();
+        $('[data-detail-lightbox="'+$(this).prev('p').text()+'"]').show();
         $('.bam-village-back-a-map').hide();
     } else {
         return false;

@@ -337,64 +337,65 @@ $bg: #f6f6f6
                 transform: translate(-50%, -50%)
             article
                 display: none
-                a
+                div
                     position: relative
-                    display: flex
-                    justify-content: flex-start
-                    align-items: center
-                    height: 60px
-                    margin: 1.5rem 35px 1.5rem 75px
-                    padding: 0.5rem 1.5rem
-                    border: 1px solid $blue
-                    border-radius: 100px
+                    padding: 0.5rem 30px 0.5rem 70px
+                    width: 100%
                     &::before
                         position: absolute
                         display: block
                         content: ''
                         width: 70px
                         height: 50px
-                        top: 50%
+                        top: 0.25rem
                         left: 0
                         background: url('../img/bam-village-icon-wood.png') no-repeat left bottom
                         background-size: contain
-                        transform: translate(-100%, -50%)
-                    &.bam-village-select-new::after
-                        z-index: 1
-                        position: absolute
-                        display: block
-                        content: ''
-                        width: 50px
+                    p
+                        font-size: 0.95rem
+                        padding: 0 0 0.25rem 0.5rem
+                    a
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        position: relative
                         height: 50px
-                        top: 50%
-                        right: 0
-                        background: url('../img/bam-village-map-select-new.png') no-repeat center center
-                        background-size: contain
-                        transform: translate(80%, -50%)
-                    &.bam-village-select-coming
-                        color: $gray
-                        border-color: $gray
-                        cursor: default
-                        img
-                            opacity: 0.75
-                            filter: grayscale(1)
-                        span
+                        border: 1px solid $blue
+                        border-radius: 50px
+                        background: #FFF
+                        > img
+                            display: block
+                            max-height: 90%
+                            max-width: 80%
+                            margin: auto
+                        &.bam-village-select-new::after
+                            z-index: 1
                             position: absolute
                             display: block
-                            font-size: 0.75rem
-                            bottom: 0
-                            left: 1.75rem
-                            transform: translate(0%, 100%)
-                            white-space: nowrap
-                    p
-                        white-space: nowrap
-                        span
-                            display: block
-                            font-size: 0.9rem
-                    img
-                        display: block
-                        max-height: 100%
-                        max-width: 125px
-                        margin: 0 0.5rem
+                            content: ''
+                            width: 40px
+                            height: 40px
+                            top: 50%
+                            right: 0
+                            background: url('../img/bam-village-map-select-new.png') no-repeat center center
+                            background-size: contain
+                            transform: translate(80%, -50%)
+                        &.bam-village-select-coming
+                            color: $gray
+                            border-color: $gray
+                            cursor: default
+                            margin-bottom: 0.5rem
+                            img
+                                opacity: 0.75
+                                filter: grayscale(1)
+                            span
+                                position: absolute
+                                display: block
+                                font-size: 0.75rem
+                                bottom: 0
+                                left: 0.5rem
+                                transform: translate(0%, 100%)
+                                white-space: nowrap
 
 .bam-village-service
     position: relative
@@ -488,6 +489,8 @@ $bg: #f6f6f6
                 position: absolute
                 width: 14%
                 top: 14%
+                &.coming:hover
+                    cursor: default
                 h3
                     position: absolute
                     text-align: center
@@ -797,10 +800,10 @@ $bg: #f6f6f6
                         justify-content: center
                         align-items: center
                         flex-direction: column
-                        width: 120px
+                        width: 125px
                         height: 45px
                         margin: 0.5rem auto
-                        font-size: 0.9rem
+                        font-size: 0.85rem
                         line-height: 1rem
                         border: 1px solid var(--main-color)
                         border-radius: 50px
@@ -811,9 +814,9 @@ $bg: #f6f6f6
                             position: absolute
                             display: block
                             content: ''
-                            width: 35px
-                            height: 35px
-                            top: -5px
+                            width: 30px
+                            height: 30px
+                            top: -8px
                             right: -15px
                             background: url('../img/bam-village-map-select-new.png') no-repeat center center
                             background-size: contain
@@ -1495,7 +1498,7 @@ $bg: #f6f6f6
                     display: block
                     text-align: left
                     margin: 0 1%
-                    padding: 4rem 3% 3% 5%
+                    padding: 4rem 3% 3% 3%
                     height: 21vh
                     overflow-y: auto
                     -webkit-overflow-scrolling: touch
@@ -1511,9 +1514,9 @@ $bg: #f6f6f6
                                 width: 1.5rem
                         a
                             display: inline-flex
-                            width: 100px
-                            margin: 0.25rem 1px
-                            font-size: 0.8rem
+                            width: 130px
+                            margin: 0.25rem 3px
+                            font-size: 0.85rem
                             &.map-all-new::after
                                 width: 30px
                                 height: 30px
@@ -1677,63 +1680,62 @@ $bg: #f6f6f6
             background: $shadow
             overflow-y: auto
             -webkit-overflow-scrolling: touch
-            > a
+            div
                 position: relative
-                display: flex
-                justify-content: flex-start
-                align-items: center
-                height: 50px
-                padding: 0 1rem
-                border: 1px solid $blue
-                border-radius: 50px
-                margin: 1.25rem 15px 1.25rem 50px
-                background: #FFF
+                padding: 0.5rem 30px 0.5rem 70px
+                width: 100%
                 &::before
                     position: absolute
                     display: block
                     content: ''
-                    width: 40px
-                    height: 40px
-                    top: 50%
-                    left: -50px
+                    width: 70px
+                    height: 50px
+                    top: 0.25rem
+                    left: 0
                     background: url('../img/bam-village-icon-wood.png') no-repeat left bottom
                     background-size: contain
-                    transform: translate(0, -50%)
-                &.bam-village-category-new::after
-                    z-index: 1
-                    position: absolute
-                    display: block
-                    content: ''
-                    width: 40px
-                    height: 40px
-                    top: 50%
-                    right: 0
-                    background: url('../img/bam-village-map-select-new.png') no-repeat center center
-                    background-size: contain
-                    transform: translate(50%, -50%)
-                &.bam-village-category-coming
-                    color: $gray
-                    border-color: $gray
-                    cursor: default
-                    img
-                        opacity: 0.75
-                        filter: grayscale(1)
-                    span
-                        display: block
-                        position: absolute
-                        font-size: 0.75rem
-                        bottom: 0
-                        left: 1rem
-                        transform: translate(0, 100%)
-                        white-space: nowrap
                 p
-                    margin-right: 0.5rem
-                    white-space: nowrap
-                    span
-                        position: static
+                    font-size: 0.95rem
+                    padding: 0 0 0.25rem 0.5rem
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: relative
+                    height: 50px
+                    border: 1px solid $blue
+                    border-radius: 50px
+                    background: #FFF
+                    > img
                         display: block
-                        font-size: 0.8rem
-                img
-                    display: block
-                    max-width: 150px
-                    max-height: 100%
+                        max-height: 90%
+                        max-width: 80%
+                        margin: auto
+                    &.bam-village-category-new::after
+                        z-index: 1
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 40px
+                        height: 40px
+                        top: 50%
+                        right: 0
+                        background: url('../img/bam-village-map-select-new.png') no-repeat center center
+                        background-size: contain
+                        transform: translate(80%, -50%)
+                    &.bam-village-category-coming
+                        color: $gray
+                        border-color: $gray
+                        cursor: default
+                        margin-bottom: 0.5rem
+                        img
+                            opacity: 0.75
+                            filter: grayscale(1)
+                        span
+                            position: absolute
+                            display: block
+                            font-size: 0.75rem
+                            bottom: 0
+                            left: 0.5rem
+                            transform: translate(0%, 100%)
+                            white-space: nowrap
