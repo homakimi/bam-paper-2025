@@ -640,7 +640,7 @@ body {
 .bam-village-map .bam-village-select-wrap .bam-village-select-logo article div a > img {
   display: block;
   max-height: 90%;
-  max-width: 80%;
+  max-width: 80% !important;
   margin: auto;
 }
 
@@ -2453,7 +2453,7 @@ body {
   .bam-village-lightbox-category article div a > img {
     display: block;
     max-height: 90%;
-    max-width: 80%;
+    max-width: 80% !important;
     margin: auto;
   }
   .bam-village-lightbox-category article div a.bam-village-category-new::after {

@@ -45,7 +45,7 @@ $(function() {
         if($('.bam-village-scroll-wrap').scrollTop() > $('.bam-village-service').offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
             if(!$('.bam-village-service').hasClass('alreadyTrigger')) {
                 $('.bam-village-service').addClass('alreadyTrigger')
-                $('.bam-village-service-drop-wrap article a').eq(0).trigger('click');
+                $('.bam-village-service-drop-wrap article a').eq(0).addClass('active')
             }
         }
     })
@@ -55,7 +55,6 @@ $(function() {
 function resize() {
     $('body, .bam-village-scroll-wrap').css('height', window.innerHeight)
 }
-
 
 function reset() {
     $('.bam-village-scroll-wrap').removeClass('fix');
@@ -77,41 +76,19 @@ $(document)
 // 選擇: 疾病照護 生活支持 健康樂活
 .on('click', '.bam-village-select-a a', function() {
     if(!$(this).hasClass('active')) {
-        mapCategory = $(this).index();
-        $('.bam-village-select-a a').removeClass('active');
-        $(this).addClass('active');
-        $('.bam-village-map-border').stop().fadeOut();
-        $('.bam-village-map-border').eq($(this).index()).stop().fadeIn();
-        $('.bam-village-select-drop-wrap article').stop().hide();
-        $('.bam-village-select-drop-active').text('請選擇分類').removeClass('disable');
-        $('.bam-village-select-drop-active').removeClass('pink blue green');
-        if($(this).index() == 0) $('.bam-village-select-drop-active').addClass('pink');
-        if($(this).index() == 1) $('.bam-village-select-drop-active').addClass('blue');
-        if($(this).index() == 2) $('.bam-village-select-drop-active').addClass('green');
-        $('.bam-village-select-logo h3').show();
-        $('.bam-village-select-logo article').hide();
+        selectBigCategory($(this));
     }
 })
 .on('click', '.bam-village-select-drop-active:not(.disable)', function() {
     $('.bam-village-select-drop-wrap article').eq(mapCategory).stop().slideToggle();
 })
-// 選擇子項目
+// 選擇下拉子項目
 .on('click', '.bam-village-select-drop-wrap article a', function() {
-    mapSelect = $(this).index();
-    $('.bam-village-map-click a').removeClass('active');
-    $('[data-category="'+mapCategory+'"][data-select="'+mapSelect+'"]').addClass('active');
-    $('.bam-village-select-drop-wrap article').stop().slideUp();
-    $('.bam-village-select-drop-active').html($(this).html());
-    $('.bam-village-select-logo h3, .bam-village-select-logo [data-logo]').hide();
-    $('.bam-village-select-logo [data-logo="'+mapCategory+'-'+mapSelect+'"]').show();
+    selectDropdown($(this))
 })
 // 點地圖
 .on('click', '.bam-village-map-click a', function() {
-    $('.bam-village-select-a a').eq($(this).data('category')).trigger('click');
-    $('.bam-village-select-drop-wrap article').eq($(this).data('category')).trigger('click');
-    $('.bam-village-select-drop-wrap article').eq($(this).data('category')).find('a').eq($(this).data('select')).trigger('click');
-    $('.bam-village-map-click a').removeClass('active');
-    $(this).addClass('active');
+    selectFromMap($(this));
 })
 // 從選擇區點logo
 .on('click', '[data-logo] a', function() {
@@ -225,3 +202,43 @@ $(document)
 .on('click', '.bam-village-map .bam-village-select-drop-wrap article', function(e) {
     e.stopPropagation();
 })
+
+
+function selectBigCategory(ele) {
+    mapCategory = ele.index();
+    $('.bam-village-select-a a').removeClass('active');
+    ele.addClass('active');
+    $('.bam-village-map-border').stop().fadeOut().eq(ele.index()).stop().fadeIn();
+    $('.bam-village-select-drop-wrap article').stop().hide();
+    $('.bam-village-select-drop-active').text('請選擇分類').removeClass('disable pink blue green');
+    if(ele.index() == 0) $('.bam-village-select-drop-active').addClass('pink');
+    if(ele.index() == 1) $('.bam-village-select-drop-active').addClass('blue');
+    if(ele.index() == 2) $('.bam-village-select-drop-active').addClass('green');
+    $('.bam-village-select-logo h3').show();
+    $('.bam-village-select-logo article').hide();
+}
+function selectDropdown(ele) {
+    mapSelect = ele.index();
+    $('.bam-village-map-click a').removeClass('active');
+    $('[data-category="'+mapCategory+'"][data-select="'+mapSelect+'"]').addClass('active');
+    $('.bam-village-select-drop-wrap article').stop().slideUp();
+    $('.bam-village-select-drop-active').html(ele.html());
+    $('.bam-village-select-logo h3, .bam-village-select-logo [data-logo]').hide();
+    $('.bam-village-select-logo [data-logo="'+mapCategory+'-'+mapSelect+'"]').show();
+}
+function selectFromMap(ele) {
+    mapCategory = ele.data('category');
+    mapSelect = ele.data('select');
+    $('.bam-village-select-a a').removeClass('active').eq(mapCategory).addClass('active');
+    $('.bam-village-select-drop-wrap article').stop().hide();
+    $('.bam-village-select-drop-active').text('請選擇分類').removeClass('disable pink blue green');
+    if(mapCategory == 0) $('.bam-village-select-drop-active').addClass('pink');
+    if(mapCategory == 1) $('.bam-village-select-drop-active').addClass('blue');
+    if(mapCategory == 2) $('.bam-village-select-drop-active').addClass('green');
+    $('.bam-village-select-drop-active').html($('.bam-village-select-drop-wrap article').eq(mapCategory).find('a').eq(mapSelect).html());
+    $('.bam-village-map-border').stop().fadeOut().eq(mapCategory).stop().fadeIn();
+    $('.bam-village-map-click a').removeClass('active');
+    ele.addClass('active');
+    $('.bam-village-select-logo h3, .bam-village-select-logo [data-logo]').hide();
+    $('.bam-village-select-logo [data-logo="'+mapCategory+'-'+mapSelect+'"]').show();
+}
