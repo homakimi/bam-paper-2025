@@ -27,10 +27,6 @@ body {
           box-sizing: border-box;
 }
 
-.bam-village-scroll-wrap section {
-  background: #FFF;
-}
-
 .bam-village-scroll-wrap a {
   text-decoration: none;
   color: inherit;
@@ -122,18 +118,18 @@ body {
 }
 
 .bam-village-gradient-1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#eaf8ff), to(#FFF)) !important;
-  background: linear-gradient(to bottom, #eaf8ff, #FFF) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eaf8ff), to(#FFF));
+  background: linear-gradient(to bottom, #eaf8ff, #FFF);
 }
 
 .bam-village-gradient-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#eaf8ff)) !important;
-  background: linear-gradient(to bottom, #FFF, #eaf8ff) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#eaf8ff));
+  background: linear-gradient(to bottom, #FFF, #eaf8ff);
 }
 
 .bam-village-banner {
   position: relative;
-  background: #eaf8ff !important;
+  background: #eaf8ff;
 }
 
 .bam-village-banner::after {
@@ -201,7 +197,7 @@ body {
 .bam-village-map {
   position: relative;
   padding: 3rem 0;
-  background: #eaf8ff !important;
+  background: #eaf8ff;
 }
 
 .bam-village-map .bam-village-map-wrap {
@@ -953,7 +949,7 @@ body {
 .bam-village-library {
   position: relative;
   padding: 3rem 0;
-  background: #eaf8ff !important;
+  background: #eaf8ff;
 }
 
 .bam-village-library .bam-village-library-image {
@@ -1092,7 +1088,7 @@ body {
 .bam-village-notice {
   position: relative;
   padding: 3rem 0;
-  background: #eaf8ff !important;
+  background: #eaf8ff;
   overflow: hidden;
 }
 
@@ -1328,8 +1324,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 125px;
-  height: 45px;
+  width: 130px;
+  height: 50px;
+  letter-spacing: -0.25px;
   margin: 0.5rem auto;
   font-size: 0.85rem;
   line-height: 1rem;
@@ -1736,11 +1733,11 @@ body {
     margin: 0.5rem 0 0 0;
   }
   .bam-village-gradient-1 {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff1e8), to(#FFF)) !important;
-    background: linear-gradient(to bottom, #fff1e8, #FFF) !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff1e8), to(#FFF));
+    background: linear-gradient(to bottom, #fff1e8, #FFF);
   }
   .bam-village-banner {
-    background: #fff1e8 !important;
+    background: #fff1e8;
   }
   .bam-village-banner::after {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 241, 232, 0)), color-stop(75%, #fff1e8));
@@ -1763,7 +1760,7 @@ body {
   }
   .bam-village-map {
     padding: 3rem 0;
-    background: #fff1e8 !important;
+    background: #fff1e8;
   }
   .bam-village-map .bam-village-wrap {
     padding: 0;
@@ -2099,7 +2096,7 @@ body {
     height: 100%;
     max-height: 100%;
     border-radius: 0;
-    background: #eaf8ff !important;
+    background: #eaf8ff;
     padding: 5% 3% 3% 3%;
     overflow: hidden;
   }
@@ -2187,9 +2184,8 @@ body {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 130px;
-    margin: 0.25rem 3px;
-    font-size: 0.85rem;
+    width: 135px;
+    margin: 0.25rem 1px;
   }
   .bam-village-lightbox-map > div article .bam-village-lightbox-map-flex div a.map-all-new::after {
     width: 30px;
@@ -2206,7 +2202,7 @@ body {
     height: 100%;
     padding: 3%;
     border-radius: 0;
-    background: #eaf8ff !important;
+    background: #eaf8ff;
     overflow: hidden;
   }
   .bam-village-lightbox-detail > div {
@@ -2270,7 +2266,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #eaf8ff !important;
+    background: #eaf8ff;
     -webkit-transform: scale(0);
             transform: scale(0);
     -webkit-transition: -webkit-transform 0.5s;
@@ -2360,7 +2356,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #eaf8ff !important;
+    background: #eaf8ff;
     -webkit-transform: scale(0);
             transform: scale(0);
     padding: 0 3%;
