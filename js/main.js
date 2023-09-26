@@ -53,7 +53,7 @@ $(function() {
     
 })
 function resize() {
-    $('.bam-village-scroll-wrap').css('height', window.innerHeight)
+    $('body, .bam-village-scroll-wrap').css('height', window.innerHeight)
 }
 
 
@@ -83,7 +83,11 @@ $(document)
         $('.bam-village-map-border').stop().fadeOut();
         $('.bam-village-map-border').eq($(this).index()).stop().fadeIn();
         $('.bam-village-select-drop-wrap article').stop().hide();
-        $('.bam-village-select-drop-active').text('請選擇疾病照顧分類').removeClass('disable');
+        $('.bam-village-select-drop-active').text('請選擇分類').removeClass('disable');
+        $('.bam-village-select-drop-active').removeClass('pink blue green');
+        if($(this).index() == 0) $('.bam-village-select-drop-active').addClass('pink');
+        if($(this).index() == 1) $('.bam-village-select-drop-active').addClass('blue');
+        if($(this).index() == 2) $('.bam-village-select-drop-active').addClass('green');
         $('.bam-village-select-logo h3').show();
         $('.bam-village-select-logo article').hide();
     }

@@ -165,17 +165,17 @@ $bg: #f6f6f6
                     top: 65%
                     left: 53%
                 &:nth-child(10)
-                    width: 17%
-                    top: 21%
-                    left: 64%
-                &:nth-child(11)
-                    width: 18%
-                    top: 38%
-                    left: 65%
-                &:nth-child(12)
                     width: 18%
                     top: 32%
                     left: 79%
+                &:nth-child(11)
+                    width: 17%
+                    top: 21%
+                    left: 64%
+                &:nth-child(12)
+                    width: 18%
+                    top: 38%
+                    left: 65%
         .bam-village-map-click
             a
                 z-index: 1
@@ -226,8 +226,8 @@ $bg: #f6f6f6
                         content: ''
                         top: 50%
                         left: 50%
-                        width: calc(100% - 30px)
-                        height: calc(100% - 30px)
+                        width: 100%
+                        height: 100%
                         border: 15px solid $shadow
                         border-radius: 50%
                         transform: translate(-50%, -50%)
@@ -270,8 +270,14 @@ $bg: #f6f6f6
                         height: 100%
                         border-radius: 100px
                         background: #FFF
-                        color: $pink
                         padding-right: 1.5rem
+                        color: var(--main-color)
+                        &.pink
+                            --main-color: #{$pink}
+                        &.blue
+                            --main-color: #{$blue}
+                        &.green
+                            --main-color: #{$green}
                         img
                             display: inline-block
                             width: 2rem
@@ -302,7 +308,13 @@ $bg: #f6f6f6
                         border-radius: 25px
                         background: #FFF
                         text-align: center
-                        color: $pink
+                        color: var(--main-color)
+                        &.pink
+                            --main-color: #{$pink}
+                        &.blue
+                            --main-color: #{$blue}
+                        &.green
+                            --main-color: #{$green}
                         a
                             display: block
                             border-top: 1px solid $shadow
@@ -1178,69 +1190,7 @@ $bg: #f6f6f6
                 transform: translateY(50%)
 
             .bam-village-select-drop
-                display: flex
-                justify-content: space-between
-                align-items: stretch
-                .bam-village-select-drop-wrap
-                    position: relative
-                    flex: 1 0 0
-                    border: 2px solid $shadow
-                    border-radius: 100px
-                    .bam-village-select-drop-active
-                        position: relative
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        width: 100%
-                        height: 100%
-                        border-radius: 100px
-                        background: #FFF
-                        color: $pink
-                        padding-right: 1.5rem
-                        img
-                            display: inline-block
-                            width: 2rem
-                            vertical-align: middle
-                            margin-right: 0.5rem
-                        &::after
-                            display: block
-                            content: '▼'
-                            position: absolute
-                            top: 50%
-                            right: 1rem
-                            color: $shadow
-                            transform: translateY(-50%) scale(0.7)
-                        &.disable
-                            color: $light
-                            padding-right: 0
-                            &::after
-                                display: none
-                    article
-                        display: none
-                        z-index: 1
-                        position: absolute
-                        top: 120%
-                        width: 80%
-                        left: 10%
-                        padding: 0.5rem 1.5rem
-                        border: 2px solid $shadow
-                        border-radius: 25px
-                        background: #FFF
-                        text-align: center
-                        color: $pink
-                        a
-                            display: block
-                            border-top: 1px solid $shadow
-                            padding: 0.75rem 0
-                            &:first-child
-                                border: 0
-                            img
-                                position: relative
-                                display: inline-block
-                                width: 2rem
-                                vertical-align: middle
-                                top: -2px
-                                margin-right: 0.5rem
+                display: none
                              
         .bam-village-service-drop-wrap
             position: relative

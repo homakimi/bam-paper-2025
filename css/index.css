@@ -22,77 +22,39 @@ body {
           box-sizing: border-box;
 }
 
-a {
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bam-village-scroll-wrap a {
   text-decoration: none;
   color: inherit;
 }
 
-.fullimg {
+.bam-village-scroll-wrap .fullimg {
   display: block;
   width: 100%;
 }
 
-ul {
+.bam-village-scroll-wrap ul {
   list-style: none;
   margin-left: 1rem;
 }
 
-ul li {
+.bam-village-scroll-wrap ul li {
   position: relative;
 }
 
-ul li::before {
+.bam-village-scroll-wrap ul li::before {
   position: absolute;
   content: '・';
   left: -1rem;
 }
 
-ol {
+.bam-village-scroll-wrap ol {
   list-style: decimal;
   margin-left: 2.5rem;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + label {
-  display: inline-block;
-  cursor: pointer;
-  margin: 0.25rem 0;
-}
-
-input[type="radio"] + label p {
-  cursor: pointer;
-  position: relative;
-  top: -2px;
-  display: inline-block;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: 0 0.5rem 0 1rem;
-  border: 1px solid #AAA;
-  vertical-align: middle;
-  background: #FFF;
-  border-radius: 8px;
-}
-
-input[type="radio"] + label p::after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 60%;
-  height: 60%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #8ccff1;
-  border-radius: 4px;
-  opacity: 0;
-}
-
-input[type="radio"]:checked + label p::after {
-  opacity: 1;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -104,21 +66,6 @@ input[type="radio"]:checked + label p::after {
 @media only screen and (max-width: 1024px) {
   .for-pc {
     display: none !important;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  input[type="radio"] + label p {
-    top: -2px;
-    width: 20px;
-    height: 20px;
-    margin: 0 0.25rem 0 0.5rem;
-    border-radius: 6px;
-  }
-  input[type="radio"] + label p::after {
-    border-radius: 4px;
-    width: 12px;
-    height: 12px;
   }
 }
 
@@ -353,23 +300,23 @@ input[type="radio"]:checked + label p::after {
 
 .bam-village-map .bam-village-map-wrap .bam-village-map-click-fake a:nth-child(10),
 .bam-village-map .bam-village-map-wrap .bam-village-map-click a:nth-child(10) {
+  width: 18%;
+  top: 32%;
+  left: 79%;
+}
+
+.bam-village-map .bam-village-map-wrap .bam-village-map-click-fake a:nth-child(11),
+.bam-village-map .bam-village-map-wrap .bam-village-map-click a:nth-child(11) {
   width: 17%;
   top: 21%;
   left: 64%;
 }
 
-.bam-village-map .bam-village-map-wrap .bam-village-map-click-fake a:nth-child(11),
-.bam-village-map .bam-village-map-wrap .bam-village-map-click a:nth-child(11) {
-  width: 18%;
-  top: 38%;
-  left: 65%;
-}
-
 .bam-village-map .bam-village-map-wrap .bam-village-map-click-fake a:nth-child(12),
 .bam-village-map .bam-village-map-wrap .bam-village-map-click a:nth-child(12) {
   width: 18%;
-  top: 32%;
-  left: 79%;
+  top: 38%;
+  left: 65%;
 }
 
 .bam-village-map .bam-village-map-wrap .bam-village-map-click a {
@@ -455,8 +402,8 @@ input[type="radio"]:checked + label p::after {
   content: '';
   top: 50%;
   left: 50%;
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
+  width: 100%;
+  height: 100%;
   border: 15px solid #d2edfb;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -531,8 +478,20 @@ input[type="radio"]:checked + label p::after {
   height: 100%;
   border-radius: 100px;
   background: #FFF;
-  color: #ff99b9;
   padding-right: 1.5rem;
+  color: var(--main-color);
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active.pink {
+  --main-color: #ff99b9;
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active.blue {
+  --main-color: #55a4f1;
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active.green {
+  --main-color: #3dcca0;
 }
 
 .bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active img {
@@ -574,7 +533,19 @@ input[type="radio"]:checked + label p::after {
   border-radius: 25px;
   background: #FFF;
   text-align: center;
-  color: #ff99b9;
+  color: var(--main-color);
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap article.pink {
+  --main-color: #ff99b9;
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap article.blue {
+  --main-color: #55a4f1;
+}
+
+.bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap article.green {
+  --main-color: #3dcca0;
 }
 
 .bam-village-map .bam-village-select-wrap .bam-village-select-block .bam-village-select-drop .bam-village-select-drop-wrap article a {
@@ -1872,94 +1843,7 @@ input[type="radio"]:checked + label p::after {
             transform: translateY(50%);
   }
   .bam-village-service .bam-village-servie-person .bam-village-select-drop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap {
-    position: relative;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 0px;
-            flex: 1 0 0;
-    border: 2px solid #d2edfb;
-    border-radius: 100px;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    background: #FFF;
-    color: #ff99b9;
-    padding-right: 1.5rem;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active img {
-    display: inline-block;
-    width: 2rem;
-    vertical-align: middle;
-    margin-right: 0.5rem;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active::after {
-    display: block;
-    content: '▼';
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    color: #d2edfb;
-    -webkit-transform: translateY(-50%) scale(0.7);
-            transform: translateY(-50%) scale(0.7);
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active.disable {
-    color: #CCCCCC;
-    padding-right: 0;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap .bam-village-select-drop-active.disable::after {
     display: none;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap article {
-    display: none;
-    z-index: 1;
-    position: absolute;
-    top: 120%;
-    width: 80%;
-    left: 10%;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid #d2edfb;
-    border-radius: 25px;
-    background: #FFF;
-    text-align: center;
-    color: #ff99b9;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap article a {
-    display: block;
-    border-top: 1px solid #d2edfb;
-    padding: 0.75rem 0;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap article a:first-child {
-    border: 0;
-  }
-  .bam-village-service .bam-village-servie-person .bam-village-select-drop .bam-village-select-drop-wrap article a img {
-    position: relative;
-    display: inline-block;
-    width: 2rem;
-    vertical-align: middle;
-    top: -2px;
-    margin-right: 0.5rem;
   }
   .bam-village-service .bam-village-service-drop-wrap {
     position: relative;
