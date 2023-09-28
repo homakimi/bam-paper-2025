@@ -158,10 +158,10 @@ $(document)
 .on('click', '.bam-village-service-door:not(.coming)', function(e) {
     $('.bam-village-service-door-inside').stop().removeClass('active');
     $(this).find('.bam-village-service-door-inside').stop().addClass('active');
-    e.preventDefault();
-    setTimeout(function() {
-        window.open($(this).attr('href'), '_blank');
-    }.bind(this), 500)
+    // e.preventDefault();
+    // setTimeout(function() {
+    //     window.open($(this).attr('href'), '_blank');
+    // }.bind(this), 500)
 })
 // 點開全地圖
 .on('click', '.bam-village-map-select-full', function() {
