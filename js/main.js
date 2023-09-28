@@ -2,7 +2,7 @@ $(function() {
 
     // detect device change start
     var isMobile, isMobileFirst, widthPC;
-    if(window.innerWidth > 1024) {
+    if(window.innerWidth > 1280) {
         widthPC = true;
     } else {
         widthPC = false;
@@ -21,14 +21,14 @@ $(function() {
         if(isMobileFirst != isMobile) {
             reset()
         }
-        if(widthPC && window.innerWidth <= 1024) {
+        if(widthPC && window.innerWidth <= 1280) {
             reset()
-        } else if(!widthPC && window.innerWidth > 1024) {
+        } else if(!widthPC && window.innerWidth > 1280) {
             reset()
         }
     })
     // detect device change end
-    $('.bam-book-guess-question, .bam-book-wrong-wrap, .bam-book-right-wrap, .bam-book-right-lottery, .bam-book-right-none').hide();
+    $('.bam-book-guess-question, .bam-book-wrong-wrap, .bam-book-right-wrap, .bam-book-right-lottery, .bam-book-right-none, .bam-village-service-door-block').hide();
     resize();
     $(window).resize(function() {
         resize();
@@ -40,17 +40,27 @@ $(function() {
         var _getIndex = _getParam.substring(_getParam.indexOf('=')+1)
         $('.bam-village-scroll-wrap').animate({ scrollTop: $('[data-pin="'+_getIndex+'"]').offset().top - 50 }, 1000);
     }
-
+    if( url.indexOf('?slideto=') > 0 || url.indexOf('&slideto=') > 0 ) {
+        var _getParam = url.substring(url.lastIndexOf('slideto='));
+        var _getIndex = parseInt(_getParam.substring(_getParam.indexOf('=')+1))
+        console.log(_getIndex-1)
+        $('.bam-village-service').addClass('alreadyTrigger');
+        $('.bam-village-scroll-wrap').animate({ scrollTop: $('.bam-village-service').offset().top - 50 }, 1000);
+        $('.bam-village-service-drop-wrap article a').removeClass('active');
+        $('.bam-village-service-drop-wrap article a').eq(_getIndex-1).addClass('active');
+        $('.bam-village-service-drop-active').html($('.bam-village-service-drop-wrap article a').eq(_getIndex-1).html());
+        $('.bam-village-service-door-block').hide();
+        $('.bam-village-service-door-block').eq(_getIndex-1).show();
+    }
     $('.bam-village-scroll-wrap').scroll(function() {
         if($('.bam-village-scroll-wrap').scrollTop() > $('.bam-village-service').offset().top + $('.bam-village-scroll-wrap').scrollTop() - $(window).height()*0.75) {
             if(!$('.bam-village-service').hasClass('alreadyTrigger')) {
                 $('.bam-village-service').addClass('alreadyTrigger')
+                $('.bam-village-service-door-block').eq(0).show()
                 $('.bam-village-service-drop-wrap article a').eq(0).addClass('active')
             }
         }
-    })
-
-    
+    })    
 })
 function resize() {
     $('body, .bam-village-scroll-wrap').css('height', window.innerHeight)
@@ -59,8 +69,9 @@ function resize() {
 function reset() {
     $('.bam-village-scroll-wrap').removeClass('fix');
     $('.bam-village-back').fadeOut();
-    $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
+    $('.bam-village-select-drop-wrap article').stop().slideUp();
     $('.bam-village-gray, .bam-village-lightbox-map, .bam-village-lightbox-detail, .bam-village-lightbox-area, .bam-village-lightbox-category').stop().fadeOut().removeClass('active');
+    if(window.innerWidth <= 1280)$('.bam-village-service-drop-wrap article').stop().slideUp();
 }
 var mapCategory, mapSelect, mobileFromMap;
 $(document)
@@ -126,7 +137,7 @@ $(document)
 })
 // 選擇服務
 .on('click', '.bam-village-service-drop-active', function() {
-    if(window.innerWidth <= 1024) {
+    if(window.innerWidth <= 1280) {
         $('.bam-village-service-drop-wrap article').stop().slideToggle();
     }
 })
@@ -134,13 +145,13 @@ $(document)
 .on('click', '.bam-village-service-drop-wrap article a', function() {
     if(!$(this).hasClass('active')) {
         $('.bam-village-service-drop-active').html($(this).html());
-        $('.bam-village-service-drop-wrap article a').removeClass('active');
+        $('.bam-village-service-door-inside, .bam-village-service-drop-wrap article a').stop().removeClass('active');
         $(this).addClass('active');
         $('.bam-village-service-door-wrap .bam-village-service-door-block').hide();
         $('.bam-village-service-door-wrap .bam-village-service-door-block').eq($(this).index()).show();
     }
-    if(window.innerWidth <= 1024) {
-        $('.bam-village-service-drop-wrap article').stop().slideUp();
+    if(window.innerWidth <= 1280) {
+        $('.bam-village-service-drop-wrap article').slideUp();
     }
 })
 // 開門
@@ -197,7 +208,8 @@ $(document)
     reset();
 })
 .on('click', 'body', function() {
-    $('.bam-village-select-drop-wrap article, .bam-village-service-drop-wrap article').stop().slideUp();
+    $('.bam-village-select-drop-wrap article').slideUp();
+    if(window.innerWidth <= 1280)$('.bam-village-service-drop-wrap article').slideUp();
 })
 .on('click', '.bam-village-map .bam-village-select-drop-wrap article', function(e) {
     e.stopPropagation();
