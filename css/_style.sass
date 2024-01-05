@@ -1,35 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap')
-
+    
 html 
     font-size: 16px
 
 body
-    position: relative
-    width: 100%
-    letter-spacing: 0.5px
-    color: #545454
-    background: #FFF
-    font-family: 'Noto Sans TC'
-    font-weight: 500
-    overflow: hidden
-
-*
-    margin: 0
     padding: 0
-    box-sizing: border-box
-    &::before,
-    &::after
-        box-sizing: border-box
+    margin: 0
 
 .bam-newyear-wrap
+    width: 100%
+    letter-spacing: 0.5px
+    background: #FFF
+    font-family: 'Noto Sans TC'
+    overflow: hidden
+    *
+        box-sizing: border-box
+        &::before,
+        &::after
+            box-sizing: border-box
     a 
         text-decoration: none
         color: inherit
-
     .fullimg 
         display: block
         width: 100%
-
     ul
         list-style: none
         margin-left: 1rem
@@ -42,8 +36,6 @@ body
     ol
         list-style: decimal
         margin-left: 2.5rem
-
-
 
 @media only screen and (min-width: 1281px)
     .for-m

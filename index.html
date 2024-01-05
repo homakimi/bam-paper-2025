@@ -13,20 +13,109 @@
     <body>
 
         <div class="bam-newyear-wrap">
+            <!-- <section class="kv">
+                <img class="fullimg" src="img/bam-newyear-banner-dragon.png">
+                <img class="banner-title" src="img/bam-newyear-banner-title.png">
+                <img class="banner-words" src="img/bam-newyear-banner-words.png">
+                <a class="banner-bag" href=""><img class="fullimg" src="img/bam-newyear-banner-bag.png"></a>
+                <div class="banner-w">
+                    <img src="img/bam-newyear-banner-w-1.png">
+                    <img src="img/bam-newyear-banner-w-2.png">
+                    <img src="img/bam-newyear-banner-w-3.png">
+                    <img src="img/bam-newyear-banner-w-4.png">
+                    <img src="img/bam-newyear-banner-w-5.png">
+                </div>
+            </section> -->
 
+            <section class="content-1">
+                <div class="content-wrap">
+                    <div class="interact">
+                        <img class="firework fullimg" src="img/bam-newyear-bg-firework.png">
+                        <img class="bam-newyear-title" src="img/bam-newyear-title-1.png">
+                        <h3><img class="fullimg" src="img/bam-newyear-des-1.png"></h3>
+                        <h4>活動日期：2023/2/5-2023/3/31<br>活動對象：南山聚樂部會員<br>活動辦法：活動期間內達成指定任務，每天可享有一次抽獎機會。</h4>
+                        <p>本活動限定南山網路會員參加（需具備聚樂部會員資格）<br>若您尚未加入會員，請先加入會員，再進行遊戲。</p>
+                        <a class="btn-sign" href=""><img class="fullimg" src="img/bam-newyear-btn-sign.png"></a>
+                        <div class="game-wrap">
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-deco-1" src="img/bam-newyear-deco-7.svg">
+                        <img class="card-deco-2" src="img/bam-newyear-deco-7.svg">
+                        <img class="card-deco-3" src="img/bam-newyear-deco-7.svg">
+                        <img class="card-deco-4" src="img/bam-newyear-deco-7.svg">
+                        <img class="firework fullimg" src="img/bam-newyear-bg-firework.png">
+                        <img class="bam-newyear-title" src="img/bam-newyear-title-2.png">
+                        <h3><img class="fullimg" src="img/bam-newyear-des-2.png"></h3>
+                        <div class="card-swiper-wrap">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="" class="swiper-slide"><div style="background: url('img/bam-newyear-card-1.jpg')"></div></a>
+                                    <a href="" class="swiper-slide"><div style="background: url('img/bam-newyear-card-2.jpg')"></div></a>
+                                    <a href="" class="swiper-slide"><div style="background: url('img/bam-newyear-card-1.jpg')"></div></a>
+                                </div>
+                                <div class="swiper-button-prev"><img class="fullimg" src="img/bam-newyear-prev.svg"></div>
+                                <div class="swiper-button-next"><img class="fullimg" src="img/bam-newyear-next.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </body>
     <script>
-        new Swiper('.swiper', {
+        var currentSlide;
+        new Swiper('.card-swiper-wrap .swiper', {
             speed: 500,
             allowTouchMove: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            effect: 'coverflow',
+            loop: true,
+            loopAdditionalSlides: 1,
+            coverflowEffect: {
+                rotate: 0,
+                depth: 150,
+                scale: 0.8,
+                slideShadows: false,
+                stretch: 150,
             },
+            navigation: {
+                nextEl: '.card-swiper-wrap .swiper-button-next',
+                prevEl: '.card-swiper-wrap .swiper-button-prev',
+            },
+            641: {
+                coverflowEffect: {
+                    rotate: 0,
+                    depth: 200,
+                    scale: 0.9,
+                    slideShadows: false,
+                    stretch: 300,
+                },
+            },
+            1025: {
+                coverflowEffect: {
+                    rotate: 0,
+                    depth: 250,
+                    scale: 0.9,
+                    slideShadows: false,
+                    stretch: 350,
+                },
+            },
+            on: {
+                slideChangeTransitionStart: function() {
+                    slideHide();
+                }
+            }
         });
-
+        slideHide();
+        function slideHide() {
+            currentSlide = $('.card-swiper-wrap .swiper-slide-active').index();
+            $('.card-swiper-wrap .swiper-slide div').css('opacity', '0')
+            $('.card-swiper-wrap .swiper-slide-active div').css('opacity', '1')
+            $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') div').css('opacity', '1')
+            $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') div').css('opacity', '1')
+        }
 
     </script>
 </html>

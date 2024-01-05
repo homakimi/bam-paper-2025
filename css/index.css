@@ -5,24 +5,24 @@ html {
 }
 
 body {
-  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.bam-newyear-wrap {
   width: 100%;
   letter-spacing: 0.5px;
-  color: #545454;
   background: #FFF;
   font-family: 'Noto Sans TC';
-  font-weight: 500;
   overflow: hidden;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.bam-newyear-wrap * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-*::before, *::after {
+.bam-newyear-wrap *::before, .bam-newyear-wrap *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -67,5 +67,226 @@ body {
   .for-pc {
     display: none !important;
   }
+}
+
+.bam-newyear-wrap {
+  color: #78672f;
+  background: url("../img/bam-newyear-bg.png") repeat center center;
+  background-size: 75px auto;
+}
+
+.bam-newyear-wrap .swiper-button-prev,
+.bam-newyear-wrap .swiper-button-next {
+  width: 2rem;
+}
+
+.bam-newyear-wrap .swiper-button-prev::after,
+.bam-newyear-wrap .swiper-button-next::after {
+  display: none;
+}
+
+.bam-newyear-wrap .kv {
+  position: relative;
+}
+
+.bam-newyear-wrap .kv .banner-title,
+.bam-newyear-wrap .kv .banner-words,
+.bam-newyear-wrap .kv .banner-bag {
+  position: absolute;
+  display: block;
+}
+
+.bam-newyear-wrap .kv .banner-title {
+  width: 29%;
+  top: 8%;
+  right: 4%;
+}
+
+.bam-newyear-wrap .kv .banner-words,
+.bam-newyear-wrap .kv .banner-bag {
+  width: 25%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 64%;
+}
+
+.bam-newyear-wrap .kv .banner-bag {
+  bottom: 3%;
+}
+
+.bam-newyear-wrap .kv .banner-w img {
+  position: absolute;
+  display: block;
+  width: 7%;
+}
+
+.bam-newyear-wrap .kv .banner-w img:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.bam-newyear-wrap .kv .banner-w img:nth-child(2) {
+  top: 10%;
+  left: 15%;
+}
+
+.bam-newyear-wrap .kv .banner-w img:nth-child(3) {
+  top: 6%;
+  left: 20%;
+}
+
+.bam-newyear-wrap .kv .banner-w img:nth-child(4) {
+  top: 19%;
+  left: 14%;
+}
+
+.bam-newyear-wrap .kv .banner-w img:nth-child(5) {
+  top: 17%;
+  left: 19%;
+}
+
+.bam-newyear-wrap .content-wrap {
+  width: 1024px;
+  margin: auto;
+  background: #FFF;
+}
+
+.bam-newyear-wrap .bam-newyear-title {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.bam-newyear-wrap .interact,
+.bam-newyear-wrap .card {
+  position: relative;
+  text-align: center;
+}
+
+.bam-newyear-wrap .interact .firework,
+.bam-newyear-wrap .card .firework {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.bam-newyear-wrap .interact h3,
+.bam-newyear-wrap .card h3 {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+  margin: 1.5rem auto;
+}
+
+.bam-newyear-wrap .interact h4,
+.bam-newyear-wrap .card h4 {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bam-newyear-wrap .interact .btn-sign,
+.bam-newyear-wrap .card .btn-sign {
+  display: block;
+  width: 15%;
+  margin: 1rem auto;
+}
+
+.bam-newyear-wrap .card {
+  padding: 5rem 0;
+}
+
+.bam-newyear-wrap .card .card-deco-1,
+.bam-newyear-wrap .card .card-deco-2,
+.bam-newyear-wrap .card .card-deco-3,
+.bam-newyear-wrap .card .card-deco-4 {
+  display: block;
+  position: absolute;
+  width: 5%;
+}
+
+.bam-newyear-wrap .card .card-deco-1 {
+  width: 4%;
+  bottom: 40%;
+  left: 15%;
+}
+
+.bam-newyear-wrap .card .card-deco-2 {
+  width: 4%;
+  bottom: 50%;
+  right: 15%;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.bam-newyear-wrap .card .card-deco-3 {
+  width: 5%;
+  bottom: 3%;
+  left: 30%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.bam-newyear-wrap .card .card-deco-4 {
+  width: 3%;
+  bottom: 8%;
+  right: 30%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap {
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper-button-prev {
+  left: -45%;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper-button-next {
+  right: -45%;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper {
+  position: relative;
+  width: 30%;
+  margin: auto;
+  overflow: visible;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper-slide {
+  overflow: hidden;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper-slide > div {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border: 8px solid #ad974c;
+  border-radius: 27px;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.bam-newyear-wrap .card .card-swiper-wrap .swiper-slide > div::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 8px solid #cb3435;
+  border-radius: 18px;
 }
 /*# sourceMappingURL=index.css.map */
