@@ -12,3 +12,7 @@ $(document)
 .on('mousedown', 'img', function(e) {
     e.preventDefault();
 })
+.on('click', '.notice-more', function() {
+    $(this).hide();
+    $('.notice-content').addClass('active');
+})
