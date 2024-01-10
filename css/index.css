@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+body.fix {
+  overflow: hidden;
+}
+
 .bam-newyear-wrap {
   width: 100%;
   letter-spacing: 0.5px;
@@ -171,20 +175,24 @@ body {
   display: block;
   content: '';
   width: 100%;
-  height: 88px;
+  padding-top: 8.2%;
   left: 0;
-  background: url("../img/bam-newyear-curve.svg") no-repeat center center;
-  background-size: 100% auto;
+  background: url("../img/bam-newyear-curve.svg") no-repeat;
+  background-size: cover;
 }
 
 .bam-newyear-wrap .curve-top::before {
-  top: -87px;
+  top: 0;
+  background-position: top center;
+  -webkit-transform: translateY(calc(-100% + 1px));
+          transform: translateY(calc(-100% + 1px));
 }
 
 .bam-newyear-wrap .curve-bottom::before {
-  bottom: -87px;
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  bottom: 0;
+  background-position: bottom center;
+  -webkit-transform: translateY(calc(100% - 1px)) scale(1, -1);
+          transform: translateY(calc(100% - 1px)) scale(1, -1);
 }
 
 .bam-newyear-wrap .content-1 {
@@ -202,7 +210,23 @@ body {
   margin: 3rem auto;
 }
 
-.bam-newyear-wrap .content-1 .game-wrap .btn-start {
+.bam-newyear-wrap .content-1 .game-wrap .game-intro,
+.bam-newyear-wrap .content-1 .game-wrap .game-bg,
+.bam-newyear-wrap .content-1 .game-wrap .game-floor,
+.bam-newyear-wrap .content-1 .game-wrap .game-result {
+  position: absolute;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-intro .btn-start {
   position: absolute;
   display: block;
   width: 22%;
@@ -210,6 +234,143 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block {
+  display: none;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-bg,
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-floor,
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-hint {
+  pointer-events: none;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-hint {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: hint 4s forwards;
+          animation: hint 4s forwards;
+}
+
+@-webkit-keyframes hint {
+  0%, 15%, 45%, 75% {
+    opacity: 1;
+  }
+  30%, 60%, 90%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hint {
+  0%, 15%, 45%, 75% {
+    opacity: 1;
+  }
+  30%, 60%, 90%, 100% {
+    opacity: 0;
+  }
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%;
+  height: 93%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  width: 12%;
+  -webkit-transition: left 0.05s linear;
+  transition: left 0.05s linear;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket.left {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container .egg {
+  position: absolute;
+  width: 5%;
+  padding-top: 5%;
+  background: url("../img/bam-newyear-game-coin.svg") no-repeat center center;
+  background-size: contain;
+  -webkit-transition: bottom 0.25s linear;
+  transition: bottom 0.25s linear;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 15%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  color: #59221e;
+  font-size: 3.5rem;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  height: 93%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  gap: 5%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success > img,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail > img {
+  display: block;
+  width: 50%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a {
+  display: block;
+  height: 10%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a img,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a img {
+  display: block;
+  height: 100%;
 }
 
 .bam-newyear-wrap .content-1 .interact,
@@ -380,28 +541,20 @@ body {
 }
 
 .bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide {
+  cursor: pointer;
   overflow: hidden;
 }
 
 .bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div {
   position: relative;
-  width: 100%;
-  padding-top: 100%;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
   border: 8px solid #ad974c;
   border-radius: 27px;
+  overflow: hidden;
 }
 
-.bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div::after {
-  position: absolute;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div img {
+  z-index: 1;
+  position: relative;
   border: 8px solid #cb3435;
   border-radius: 18px;
 }
@@ -451,14 +604,14 @@ body {
 
 .bam-newyear-wrap .content-2 .lantern-right {
   left: 0;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .bam-newyear-wrap .content-2 .lantern-left {
   right: 0;
-  -webkit-transform: translateY(-30%) scale(-1, 1);
-          transform: translateY(-30%) scale(-1, 1);
+  -webkit-transform: translateY(-50%) scale(-1, 1);
+          transform: translateY(-50%) scale(-1, 1);
 }
 
 .bam-newyear-wrap .content-2 .gift {
@@ -738,7 +891,6 @@ body {
 .bam-newyear-wrap .content-3 .notice .notice-content {
   padding: 1.5rem 10%;
   line-height: 180%;
-  text-align: justify;
   font-size: 1.1rem;
 }
 
@@ -755,12 +907,17 @@ body {
 
 .bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-bg-pop {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 90vh;
+  padding-top: 90vh;
   background: url("../img/bam-newyear-bg-pop.png") no-repeat center center;
-  background-size: auto 90%;
+  background-size: contain;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0) translate(-50%, -50%);
+          transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-paper {
@@ -785,6 +942,180 @@ body {
   background-size: contain;
 }
 
+.bam-newyear-wrap .banner-w img:nth-child(1) {
+  -webkit-animation: shine 0.5s infinite alternate;
+          animation: shine 0.5s infinite alternate;
+}
+
+.bam-newyear-wrap .banner-w img:nth-child(2) {
+  -webkit-animation: shine 0.75s infinite alternate;
+          animation: shine 0.75s infinite alternate;
+}
+
+.bam-newyear-wrap .banner-w img:nth-child(3) {
+  -webkit-animation: shine 1.5s -0.5s infinite alternate;
+          animation: shine 1.5s -0.5s infinite alternate;
+}
+
+.bam-newyear-wrap .banner-w img:nth-child(4) {
+  -webkit-animation: shine 0.75s -0.35s infinite alternate;
+          animation: shine 0.75s -0.35s infinite alternate;
+}
+
+.bam-newyear-wrap .banner-w img:nth-child(5) {
+  -webkit-animation: shine 1s -0.5s infinite alternate;
+          animation: shine 1s -0.5s infinite alternate;
+}
+
+@-webkit-keyframes shine {
+  to {
+    -webkit-filter: contrast(1.15) brightness(1.05) hue-rotate(-3deg);
+            filter: contrast(1.15) brightness(1.05) hue-rotate(-3deg);
+  }
+}
+
+@keyframes shine {
+  to {
+    -webkit-filter: contrast(1.15) brightness(1.05) hue-rotate(-3deg);
+            filter: contrast(1.15) brightness(1.05) hue-rotate(-3deg);
+  }
+}
+
+.bam-newyear-wrap .banner-words {
+  -webkit-animation: words 1s infinite alternate;
+          animation: words 1s infinite alternate;
+}
+
+@-webkit-keyframes words {
+  to {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+
+@keyframes words {
+  to {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+
+.bam-newyear-wrap .banner-bag {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: bag 1s infinite alternate;
+          animation: bag 1s infinite alternate;
+}
+
+@-webkit-keyframes bag {
+  to {
+    -webkit-transform: translateY(1rem) scale(1, 0.95);
+            transform: translateY(1rem) scale(1, 0.95);
+  }
+}
+
+@keyframes bag {
+  to {
+    -webkit-transform: translateY(1rem) scale(1, 0.95);
+            transform: translateY(1rem) scale(1, 0.95);
+  }
+}
+
+.bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-bg-pop {
+  -webkit-animation: pop 1s 0.5s forwards;
+          animation: pop 1s 0.5s forwards;
+}
+
+@-webkit-keyframes pop {
+  to {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes pop {
+  to {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-paper {
+  opacity: 0;
+  -webkit-transform: translate(-50%, calc(-50% + 5rem));
+          transform: translate(-50%, calc(-50% + 5rem));
+  -webkit-animation: paper 1s 1.25s forwards;
+          animation: paper 1s 1.25s forwards;
+}
+
+@-webkit-keyframes paper {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes paper {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-pop-bag {
+  opacity: 0;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+  -webkit-animation: popbag 1s 1s forwards;
+          animation: popbag 1s 1s forwards;
+}
+
+@-webkit-keyframes popbag {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes popbag {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.bam-newyear-wrap .lantern-right {
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.bam-newyear-wrap .lantern-right.active {
+  opacity: 1;
+  -webkit-transform: translateY(-26%);
+          transform: translateY(-26%);
+}
+
+.bam-newyear-wrap .lantern-left {
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.bam-newyear-wrap .lantern-left.active {
+  opacity: 1;
+  -webkit-transform: translateY(-26%) scale(-1, 1);
+          transform: translateY(-26%) scale(-1, 1);
+}
+
 @media only screen and (max-width: 1440px) {
   .bam-newyear-wrap .swiper-button-prev,
   .bam-newyear-wrap .swiper-button-next {
@@ -793,18 +1124,11 @@ body {
   .bam-newyear-wrap .content-wrap {
     width: 900px;
   }
-  .bam-newyear-wrap .curve-top::before,
-  .bam-newyear-wrap .curve-bottom::before {
-    height: 63px;
-  }
-  .bam-newyear-wrap .curve-top::before {
-    top: -62px;
-  }
-  .bam-newyear-wrap .curve-bottom::before {
-    bottom: -62px;
-  }
   .bam-newyear-wrap .content-1 {
     padding-bottom: 105px;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block p {
+    font-size: 2.5rem;
   }
   .bam-newyear-wrap .content-1 .interact h4,
   .bam-newyear-wrap .content-1 .card h4 {
@@ -863,11 +1187,11 @@ body {
 
 @media only screen and (max-width: 1024px) {
   .bam-newyear-wrap {
-    background-size: 75px auto;
+    background-size: 50px auto;
   }
   .bam-newyear-wrap .swiper-button-prev,
   .bam-newyear-wrap .swiper-button-next {
-    width: 2rem;
+    width: 2.5rem;
   }
   .bam-newyear-wrap .kv .banner-title {
     width: 60%;
@@ -919,31 +1243,64 @@ body {
   .bam-newyear-wrap .bam-newyear-title {
     width: 85%;
   }
-  .bam-newyear-wrap .curve-top::before,
-  .bam-newyear-wrap .curve-bottom::before {
-    height: 0;
-    padding-top: 7%;
-  }
-  .bam-newyear-wrap .curve-top::before {
-    top: 0;
-    -webkit-transform: translateY(calc(-100% + 1px));
-            transform: translateY(calc(-100% + 1px));
-  }
-  .bam-newyear-wrap .curve-bottom::before {
-    bottom: 0;
-    -webkit-transform: translateY(calc(100% - 1px)) scale(1, -1);
-            transform: translateY(calc(100% - 1px)) scale(1, -1);
-  }
   .bam-newyear-wrap .content-1 {
-    margin-top: 10%;
+    margin-top: 15%;
     padding-bottom: 12%;
   }
   .bam-newyear-wrap .content-1 .game-wrap {
     margin: 1.5rem auto;
   }
-  .bam-newyear-wrap .content-1 .game-wrap .btn-start {
+  .bam-newyear-wrap .content-1 .game-wrap .game-intro,
+  .bam-newyear-wrap .content-1 .game-wrap .game-bg,
+  .bam-newyear-wrap .content-1 .game-wrap .game-floor,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result {
+    display: none;
+    width: 96%;
+    border-radius: 12px;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-intro .btn-start {
     width: 35%;
-    bottom: 22%;
+    bottom: 20%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-hint {
+    display: none;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container {
+    width: 96%;
+    height: 93%;
+    border-radius: 12px;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket {
+    bottom: 15%;
+    left: 50%;
+    width: 12%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container .egg {
+    width: 5%;
+    padding-top: 5%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block {
+    top: 5%;
+    right: 3%;
+    width: 15%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block p {
+    font-size: 3.5rem;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-result {
+    height: 93%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail {
+    gap: 5%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success > img,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail > img {
+    width: 50%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a {
+    height: 10%;
   }
   .bam-newyear-wrap .content-1 .interact .firework,
   .bam-newyear-wrap .content-1 .card .firework {
@@ -1017,16 +1374,16 @@ body {
     width: 65%;
   }
   .bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div {
-    border: 3px solid #ad974c;
+    border-width: 3px;
     border-radius: 20px;
   }
-  .bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div::after {
-    border: 5px solid #cb3435;
+  .bam-newyear-wrap .content-1 .card .card-swiper-wrap .swiper-slide > div img {
+    border-width: 5px;
     border-radius: 17px;
   }
   .bam-newyear-wrap .content-2::before {
-    height: 130%;
-    bottom: 1px;
+    height: 85%;
+    bottom: 30%;
   }
   .bam-newyear-wrap .content-2 .dragon-body,
   .bam-newyear-wrap .content-2 .dragon-tail {
@@ -1034,62 +1391,50 @@ body {
   }
   .bam-newyear-wrap .content-2 .lantern-right,
   .bam-newyear-wrap .content-2 .lantern-left {
-    width: 16%;
-    top: 0;
+    width: 18%;
+    top: 0.3%;
   }
-  .bam-newyear-wrap .content-2 .gift {
-    margin-top: 12%;
-  }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-1,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-2,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-3,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-4,
-  .bam-newyear-wrap .content-2 .gift .gift-wave-1,
-  .bam-newyear-wrap .content-2 .gift .gift-wave-2,
-  .bam-newyear-wrap .content-2 .gift .gift-wave-3 {
+  .bam-newyear-wrap .content-2 .gift-firework-1,
+  .bam-newyear-wrap .content-2 .gift-firework-2 {
+    z-index: 1;
     position: absolute;
     display: block;
-    width: 15%;
-  }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-1,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-2,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-3,
-  .bam-newyear-wrap .content-2 .gift .gift-firework-4 {
-    width: 5%;
     -webkit-filter: brightness(1.5) grayscale(0.8);
             filter: brightness(1.5) grayscale(0.8);
   }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-1 {
-    width: 7%;
-    left: -20%;
-    top: -40rem;
+  .bam-newyear-wrap .content-2 .gift-firework-1 {
+    width: 10%;
+    left: 14%;
+    top: 1%;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-2 {
-    right: -15%;
-    top: -30rem;
+  .bam-newyear-wrap .content-2 .gift-firework-2 {
+    right: 12%;
+    width: 15%;
+    top: 1%;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-3 {
-    left: -15%;
-    top: 15rem;
+  .bam-newyear-wrap .content-2 .gift-wave-1,
+  .bam-newyear-wrap .content-2 .gift-wave-2,
+  .bam-newyear-wrap .content-2 .gift-wave-3,
+  .bam-newyear-wrap .content-2 .gift-wave-4 {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    top: 0%;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-firework-4 {
-    width: 7%;
-    right: -5%;
-    bottom: 10rem;
+  .bam-newyear-wrap .content-2 .gift-wave-1 {
+    width: 18%;
+    left: 0%;
+    top: 7%;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-wave-1 {
-    left: -20%;
-    top: -20rem;
-  }
-  .bam-newyear-wrap .content-2 .gift .gift-wave-2 {
-    left: -25%;
-    top: 30rem;
-  }
-  .bam-newyear-wrap .content-2 .gift .gift-wave-3 {
-    right: -25%;
-    bottom: 20rem;
+  .bam-newyear-wrap .content-2 .gift-wave-2 {
+    width: 20%;
+    right: -8%;
+    top: 8%;
     -webkit-transform: scale(1, -1);
             transform: scale(1, -1);
+  }
+  .bam-newyear-wrap .content-2 .gift {
+    margin-top: 12%;
   }
   .bam-newyear-wrap .content-2 .gift h3 {
     font-size: 1.25rem;
@@ -1128,7 +1473,24 @@ body {
     padding: 1.5rem 0;
   }
   .bam-newyear-wrap .content-2 .gift-flex .gift-flex-block {
+    position: relative;
     margin: 1.5rem 0;
+  }
+  .bam-newyear-wrap .content-2 .gift-flex .gift-flex-block .gift-wave-3 {
+    width: 35%;
+    top: -5rem;
+    left: -20%;
+    bottom: auto;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+  }
+  .bam-newyear-wrap .content-2 .gift-flex .gift-flex-block .gift-wave-4 {
+    width: 35%;
+    top: -3rem;
+    right: -17%;
+    bottom: auto;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
   }
   .bam-newyear-wrap .content-2 .gift-flex .gift-flex-block h4 {
     font-size: 1.5rem;
@@ -1199,8 +1561,8 @@ body {
             transform: rotate(90deg);
   }
   .bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-bg-pop {
-    background: url("../img/bam-newyear-bg-pop.png") no-repeat top 40% center;
-    background-size: auto 80%;
+    width: 75vh;
+    padding-top: 75vh;
   }
   .bam-newyear-wrap .bam-newyear-lightbox .bam-newyear-pop-bag {
     background: url("../img/bam-newyear-pop-bag-m.png") no-repeat bottom center;

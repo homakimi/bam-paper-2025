@@ -1,6 +1,9 @@
 $(function() {
-
-
+    $(window).scroll(function() {
+        if($(window).scrollTop() > $('.content-2').offset().top - window.innerHeight*0.5) {
+            $('.lantern-left, .lantern-right').addClass('active');
+        }
+    })
 })
 $(document)
 .on('click', 'a', function(e) {
@@ -15,4 +18,24 @@ $(document)
 .on('click', '.notice-more', function() {
     $(this).hide();
     $('.notice-content').addClass('active');
+})
+.on('click', '.banner-bag', function() {
+    $('body').addClass('fix');
+    $('.bam-newyear-lightbox').fadeIn();
+    setTimeout(function() {
+        $('body').removeClass('fix');
+        $('.bam-newyear-lightbox').fadeOut();
+        $('body, html').animate({scrollTop: $('.content-1').offset().top}, 1000)
+    }, 3500)
+})
+.on('click', '.card-swiper-wrap .swiper-slide', function() {
+    if(window.innerWidth > 1024) {
+        var imageUrl = $(this).find('img').attr('src');
+        var downloadLink = document.createElement('a');
+        downloadLink.href = imageUrl;
+        downloadLink.download = 'downloaded_image.jpg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
 })
