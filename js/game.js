@@ -64,7 +64,6 @@ $(function () {
                         score++;
                         egg.remove();
                         clearInterval(fallInterval);
-                        console.log('catch', score)
                     }
                 } else {
                     egg.remove();
