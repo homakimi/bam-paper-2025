@@ -20,6 +20,10 @@ $(document)
     $('.notice-content').addClass('active');
 })
 .on('click', '.banner-bag', function() {
+    // random
+    var _random = parseInt(Math.random()*3)+1;
+    console.log(_random)
+    $('.bam-newyear-paper').css('background', 'url("img/bam-newyear-paper-'+_random+'.jpg")')
     $('body').addClass('fix');
     $('.bam-newyear-lightbox').fadeIn();
     setTimeout(function() {
