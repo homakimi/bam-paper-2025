@@ -3,9 +3,9 @@ $(function () {
     const basket = $('#basket');
     var score;
     var scoreSuccess = 10;
-    var createInterval = 500;
-    var runDistance = 20;
-    var dropSpeed = 25;
+    var createInterval = 1000;
+    var runDistance = 18;
+    var dropSpeed = 2;
     var startFall;
     var countDownNum;
     var countDownInterval;
@@ -52,24 +52,25 @@ $(function () {
     function createEgg() {
         if(startFall) {
             const egg = $('<div class="egg"></div>');
-            egg.css('bottom', '100%');
             egg.css('left', Math.floor(Math.random() * (gameContainer.width() - 20)) + 'px');
+            egg.css('transition', 'bottom '+dropSpeed*(1+Math.random())+'s linear');
             gameContainer.append(egg);
-
             const fallInterval = setInterval(() => {
-                const eggBottom = parseInt(egg.css('bottom'));
-                if (eggBottom > 0) {
-                    egg.css('bottom', eggBottom - dropSpeed + 'px');
-                    if (eggBottom <= basket.height()*0.5 + parseInt(basket.css('bottom')) && Math.abs( (parseInt(basket.css('left'))+$('#basket').width()*0.5) - (parseInt(egg.css('left'))+$('.egg').width()*0.5) ) <= ($('.egg').width()+$('#basket').width())*0.5 ) {
-                        score++;
-                        egg.remove();
+                $('.egg').each(function() {
+                    $(this).addClass('active');
+                    var _eggBottom = parseInt($(this).css('bottom'));
+                    if(_eggBottom > 0) {
+                        if (_eggBottom <= basket.height()*0.5 + parseInt(basket.css('bottom')) && Math.abs( (parseInt(basket.css('left'))+$('#basket').width()*0.5) - (parseInt($(this).css('left'))+$('.egg').width()*0.5) ) <= ($('.egg').width()+$('#basket').width())*0.5 ) {
+                            score++;
+                            $(this).remove();
+                            clearInterval(fallInterval);
+                        }
+                    } else {
+                        $(this).remove();
                         clearInterval(fallInterval);
                     }
-                } else {
-                    egg.remove();
-                    clearInterval(fallInterval);
-                }
-            }, 100);
+                })
+            }, 250);
         }
     }
 
@@ -83,6 +84,21 @@ $(function () {
             }
         }
     });
+    $(document)
+    .on('click', '.game-prev', function() {
+        const basketLeft = parseInt(basket.css('left'));
+        if(basketLeft > 0) {
+            basket.css('left', basketLeft - runDistance + 'px');
+            $('#basket').addClass('left');
+        }
+    })
+    .on('click', '.game-next', function() {
+        const basketLeft = parseInt(basket.css('left'));
+        if(basketLeft < gameContainer.width() - basket.width()) {
+            basket.css('left', basketLeft + runDistance + 'px');
+            $('#basket').removeClass('left');
+        }
+    })
     $(document).on('mousemove', '#game-container', function(e) {
         if(window.innerWidth > 1024) {
             var divOffset = $(this).offset();

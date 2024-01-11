@@ -19,6 +19,21 @@ $teal: #6eb5ba
     .kv
         z-index: 3
         position: relative
+        .banner-coin-1,
+        .banner-coin-2
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            transform: translateY(-100%)
+        .banner-coin-1
+            animation: coin 1.5s forwards
+        .banner-coin-2
+            animation: coin 1.5s 0.5s forwards
+        @keyframes coin
+            to
+                opacity: 1
+                transform: none
         .banner-title,
         .banner-words,
         .banner-bag
@@ -63,12 +78,60 @@ $teal: #6eb5ba
         width: 1280px
         margin: auto
 
-    .bam-newyear-title
+    .bam-newyear-title,
+    .bam-newyear-title-ani
         position: relative
         z-index: 1
         display: block
         width: 50%
         margin: auto
+    .bam-newyear-title-ani
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1%
+        &.active div
+            &:nth-child(1)
+                animation: flipdiv 0.5s forwards
+                img
+                    animation: flipimg 0.5s forwards
+            &:nth-child(2)
+                animation: flipdiv 0.5s 0.2s forwards
+                img
+                    animation: flipimg 0.5s 0.2s forwards
+            &:nth-child(3)
+                animation: flipdiv 0.5s 0.4s forwards
+                img
+                    animation: flipimg 0.5s 0.4s forwards
+            &:nth-child(4)
+                animation: flipdiv 0.5s 0.6s forwards
+                img
+                    animation: flipimg 0.5s 0.6s forwards
+            &:nth-child(5)
+                animation: flipdiv 0.5s 0.8s forwards
+                img
+                    animation: flipimg 0.5s 0.8s forwards
+        div
+            width: 19%
+            border: 5px solid #dabd61
+            border-radius: 50%
+            background: $red
+            img
+                display: block
+                width: 100%
+                opacity: 0
+                transform: scale(-1, 1)
+
+        @keyframes flipdiv
+            0%
+                transform: scale(1, 1)
+            100%
+                transform: scale(-1, 1)
+        @keyframes flipimg
+            0%, 49.9%
+                opacity: 0
+            50%, 100%
+                opacity: 1
 
     .curve-top,
     .curve-bottom
@@ -103,6 +166,7 @@ $teal: #6eb5ba
             position: relative
             width: 90%
             margin: 3rem auto
+            user-select: none
             .game-intro,
             .game-bg,
             .game-floor,
@@ -117,6 +181,24 @@ $teal: #6eb5ba
                 border-radius: 12px
                 overflow: hidden
             .game-intro
+                height: 93%
+                .game-intro-bg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: url('../img/bam-newyear-game-intro-bg.jpg') no-repeat center center
+                    background-size: cover
+                .game-intro-content
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    width: 100%
+                    transform: translate(-50%, -50%) scale(0)
+                    transition: transform 0.5s
+                    &.active
+                        transform: translate(-50%, -50%) scale(1)
                 .btn-start
                     position: absolute
                     display: block
@@ -165,9 +247,11 @@ $teal: #6eb5ba
                         position: absolute
                         width: 5%
                         padding-top: 5%
+                        bottom: 100%
                         background: url('../img/bam-newyear-game-coin.svg') no-repeat center center
                         background-size: contain
-                        transition: bottom 0.25s linear
+                        &.active
+                            bottom: 0! important
                 .game-time-block
                     position: absolute
                     top: 5%
@@ -244,10 +328,12 @@ $teal: #6eb5ba
                 width: 20%
                 right: -11%
                 top: 10rem
+                animation: float 2s infinite alternate
             .interact-wave-2
                 width: 20%
                 left: -14%
                 top: 20rem
+                animation: float 3s infinite alternate
             .interact-firework-1
                 width: 5%
                 top: 5rem
@@ -276,11 +362,13 @@ $teal: #6eb5ba
                 top: 0
                 width: 20%
                 transform: scale(-1, 1)
+                animation: floatscale 1.5s infinite alternate
             .card-wave-2
                 right: -32%
                 top: 10rem
                 width: 20%
                 transform: scale(-1, 1)
+                animation: floatscale 2s infinite alternate
             .card-deco-1
                 width: 4%
                 bottom: 40%
@@ -314,6 +402,7 @@ $teal: #6eb5ba
                     margin: auto
                     overflow: visible
                 .swiper-slide
+                    display: block
                     cursor: pointer
                     overflow: hidden
                     > div
@@ -345,12 +434,21 @@ $teal: #6eb5ba
             right: 0
             bottom: 25%
             transform: translateX(78%)
+            animation: dragonbody 2s infinite alternate
+            @keyframes dragonbody
+                to
+                    transform: translate(78%, -10%)
         .dragon-tail
             position: absolute
             width: 12%
             left: 0
             bottom: 5%
-            transform: translateX(-100%)
+            transform: translateX(-95%)
+            animation: dragontail 1s infinite alternate
+            transform-origin: right bottom
+            @keyframes dragontail
+                to
+                    transform: translateX(-95%) rotate(-5deg)
         .lantern-right,
         .lantern-left
             z-index: 1
@@ -598,18 +696,21 @@ $teal: #6eb5ba
 .bam-newyear-wrap
     .banner-w
         img:nth-child(1)
-            animation: shine 0.5s infinite alternate
+            animation: shine 0.25s infinite alternate
         img:nth-child(2)
-            animation: shine 0.75s infinite alternate
+            animation: shine 0.5s infinite alternate
         img:nth-child(3)
-            animation: shine 1.5s -0.5s infinite alternate
+            animation: shine 0.75s -0.5s infinite alternate
         img:nth-child(4)
-            animation: shine 0.75s -0.35s infinite alternate
+            animation: shine 0.25s -0.35s infinite alternate
         img:nth-child(5)
-            animation: shine 1s -0.5s infinite alternate
+            animation: shine 0.5s -0.5s infinite alternate
         @keyframes shine
+            from
+                transform: rotate(-5deg)
             to
-                filter: contrast(1.15) brightness(1.05) hue-rotate(-3deg)
+                filter: contrast(1.1) brightness(1.05) hue-rotate(-3deg)
+                transform: rotate(5deg)
     .banner-words 
         animation: words 1s infinite alternate
         @keyframes words
@@ -655,6 +756,13 @@ $teal: #6eb5ba
         &.active
             opacity: 1
             transform: translateY(-26%) scale(-1, 1)
+
+    @keyframes float
+        to
+            transform: translateX(1.5rem)
+    @keyframes floatscale
+        to
+            transform: translateX(1.5rem) scale(-1, 1)
 
 @media only screen and (max-width: 1440px)
     .bam-newyear-wrap
@@ -761,56 +869,98 @@ $teal: #6eb5ba
         .content-wrap
             width: 95%
 
-        .bam-newyear-title
+        .bam-newyear-title,
+        .bam-newyear-title-ani
             width: 85%
-
+        .bam-newyear-title-ani
+            div
+                border-width: 3px
+        .bam-newyear-title-ani-3
+            width: 50%
+            flex-wrap: wrap-reverse
+            flex-direction: row-reverse
+            div
+                width: 32%
+            &.active div
+                &:nth-child(5)
+                    animation: flipdiv 0.5s forwards
+                    img
+                        animation: flipimg 0.5s forwards
+                &:nth-child(4)
+                    animation: flipdiv 0.5s 0.2s forwards
+                    img
+                        animation: flipimg 0.5s 0.2s forwards
+                &:nth-child(3)
+                    animation: flipdiv 0.5s 0.4s forwards
+                    img
+                        animation: flipimg 0.5s 0.4s forwards
+                &:nth-child(2)
+                    animation: flipdiv 0.5s 0.6s forwards
+                    img
+                        animation: flipimg 0.5s 0.6s forwards
+                &:nth-child(1)
+                    animation: flipdiv 0.5s 0.8s forwards
+                    img
+                        animation: flipimg 0.5s 0.8s forwards
         .content-1
             margin-top: 15%
             padding-bottom: 12%
-
-        
             .game-wrap
+                width: 100%
                 margin: 1.5rem auto
                 .game-intro,
                 .game-bg,
                 .game-floor,
                 .game-result
-                    display: none
-                    width: 96%
-                    border-radius: 12px
+                    width: 94%
                 .game-intro
+                    height: 95%
+                    .game-intro-bg
+                        background: url('../img/bam-newyear-game-intro-bg-m.jpg') no-repeat center center
+                        background-size: cover
                     .btn-start
-                        width: 35%
+                        width: 40%
                         bottom: 20%
                 .game-block
-                    .game-hint
-                        display: none
+                    .game-prev,
+                    .game-next
+                        display: block
+                        position: absolute
+                        width: 15%
+                        bottom: 6%
+                        border-radius: 50%
+                        box-shadow: 0 3px 5px rgba(0,0,0,0.25)
+                        -webkit-touch-callout: none
+                    .game-prev
+                        left: 6%
+                    .game-next
+                        right: 6%
+
                     #game-container
-                        width: 96%
-                        height: 93%
-                        border-radius: 12px
+                        width: 94%
+                        height: 95%
                         #basket
-                            bottom: 15%
+                            bottom: 10%
                             left: 50%
-                            width: 12%
+                            width: 20%
                         .egg
-                            width: 5%
-                            padding-top: 5%
+                            width: 10%
+                            padding-top: 10%
                     .game-time-block
                         top: 5%
-                        right: 3%
-                        width: 15%
+                        right: 5%
+                        width: 17%
                         p
-                            font-size: 3.5rem
+                            font-size: 6vw
                 .game-result
-                    height: 93%
+                    height: 95%
                     .game-result-success,
                     .game-result-fail
                         gap: 5%
                         > img
-                            width: 50%
+                            width: 80%
                         a
-                            height: 10%
+                            height: 12%
 
             .interact,
             .card
