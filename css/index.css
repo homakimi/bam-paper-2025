@@ -434,7 +434,10 @@ body.fix {
 
 .bam-newyear-wrap .content-1 .game-wrap .game-block .game-bg,
 .bam-newyear-wrap .content-1 .game-wrap .game-block .game-floor,
-.bam-newyear-wrap .content-1 .game-wrap .game-block .game-hint {
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-hint,
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block,
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block,
+.bam-newyear-wrap .content-1 .game-wrap .game-block #basket {
   pointer-events: none;
 }
 
@@ -468,6 +471,38 @@ body.fix {
   }
 }
 
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-start-countdown {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-start-countdown img {
+  display: none;
+  -webkit-animation: number 0.5s 0.5s forwards;
+          animation: number 0.5s 0.5s forwards;
+}
+
+@-webkit-keyframes number {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes number {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
 .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container {
   position: absolute;
   top: 50%;
@@ -489,9 +524,39 @@ body.fix {
   transition: left 0.05s linear;
 }
 
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket .coin-get {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  -webkit-animation: getcoin 1s forwards;
+          animation: getcoin 1s forwards;
+}
+
 .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket.left {
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block #game-container #basket.left .coin-get {
+  -webkit-transform: scale(-1, 1) translate(50%, -100%);
+          transform: scale(-1, 1) translate(50%, -100%);
+}
+
+@-webkit-keyframes getcoin {
+  to {
+    opacity: 0;
+    top: -100%;
+  }
+}
+
+@keyframes getcoin {
+  to {
+    opacity: 0;
+    top: -100%;
+  }
 }
 
 .bam-newyear-wrap .content-1 .game-wrap .game-block #game-container .egg {
@@ -525,9 +590,27 @@ body.fix {
           transform: translate(-50%, -55%);
 }
 
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block {
+  position: absolute;
+  top: 12%;
+  right: 18%;
+  width: 12%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block p {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  margin: 0;
+  color: #59221e;
+  font-size: 2rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .bam-newyear-wrap .content-1 .game-wrap .game-result {
   display: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   height: 93%;
 }
 
@@ -556,16 +639,25 @@ body.fix {
   width: 50%;
 }
 
-.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a,
-.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a {
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success .game-result-btn,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail .game-result-btn {
   display: block;
   height: 10%;
 }
 
-.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a img,
-.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a img {
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success .game-result-btn img,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail .game-result-btn img {
   display: block;
   height: 100%;
+}
+
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success .game-result-close,
+.bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail .game-result-close {
+  display: block;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  width: 8%;
 }
 
 .bam-newyear-wrap .content-1 .interact,
@@ -1410,6 +1502,9 @@ body.fix {
   .bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block p {
     font-size: 2.5rem;
   }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block p {
+    font-size: 1.5rem;
+  }
   .bam-newyear-wrap .content-1 .interact h4,
   .bam-newyear-wrap .content-1 .card h4 {
     font-size: 1rem;
@@ -1642,6 +1737,14 @@ body.fix {
   .bam-newyear-wrap .content-1 .game-wrap .game-block .game-time-block p {
     font-size: 6vw;
   }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block {
+    top: 20%;
+    right: 6%;
+    width: 20%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-block .game-count-block p {
+    font-size: 5vw;
+  }
   .bam-newyear-wrap .content-1 .game-wrap .game-result {
     height: 95%;
   }
@@ -1653,9 +1756,14 @@ body.fix {
   .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail > img {
     width: 80%;
   }
-  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success a,
-  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail a {
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success .game-result-btn,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail .game-result-btn {
     height: 12%;
+  }
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-success .game-result-close,
+  .bam-newyear-wrap .content-1 .game-wrap .game-result .game-result-fail .game-result-close {
+    top: 3%;
+    width: 10%;
   }
   .bam-newyear-wrap .content-1 .interact .firework,
   .bam-newyear-wrap .content-1 .card .firework {

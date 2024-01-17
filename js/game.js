@@ -4,7 +4,7 @@ $(function () {
     var score;
     var scoreSuccess = 10;
     var createInterval = 1000;
-    var runDistance = 18;
+    var runDistance = 22;
     var dropSpeed = 2;
     var startFall;
     var countDownNum;
@@ -16,7 +16,8 @@ $(function () {
         clearInterval(runGame);
         score = 0;
         startFall = false;
-        countDownNum = 20;
+        countDownNum = 5;
+        $('.coin-get').remove();
         $('.game-time-block p').text(countDownNum);
         $('.game-result-fail, .game-result-success').hide();
     }
@@ -29,6 +30,7 @@ $(function () {
                 } else {
                     // end game
                     countDownNum = 0;
+                    startFall = false;
                 }
                 $('.game-time-block p').text(countDownNum);
                 result();
@@ -62,6 +64,8 @@ $(function () {
                     if(_eggBottom > 0) {
                         if (_eggBottom <= basket.height()*0.5 + parseInt(basket.css('bottom')) && Math.abs( (parseInt(basket.css('left'))+$('#basket').width()*0.5) - (parseInt($(this).css('left'))+$('.egg').width()*0.5) ) <= ($('.egg').width()+$('#basket').width())*0.5 ) {
                             score++;
+                            $('.game-count-block p').text(score);
+                            $('#basket').append('<img class="coin-get" src="img/bam-newyear-coin-get.svg">')
                             $(this).remove();
                             clearInterval(fallInterval);
                         }
@@ -105,10 +109,10 @@ $(function () {
             var x = e.pageX - divOffset.left;
             var _basketLeft = parseInt(basket.css('left'));
             var _basketPosition = parseInt(basket.css('left')) + parseInt(basket.width())*0.5;
-            if(_basketPosition > x+10 && _basketLeft > 0) {
+            if(_basketPosition > x+15 && _basketLeft > 0) {
                 basket.css('left', _basketLeft - runDistance + 'px');
                 $('#basket').addClass('left');
-            } else if(_basketPosition < x-10 && _basketLeft < gameContainer.width() - basket.width()) {
+            } else if(_basketPosition < x-15 && _basketLeft < gameContainer.width() - basket.width()) {
                 basket.css('left', _basketLeft + runDistance + 'px');
                 $('#basket').removeClass('left');
             }
@@ -123,11 +127,23 @@ $(function () {
         reset();
         runGame = setInterval(createEgg, createInterval);
         setTimeout(function() {
-            startFall = true;
-            countDown();
+            $('.game-start-countdown img').eq(0).show();
+            setTimeout(function() {
+                $('.game-start-countdown img').eq(0).hide();
+                $('.game-start-countdown img').eq(1).show();
+            }, 1000)
+            setTimeout(function() {
+                $('.game-start-countdown img').eq(1).hide();
+                $('.game-start-countdown img').eq(2).show();
+                startFall = true;
+                countDown();
+            }, 2000)
+            setTimeout(function() {
+                $('.game-start-countdown img').eq(2).hide();
+            }, 3000)
         }, 4000)
     })
-    .on('click', '.game-result-fail a', function() {
+    .on('click', '.game-result-close, .game-result-fail .game-result-btn', function() {
         $('.game-block, .game-result, .game-result-fail').fadeOut();
         $('.game-intro').show();
     })

@@ -1,18 +1,23 @@
 $(function() {
+    scrollEffect();
     $(window).scroll(function() {
-        if($(window).scrollTop() > $('.content-2').offset().top - window.innerHeight*0.75) {
-            $('.lantern-left, .lantern-right').addClass('active');
-        }
-        $('.bam-newyear-title-ani').each(function() {
-            if($(window).scrollTop() > $(this).offset().top - window.innerHeight*0.75 ) {
-                $(this).addClass('active')
-            }
-        })
-        if($(window).scrollTop() > $('.game-wrap').offset().top - window.innerHeight*0.75) {
-            $('.game-intro-content').addClass('active')
-        }
+        scrollEffect();
     })
 })
+
+function scrollEffect() {
+    if($(window).scrollTop() > $('.content-2').offset().top - window.innerHeight*0.75) {
+        $('.lantern-left, .lantern-right').addClass('active');
+    }
+    $('.bam-newyear-title-ani').each(function() {
+        if($(window).scrollTop() > $(this).offset().top - window.innerHeight*0.75 ) {
+            $(this).addClass('active')
+        }
+    })
+    if($(window).scrollTop() > $('.game-wrap').offset().top - window.innerHeight*0.75) {
+        $('.game-intro-content').addClass('active')
+    }
+}
 $(document)
 .on('click', 'a', function(e) {
     if($(this).attr('href').length == 0) {
@@ -37,7 +42,7 @@ $(document)
         $('body').removeClass('fix');
         $('.bam-newyear-lightbox').fadeOut();
         $('body, html').animate({scrollTop: $('.content-1').offset().top}, 1000)
-    }, 3500)
+    }, 5000)
 })
 // .on('click', '.card-swiper-wrap .swiper-slide', function() {
 //     if(window.innerWidth > 1024) {

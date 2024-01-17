@@ -211,7 +211,10 @@ $teal: #6eb5ba
                 display: none
                 .game-bg,
                 .game-floor,
-                .game-hint
+                .game-hint,
+                .game-time-block,
+                .game-count-block,
+                #basket
                     pointer-events: none
                 .game-hint
                     position: absolute
@@ -226,6 +229,20 @@ $teal: #6eb5ba
                             opacity: 1
                         30%, 60%, 90%, 100%
                             opacity: 0
+                .game-start-countdown
+                    position: absolute
+                    display: block
+                    top: 50%
+                    left: 50%
+                    width: 30%
+                    transform: translate(-50%, -50%)
+                    img
+                        display: none
+                        animation: number 0.5s 0.5s forwards
+                    @keyframes number
+                        to
+                            opacity: 0
+                            transform: scale(0.5)
                 #game-container
                     position: absolute
                     top: 50%
@@ -241,8 +258,21 @@ $teal: #6eb5ba
                         left: 50%
                         width: 12%
                         transition: left 0.05s linear
+                        .coin-get
+                            position: absolute
+                            width: 50%
+                            top: 0
+                            left: 50%
+                            transform: translate(-50%, -100%)
+                            animation: getcoin 1s forwards
                         &.left
                             transform: scale(-1, 1)
+                            .coin-get
+                                transform: scale(-1, 1) translate(50%, -100%)
+                        @keyframes getcoin
+                            to
+                                opacity: 0
+                                top: -100%
                     .egg
                         position: absolute
                         width: 5%
@@ -265,9 +295,22 @@ $teal: #6eb5ba
                         color: #59221e
                         font-size: 3.5rem
                         transform: translate(-50%, -55%)
+                .game-count-block
+                    position: absolute
+                    top: 12%
+                    right: 18%
+                    width: 12%
+                    p
+                        position: absolute
+                        top: 50%
+                        left: 30%
+                        margin: 0
+                        color: #59221e
+                        font-size: 2rem
+                        transform: translate(-50%, -50%)
             .game-result
                 display: none
-                background: rgba(0,0,0,0.5)
+                background: rgba(0,0,0,0.75)
                 height: 93%
                 .game-result-success,
                 .game-result-fail
@@ -280,12 +323,18 @@ $teal: #6eb5ba
                     > img
                         display: block
                         width: 50%
-                    a
+                    .game-result-btn
                         display: block
                         height: 10%
                         img
                             display: block
                             height: 100%
+                    .game-result-close
+                        display: block
+                        position: absolute
+                        right: 3%
+                        top: 5%
+                        width: 8%
 
         .interact,
         .card
@@ -780,6 +829,9 @@ $teal: #6eb5ba
                     .game-time-block
                         p
                             font-size: 2.5rem
+                    .game-count-block
+                        p
+                            font-size: 1.5rem
             .interact,
             .card
                 h4
@@ -952,6 +1004,12 @@ $teal: #6eb5ba
                         width: 17%
                         p
                             font-size: 6vw
+                    .game-count-block
+                        top: 20%
+                        right: 6%
+                        width: 20%
+                        p
+                            font-size: 5vw
                 .game-result
                     height: 95%
                     .game-result-success,
@@ -959,8 +1017,11 @@ $teal: #6eb5ba
                         gap: 5%
                         > img
                             width: 80%
-                        a
+                        .game-result-btn
                             height: 12%
+                        .game-result-close
+                            top: 3%
+                            width: 10%
 
             .interact,
             .card
