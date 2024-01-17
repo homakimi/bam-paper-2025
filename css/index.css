@@ -77,6 +77,21 @@ body.fix {
   color: #78672f;
   background: url("../img/bam-newyear-bg.png") repeat center center;
   background-size: 75px auto;
+  opacity: 0;
+  -webkit-animation: wrapshow 1s forwards;
+          animation: wrapshow 1s forwards;
+}
+
+@-webkit-keyframes wrapshow {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wrapshow {
+  to {
+    opacity: 1;
+  }
 }
 
 .bam-newyear-wrap .swiper-button-prev,
@@ -105,13 +120,13 @@ body.fix {
 }
 
 .bam-newyear-wrap .kv .banner-coin-1 {
-  -webkit-animation: coin 1.5s forwards;
-          animation: coin 1.5s forwards;
+  -webkit-animation: coin 1.5s 0.5s forwards;
+          animation: coin 1.5s 0.5s forwards;
 }
 
 .bam-newyear-wrap .kv .banner-coin-2 {
-  -webkit-animation: coin 1.5s 0.5s forwards;
-          animation: coin 1.5s 0.5s forwards;
+  -webkit-animation: coin 1.5s 1s forwards;
+          animation: coin 1.5s 1s forwards;
 }
 
 @-webkit-keyframes coin {
@@ -1037,9 +1052,8 @@ body.fix {
 }
 
 .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper {
-  width: 25%;
+  width: 80%;
   margin: 3rem auto 1.5rem auto;
-  overflow: visible;
 }
 
 .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide {
@@ -1076,7 +1090,6 @@ body.fix {
 .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article p {
   margin: 0;
   font-size: 1.25rem;
-  text-align: justify;
 }
 
 .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article a {
@@ -1540,13 +1553,13 @@ body.fix {
   .bam-newyear-wrap .content-2 .gift h3 {
     font-size: 1.5rem;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide h4 {
+  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article h4 {
     font-size: 1.25rem;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide p {
+  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article p {
     font-size: 1rem;
   }
-  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide a {
+  .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article a {
     font-size: 1rem;
   }
   .bam-newyear-wrap .content-2 .gift-flex .gift-flex-block h4 {
@@ -1911,6 +1924,7 @@ body.fix {
   .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper {
     width: 65%;
     margin: 1.5rem auto;
+    overflow: visible;
   }
   .bam-newyear-wrap .content-2 .gift .gift-swiper-wrap .swiper-slide article {
     border-width: 5px;

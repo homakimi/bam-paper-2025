@@ -3,6 +3,37 @@ $(function() {
     $(window).scroll(function() {
         scrollEffect();
     })
+
+    // detect device change start
+    var isMobile, isMobileFirst, widthPC;
+    if(window.innerWidth > 1024) {
+        widthPC = true;
+    } else {
+        widthPC = false;
+    }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobileFirst = true;
+    } else {
+        isMobileFirst = false;
+    }
+    $(window).resize(function() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            isMobile = true;
+        } else {
+            isMobile = false;
+        }
+        if(isMobileFirst != isMobile) {
+            location.reload();
+        }
+        if(widthPC && window.innerWidth <= 1024) {
+            location.reload();
+        } else if(!widthPC && window.innerWidth > 1024) {
+            location.reload();
+        }
+    })
+    // detect device change end
+
+    
 })
 
 function scrollEffect() {

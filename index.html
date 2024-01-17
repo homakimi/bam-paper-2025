@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="game-count-block">
                                     <img class="fullimg" src="img/bam-newyear-coin-count.svg">
-                                    <p>0</p>
+                                    <p></p>
                                 </div>
                                 <img class="game-hint for-pc" src="img/bam-newyear-game-hint.png">
                                 <img class="game-hint for-m" src="img/bam-newyear-game-hint-m.png">
@@ -323,49 +323,50 @@
             $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') div').css('display', 'block')
         }
 
-        new Swiper('.gift-swiper-wrap .swiper', {
-            speed: 500,
-            allowTouchMove: false,
-            spaceBetween: 0,
-            effect: 'coverflow',
-            loop: true,
-            loopAdditionalSlides: 1,
-            coverflowEffect: {
-                rotate: 0,
-                depth: 150,
-                scale: 0.8,
-                slideShadows: false,
-                stretch: 150,
-            },
-            navigation: {
-                nextEl: '.gift-swiper-wrap .swiper-button-next',
-                prevEl: '.gift-swiper-wrap .swiper-button-prev',
-            },
-            breakpoints: {
-                1025: {
-                    spaceBetween: 15,
-                    coverflowEffect: {
-                        rotate: 0,
-                        depth: 0,
-                        scale: 1,
-                        slideShadows: false,
-                        stretch: 0,
-                    },
+        if(window.innerWidth > 1024) {
+            new Swiper('.gift-swiper-wrap .swiper', {
+                speed: 500,
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 15,
+                navigation: {
+                    nextEl: '.gift-swiper-wrap .swiper-button-next',
+                    prevEl: '.gift-swiper-wrap .swiper-button-prev',
                 },
-            },
-            on: {
-                slideChangeTransitionStart: function() {
-                    slideHideGift();
+            });
+        } else {
+            new Swiper('.gift-swiper-wrap .swiper', {
+                speed: 500,
+                allowTouchMove: false,
+                spaceBetween: 0,
+                effect: 'coverflow',
+                loop: true,
+                loopAdditionalSlides: 1,
+                coverflowEffect: {
+                    rotate: 0,
+                    depth: 150,
+                    scale: 0.8,
+                    slideShadows: false,
+                    stretch: 150,
+                },
+                navigation: {
+                    nextEl: '.gift-swiper-wrap .swiper-button-next',
+                    prevEl: '.gift-swiper-wrap .swiper-button-prev',
+                },
+                on: {
+                    slideChangeTransitionStart: function() {
+                        slideHideGift();
+                    }
                 }
+            });
+            slideHideGift();
+            function slideHideGift() {
+                currentSlide = $('.gift-swiper-wrap .swiper-slide-active').index();
+                $('.gift-swiper-wrap .swiper-slide article').css('opacity', '0')
+                $('.gift-swiper-wrap .swiper-slide-active article').css('opacity', '1')
+                $('.gift-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') article').css('opacity', '1')
+                $('.gift-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') article').css('opacity', '1')
             }
-        });
-        slideHideGift();
-        function slideHideGift() {
-            currentSlide = $('.gift-swiper-wrap .swiper-slide-active').index();
-            $('.gift-swiper-wrap .swiper-slide article').css('opacity', '0')
-            $('.gift-swiper-wrap .swiper-slide-active article').css('opacity', '1')
-            $('.gift-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') article').css('opacity', '1')
-            $('.gift-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') article').css('opacity', '1')
         }
     </script>
 </html>

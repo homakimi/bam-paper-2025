@@ -16,8 +16,9 @@ $(function () {
         clearInterval(runGame);
         score = 0;
         startFall = false;
-        countDownNum = 5;
+        countDownNum = 20;
         $('.coin-get').remove();
+        $('.game-count-block p').text('0');
         $('.game-time-block p').text(countDownNum);
         $('.game-result-fail, .game-result-success').hide();
     }
@@ -45,7 +46,10 @@ $(function () {
             $('.game-result, .game-result-success').fadeIn();
         } else {
             if(countDownNum == 0) {
+                var _thisScore = score;
+                console.log(_thisScore)
                 reset();
+                $('.game-count-block p').text(_thisScore);
                 $('.game-time-block p').text('0');
                 $('.game-result, .game-result-fail').fadeIn();
             }

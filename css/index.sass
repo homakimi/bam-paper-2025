@@ -11,6 +11,11 @@ $teal: #6eb5ba
     color: $black
     background: url('../img/bam-newyear-bg.png') repeat center center
     background-size: 75px auto
+    opacity: 0
+    animation: wrapshow 1s forwards
+    @keyframes wrapshow
+        to
+            opacity: 1
     .swiper-button-prev,
     .swiper-button-next
         width: 2.5rem
@@ -27,9 +32,9 @@ $teal: #6eb5ba
             opacity: 0
             transform: translateY(-100%)
         .banner-coin-1
-            animation: coin 1.5s forwards
-        .banner-coin-2
             animation: coin 1.5s 0.5s forwards
+        .banner-coin-2
+            animation: coin 1.5s 1s forwards
         @keyframes coin
             to
                 opacity: 1
@@ -572,9 +577,8 @@ $teal: #6eb5ba
                 .swiper-button-next
                     right: 5%
                 .swiper
-                    width: 25%
+                    width: 80%
                     margin: 3rem auto 1.5rem auto
-                    overflow: visible
                 .swiper-slide
                     position: relative
                     height: auto
@@ -601,7 +605,6 @@ $teal: #6eb5ba
                         p
                             margin: 0
                             font-size: 1.25rem
-                            text-align: justify
                         a
                             display: block
                             position: absolute
@@ -860,12 +863,13 @@ $teal: #6eb5ba
                     font-size: 1.5rem
                 .gift-swiper-wrap
                     .swiper-slide
-                        h4
-                            font-size: 1.25rem
-                        p
-                            font-size: 1rem
-                        a
-                            font-size: 1rem
+                        article
+                            h4
+                                font-size: 1.25rem
+                            p
+                                font-size: 1rem
+                            a
+                                font-size: 1rem
             .gift-flex
                 .gift-flex-block
                     h4
@@ -1136,6 +1140,7 @@ $teal: #6eb5ba
                     .swiper
                         width: 65%
                         margin: 1.5rem auto
+                        overflow: visible
                     .swiper-slide
                         article
                             border-width: 5px
