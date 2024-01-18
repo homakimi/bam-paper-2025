@@ -1237,6 +1237,10 @@ body.fix {
   font-size: 1.1rem;
 }
 
+.bam-newyear-wrap .content-3 .notice .notice-content a {
+  color: #55a4f1;
+}
+
 .bam-newyear-wrap .bam-newyear-lightbox {
   display: none;
   z-index: 99;

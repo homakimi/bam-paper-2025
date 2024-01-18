@@ -17,6 +17,7 @@ $(function () {
         score = 0;
         startFall = false;
         countDownNum = 20;
+        $('.egg').remove();
         $('.coin-get').remove();
         $('.game-count-block p').text('0');
         $('.game-time-block p').text(countDownNum);
@@ -41,13 +42,14 @@ $(function () {
     function result() {
         if(score >= scoreSuccess) {
             var _thisTime = $('.game-time-block p').text();
+            var _thisScore = score;
             reset();
+            $('.game-count-block p').text(_thisScore);
             $('.game-time-block p').text(_thisTime);
             $('.game-result, .game-result-success').fadeIn();
         } else {
             if(countDownNum == 0) {
                 var _thisScore = score;
-                console.log(_thisScore)
                 reset();
                 $('.game-count-block p').text(_thisScore);
                 $('.game-time-block p').text('0');
@@ -66,7 +68,7 @@ $(function () {
                     $(this).addClass('active');
                     var _eggBottom = parseInt($(this).css('bottom'));
                     if(_eggBottom > 0) {
-                        if (_eggBottom <= basket.height()*0.5 + parseInt(basket.css('bottom')) && Math.abs( (parseInt(basket.css('left'))+$('#basket').width()*0.5) - (parseInt($(this).css('left'))+$('.egg').width()*0.5) ) <= ($('.egg').width()+$('#basket').width())*0.5 ) {
+                        if (_eggBottom <= basket.height()*0.75 + parseInt(basket.css('bottom')) && Math.abs( (parseInt(basket.css('left'))+$('#basket').width()*0.5) - (parseInt($(this).css('left'))+$('.egg').width()*0.5) ) <= ($('.egg').width()+$('#basket').width())*0.5 ) {
                             score++;
                             $('.game-count-block p').text(score);
                             $('#basket').append('<img class="coin-get" src="img/bam-newyear-coin-get.svg">')
