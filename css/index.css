@@ -716,6 +716,8 @@ body.fix {
 
 .bam-newyear-wrap .content-1 .interact .btn-sign,
 .bam-newyear-wrap .content-1 .card .btn-sign {
+  z-index: 1;
+  position: relative;
   display: block;
   width: 15%;
   margin: auto;
