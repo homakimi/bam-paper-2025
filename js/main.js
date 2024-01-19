@@ -33,7 +33,7 @@ $(function() {
     })
     // detect device change end
 
-    
+
 })
 
 function scrollEffect() {
@@ -72,17 +72,6 @@ $(document)
     setTimeout(function() {
         $('body').removeClass('fix');
         $('.bam-newyear-lightbox').fadeOut();
-        $('body, html').animate({scrollTop: $('.content-1').offset().top}, 1000)
+        $('body, html').animate({scrollTop: $('.content-1').offset().top - $('nav').height() }, 1000)
     }, 5000)
 })
-// .on('click', '.card-swiper-wrap .swiper-slide', function() {
-//     if(window.innerWidth > 1024) {
-//         var imageUrl = $(this).find('img').attr('src');
-//         var downloadLink = document.createElement('a');
-//         downloadLink.href = imageUrl;
-//         downloadLink.download = 'downloaded_image.jpg';
-//         document.body.appendChild(downloadLink);
-//         downloadLink.click();
-//         document.body.removeChild(downloadLink);
-//     }
-// })

@@ -314,10 +314,6 @@
         slideHideCard();
         function slideHideCard() {
             currentSlide = $('.card-swiper-wrap .swiper-slide-active').index();
-            // $('.card-swiper-wrap .swiper-slide div').css('opacity', '0')
-            // $('.card-swiper-wrap .swiper-slide-active div').css('opacity', '1')
-            // $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') div').css('opacity', '1')
-            // $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') div').css('opacity', '1')
             $('.card-swiper-wrap .swiper-slide div').css('display', 'none')
             $('.card-swiper-wrap .swiper-slide-active div').css('display', 'block')
             $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') div').css('display', 'block')
