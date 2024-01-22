@@ -334,7 +334,7 @@ $blue: #55a4f1
                         height: 10%
                         img
                             display: block
-                            height: 100%
+                            height: 100%! important
                     .game-result-close
                         display: block
                         position: absolute
@@ -343,7 +343,7 @@ $blue: #55a4f1
                         width: 8%
 
         .interact,
-        .card
+        .piece
             z-index: 1
             position: relative
             text-align: center
@@ -367,6 +367,7 @@ $blue: #55a4f1
             p
                 font-size: 1.25rem
                 color: $gold
+                margin: 1rem 0
             .btn-sign
                 z-index: 1
                 position: relative
@@ -403,49 +404,49 @@ $blue: #55a4f1
                 width: 7%
                 bottom: 5rem
                 right: -10%
-        .card
+        .piece
             padding: 5rem 0
-            .card-deco-1,
-            .card-deco-2,
-            .card-deco-3,
-            .card-deco-4,
-            .card-wave-1,
-            .card-wave-2
+            .piece-deco-1,
+            .piece-deco-2,
+            .piece-deco-3,
+            .piece-deco-4,
+            .piece-wave-1,
+            .piece-wave-2
                 display: block
                 position: absolute
                 width: 5%
-            .card-wave-1
+            .piece-wave-1
                 left: -32%
                 top: 0
                 width: 20%
                 transform: scale(-1, 1)
                 animation: floatscale 1.5s infinite alternate
-            .card-wave-2
+            .piece-wave-2
                 right: -32%
                 top: 10rem
                 width: 20%
                 transform: scale(-1, 1)
                 animation: floatscale 2s infinite alternate
-            .card-deco-1
+            .piece-deco-1
                 width: 4%
                 bottom: 40%
                 left: 15%
-            .card-deco-2
+            .piece-deco-2
                 width: 4%
                 bottom: 50%
                 right: 15%
                 transform: rotate(35deg)
-            .card-deco-3
+            .piece-deco-3
                 width: 5%
                 bottom: 3%
                 left: 30%
                 transform: rotate(135deg)
-            .card-deco-4
+            .piece-deco-4
                 width: 3%
                 bottom: 8%
                 right: 30%
                 transform: rotate(90deg)
-            .card-swiper-wrap
+            .piece-swiper-wrap
                 position: relative
                 padding: 1.5rem 0
                 overflow: hidden
@@ -841,7 +842,7 @@ $blue: #55a4f1
                         p
                             font-size: 1.5rem
             .interact,
-            .card
+            .piece
                 h4
                     font-size: 1rem
                 p
@@ -1033,7 +1034,7 @@ $blue: #55a4f1
                             width: 10%
 
             .interact,
-            .card
+            .piece
                 .firework
                     opacity: 0.8
                     transform: scale(1.1)
@@ -1053,29 +1054,29 @@ $blue: #55a4f1
                 .interact-firework-2,
                 .interact-firework-3
                     display: none
-            .card
+            .piece
                 padding: 3rem 0
-                .card-deco-1,
-                .card-deco-2,
-                .card-deco-3,
-                .card-deco-4
+                .piece-deco-1,
+                .piece-deco-2,
+                .piece-deco-3,
+                .piece-deco-4
                     width: 10%
-                .card-wave-1,
-                .card-wave-2
+                .piece-wave-1,
+                .piece-wave-2
                     display: none
-                .card-deco-1
+                .piece-deco-1
                     bottom: 55%
                     left: 3%
-                .card-deco-2
+                .piece-deco-2
                     bottom: 63%
                     right: 3%
-                .card-deco-3
+                .piece-deco-3
                     bottom: 5%
                     left: 12%
-                .card-deco-4
+                .piece-deco-4
                     bottom: 3%
                     right: 24%
-                .card-swiper-wrap
+                .piece-swiper-wrap
                     padding: 1rem 0
                     .swiper-button-prev
                         left: -22%
@@ -1171,6 +1172,7 @@ $blue: #55a4f1
                         width: 35%
                         top: -5rem
                         left: -20%
+                        right: auto
                         bottom: auto
                         transform: scale(-1, 1)
                     .gift-wave-4

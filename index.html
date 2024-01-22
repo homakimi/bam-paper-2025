@@ -105,13 +105,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card curve-bottom">
-                        <img class="card-wave-1" src="img/bam-newyear-deco-1.svg">
-                        <img class="card-wave-2" src="img/bam-newyear-deco-2.svg">
-                        <img class="card-deco-1" src="img/bam-newyear-deco-7.svg">
-                        <img class="card-deco-2" src="img/bam-newyear-deco-7.svg">
-                        <img class="card-deco-3" src="img/bam-newyear-deco-7.svg">
-                        <img class="card-deco-4" src="img/bam-newyear-deco-7.svg">
+                    <div class="piece curve-bottom">
+                        <img class="piece-wave-1" src="img/bam-newyear-deco-1.svg">
+                        <img class="piece-wave-2" src="img/bam-newyear-deco-2.svg">
+                        <img class="piece-deco-1" src="img/bam-newyear-deco-7.svg">
+                        <img class="piece-deco-2" src="img/bam-newyear-deco-7.svg">
+                        <img class="piece-deco-3" src="img/bam-newyear-deco-7.svg">
+                        <img class="piece-deco-4" src="img/bam-newyear-deco-7.svg">
                         <img class="firework fullimg for-pc" src="img/bam-newyear-bg-firework.png">
                         <img class="bam-newyear-title for-pc" src="img/bam-newyear-title-2-des.png">
                         <img class="bam-newyear-title for-m" src="img/bam-newyear-title-2-des-m.png">
@@ -123,7 +123,7 @@
                             <div><img src="img/bam-newyear-title-2-5.png"></div>
                         </div>
                         <h3><img class="fullimg for-pc" src="img/bam-newyear-des-2.png"><img class="fullimg for-m" src="img/bam-newyear-des-2-m.png"></h3>
-                        <div class="card-swiper-wrap">
+                        <div class="piece-swiper-wrap">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <a href="img/bam-newyear-card-1.jpg" target="_blank" class="swiper-slide"><div><img class="fullimg" src="img/bam-newyear-card-1.jpg"></div></a>
@@ -288,7 +288,7 @@
     </body>
     <script>
         var currentSlide;
-        new Swiper('.card-swiper-wrap .swiper', {
+        new Swiper('.piece-swiper-wrap .swiper', {
             speed: 500,
             allowTouchMove: false,
             effect: 'coverflow',
@@ -302,8 +302,8 @@
                 stretch: 150,
             },
             navigation: {
-                nextEl: '.card-swiper-wrap .swiper-button-next',
-                prevEl: '.card-swiper-wrap .swiper-button-prev',
+                nextEl: '.piece-swiper-wrap .swiper-button-next',
+                prevEl: '.piece-swiper-wrap .swiper-button-prev',
             },
             on: {
                 slideChangeTransitionStart: function() {
@@ -313,11 +313,11 @@
         });
         slideHideCard();
         function slideHideCard() {
-            currentSlide = $('.card-swiper-wrap .swiper-slide-active').index();
-            $('.card-swiper-wrap .swiper-slide div').css('display', 'none')
-            $('.card-swiper-wrap .swiper-slide-active div').css('display', 'block')
-            $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') div').css('display', 'block')
-            $('.card-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') div').css('display', 'block')
+            currentSlide = $('.piece-swiper-wrap .swiper-slide-active').index();
+            $('.piece-swiper-wrap .swiper-slide div').css('display', 'none')
+            $('.piece-swiper-wrap .swiper-slide-active div').css('display', 'block')
+            $('.piece-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide)+') div').css('display', 'block')
+            $('.piece-swiper-wrap .swiper-slide:nth-child('+parseInt(currentSlide+2)+') div').css('display', 'block')
         }
 
         if(window.innerWidth > 1024) {
