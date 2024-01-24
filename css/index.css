@@ -697,6 +697,7 @@ body.fix {
   z-index: 1;
   width: 60%;
   margin: 1.5rem auto;
+  line-height: 175%;
 }
 
 .bam-newyear-wrap .content-1 .interact h4,
@@ -706,6 +707,7 @@ body.fix {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: #ad974c;
+  line-height: 175%;
 }
 
 .bam-newyear-wrap .content-1 .interact p,
@@ -713,6 +715,7 @@ body.fix {
   font-size: 1.25rem;
   color: #ad974c;
   margin: 1rem 0;
+  line-height: 175%;
 }
 
 .bam-newyear-wrap .content-1 .interact .btn-sign,
