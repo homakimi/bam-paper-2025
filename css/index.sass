@@ -1,12 +1,279 @@
 @import 'style'
 
-$gold: #ad974c
-$red: #cb3435
-$black: #78672f
-$light: #f5ebd7
-$yellow: #fbd896
-$teal: #6eb5ba
-$blue: #55a4f1
+$red: #ff5b4d
+$black: #5d4f4c
+$light: #fff6eb
+$green: #7eccc1
+$pink: #ffdfd7
+$orange: #ff978d
 
-.bam-newyear-wrap
+.bam-warm-wrap
     color: $black
+    width: calc(100% - 30px)
+    margin: auto
+    .kv
+        position: relative
+        background: $pink
+        .kv-img
+            z-index: 1
+            position: relative
+            width: 90%
+            margin: auto
+        .kv-b
+            margin-top: -9%
+        .kv-d-1,
+        .kv-d-2
+            z-index: 1
+            position: absolute
+            width: 9%
+        .kv-d-1
+            top: 0
+            left: 0
+        .kv-d-2
+            top: 50%
+            right: 0
+        article
+            z-index: 1
+            position: absolute
+            width: 36%
+            top: 37%
+            left: 14%
+            > div
+                position: absolute
+                padding: 2.5% 8% 5% 8%
+                width: 100%
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                h2
+                    color: $red
+                    font-weight: normal
+                    font-size: 1.5vw
+                p
+                    margin-top: 2%
+        .kv-p
+            z-index: 1
+            display: block
+            position: absolute
+            width: 10%
+            top: 45%
+            left: 6%
+        h1
+            z-index: 1
+            position: absolute
+            top: 8%
+            left: 14%
+            font-size: 3vw
+            letter-spacing: 0.2vw
+            font-weight: normal
+            p
+                color: $red
+                span
+                    display: inline-block
+                    border-radius: 1vw
+                    background: #FFF
+                    padding: 0 0.75vw
+                    margin: 0 0.5vw
+    .intro
+        position: relative
+        margin-top: -18%
+        .intro-wrap
+            width: 1280px
+            margin: auto
+        h2
+            font-size: 1.75rem
+            font-weight: normal
+            color: $red
+            text-align: center
+            img
+                display: block
+                width: 2rem
+                margin: 1rem auto
+        .intro-flex
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 5% 0
+            a
+                position: relative
+                display: block
+                width: 24%
+                padding-top: 28.5%
+                background-repeat: no-repeat! important
+                background-position: center center! important
+                background-size: cover! important
+                border-radius: 75px
+                &::before
+                    position: absolute
+                    display: block
+                    content: ''
+                    width: 100%
+                    height: 50%
+                    bottom: 0
+                    left: 0
+                    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.75))
+                    border-radius: 0 0 75px 75px
+                > div
+                    display: block
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    opacity: 0
+                    img
+                        position: absolute
+                        top: 0
+                        left: 0
+                    article
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        width: 100%
+                        transform: translate(-50%, -50%)
+                        text-align: center
+                        h4
+                            font-weight: normal
+                            font-size: 1rem
+                h3
+                    position: absolute
+                    color: #FFF
+                    font-size: 2rem
+                    top: 70%
+                    left: 0
+                    width: 100%
+                    font-weight: 500
+                    text-align: center
+                p
+                    position: absolute
+                    top: calc(70% + 3rem)
+                    left: 0
+                    width: 100%
+                    text-align: center
+                    color: #FFF
+                    span
+                        opacity: 0
+                        display: block
+                        transform: scale(0.8)
+
+    .content
+        .tab-wrap
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 500px
+            margin: auto
+            padding: 1.5rem 0
+            a
+                display: block
+                width: 25%
+                font-size: 1.25rem
+                text-align: center
+                img
+                    display: block
+                    width: 1.5rem
+                    margin: auto
+        .content-bg
+            width: calc(100% - (100% - 1280px)*0.5)
+            margin: auto
+            margin-right: 0
+            background: $light
+            border-radius: 75px 0 0 75px
+            .content-wrap
+                width: 1280px
+                margin: 0
+            .content-block
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                gap: 5%
+                .content-img
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 30%
+                    height: 750px
+                    background-repeat: no-repeat! important
+                    background-position: center center! important
+                    background-size: cover! important
+                    border-radius: 75px
+                    article
+                        background: rgba(255,255,255,0.8)
+                        border-radius: 50px
+                        width: 90%
+                        margin: 0 auto
+                        text-align: center
+                        padding: 1rem
+                        h3
+                            display: inline-block
+                            font-size: 2rem
+                            padding-bottom: 5px
+                            margin-bottom: 0.5rem
+                            font-weight: 500
+                            background: url('../img/icon-line.png') repeat-x left bottom
+                            background-size: 15px
+                .content-info
+                    flex: 1 0 0
+                    padding: 1.5rem 0
+                    h4
+                        font-weight: 500
+                        font-size: 2rem
+                    h5
+                        font-weight: 500
+                        font-size: 1.5rem
+                        color: $orange
+                    .content-tab
+                        margin-bottom: 1rem
+                        .swiper
+                            .swiper-slide
+                                display: block
+                                width: auto
+                                padding: 0.5rem 1rem
+                                color: #FFF
+                                background: $orange
+                                border-radius: 50px
+                                border: 3px solid $orange
+                                &.active
+                                    color: $orange
+                                    background: #FFF
+                            .swiper-button-prev,
+                            .swiper-button-next
+                                width: 2.5rem
+                                height: 2.5rem
+                                border: 2px solid $green
+                                border-radius: 50%
+                                transform: translateY(-50%)
+                                &::after
+                                    display: none
+                            .swiper-button-prev
+                                left: 0
+                            .swiper-button-next
+                                right: 0
+                    .content-scroll
+                        margin: 1rem 0
+                        .content-white
+                            margin: 0.5rem 0
+                            padding: 0.75rem 1rem
+                            border-radius: 20px
+                            background: #FFF
+                            border: 1px solid $green
+                            h6
+                                position: relative
+                                font-size: 1.2rem
+                                font-weight: normal
+                                color: $green
+                                padding-left: 1rem
+                                margin-bottom: 0.25rem
+                                &::before
+                                    position: absolute
+                                    display: block
+                                    content: ''
+                                    width: 4px 
+                                    height: 60%
+                                    background: $green
+                                    top: 55%
+                                    left: 3px
+                                    transform: translateY(-50%)

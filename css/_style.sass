@@ -9,13 +9,14 @@ body
     &.fix
         overflow: hidden
 
-.bam-heart-wrap
+.bam-warm-wrap
     width: 100%
-    letter-spacing: 0.5px
     background: #FFF
     font-family: 'Noto Sans TC'
     overflow: hidden
     *
+        margin: 0
+        padding: 0
         box-sizing: border-box
         &::before,
         &::after
@@ -35,9 +36,28 @@ body
                 position: absolute
                 content: '・'
                 left: -1rem
+                color: #ff978d
     ol
-        list-style: decimal
-        margin-left: -1rem
+        list-style: none
+        margin-left: 1.5rem
+        counter-reset: olol
+        li
+            position: relative
+            counter-increment: olol
+            &::before
+                position: absolute
+                left: -1.5rem
+                top: 0.15rem
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                content: counter(olol)
+                color: #ff978d
+                border: 1px solid #ff978d
+                width: 1.25rem
+                height: 1.25rem
+                border-radius: 50%
+                font-size: 0.9rem
         
 
 @media only screen and (min-width: 1025px)
