@@ -420,7 +420,6 @@ $orange: #ff978d
 
     // animate
     .kv
-        overflow: hidden
         .kv-img,
         .kv-p,
         article
@@ -460,8 +459,6 @@ $orange: #ff978d
                 &.active
                     opacity: 1
                     transform: translateY(0)
-                &.zoom
-                    transform: scale(1.05)
     .content
         .tab-wrap
             a
@@ -557,7 +554,6 @@ $orange: #ff978d
                                 .swiper-slide:hover
                                     color: $orange
                                     background: #FFF
-
 
 @media only screen and (max-width: 1024px)
     .bam-warm-wrap
@@ -785,6 +781,16 @@ $orange: #ff978d
             width: 25%
             bottom: -15%
             right: 0
+
+        // animate
+        .kv
+            h1
+                transform: translateX(0) translateY(3rem)
+        .intro
+            .intro-flex
+                a
+                    &.zoom
+                        transform: scale(1.07)
 
 @media only screen and (max-width: 480px)
     .bam-warm-wrap

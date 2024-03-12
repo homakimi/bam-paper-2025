@@ -743,10 +743,6 @@ body.fix {
   right: -12%;
 }
 
-.bam-warm-wrap .kv {
-  overflow: hidden;
-}
-
 .bam-warm-wrap .kv .kv-img,
 .bam-warm-wrap .kv .kv-p,
 .bam-warm-wrap .kv article {
@@ -840,11 +836,6 @@ body.fix {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-.bam-warm-wrap .intro .intro-flex a.zoom {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .bam-warm-wrap .content .tab-wrap a {
@@ -1274,6 +1265,14 @@ body.fix {
     width: 25%;
     bottom: -15%;
     right: 0;
+  }
+  .bam-warm-wrap .kv h1 {
+    -webkit-transform: translateX(0) translateY(3rem);
+            transform: translateX(0) translateY(3rem);
+  }
+  .bam-warm-wrap .intro .intro-flex a.zoom {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
   }
 }
 

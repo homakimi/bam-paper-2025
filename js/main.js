@@ -1,4 +1,5 @@
 var zoomAlready = false;
+var tabAlready = false;
 $(function() {
     scrollEffect();
     $(window).scroll(function() {
@@ -19,13 +20,11 @@ function scrollEffect() {
                 $(this).addClass('active')
             }.bind(this), index*250)
         });
-        if(window.innerWidth <= 1024) {
-            if(!zoomAlready) {
-                setTimeout(function() {
-                    zoomAlready = true;
-                    intro();
-                }, 1000)
-            }
+        if(!zoomAlready) {
+            setTimeout(function() {
+                zoomAlready = true;
+                intro();
+            }, 1000)
         }
     }
     if($(window).scrollTop() > $('.tab-wrap').offset().top - window.innerHeight*0.75) {
@@ -35,7 +34,10 @@ function scrollEffect() {
             }.bind(this), index*250)
         });
         setTimeout(function() {
-            $('.tab-wrap a:first-child').addClass('active');
+            if(!tabAlready) {
+                tabAlready = true;
+                $('.tab-wrap a:first-child').addClass('active');
+            }
         }, 250);
     }
 }
@@ -80,4 +82,14 @@ $(document)
         $(this).closest('.content-info').find('.content-content').hide();
         $(this).closest('.content-info').find('.content-content').eq($(this).index()).show();
     }
+})
+.on('click', '.intro-flex a', function() {
+    var _index = $(this).index();
+    $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
+    $('.tab-wrap a').removeClass('active');
+    $('.tab-wrap a').eq(_index).addClass('active');
+    $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
+    $('.tab-wrap').addClass('active-'+_index);
+    $('.content-block').hide()
+    $('.content-block').eq(_index).show();
 })
