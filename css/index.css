@@ -119,6 +119,69 @@ body.fix {
   padding-bottom: 15px;
 }
 
+.bam-warm-wrap .apply-btn {
+  display: block;
+  z-index: 9;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 120px;
+}
+
+.bam-warm-wrap .apply-btn img {
+  -webkit-animation: rrr 5s linear infinite;
+          animation: rrr 5s linear infinite;
+}
+
+@-webkit-keyframes rrr {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rrr {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.bam-warm-wrap .apply-btn p {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ff978d;
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
+  font-size: 1.75rem;
+  line-height: 120%;
+  color: #ff978d;
+  background: #FFF;
+  border-radius: 50%;
+  -webkit-transition: color 0.5s, background 0.5s;
+  transition: color 0.5s, background 0.5s;
+}
+
 .bam-warm-wrap .border-v-left,
 .bam-warm-wrap .border-v-right {
   position: absolute;
@@ -132,12 +195,12 @@ body.fix {
 
 .bam-warm-wrap .border-v-left {
   left: -15px;
-  background-position: top 10% center !important;
+  background-position: top 200px center !important;
 }
 
 .bam-warm-wrap .border-v-right {
   right: -15px;
-  background-position: top 30% center !important;
+  background-position: top 500px center !important;
 }
 
 .bam-warm-wrap .border-h-bottom {
@@ -290,10 +353,10 @@ body.fix {
   border-radius: 75px;
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
 .bam-warm-wrap .intro .intro-flex a::before {
@@ -327,8 +390,8 @@ body.fix {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .bam-warm-wrap .intro .intro-flex a > div img {
@@ -345,8 +408,8 @@ body.fix {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  -webkit-transition: top 0.5s;
-  transition: top 0.5s;
+  -webkit-transition: top 1s;
+  transition: top 1s;
 }
 
 .bam-warm-wrap .intro .intro-flex a > div article h4 {
@@ -363,8 +426,8 @@ body.fix {
   width: 100%;
   font-weight: 500;
   text-align: center;
-  -webkit-transition: top 0.5s, color 0.5s;
-  transition: top 0.5s, color 0.5s;
+  -webkit-transition: top 1s, color 1s;
+  transition: top 1s, color 1s;
 }
 
 .bam-warm-wrap .intro .intro-flex a p {
@@ -374,8 +437,8 @@ body.fix {
   width: 100%;
   text-align: center;
   color: #FFF;
-  -webkit-transition: top 0.5s, color 0.5s;
-  transition: top 0.5s, color 0.5s;
+  -webkit-transition: top 1s, color 1s;
+  transition: top 1s, color 1s;
 }
 
 .bam-warm-wrap .intro .intro-flex a p span {
@@ -383,8 +446,8 @@ body.fix {
   display: block;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .bam-warm-wrap .content .tab-wrap {
@@ -442,12 +505,6 @@ body.fix {
   transition: color 0.5s, -webkit-transform 0.5s;
   transition: color 0.5s, transform 0.5s;
   transition: color 0.5s, transform 0.5s, -webkit-transform 0.5s;
-}
-
-.bam-warm-wrap .content .tab-wrap a.active {
-  color: #ff5b4d;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .bam-warm-wrap .content .tab-wrap a img {
@@ -686,6 +743,128 @@ body.fix {
   right: -12%;
 }
 
+.bam-warm-wrap .kv {
+  overflow: hidden;
+}
+
+.bam-warm-wrap .kv .kv-img,
+.bam-warm-wrap .kv .kv-p,
+.bam-warm-wrap .kv article {
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.bam-warm-wrap .kv .kv-img {
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+
+.bam-warm-wrap .kv h1 {
+  opacity: 0;
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem);
+  -webkit-transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
+  transition: opacity 1s 0.5s, -webkit-transform 1s 0.5s;
+  transition: opacity 1s 0.5s, transform 1s 0.5s;
+  transition: opacity 1s 0.5s, transform 1s 0.5s, -webkit-transform 1s 0.5s;
+}
+
+.bam-warm-wrap .kv .kv-p {
+  -webkit-transition: opacity 1s 1s, -webkit-transform 1s 1s;
+  transition: opacity 1s 1s, -webkit-transform 1s 1s;
+  transition: opacity 1s 1s, transform 1s 1s;
+  transition: opacity 1s 1s, transform 1s 1s, -webkit-transform 1s 1s;
+}
+
+.bam-warm-wrap .kv article {
+  -webkit-transition: opacity 1s 1.5s, -webkit-transform 1s 1.5s;
+  transition: opacity 1s 1.5s, -webkit-transform 1s 1.5s;
+  transition: opacity 1s 1.5s, transform 1s 1.5s;
+  transition: opacity 1s 1.5s, transform 1s 1.5s, -webkit-transform 1s 1.5s;
+}
+
+.bam-warm-wrap .kv.active .kv-img,
+.bam-warm-wrap .kv.active h1,
+.bam-warm-wrap .kv.active .kv-p,
+.bam-warm-wrap .kv.active article {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.bam-warm-wrap .kv.active .kv-p {
+  -webkit-animation: shake 3s 2s infinite;
+          animation: shake 3s 2s infinite;
+}
+
+@-webkit-keyframes shake {
+  0%, 30%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  20% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+}
+
+@keyframes shake {
+  0%, 30%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  20% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+}
+
+.bam-warm-wrap .intro .intro-flex a {
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.bam-warm-wrap .intro .intro-flex a.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.bam-warm-wrap .intro .intro-flex a.zoom {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.bam-warm-wrap .content .tab-wrap a {
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.bam-warm-wrap .content .tab-wrap a.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.bam-warm-wrap .content .tab-wrap a.active {
+  color: #ff5b4d;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 @media only screen and (max-width: 1440px) {
   .bam-warm-wrap .intro {
     margin-top: -18%;
@@ -750,6 +929,10 @@ body.fix {
 }
 
 @media only screen and (min-width: 1025px) {
+  .bam-warm-wrap .apply-btn:hover p {
+    color: #FFF;
+    background: #ff978d;
+  }
   .bam-warm-wrap .intro .intro-flex a:hover {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
@@ -1095,6 +1278,14 @@ body.fix {
 }
 
 @media only screen and (max-width: 480px) {
+  .bam-warm-wrap .apply-btn {
+    bottom: 0.5rem;
+    right: 1rem;
+    width: 90px;
+  }
+  .bam-warm-wrap .apply-btn p {
+    font-size: 1.5rem;
+  }
   .bam-warm-wrap .intro .intro-flex a {
     gap: 1%;
   }

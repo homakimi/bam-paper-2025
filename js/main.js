@@ -1,27 +1,58 @@
+var zoomAlready = false;
 $(function() {
-    // scrollEffect();
-    // $(window).scroll(function() {
-    //     scrollEffect();
-    // })
-    $('.tab-wrap a:first-child').addClass('active');
+    scrollEffect();
+    $(window).scroll(function() {
+        scrollEffect();
+    })
     $('.swiper .swiper-slide:first-child').addClass('active');
     $('.content-block:not(:first-child)').hide();
     $('.content-content:not(:first-child)').hide();
+    setTimeout(function() {
+        $('.kv').addClass('active')
+    }, 1000)
 })
 
-// function scrollEffect() {
-//     if($(window).scrollTop() > $('.content-2').offset().top - window.innerHeight*0.75) {
-//         $('.lantern-left, .lantern-right').addClass('active');
-//     }
-//     $('.bam-newyear-title-ani').each(function() {
-//         if($(window).scrollTop() > $(this).offset().top - window.innerHeight*0.75 ) {
-//             $(this).addClass('active')
-//         }
-//     })
-//     if($(window).scrollTop() > $('.game-wrap').offset().top - window.innerHeight*0.75) {
-//         $('.game-intro-content').addClass('active')
-//     }
-// }
+function scrollEffect() {
+    if($(window).scrollTop() > $('.intro-flex').offset().top - window.innerHeight*0.75) {
+        $('.intro-flex a').each(function(index) {
+            setTimeout(function() {
+                $(this).addClass('active')
+            }.bind(this), index*250)
+        });
+        if(window.innerWidth <= 1024) {
+            if(!zoomAlready) {
+                setTimeout(function() {
+                    zoomAlready = true;
+                    intro();
+                }, 1000)
+            }
+        }
+    }
+    if($(window).scrollTop() > $('.tab-wrap').offset().top - window.innerHeight*0.75) {
+        $('.tab-wrap a').each(function(index) {
+            setTimeout(function() {
+                $(this).addClass('show')
+            }.bind(this), index*250)
+        });
+        setTimeout(function() {
+            $('.tab-wrap a:first-child').addClass('active');
+        }, 250);
+    }
+}
+
+function intro() {
+    var _in = 0;
+    setInterval(function() {
+        if(_in < $('.intro-flex a').length) {
+            $('.intro-flex a').removeClass('zoom');
+            $('.intro-flex a').eq(_in).addClass('zoom');
+            _in++;
+        }
+        if(_in == $('.intro-flex a').length) {
+            _in = 0;
+        }
+    }, 2000)
+}
 $(document)
 .on('click', 'a', function(e) {
     if($(this).attr('href').length == 0) {

@@ -13,6 +13,38 @@ $orange: #ff978d
     width: calc(100% - 30px)
     margin: auto
     padding-bottom: 15px
+    .apply-btn
+        display: block
+        z-index: 9
+        position: fixed
+        bottom: 1.5rem
+        right: 1.5rem
+        width: 120px
+        img
+            animation: rrr 5s linear infinite
+            @keyframes rrr
+                from
+                    transform: rotate(0)
+                to
+                    transform: rotate(359deg)
+        p
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            top: 50%
+            left: 50%
+            width: 100%
+            height: 100%
+            border: 1px solid $orange
+            transform: translate(-50%, -50%) scale(0.7)
+            font-size: 1.75rem
+            line-height: 120%
+            color: $orange
+            background: #FFF
+            border-radius: 50%
+            transition: color 0.5s, background 0.5s
+
     .border-v-left,
     .border-v-right
         position: absolute
@@ -24,10 +56,10 @@ $orange: #ff978d
         background-size: 100% auto! important
     .border-v-left
         left: -15px
-        background-position: top 10% center! important
+        background-position: top 200px center! important
     .border-v-right
         right: -15px
-        background-position: top 30% center! important
+        background-position: top 500px center! important
     .border-h-bottom
         position: absolute
         bottom: 0
@@ -130,7 +162,7 @@ $orange: #ff978d
                 background-size: cover! important
                 border-radius: 75px
                 box-shadow: 0 10px 25px rgba(0,0,0,0.25)
-                transition: transform 0.5s
+                transition: transform 1s, opacity 1s
                 &::before
                     position: absolute
                     display: block
@@ -152,7 +184,7 @@ $orange: #ff978d
                     width: 100%
                     height: 100%
                     opacity: 0
-                    transition: opacity 0.5s
+                    transition: opacity 1s
                     img
                         position: absolute
                         top: 0
@@ -164,7 +196,7 @@ $orange: #ff978d
                         width: 100%
                         transform: translate(-50%, -50%)
                         text-align: center
-                        transition: top 0.5s
+                        transition: top 1s
                         h4
                             font-weight: normal
                             font-size: 1rem
@@ -177,7 +209,7 @@ $orange: #ff978d
                     width: 100%
                     font-weight: 500
                     text-align: center
-                    transition: top 0.5s, color 0.5s
+                    transition: top 1s, color 1s
                 p
                     position: absolute
                     top: calc(70% + 3rem)
@@ -185,12 +217,12 @@ $orange: #ff978d
                     width: 100%
                     text-align: center
                     color: #FFF
-                    transition: top 0.5s, color 0.5s
+                    transition: top 1s, color 1s
                     span
                         opacity: 0
                         display: block
                         transform: scale(0.8)
-                        transition: opacity 0.5s
+                        transition: opacity 1s
 
     .content
         .tab-wrap
@@ -226,9 +258,6 @@ $orange: #ff978d
                 font-size: 1.25rem
                 text-align: center
                 transition: color 0.5s, transform 0.5s
-                &.active
-                    color: $red
-                    transform: translateY(-50%)
                 img
                     display: block
                     width: 1.5rem
@@ -389,6 +418,62 @@ $orange: #ff978d
         bottom: -5%
         right: -12%
 
+    // animate
+    .kv
+        overflow: hidden
+        .kv-img,
+        .kv-p,
+        article
+            opacity: 0
+            transform: translateY(3rem)
+        .kv-img
+            transition: opacity 1s, transform 1s
+        h1
+            opacity: 0
+            transform: translateX(-3rem)
+            transition: opacity 1s 0.5s, transform 1s 0.5s
+        .kv-p
+            transition: opacity 1s 1s, transform 1s 1s
+        article
+            transition: opacity 1s 1.5s, transform 1s 1.5s
+        &.active
+            .kv-img,
+            h1,
+            .kv-p,
+            article
+                opacity: 1
+                transform: translateY(0)
+            .kv-p
+                animation: shake 3s 2s infinite
+        @keyframes shake
+            0%, 30%, 100%
+                transform: rotate(0)
+            10%
+                transform: rotate(3deg)
+            20%
+                transform: rotate(-3deg)
+    .intro
+        .intro-flex
+            a
+                opacity: 0
+                transform: translateY(3rem)
+                &.active
+                    opacity: 1
+                    transform: translateY(0)
+                &.zoom
+                    transform: scale(1.05)
+    .content
+        .tab-wrap
+            a
+                opacity: 0
+                transform: translateY(3rem)
+                &.show
+                    opacity: 1
+                    transform: translateY(0)
+                &.active
+                    color: $red
+                    transform: translateY(-50%)
+
 @media only screen and (max-width: 1440px)
     .bam-warm-wrap
         .intro
@@ -441,6 +526,10 @@ $orange: #ff978d
 
 @media only screen and (min-width: 1025px)
     .bam-warm-wrap
+        .apply-btn:hover
+            p
+                color: #FFF
+                background: $orange
         .intro
             .intro-flex
                 a:hover
@@ -699,6 +788,12 @@ $orange: #ff978d
 
 @media only screen and (max-width: 480px)
     .bam-warm-wrap
+        .apply-btn
+            bottom: 0.5rem
+            right: 1rem
+            width: 90px
+            p
+                font-size: 1.5rem
         .intro
             .intro-flex
                 a
