@@ -8,9 +8,35 @@ $pink: #ffdfd7
 $orange: #ff978d
 
 .bam-warm-wrap
+    position: relative
     color: $black
     width: calc(100% - 30px)
     margin: auto
+    padding-bottom: 15px
+    .border-v-left,
+    .border-v-right
+        position: absolute
+        top: 0
+        width: 15px
+        height: 100%
+        background-color: $orange! important
+        background-repeat: repeat-y! important
+        background-size: 100% auto! important
+    .border-v-left
+        left: -15px
+        background-position: top 10% center! important
+    .border-v-right
+        right: -15px
+        background-position: top 30% center! important
+    .border-h-bottom
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 15px
+        background-color: $orange! important
+        background-repeat: no-repeat! important
+        background-size: auto 100%! important
+        background-position: bottom left 15%! important
     .kv
         position: relative
         background: $pink
@@ -88,7 +114,7 @@ $orange: #ff978d
             img
                 display: block
                 width: 2rem
-                margin: 1rem auto
+                margin: 0.5rem auto
         .intro-flex
             display: flex
             justify-content: space-between
@@ -103,6 +129,8 @@ $orange: #ff978d
                 background-position: center center! important
                 background-size: cover! important
                 border-radius: 75px
+                box-shadow: 0 10px 25px rgba(0,0,0,0.25)
+                transition: transform 0.5s
                 &::before
                     position: absolute
                     display: block
@@ -124,17 +152,19 @@ $orange: #ff978d
                     width: 100%
                     height: 100%
                     opacity: 0
+                    transition: opacity 0.5s
                     img
                         position: absolute
                         top: 0
                         left: 0
                     article
                         position: absolute
-                        top: 50%
+                        top: 75%
                         left: 50%
                         width: 100%
                         transform: translate(-50%, -50%)
                         text-align: center
+                        transition: top 0.5s
                         h4
                             font-weight: normal
                             font-size: 1rem
@@ -147,6 +177,7 @@ $orange: #ff978d
                     width: 100%
                     font-weight: 500
                     text-align: center
+                    transition: top 0.5s, color 0.5s
                 p
                     position: absolute
                     top: calc(70% + 3rem)
@@ -154,35 +185,54 @@ $orange: #ff978d
                     width: 100%
                     text-align: center
                     color: #FFF
+                    transition: top 0.5s, color 0.5s
                     span
                         opacity: 0
                         display: block
                         transform: scale(0.8)
+                        transition: opacity 0.5s
 
     .content
         .tab-wrap
+            position: relative
             display: flex
             justify-content: center
             align-items: center
             width: 500px
             margin: auto
-            padding: 1.5rem 0
+            padding: 5% 0 1% 0
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                width: 25%
+                padding-top: 6%
+                bottom: 0
+                left: 0
+                background: url('../img/bam-warm-icon-arrow.png') no-repeat center top
+                background: contain
             a
                 display: block
                 width: 25%
                 font-size: 1.25rem
                 text-align: center
+                transition: color 0.5s, transfrom 0.5s
+                &.active
+                    color: $red
+                    transform: translateY(-50%)
                 img
                     display: block
                     width: 1.5rem
                     margin: auto
         .content-bg
+            position: relative
             width: calc(100% - (100% - 1280px)*0.5)
             margin: auto
             margin-right: 0
             background: $light
             border-radius: 75px 0 0 75px
             .content-wrap
+                position: relative
                 width: 1280px
                 margin: 0
             .content-block
@@ -213,7 +263,7 @@ $orange: #ff978d
                             padding-bottom: 5px
                             margin-bottom: 0.5rem
                             font-weight: 500
-                            background: url('../img/icon-line.png') repeat-x left bottom
+                            background: url('../img/bam-warm-icon-line.png') repeat-x left bottom
                             background-size: 15px
                 .content-info
                     flex: 1 0 0
@@ -236,6 +286,7 @@ $orange: #ff978d
                                 background: $orange
                                 border-radius: 50px
                                 border: 3px solid $orange
+                                transition: color 0.5s, background 0.5s
                                 &.active
                                     color: $orange
                                     background: #FFF
@@ -252,8 +303,14 @@ $orange: #ff978d
                                 left: 0
                             .swiper-button-next
                                 right: 0
+                    .content-content:not(:first-child)
+                        display: none
                     .content-scroll
-                        margin: 1rem 0
+                        margin-top: 1rem
+                        padding-right: 0.5rem
+                        max-height: 500px
+                        overflow-y: auto
+                        -webkit-overflow-scrolling: touch
                         .content-white
                             margin: 0.5rem 0
                             padding: 0.75rem 1rem
@@ -277,3 +334,420 @@ $orange: #ff978d
                                     top: 55%
                                     left: 3px
                                     transform: translateY(-50%)
+
+    .notice
+        position: relative
+        margin-top: 3%
+        .notice-wrap
+            position: relative
+            background: url('../img/bam-warm-notice-bg.jpg') no-repeat top center
+            background-size: cover
+        .notice-block
+            width: 1280px
+            margin: 3% auto 0 auto
+            padding: 3% 0
+        h2
+            font-size: 1.75rem
+            font-weight: normal
+            color: $red
+            text-align: center
+            img
+                display: block
+                width: 2rem
+                margin: 0 auto 0.5rem auto
+
+    .deco-1
+        position: absolute
+        top: 100%
+        left: 0
+        width: 9%
+    .deco-2
+        position: absolute
+        top: 110%
+        right: 0
+        width: 7%
+    .deco-3
+        position: absolute
+        width: 14%
+        bottom: 100%
+        left: 0
+    .deco-5
+        position: absolute
+        width: 3.5%
+        bottom: 100%
+        left: 20%
+    .deco-4
+        position: absolute
+        width: 12%
+        bottom: -5%
+        right: -12%
+
+@media only screen and (max-width: 1440px)
+    .bam-warm-wrap
+        .intro
+            margin-top: -18%
+            .intro-wrap
+                width: 950px
+            .intro-flex
+                a
+                    border-radius: 45px
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.25)
+                    &::before
+                        border-radius: 0 0 45px 45px
+                    h3
+                        font-size: 1.5rem
+                        top: 65%
+                    p
+                        top: calc(65% + 2.25rem)
+
+        .content
+            .tab-wrap
+                width: 450px
+            .content-bg
+                width: calc(100% - (100% - 950px)*0.5)
+                border-radius: 75px 0 0 75px
+                .content-wrap
+                    width: 950px
+                .content-block
+                    .content-img
+                        height: 550px
+                        article
+                            border-radius: 35px
+                            h3
+                                font-size: 1.75rem
+                    .content-info
+                        padding: 1.5rem 0
+                        h4
+                            font-size: 1.75rem
+                        h5
+                            font-size: 1.25rem
+                        .content-scroll
+                            max-height: 350px
+        .notice
+            .notice-block
+                width: 950px
+
+        .deco-4
+            width: 15%
+            bottom: -5%
+            right: -15%
+
+@media only screen and (min-width: 1025px)
+    .bam-warm-wrap
+        .intro
+            .intro-flex
+                a:hover
+                    transform: translateY(30px)
+                    > div
+                        opacity: 1
+                        article
+                            top: 50%
+                    h3
+                        top: 10%
+                        color: $orange
+                    p
+                        color: $green
+                        span
+                            opacity: 1
+        .content
+            .tab-wrap
+                a:hover
+                    color: $red
+            .content-bg
+                .content-block
+                    .content-info
+                        .content-tab
+                            .swiper
+                                .swiper-slide:hover
+                                    color: $orange
+                                    background: #FFF
+
+
+@media only screen and (max-width: 1024px)
+    .bam-warm-wrap
+        width: calc(100% - 20px)
+        padding-bottom: 10px
+        .border-v-left,
+        .border-v-right
+            width: 10px
+        .border-v-left
+            left: -10px
+        .border-v-right
+            right: -10px
+        .border-h-bottom
+            height: 10px
+        .kv
+            padding-bottom: 15%
+            .kv-d-1,
+            .kv-d-2
+                width: 12%
+            .kv-d-2
+                top: 50%
+            article
+                width: 60%
+                top: 87%
+                left: 27%
+                > div
+                    padding: 2% 5% 2% 11%
+                    h2
+                        font-size: 3.5vw
+                    p
+                        font-size: 2.5vw
+                        margin-top: 2%
+            .kv-p
+                width: 22%
+                top: 80%
+                left: 5%
+            h1
+                top: 8%
+                left: 0
+                right: 0
+                margin: auto
+                font-size: 6vw
+                text-align: center
+                p
+                    span
+                        border-radius: 2.5vw
+        .intro
+            margin-top: 0
+            background: url('../img/bam-warm-intro-bg.jpg') no-repeat center center
+            background-size: cover
+            padding-top: 20%
+            .intro-wrap
+                width: 90%
+                max-width: 500px
+            h2
+                font-size: 1.35rem
+                img
+                    width: 1.5rem
+            .intro-flex
+                display: block
+                padding: 5% 0
+                a
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    flex-direction: row-reverse
+                    gap: 3%
+                    width: 100%
+                    padding-top: 0
+                    margin: 1.5% 0
+                    border-radius: 0
+                    box-shadow: none
+                    background-size: 0 0! important
+                    &::before
+                        display: none
+                    > div
+                        position: static
+                        display: block
+                        flex: 1 0 0
+                        height: auto
+                        opacity: 1
+                        img
+                            display: none
+                        article
+                            position: static
+                            transform: none
+                            text-align: left
+                            margin-top: -5%
+                            h4
+                                position: relative
+                                padding-left: 1rem
+                                &::before
+                                    position: absolute
+                                    display: block
+                                    content: '•'
+                                    top: 50%
+                                    left: 0
+                                    color: $orange
+                                    transform: translateY(-50%) scale(2)
+                    h3
+                        position: relative
+                        top: 0
+                        left: 0
+                        width: 45%
+                        font-size: 1.35rem
+                        span
+                            display: inline-block
+                            position: absolute
+                            bottom: 2.5rem
+                            left: 0
+                            width: 100%
+                            &::after
+                                display: inline-block
+                                content: '▼'
+                                transform: scale(0.5)
+                    p
+                        display: none
+
+        .content
+            margin: 5% 0 10% 0
+            .tab-wrap
+                width: 360px
+                padding: 5% 0 1% 0
+                a
+                    font-size: 1.1rem
+                    img
+                        width: 2rem
+            .content-bg
+                width: 100%
+                border-radius: 0
+                padding-bottom: 10%
+                .content-wrap
+                    width: 90%
+                    max-width: 500px
+                    margin: auto
+                .content-block
+                    display: block
+                    .content-img
+                        display: block
+                        width: 100%
+                        height: auto
+                        background-size: 0 0! important
+                        border-radius: 0
+                        article
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            gap: 1rem
+                            background: none
+                            border-radius: 0
+                            width: 100%
+                            text-align: left
+                            padding: 1rem 0
+                            h3
+                                display: block
+                                white-space: nowrap
+                                font-size: 1.5rem
+                                padding-bottom: 5px
+                                background-size: 10px
+                            p
+                                flex: 1 0 0
+                                margin-top: -5px
+                    .content-info
+                        padding: 0
+                        h4
+                            font-size: 1.5rem
+                        h5
+                            font-size: 1.25rem
+                        .content-tab
+                            .swiper
+                                .swiper-slide
+                                    padding: 0.25rem 1rem
+                                    border: 2px solid $orange
+                                .swiper-button-prev,
+                                .swiper-button-next
+                                    width: 2rem
+                                    height: 2rem
+                                    border: 1px solid $green
+                        .content-scroll
+                            margin-top: 1rem
+                            padding-right: 0
+                            max-height: none
+                            .content-white
+                                h6
+                                    font-size: 1.1rem
+                            .content-flex
+                                display: flex
+                                justify-content: center
+                                align-items: flex-start
+                                gap: 3%
+                                margin: 1rem 0
+                                > div
+                                    width: 30%
+                                    padding-top: 40%
+                                    background-position: center center! important
+                                    background-repeat: no-repeat! important
+                                    background-size: cover! important
+                                    border-radius: 35px
+                                article
+                                    flex: 1 0 0
+        .notice
+            margin-top: 15%
+            .notice-block
+                width: 90%
+                max-width: 500px
+                padding: 5% 0
+            h2
+                font-size: 1.35rem
+                img
+                    width: 1.5rem
+
+        .deco-1
+            display: none
+        .deco-2
+            display: none
+        .deco-3
+            width: 12%
+            top: 100%
+        .deco-5
+            width: 10%
+            left: 10%
+        .deco-4
+            width: 25%
+            bottom: -15%
+            right: 0
+
+@media only screen and (max-width: 480px)
+    .bam-warm-wrap
+        .intro
+            .intro-flex
+                a
+                    gap: 1%
+                    > div
+                        article
+                            h4
+                                font-size: 0.85rem
+                    h3
+                        font-size: 1.1rem
+                        font-weight: normal
+                        span
+                            bottom: 25%
+
+        .content
+            margin: 10% 0
+            .tab-wrap
+                width: 300px
+                padding: 5% 0 1% 0
+                a
+                    font-size: 1rem
+                    img
+                        width: 1.5rem
+            .content-bg
+                .content-block
+                    .content-img
+                        article
+                            h3
+                                font-size: 1.35rem
+                            p
+                                font-size: 0.9rem
+                    .content-info
+                        padding: 0
+                        h4
+                            font-size: 1.1rem
+                        h5
+                            font-size: 0.9rem
+                            margin-bottom: 0.5rem
+                        .content-scroll
+                            font-size: 0.9rem
+                            article
+                                font-size: 0.8rem
+                            .content-white
+                                h6
+                                    font-size: 1rem
+                            .content-flex
+                                > div
+                                    width: 35%
+                                    padding-top: 45%
+                                    border-radius: 30px
+        .notice
+            margin-top: 20%
+            font-size: 0.9rem
+
+        .deco-3
+            width: 15%
+        .deco-5
+            width: 15%
+        .deco-4
+            width: 35%
+            bottom: -12%
