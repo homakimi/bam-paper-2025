@@ -1,5 +1,6 @@
 var zoomAlready = false;
 var tabAlready = false;
+var clickTab = false;
 $(function() {
     scrollEffect();
     $(window).scroll(function() {
@@ -34,9 +35,11 @@ function scrollEffect() {
             }.bind(this), index*250)
         });
         setTimeout(function() {
-            if(!tabAlready) {
-                tabAlready = true;
-                $('.tab-wrap a:first-child').addClass('active');
+            if(!clickTab) {
+                if(!tabAlready) {
+                    tabAlready = true;
+                    $('.tab-wrap a:first-child').addClass('active');
+                }
             }
         }, 250);
     }
@@ -84,6 +87,7 @@ $(document)
     }
 })
 .on('click', '.intro-flex a', function() {
+    clickTab = true;
     var _index = $(this).index();
     $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
     $('.tab-wrap a').removeClass('active');
