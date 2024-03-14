@@ -1,6 +1,7 @@
 var zoomAlready = false;
 var tabAlready = false;
 var clickTab = false;
+var fixable = true;
 $(function() {
     scrollEffect();
     $(window).scroll(function() {
@@ -15,7 +16,19 @@ $(function() {
 })
 
 function scrollEffect() {
-    if($(window).scrollTop() > $('.intro-flex').offset().top - window.innerHeight*0.75) {
+    if($(window).scrollTop() > $('.intro').offset().top - window.innerHeight*0.25) {
+        if(fixable) {
+            if(window.innerWidth > 1024) {
+                $('body').addClass('fix');
+                setTimeout(function() {
+                    fixable = false;
+                    $('.intro-flex a').addClass('hoverable');
+                    $('body').removeClass('fix');
+                }, 2000)
+            } else {
+                fixable = false;
+            }
+        }
         $('.intro-flex a').each(function(index) {
             setTimeout(function() {
                 $(this).addClass('active')
@@ -28,7 +41,8 @@ function scrollEffect() {
             }, 1000)
         }
     }
-    if($(window).scrollTop() > $('.tab-wrap').offset().top - window.innerHeight*0.75) {
+    if($(window).scrollTop() > $('.content').offset().top - window.innerHeight*0.75) {
+        $('.content').addClass('active');
         $('.tab-wrap a').each(function(index) {
             setTimeout(function() {
                 $(this).addClass('show')
@@ -87,13 +101,15 @@ $(document)
     }
 })
 .on('click', '.intro-flex a', function() {
-    clickTab = true;
-    var _index = $(this).index();
-    $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
-    $('.tab-wrap a').removeClass('active');
-    $('.tab-wrap a').eq(_index).addClass('active');
-    $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-    $('.tab-wrap').addClass('active-'+_index);
-    $('.content-block').hide()
-    $('.content-block').eq(_index).show();
+    if(!fixable) {
+        clickTab = true;
+        var _index = $(this).index();
+        $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
+        $('.tab-wrap a').removeClass('active');
+        $('.tab-wrap a').eq(_index).addClass('active');
+        $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
+        $('.tab-wrap').addClass('active-'+_index);
+        $('.content-block').hide()
+        $('.content-block').eq(_index).show();
+    }
 })
