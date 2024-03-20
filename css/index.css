@@ -1178,7 +1178,7 @@ body.fix {
     font-weight: normal;
     color: #ff5b4d;
     text-align: center;
-    margin-bottom: 8%;
+    margin-bottom: 3rem;
   }
   .bam-warm-wrap .content h2 img {
     display: block;
@@ -1197,7 +1197,7 @@ body.fix {
     position: absolute;
     display: block;
     content: '';
-    top: -1px;
+    top: 0;
     left: 50%;
     width: calc(100vw - 20px);
     height: 100%;
@@ -1361,7 +1361,7 @@ body.fix {
   .bam-warm-wrap .notice .notice-block {
     width: 90%;
     max-width: 500px;
-    height: 5rem;
+    height: 8rem;
     padding: 2rem 0;
     overflow: hidden;
   }
@@ -1405,9 +1405,10 @@ body.fix {
   }
   .bam-warm-wrap .deco-4 {
     width: 25%;
-    top: 110%;
-    bottom: auto;
+    bottom: 0;
     right: 0;
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
   }
   .bam-warm-wrap .kv h1 {
     -webkit-transform: translateX(0) translateY(3rem);
@@ -1426,7 +1427,10 @@ body.fix {
     width: 90px;
   }
   .bam-warm-wrap .apply-btn p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .bam-warm-wrap .apply-btn p::after {
+    border-width: 3px;
   }
   .bam-warm-wrap .intro .intro-flex a {
     gap: 1%;

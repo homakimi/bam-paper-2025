@@ -762,7 +762,7 @@ $orange: #ff978d
                 font-weight: normal
                 color: $red
                 text-align: center
-                margin-bottom: 8%
+                margin-bottom: 3rem
                 img
                     display: block
                     width: 1.5rem
@@ -777,7 +777,7 @@ $orange: #ff978d
                     position: absolute
                     display: block
                     content: ''
-                    top: -1px
+                    top: 0
                     left: 50%
                     width: calc(100vw - 20px)
                     height: 100%
@@ -898,7 +898,7 @@ $orange: #ff978d
             .notice-block
                 width: 90%
                 max-width: 500px
-                height: 5rem
+                height: 8rem
                 padding: 2rem 0
                 overflow: hidden
                 &.active
@@ -932,9 +932,9 @@ $orange: #ff978d
             left: 10%
         .deco-4
             width: 25%
-            top: 110%
-            bottom: auto
+            bottom: 0
             right: 0
+            transform: translateY(125%)
 
         // animate
         .kv
@@ -953,7 +953,9 @@ $orange: #ff978d
             right: 1rem
             width: 90px
             p
-                font-size: 1.5rem
+                font-size: 1.25rem
+                &::after
+                    border-width: 3px
         .intro
             .intro-flex
                 a

@@ -60,7 +60,7 @@ function scrollEffect() {
         }, 250);
     }
 
-    if($('.tab-wrap').offset().top == $(window).scrollTop()) {
+    if($('.tab-wrap').offset().top - 5 <= $(window).scrollTop()) {
         $('.tab-wrap').addClass('fix')
     } else {
         $('.tab-wrap').removeClass('fix')
@@ -99,6 +99,9 @@ $(document)
         $('.tab-wrap').addClass('active-'+$(this).index());
         $('.content-block').hide()
         $('.content-block').eq($(this).index()).show();
+        // for m tab
+        $('.content-toggle-a').removeClass('active');
+        $('.content-toggle-dropdown').stop().slideUp();
     }
 })
 .on('click', '.swiper .swiper-slide', function() {
