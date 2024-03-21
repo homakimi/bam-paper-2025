@@ -338,7 +338,6 @@ $orange: #ff978d
                 display: flex
                 justify-content: space-between
                 align-items: flex-start
-                gap: 5%
                 .content-img
                     display: flex
                     justify-content: center
@@ -382,34 +381,37 @@ $orange: #ff978d
                         font-size: 1.5rem
                         color: $orange
                     .content-tab
+                        position: relative
                         margin-bottom: 1rem
+                        padding: 0 2.5rem
                         .swiper
                             .swiper-slide
                                 display: block
                                 width: auto
                                 padding: 0.5rem 1rem
-                                color: #FFF
-                                background: $orange
+                                color: $orange
+                                background: #FFF
                                 border-radius: 50px
                                 border: 3px solid $orange
                                 transition: color 0.5s, background 0.5s
                                 &.active
-                                    color: $orange
-                                    background: #FFF
-                            .swiper-button-prev,
-                            .swiper-button-next
-                                width: 2.5rem
-                                height: 2.5rem
-                                border: 2px solid $green
-                                border-radius: 50%
-                                transform: translateY(-50%)
-                                &::after
-                                    display: none
-                            .swiper-button-prev
-                                left: 0
-                            .swiper-button-next
-                                right: 0
+                                    color: #FFF
+                                    background: $orange
+                        .swiper-button-prev,
+                        .swiper-button-next
+                            width: 1.75rem
+                            height: 1.75rem
+                            border: 2px solid $green
+                            border-radius: 50%
+                            transform: translateY(-50%)
+                            &::after
+                                display: none
+                        .swiper-button-prev
+                            left: 5px
+                        .swiper-button-next
+                            right: 5px
                     .content-content
+                        margin: 0 2.5rem
                         opacity: 0
                         transform: translateY(1rem)
                         animation: fadein 1s forwards
@@ -490,7 +492,7 @@ $orange: #ff978d
         position: absolute
         width: 12%
         bottom: -5%
-        right: -12%
+        right: -5%
 
     // animate
     .kv
@@ -600,7 +602,7 @@ $orange: #ff978d
         .deco-4
             width: 12%
             bottom: -5%
-            right: -7%
+            right: -5%
 
 @media only screen and (min-width: 1025px)
     .bam-warm-wrap
@@ -636,8 +638,8 @@ $orange: #ff978d
                         .content-tab
                             .swiper
                                 .swiper-slide:hover
-                                    color: $orange
-                                    background: #FFF
+                                    color: #FFF
+                                    background: $orange
 
 @media only screen and (max-width: 1024px)
     .bam-warm-wrap
@@ -848,6 +850,7 @@ $orange: #ff978d
                             padding-top: 1rem
                         .content-content
                             display: block! important
+                            margin: 0
                             .content-toggle-a
                                 position: relative
                                 display: block

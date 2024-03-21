@@ -2,6 +2,8 @@ var zoomAlready = false;
 var tabAlready = false;
 var clickTab = false;
 var fixable = true;
+
+var headerHeight;
 $(function() {
     scrollEffect();
     $(window).scroll(function() {
@@ -14,6 +16,15 @@ $(function() {
         $('.kv').addClass('active')
     }, 1000)
     urlDetect();
+
+    // for nanshan
+    if($('header').length > 0) {
+        headerHeight = 55;
+        $('.tab-wrap').css('top', headerHeight);
+        $('.kv').css('margin-top', headerHeight);
+    } else {
+        headerHeight = 0;
+    }
 })
 
 function scrollEffect() {
@@ -60,7 +71,7 @@ function scrollEffect() {
         }, 250);
     }
 
-    if($('.tab-wrap').offset().top - 5 <= $(window).scrollTop()) {
+    if($('.tab-wrap').offset().top - headerHeight - 5 <= $(window).scrollTop()) {
         $('.tab-wrap').addClass('fix')
     } else {
         $('.tab-wrap').removeClass('fix')
@@ -121,7 +132,7 @@ $(document)
     if(!fixable) {
         clickTab = true;
         var _index = $(this).index();
-        $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
+        $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
         $('.tab-wrap a').removeClass('active');
         $('.tab-wrap a').eq(_index).addClass('active');
         $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
@@ -147,7 +158,7 @@ $(document)
             $(this).closest('.content-block').find('.content-content').eq($(this).closest('.content-content').index()).show();
 
             setTimeout(function() {
-                $('body, html').animate({ scrollTop: $(this).offset().top - window.innerHeight*0.1 }, 1000)
+                $('body, html').animate({ scrollTop: $(this).offset().top - headerHeight }, 1000)
             }.bind(this), 500)
         }
     }
@@ -161,6 +172,10 @@ function urlDetect() {
         var _url = new URL(window.location.href);
         var _searchParams = _url.searchParams.get('pin');
         var _mainCategory, _subCategory;
+        if(_searchParams == 'concern') {_mainCategory = 0; _subCategory = 0;}
+        if(_searchParams == 'enduring') {_mainCategory = 1; _subCategory = 0;}
+        if(_searchParams == 'hurt') {_mainCategory = 2; _subCategory = 0;}
+        if(_searchParams == 'health') {_mainCategory = 3; _subCategory = 0;}
         if(_searchParams == 'farhugs') {_mainCategory = 0; _subCategory = 0;}
         if(_searchParams == 'protect') {_mainCategory = 0; _subCategory = 1;}
         if(_searchParams == 'malldj') {_mainCategory = 0; _subCategory = 2;}
@@ -176,7 +191,7 @@ function urlDetect() {
         if(_searchParams == 'mental') {_mainCategory = 3; _subCategory = 0;}
 
         clickTab = true;
-        $('body, html').animate({ scrollTop: $('.content').offset().top - window.innerHeight*0.1 }, 1000)
+        $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
         $('.tab-wrap a').removeClass('active');
         $('.tab-wrap a').eq(_mainCategory).addClass('active');
         $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
