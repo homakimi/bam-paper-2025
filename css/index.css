@@ -906,10 +906,19 @@ body.fix {
   transition: opacity 1s 1.5s, transform 1s 1.5s, -webkit-transform 1s 1.5s;
 }
 
+.bam-warm-wrap .kv .scrolldown {
+  opacity: 0;
+  -webkit-transition: opacity 1s 1.5s, -webkit-transform 1s 1.5s;
+  transition: opacity 1s 1.5s, -webkit-transform 1s 1.5s;
+  transition: opacity 1s 1.5s, transform 1s 1.5s;
+  transition: opacity 1s 1.5s, transform 1s 1.5s, -webkit-transform 1s 1.5s;
+}
+
 .bam-warm-wrap .kv.active .kv-img,
 .bam-warm-wrap .kv.active h1,
 .bam-warm-wrap .kv.active .kv-p,
-.bam-warm-wrap .kv.active article {
+.bam-warm-wrap .kv.active article,
+.bam-warm-wrap .kv.active .scrolldown {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);

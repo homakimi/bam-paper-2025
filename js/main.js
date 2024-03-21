@@ -21,7 +21,6 @@ $(function() {
     if($('header').length > 0) {
         headerHeight = 55;
         $('.tab-wrap').css('top', headerHeight);
-        $('.kv').css('margin-top', headerHeight);
     } else {
         headerHeight = 0;
     }

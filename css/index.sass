@@ -511,15 +511,20 @@ $orange: #ff978d
             transition: opacity 1s 1s, transform 1s 1s
         article
             transition: opacity 1s 1.5s, transform 1s 1.5s
+        .scrolldown
+            opacity: 0
+            transition: opacity 1s 1.5s, transform 1s 1.5s
         &.active
             .kv-img,
             h1,
             .kv-p,
-            article
+            article,
+            .scrolldown
                 opacity: 1
                 transform: translateY(0)
             .kv-p
                 animation: shake 3s 2s infinite
+            .scrolldown
         @keyframes shake
             0%, 30%, 100%
                 transform: rotate(0)
