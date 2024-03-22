@@ -124,7 +124,7 @@ body.fix {
   z-index: 9;
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 4%;
   width: 120px;
 }
 
@@ -817,6 +817,31 @@ body.fix {
   width: 1280px;
   margin: 3% auto 0 auto;
   padding: 3% 0;
+  height: 8rem;
+  overflow: hidden;
+}
+
+.bam-warm-wrap .notice .notice-block.active {
+  height: auto;
+}
+
+.bam-warm-wrap .notice .notice-more {
+  display: block;
+  margin: auto;
+  padding: 0 0 3rem 0;
+  width: 100px;
+}
+
+.bam-warm-wrap .notice .notice-more .icon-less {
+  display: none;
+}
+
+.bam-warm-wrap .notice .notice-more.active .icon-more {
+  display: none;
+}
+
+.bam-warm-wrap .notice .notice-more.active .icon-less {
+  display: block;
 }
 
 .bam-warm-wrap .notice h2 {
@@ -1377,29 +1402,14 @@ body.fix {
     padding: 2rem 0;
     overflow: hidden;
   }
-  .bam-warm-wrap .notice .notice-block.active {
-    height: auto;
+  .bam-warm-wrap .notice .notice-more {
+    padding: 1.5rem 0;
   }
   .bam-warm-wrap .notice h2 {
     font-size: 1.35rem;
   }
   .bam-warm-wrap .notice h2 img {
     width: 1.5rem;
-  }
-  .bam-warm-wrap .notice .notice-more {
-    display: block;
-    margin: auto;
-    padding: 1.5rem 0;
-    width: 100px;
-  }
-  .bam-warm-wrap .notice .notice-more .icon-less {
-    display: none;
-  }
-  .bam-warm-wrap .notice .notice-more.active .icon-more {
-    display: none;
-  }
-  .bam-warm-wrap .notice .notice-more.active .icon-less {
-    display: block;
   }
   .bam-warm-wrap .deco-1 {
     display: none;

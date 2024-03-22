@@ -171,23 +171,23 @@ function urlDetect() {
         var _url = new URL(window.location.href);
         var _searchParams = _url.searchParams.get('pin');
         var _mainCategory, _subCategory;
-        if(_searchParams == 'concern') {_mainCategory = 0; _subCategory = 0;}
-        if(_searchParams == 'enduring') {_mainCategory = 1; _subCategory = 0;}
-        if(_searchParams == 'hurt') {_mainCategory = 2; _subCategory = 0;}
-        if(_searchParams == 'health') {_mainCategory = 3; _subCategory = 0;}
-        if(_searchParams == 'farhugs') {_mainCategory = 0; _subCategory = 0;}
-        if(_searchParams == 'protect') {_mainCategory = 0; _subCategory = 1;}
+        if(_searchParams == 'maternal') {_mainCategory = 0; _subCategory = 0;}
+        if(_searchParams == 'longtermcare') {_mainCategory = 1; _subCategory = 0;}
+        if(_searchParams == 'disease') {_mainCategory = 2; _subCategory = 0;}
+        if(_searchParams == 'mental') {_mainCategory = 3; _subCategory = 0;}
+        if(_searchParams == 'amh') {_mainCategory = 0; _subCategory = 0;}
+        if(_searchParams == 'earlyintervention') {_mainCategory = 0; _subCategory = 1;}
         if(_searchParams == 'malldj') {_mainCategory = 0; _subCategory = 2;}
         if(_searchParams == 'lost') {_mainCategory = 1; _subCategory = 0;}
         if(_searchParams == 'dental') {_mainCategory = 1; _subCategory = 1;}
         if(_searchParams == 'wacare') {_mainCategory = 1; _subCategory = 2;}
-        if(_searchParams == 'promote') {_mainCategory = 1; _subCategory = 3;}
-        if(_searchParams == 'carry') {_mainCategory = 1; _subCategory = 4;}
-        if(_searchParams == 'disease') {_mainCategory = 2; _subCategory = 0;}
+        if(_searchParams == 'caregiver') {_mainCategory = 1; _subCategory = 3;}
+        if(_searchParams == 'aid') {_mainCategory = 1; _subCategory = 4;}
+        if(_searchParams == 'secondopinion') {_mainCategory = 2; _subCategory = 0;}
         if(_searchParams == 'hope') {_mainCategory = 2; _subCategory = 1;}
-        if(_searchParams == 'age') {_mainCategory = 2; _subCategory = 2;}
-        if(_searchParams == 'physical') {_mainCategory = 2; _subCategory = 3;}
-        if(_searchParams == 'mental') {_mainCategory = 3; _subCategory = 0;}
+        if(_searchParams == 'hearing') {_mainCategory = 2; _subCategory = 2;}
+        if(_searchParams == 'physiotherapy') {_mainCategory = 2; _subCategory = 3;}
+        if(_searchParams == 'farhugs') {_mainCategory = 3; _subCategory = 0;}
 
         clickTab = true;
         $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)

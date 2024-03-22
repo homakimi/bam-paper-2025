@@ -19,7 +19,7 @@ $orange: #ff978d
         z-index: 9
         position: fixed
         bottom: 5%
-        right: 5%
+        right: 4%
         width: 120px
         img
             animation: rrr 10s linear infinite
@@ -458,6 +458,23 @@ $orange: #ff978d
             width: 1280px
             margin: 3% auto 0 auto
             padding: 3% 0
+            height: 8rem
+            overflow: hidden
+            &.active
+                height: auto
+        .notice-more
+            display: block
+            margin: auto
+            padding: 0 0 3rem 0
+            width: 100px
+            .icon-less
+                display: none
+            &.active
+                .icon-more
+                    display: none
+                .icon-less
+                    display: block
+
         h2
             font-size: 1.75rem
             font-weight: normal
@@ -909,24 +926,12 @@ $orange: #ff978d
                 height: 8rem
                 padding: 2rem 0
                 overflow: hidden
-                &.active
-                    height: auto
+            .notice-more
+                padding: 1.5rem 0
             h2
                 font-size: 1.35rem
                 img
                     width: 1.5rem
-            .notice-more
-                display: block
-                margin: auto
-                padding: 1.5rem 0
-                width: 100px
-                .icon-less
-                    display: none
-                &.active
-                    .icon-more
-                        display: none
-                    .icon-less
-                        display: block
 
         .deco-1
             display: none
