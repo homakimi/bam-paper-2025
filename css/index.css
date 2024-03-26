@@ -809,31 +809,30 @@ body.fix {
 
 .bam-warm-wrap .notice .notice-wrap {
   position: relative;
-  background: url("../img/bam-warm-notice-bg.jpg") no-repeat top center;
-  background-size: cover;
+  background: url("../img/bam-warm-notice-bg.jpg") repeat-y top center;
+  background-size: 100% auto;
+  padding: 3% 0;
+  margin: 3% 0 0 0;
 }
 
 .bam-warm-wrap .notice .notice-block {
+  display: none;
   width: 1280px;
-  margin: 3% auto 0 auto;
-  padding: 3% 0;
-  height: 8rem;
-  overflow: hidden;
-}
-
-.bam-warm-wrap .notice .notice-block.active {
-  height: auto;
+  margin: auto;
 }
 
 .bam-warm-wrap .notice .notice-more {
   display: block;
   margin: auto;
-  padding: 0 0 3rem 0;
   width: 100px;
 }
 
 .bam-warm-wrap .notice .notice-more .icon-less {
   display: none;
+}
+
+.bam-warm-wrap .notice .notice-more.active {
+  padding: 35px 0;
 }
 
 .bam-warm-wrap .notice .notice-more.active .icon-more {
@@ -1082,9 +1081,6 @@ body.fix {
   .bam-warm-wrap .content .content-bg .content-block .content-img article h3 {
     font-size: 1.75rem;
   }
-  .bam-warm-wrap .content .content-bg .content-block .content-info {
-    padding: 1.5rem 0;
-  }
   .bam-warm-wrap .content .content-bg .content-block .content-info h4 {
     font-size: 1.75rem;
   }
@@ -1145,6 +1141,12 @@ body.fix {
   .bam-warm-wrap {
     width: calc(100% - 20px);
     padding-bottom: 10px;
+  }
+  .bam-warm-wrap.adjusted .tab-wrap {
+    top: 55px !important;
+  }
+  .bam-warm-wrap.adjusted .content-toggle-a.active {
+    top: 120px !important;
   }
   .bam-warm-wrap .border-v-left,
   .bam-warm-wrap .border-v-right {
@@ -1320,9 +1322,6 @@ body.fix {
             flex: 1 0 0;
     margin-top: -5px;
   }
-  .bam-warm-wrap .content .content-bg .content-block .content-info {
-    padding: 0;
-  }
   .bam-warm-wrap .content .content-bg .content-block .content-info h4 {
     font-size: 1.5rem;
   }
@@ -1350,6 +1349,24 @@ body.fix {
     -webkit-transition: color 0.5s, background 0.5s;
     transition: color 0.5s, background 0.5s;
   }
+  .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a::before {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: '';
+    width: calc(100vw - 20px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: 50%;
+    background: #ff978d;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+    -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+  }
   .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a::after {
     position: absolute;
     display: block;
@@ -1360,11 +1377,18 @@ body.fix {
             transform: translateY(-55%);
   }
   .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active {
+    z-index: 3;
     background: #ff978d;
     color: #FFF;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 68px;
   }
   .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active::after {
     content: '－';
+  }
+  .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active.fix::before {
+    opacity: 1;
   }
   .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-dropdown {
     display: none;
@@ -1393,17 +1417,11 @@ body.fix {
     margin-top: 15%;
   }
   .bam-warm-wrap .notice .notice-wrap {
-    padding-bottom: 75px;
+    padding: 5% 0;
   }
   .bam-warm-wrap .notice .notice-block {
     width: 90%;
     max-width: 500px;
-    height: 8rem;
-    padding: 2rem 0;
-    overflow: hidden;
-  }
-  .bam-warm-wrap .notice .notice-more {
-    padding: 1.5rem 0;
   }
   .bam-warm-wrap .notice h2 {
     font-size: 1.35rem;
@@ -1443,6 +1461,9 @@ body.fix {
 }
 
 @media only screen and (max-width: 480px) {
+  .bam-warm-wrap.adjusted .content-toggle-a.active {
+    top: 110px !important;
+  }
   .bam-warm-wrap .apply-btn {
     bottom: 1rem;
     right: 1rem;
@@ -1482,11 +1503,11 @@ body.fix {
   .bam-warm-wrap .content .content-bg .content-block .content-img article p {
     font-size: 0.9rem;
   }
-  .bam-warm-wrap .content .content-bg .content-block .content-info {
-    padding: 0;
-  }
   .bam-warm-wrap .content .content-bg .content-block .content-info h5 {
     font-size: 1.35rem;
+  }
+  .bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active {
+    top: 55px;
   }
   .bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white h6 {
     font-size: 1.2rem;

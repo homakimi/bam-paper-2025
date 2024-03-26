@@ -452,24 +452,22 @@ $orange: #ff978d
         margin-top: 3%
         .notice-wrap
             position: relative
-            background: url('../img/bam-warm-notice-bg.jpg') no-repeat top center
-            background-size: cover
-        .notice-block
-            width: 1280px
-            margin: 3% auto 0 auto
+            background: url('../img/bam-warm-notice-bg.jpg') repeat-y top center
+            background-size: 100% auto
             padding: 3% 0
-            height: 8rem
-            overflow: hidden
-            &.active
-                height: auto
+            margin: 3% 0 0 0
+        .notice-block
+            display: none
+            width: 1280px
+            margin: auto
         .notice-more
             display: block
             margin: auto
-            padding: 0 0 3rem 0
             width: 100px
             .icon-less
                 display: none
             &.active
+                padding: 35px 0 
                 .icon-more
                     display: none
                 .icon-less
@@ -610,7 +608,6 @@ $orange: #ff978d
                             h3
                                 font-size: 1.75rem
                     .content-info
-                        padding: 1.5rem 0
                         h4
                             font-size: 1.75rem
                         h5
@@ -667,6 +664,11 @@ $orange: #ff978d
     .bam-warm-wrap
         width: calc(100% - 20px)
         padding-bottom: 10px
+        &.adjusted
+            .tab-wrap
+                top: 55px! important
+            .content-toggle-a.active
+                top: 120px! important
         .border-v-left,
         .border-v-right
             width: 10px
@@ -862,7 +864,6 @@ $orange: #ff978d
                                 flex: 1 0 0
                                 margin-top: -5px
                     .content-info
-                        padding: 0
                         h4
                             font-size: 1.5rem
                         h5
@@ -885,6 +886,20 @@ $orange: #ff978d
                                 background: #FFF
                                 margin: 0.5rem 0
                                 transition: color 0.5s, background 0.5s
+                                &::before
+                                    z-index: -1
+                                    position: absolute
+                                    display: block
+                                    content: ''
+                                    width: calc(100vw - 20px)
+                                    height: calc(100% + 4px)
+                                    top: -2px
+                                    left: 50%
+                                    background: $orange
+                                    transform: translateX(-50%)
+                                    opacity: 0
+                                    box-shadow: 0 0 15px -5px rgba(0,0,0,0.5)
+                                    transition: opacity 0.25s
                                 &::after
                                     position: absolute
                                     display: block
@@ -893,10 +908,16 @@ $orange: #ff978d
                                     right: 1rem
                                     transform: translateY(-55%)
                                 &.active
+                                    z-index: 3
                                     background: $orange
                                     color: #FFF
+                                    position: sticky
+                                    top: 68px
                                     &::after
                                         content: '－'
+                                    &.fix
+                                        &::before
+                                            opacity: 1
                             .content-toggle-dropdown
                                 display: none
                         .content-scroll
@@ -919,15 +940,10 @@ $orange: #ff978d
         .notice
             margin-top: 15%
             .notice-wrap
-                padding-bottom: 75px
+                padding: 5% 0
             .notice-block
                 width: 90%
                 max-width: 500px
-                height: 8rem
-                padding: 2rem 0
-                overflow: hidden
-            .notice-more
-                padding: 1.5rem 0
             h2
                 font-size: 1.35rem
                 img
@@ -961,6 +977,9 @@ $orange: #ff978d
 
 @media only screen and (max-width: 480px)
     .bam-warm-wrap
+        &.adjusted
+            .content-toggle-a.active
+                top: 110px! important
         .apply-btn
             bottom: 1rem
             right: 1rem
@@ -999,9 +1018,12 @@ $orange: #ff978d
                             p
                                 font-size: 0.9rem
                     .content-info
-                        padding: 0
                         h5
                             font-size: 1.35rem
+                        .content-content
+                            .content-toggle-a
+                                &.active
+                                    top: 55px
                         .content-scroll
                             .content-white
                                 h6
