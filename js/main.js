@@ -15,7 +15,6 @@ $(function() {
     setTimeout(function() {
         $('.kv').addClass('active')
     }, 1000)
-    urlDetect();
 
     // for nanshan
     if($('header').length > 0) {
@@ -24,6 +23,7 @@ $(function() {
     } else {
         headerHeight = 0;
     }
+    urlDetect();
 })
 
 function scrollEffect() {
