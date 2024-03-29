@@ -117,7 +117,7 @@ $(document)
         $('.content-block').eq($(this).index()).show();
         // for m tab
         $('.content-toggle-a').removeClass('active');
-        $('.content-toggle-dropdown').stop().slideUp();
+        $('.content-toggle-dropdown').hide();
         if(window.innerWidth <= 1024) {
             $('body, html').animate({ scrollTop: $('.content-bg').offset().top - headerHeight - $('.tab-wrap').height() }, 1000)
         }
