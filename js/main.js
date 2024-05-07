@@ -1,14 +1,48 @@
-var zoomAlready = false;
-var tabAlready = false;
-var clickTab = false;
-var fixable = true;
-
 var headerHeight;
+var infoTimeout;
+var introSwiper
 $(function() {
+    resize();
     scrollEffect();
     $(window).scroll(function() {
         scrollEffect();
     })
+    $(window).resize(function() {
+        resize();
+    })
+
+    introSwiper = new Swiper('.intro .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        breakpoints: {
+            1025: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 5,
+                },
+                spaceBetween: 20,
+            },
+            1441: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 5,
+                },
+            },
+        },
+        navigation: {
+            nextEl: '.intro .swiper-button-next',
+            prevEl: '.intro .swiper-button-prev',
+        },
+        on: {
+            init: function() {
+                if(window.innerWidth <= 1024) this.slides.eq(0).addClass('active');
+            },
+            click: function () {
+                this.slideTo(this.clickedIndex)
+            }
+        }
+    });
 
     // for nanshan
     if($('header').length > 0) {
@@ -17,10 +51,99 @@ $(function() {
     } else {
         headerHeight = 0;
     }
-    urlDetect();
+
+    $('.info-block article:first-child a').addClass('active');
+    if(window.innerWidth <= 1024) $('.info-block article:first-child .info-dropdown').show();
+    if(window.innerWidth <= 1024) $('.intro-block:first-child').show();
 })
 
+var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, linkEffect = false;
+
+function resize() {
+    if(window.innerWidth > 1024) {
+        if(introEffect) {
+            $('.intro-default, .intro-hand').hide();
+        }
+    } else {
+        if(introEffect && !introClick) {
+            $('.intro .swiper-slide').eq(0).addClass('active');
+            $('.intro-block').eq(0).show();
+        }
+        if(introEffect && introClick) {
+            setTimeout(function() {
+                introSwiper.slideTo($('.intro .swiper-slide.active').index());
+            }, 500)
+        }
+    }
+}
 function scrollEffect() {
+    if($(window).scrollTop() + window.innerHeight*0.25 > $('.info').offset().top && $(window).scrollTop() < $('.info').offset().top + $('.info').height() - window.innerHeight*0.25 ) {
+        $('.info .badge').addClass('show');
+        infoBadge = true;
+    } else {
+        if(infoBadge) {
+            $('.info .badge').removeClass('show');
+        }
+    }
+    if($(window).scrollTop() + window.innerHeight*0.25 > $('.intro').offset().top && $(window).scrollTop() < $('.intro').offset().top + $('.intro').height() - window.innerHeight*0.25) {
+        $('.intro .badge').addClass('show');
+        introBadge = true;
+    } else {
+        if(introBadge) {
+            $('.intro .badge').removeClass('show');
+        }
+    }
+    
+    if($(window).scrollTop() > $('.question').offset().top - window.innerHeight*0.5) {
+        if(!qEffect) {
+            qEffect = true;
+            $('.question-intro [data-show]').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*500)
+            })
+            $('.question-btn').addClass('active')
+        }
+    }
+    if($(window).scrollTop() > $('.info').offset().top - window.innerHeight*0.5) {
+        if(!infoEffect) {
+            infoEffect = true;
+            $('.info .bam-exam-h2, .info .bam-exam-h2-deco').addClass('active');
+            if(window.innerWidth > 1024) {
+                $('.info-block article a').each(function(index) {
+                    setTimeout(function() {
+                        $(this).find('p').addClass('effect')
+                    }.bind(this), index*250)
+                })
+                infoTimeout = setTimeout(function() {
+                    $('.info-block article:first-child .info-dropdown').fadeIn();
+                }, 3000)
+            }
+        }
+    }
+    if($(window).scrollTop() > $('.intro').offset().top - window.innerHeight*0.5) {
+        if(!introEffect) {
+            introEffect = true;
+            $('.intro .bam-exam-h2, .intro .bam-exam-h2-deco').addClass('active');
+            $('.intro-hand').addClass('active');
+        }
+    }
+    if($(window).scrollTop() > $('.link').offset().top - window.innerHeight*0.5) {
+        if(!linkEffect) {
+            linkEffect = true;
+            $('.link h2 img').addClass('active')
+            $('.link [data-show]').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*500)
+            })
+            $('.link-flex > div').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*500)
+            })
+        }
+    }
 }
 
 $(document)
@@ -33,115 +156,31 @@ $(document)
 .on('mousedown', 'img', function(e) {
     e.preventDefault();
 })
-.on('click', '.tab-wrap a', function() {
+.on('click', '.question-btn', function() {
+    $('.bam-exam-q-deco').addClass('active');
+})
+.on('click', '.info-block a', function() {
+    clearTimeout(infoTimeout);
     if(!$(this).hasClass('active')) {
-        $('.tab-wrap a').removeClass('active');
+        $('.info-block a').removeClass('active');
         $(this).addClass('active');
-        $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-        $('.tab-wrap').addClass('active-'+$(this).index());
-        $('.content-block').hide()
-        $('.content-block').eq($(this).index()).show();
-        // for m tab
-        $('.content-toggle-a').removeClass('active');
-        $('.content-toggle-dropdown').hide();
-        if(window.innerWidth <= 1024) {
-            $('body, html').animate({ scrollTop: $('.content-bg').offset().top - headerHeight - $('.tab-wrap').height() }, 1000)
-        }
-    }
-})
-.on('click', '.swiper .swiper-slide', function() {
-    if(!$(this).hasClass('active')) {
-        $(this).closest('.swiper').find('.swiper-slide').removeClass('active');
-        $(this).addClass('active');
-        $(this).closest('.content-info').find('.content-content').hide();
-        $(this).closest('.content-info').find('.content-content').eq($(this).index()).show();
-        // for m tab
-        $(this).closest('.content-block').find('.content-toggle-a').removeClass('active');
-        $(this).closest('.content-block').find('.content-content').eq($(this).index()).find('.content-toggle-a').addClass('active');
-        $(this).closest('.content-block').find('.content-toggle-dropdown').hide();
-        $(this).closest('.content-block').find('.content-content').eq($(this).index()).find('.content-toggle-dropdown').css('display', 'block');
-    }
-})
-.on('click', '.intro-flex a', function() {
-    if(!fixable) {
-        clickTab = true;
-        var _index = $(this).index();
-        $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
-        $('.tab-wrap a').removeClass('active');
-        $('.tab-wrap a').eq(_index).addClass('active');
-        $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-        $('.tab-wrap').addClass('active-'+_index);
-        $('.content-block').hide()
-        $('.content-block').eq(_index).show();
-    }
-})
-.on('click', '.content-toggle-a', function() {
-    if(window.innerWidth <= 1024) {
-        if($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).next('.content-toggle-dropdown').stop().slideUp();
+        if(window.innerWidth > 1024) {
+            $('.info-dropdown').hide();
+            $(this).next('.info-dropdown').fadeIn();
         } else {
-            $(this).closest('.content-block').find('.content-toggle-a').removeClass('active');
-            $(this).toggleClass('active');
-            $(this).closest('.content-block').find('.content-toggle-dropdown').stop().slideUp();
-            $(this).next('.content-toggle-dropdown').stop().slideToggle();
-            // for pc tab
-            $(this).closest('.content-block').find('.swiper .swiper-slide').removeClass('active');
-            $(this).closest('.content-block').find('.swiper .swiper-slide').eq($(this).closest('.content-content').index()).addClass('active');
-            $(this).closest('.content-block').find('.content-content').hide();
-            $(this).closest('.content-block').find('.content-content').eq($(this).closest('.content-content').index()).show();
+            $('.info-dropdown').stop().slideUp();
+            $(this).next('.info-dropdown').stop().slideDown();
 
-            setTimeout(function() {
-                $('body, html').animate({ scrollTop: $(this).next('.content-toggle-dropdown').offset().top - headerHeight - $(this).height() - $('.tab-wrap').height() - 5 }, 1000)
-            }.bind(this), 500)
         }
     }
 })
-.on('click', '.notice-more', function() {
-    $('.notice-block').stop().slideToggle();
-    $('.notice-wrap, .notice-more').toggleClass('active')
-})
-
-function urlDetect() {
-    if(window.location.href.indexOf('pin') > 0) {
-        var _url = new URL(window.location.href);
-        var _searchParams = _url.searchParams.get('pin');
-        var _mainCategory, _subCategory;
-        if(_searchParams == 'maternal') {_mainCategory = 0; _subCategory = 0;}
-        if(_searchParams == 'longtermcare') {_mainCategory = 1; _subCategory = 0;}
-        if(_searchParams == 'disease') {_mainCategory = 2; _subCategory = 0;}
-        if(_searchParams == 'mental') {_mainCategory = 3; _subCategory = 0;}
-        if(_searchParams == 'amh') {_mainCategory = 0; _subCategory = 0;}
-        if(_searchParams == 'earlyintervention') {_mainCategory = 0; _subCategory = 1;}
-        if(_searchParams == 'malldj') {_mainCategory = 0; _subCategory = 2;}
-        if(_searchParams == 'lost') {_mainCategory = 1; _subCategory = 0;}
-        if(_searchParams == 'dental') {_mainCategory = 1; _subCategory = 1;}
-        if(_searchParams == 'wacare') {_mainCategory = 1; _subCategory = 2;}
-        if(_searchParams == 'caregiver') {_mainCategory = 1; _subCategory = 3;}
-        if(_searchParams == 'aid') {_mainCategory = 1; _subCategory = 4;}
-        if(_searchParams == 'secondopinion') {_mainCategory = 2; _subCategory = 0;}
-        if(_searchParams == 'hope') {_mainCategory = 2; _subCategory = 1;}
-        if(_searchParams == 'hearing') {_mainCategory = 2; _subCategory = 2;}
-        if(_searchParams == 'physiotherapy') {_mainCategory = 2; _subCategory = 3;}
-        if(_searchParams == 'farhugs') {_mainCategory = 3; _subCategory = 0;}
-
-        clickTab = true;
-        $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
-        $('.tab-wrap a').removeClass('active');
-        $('.tab-wrap a').eq(_mainCategory).addClass('active');
-        $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-        $('.tab-wrap').addClass('active-'+_mainCategory);
-        $('.content-block').hide()
-        $('.content-block').eq(_mainCategory).show();
-        // pc
-        $('.content-block').eq(_mainCategory).find('.swiper .swiper-slide').removeClass('active');
-        $('.content-block').eq(_mainCategory).find('.swiper .swiper-slide').eq(_subCategory).addClass('active');
-        $('.content-block').eq(_mainCategory).find('.content-content').hide();
-        $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).show();
-        // m
-        $('.content-block').eq(_mainCategory).find('.content-content').find('.content-toggle-a').removeClass('active');
-        $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).find('.content-toggle-a').addClass('active');
-        $('.content-block').eq(_mainCategory).find('.content-content').find('.content-toggle-dropdown').stop().slideUp();
-        $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).find('.content-toggle-dropdown').stop().slideDown();
+.on('click', '.intro .swiper-slide', function() {
+    if(!$(this).hasClass('active')) {
+        introClick = true;
+        $('.intro-default, .intro-hand').hide();
+        $('.intro .swiper-slide').removeClass('active');
+        $(this).addClass('active');
+        $('.intro-block').hide();
+        $('.intro-block').eq($(this).index()).fadeIn();
     }
-}
+})

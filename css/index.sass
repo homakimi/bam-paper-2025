@@ -1,15 +1,809 @@
 @import 'style'
 
-$red: #ff5b4d
-$black: #5d4f4c
-$light: #fff6eb
-$green: #7eccc1
-$grass: #009090
-$pink: #ffdfd7
-$orange: #ff978d
+$navy: #0e5b7b
+$blue: #53ccfb
+$water: #3293d9
+$light: #ededed
+$orange: #ffdfbb
 
-.bam-warm-wrap
+.bam-exam-wrap
+    color: $navy
+    .badge
+        z-index: 9
+        position: fixed
+        display: block
+        width: 150px
+        top: 10%
+        right: 0
+        transform: translateX(100%)
+        animation: badgehide 0.35s linear forwards
+        &.show
+            animation: badge 0.35s linear forwards
+            .badge-word
+                animation: fadein 0.5s 0.25s forwards
+        .badge-word
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            transform: translateY(50px)
+    .outer-wrap
+        width: 1440px
+        margin: auto
+    .kv
+        position: relative
+        overflow: hidden
+        .kv-img
+            width: 100%
+            padding-top: 66.5%
+            background-repeat: no-repeat! important
+            background-position: center center! important
+            background-size: cover! important
+        h1
+            position: absolute
+            width: 0
+            top: 10%
+            left: 15%
+            overflow: hidden
+            animation: kv 2s 1s forwards
+            img
+                display: block
+                width: 23vw
+            p
+                display: none
+        .kv-title
+            position: absolute
+            width: 0
+            top: 32%
+            left: 8%
+            overflow: hidden
+            animation: kv 2s 1.5s forwards
+            img
+                display: block
+                width: 40vw
+        .kv-des
+            position: absolute
+            width: 0
+            top: 41%
+            left: 11%
+            overflow: hidden
+            animation: kv 2s 2s forwards
+            img
+                display: block
+                width: 34vw
+        .kv-hat
+            position: absolute
+            display: block
+            width: 7%
+            top: 12%
+            left: 35%
+            opacity: 0
+            transform: translateY(50px)
+            animation: fadein 1s 2.5s forwards
+
+    .question
+        position: relative
+        margin-top: -30%
+        overflow: hidden
+        padding: 5% 0
+        .outer-wrap
+            position: relative
+            .bam-exam-q-deco
+                position: absolute
+                width: 175px
+                &.active
+                    animation: fadein 1s forwards
+            .bam-exam-q-deco-1
+                top: 35%
+                left: -10%
+                transform: translate(90%, 0) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-2
+                top: 60%
+                left: -3%
+                transform: translate(50%, -10%) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-3
+                top: 80%
+                left: 4%
+                transform: translate(40%, -15%) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-4
+                top: 1%
+                left: 5%
+                transform: translate(35%, 20%) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-5
+                top: 3%
+                left: 85%
+                transform: translate(-40%, 30%) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-6
+                top: 20%
+                left: 95%
+                transform: translate(-30%, 25%) scale(0.8) rotate(15deg)
+            .bam-exam-q-deco-7
+                top: 75%
+                left: 88%
+                transform: translate(-25%, -10%) scale(0.8) rotate(15deg)
+        .question-bg
+            position: relative
+            width: 80%
+            padding-top: 55%
+            margin: auto
+            background-repeat: no-repeat! important
+            background-position: center center! important
+            background-size: contain! important
+            .question-intro
+                position: absolute
+                top: 55%
+                left: 50%
+                width: 100%
+                transform: translate(-50%, -50%)
+                letter-spacing: 3px
+                font-size: 1.75rem
+                text-align: center
+                line-height: 200%
+                p
+                    display: inline-block
+                    +showeffect
+                h3
+                    display: inline-block
+                    font-size: 1.75rem
+                    font-weight: normal
+                    padding: 0 1rem
+                    margin: 0.75rem 0
+                    background: linear-gradient(to right, $blue, $orange)
+                    border-radius: 50px
+                    +showeffect
+                    span
+                        font-weight: bold
+                .question-btn
+                    display: block
+                    width: 300px
+                    color: #FFF
+                    padding: 0.75rem 0
+                    margin: auto
+                    background-repeat: no-repeat! important
+                    background-position: center center! important
+                    background-size: cover! important
+                    border-radius: 100px
+                    filter: brightness(1.25)
+                    opacity: 0
+                    transform: translateY(50px)
+                    &.active
+                        animation: fadein 1s 3s forwards
+
+    .info
+        font-size: 1.5rem
+        .outer-wrap
+            position: relative
+        .info-left
+            width: 38%
+            .bam-exam-h2-deco
+                display: block
+                width: 50%
+                opacity: 0
+                transform: translateY(50px)
+                &.active
+                    animation: fadein 1s 1s forwards
+            .bam-exam-h2
+                width: 80%
+                +showeffect
+            .info-block
+                margin-top: 5%
+                border-left: 3px solid $navy
+                counter-reset: aaa
+                article
+                    a
+                        position: relative
+                        display: block
+                        img
+                            opacity: 0
+                            transition: opacity 0.5s
+                        p
+                            position: absolute
+                            top: 45%
+                            left: 5%
+                            padding-left: 1.75rem
+                            transform: translateY(-50%)
+                            transition: left 0.5s
+                            &.effect
+                                animation: hint 1s 2s forwards
+                            &::before
+                                position: absolute
+                                top: 0
+                                left: 0
+                                counter-increment: aaa
+                                content: counter(aaa) '. '
+                        &.active
+                            img
+                                opacity: 1
+                            p
+                                left: 8%
+                    .info-dropdown
+                        display: none
+                        position: absolute
+                        top: 100px
+                        right: 0
+                        width: 57%
+                        p
+                            position: relative
+                            padding: 6% 4% 1% 1%
+                            text-align: justify
+                            line-height: 175%
+                            &::after
+                                position: absolute
+                                display: block
+                                content: ''
+                                width: 4px
+                                height: 100%
+                                top: 0
+                                right: 0
+                                background: $blue
+                                transform-origin: top center
+                                transform: scale(1, 0)
+                                animation: lineeffect 0.5s 1.35s linear forwards
+                        .info-line
+                            top: 0
+                            left: 0
+                            width: 100%
+                            +showeffect
+                            position: absolute
+                            animation-timing-function: linear
+                        .info-img
+                            width: 100%
+                            padding-top: 50%
+                            background-repeat: no-repeat! important
+                            background-position: center center! important
+                            background-size: cover! important
+                            margin-top: 3%
+                            border-radius: 75px
+
+    .wave
+        margin: -20% auto -5% auto
+        overflow: hidden
+        .outer-wrap
+            position: relative
+        .wave-deco
+            position: absolute
+            top: 0
+            right: 0
+            width: 20%
+            transform: translate(30%, 90%)
+
+    .intro
+        font-size: 1.25rem
+        overflow: hidden
+        .outer-wrap
+            position: relative
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            gap: 5%
+        .intro-deco
+            position: absolute
+            width: 10%
+            top: 50%
+            left: -18%
+        .intro-left
+            width: 38%
+            .bam-exam-h2-deco
+                display: block
+                width: 50%
+                opacity: 0
+                transform: translateY(50px)
+                &.active
+                    animation: fadein 1s 1s forwards
+            .bam-exam-h2
+                width: 80%
+                +showeffect
+            .swiper
+                padding-bottom: 50px
+                overflow: visible
+                .swiper-wrapper
+                    flex-direction: row
+                .swiper-slide
+                    position: relative
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 25px
+                    padding: 3% 1.5%
+                    margin-top: 30px! important
+                    margin-bottom: 0! important
+                    box-shadow: 0 5px 25px -5px rgba(0,0,0,0.25)
+                    background: #FFF
+                    &.active
+                        box-shadow: none
+                        &::before,
+                        &::after
+                            opacity: 1
+                    &::before,
+                    &::after
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        border-radius: 25px
+                        opacity: 0
+                    &::before
+                        background: linear-gradient(to right, $blue, $orange)
+                        transform: translate(10px, 8px)
+                        opacity: 0
+                    &::after
+                        background: #FFF
+                        border: 3px solid $navy
+                    img
+                        z-index: 1
+                        position: relative
+                        display: block
+                        width: 25%
+                    div
+                        z-index: 1
+                        position: relative
+                        width: 75%
+                        text-align: center
+                        h4
+                            font-size: 1.5rem
+                            letter-spacing: 3px
+                            font-weight: 500
+                        p
+                            white-space: nowrap
+                            font-size: 0.85rem
+                            font-weight: 500
+                            letter-spacing: 0
+        .intro-right
+            flex: 1 0 0
+            margin-top: 20%
+            .intro-default
+                position: relative
+                background: $light
+                border-radius: 50px
+                width: 100%
+                padding-top: 85%
+                margin-top: -10%
+                p
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    font-size: 1.25rem
+                    letter-spacing: 3px
+                    color: #FFF
+                    padding: 0.25rem 1.5rem
+                    background: $water
+                    border-radius: 100px
+                    transform: translate(-50%, -50%)
+                .intro-default-deco-1,
+                .intro-default-deco-2
+                    position: absolute
+                    width: 20%
+                .intro-default-deco-1
+                    bottom: 0
+                    left: -10%
+                .intro-default-deco-2
+                    top: -10%
+                    right: 3%
+                .intro-hand
+                    z-index: 1
+                    position: absolute
+                    width: 10%
+                    top: 65%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    &.active
+                        animation: hand 2s 1s forwards
+            .intro-block
+                display: none
+                text-align: justify
+                h4
+                    display: inline-block
+                    font-size: 1.25rem
+                    color: #FFF
+                    background: $water
+                    padding: 0.1rem 1rem
+                    letter-spacing: 3px
+                    font-weight: 500
+                    border-radius: 50px
+                p
+                    margin: 1rem 0 1.5rem 0
+
+    .link
+        padding-top: 5%
+        text-align: center
+        overflow: hidden
+        .outer-wrap
+            position: relative
+        .link-deco-1,
+        .link-deco-2,
+        .link-deco-3
+            position: absolute
+            opacity: 0.5
+        .link-deco-1
+            right: 3%
+            top: 15%
+            width: 10%
+        .link-deco-2
+            left: -5%
+            top: 50%
+            width: 15%
+        h2
+            font-size: 1.75rem
+            font-weight: 500
+            p
+                display: inline-block
+                +showeffect
+            img
+                display: block
+                width: 200px
+                margin: 1% auto
+                opacity: 0
+                transform: translateY(50px)
+                &.active
+                    animation: fadein 1s 1s forwards
+        .link-flex
+            display: flex
+            width: 70%
+            margin: auto
+            gap: 5%
+            div
+                width: 100%
+                opacity: 0
+                transform: translateY(50px)
+                &.active
+                    animation: fadein 1s 1s forwards
+                a
+                    display: block
+                    width: 60%
+                    color: #FFF
+                    font-size: 1.25rem
+                    padding: 0.75rem 0
+                    margin: 5% auto
+                    background-repeat: no-repeat! important
+                    background-position: center center! important
+                    background-size: cover! important
+                    border-radius: 100px
+
+
+    @keyframes badge
+        0%
+            transform: translateX(100%)
+        70%
+            transform: translateX(0%)
+        100%
+            transform: translateX(10%)
+    @keyframes badgehide
+        from
+            transform: translateX(10%)
+        to
+            transform: translateX(100%)
+
+    @keyframes kv
+        to
+            width: 100%
+    @keyframes fadein
+        to
+            opacity: 1
+            transform: translate(0, 0)
+    @keyframes hint
+        50%
+            filter: grayscale(1)
+            transform: translateY(-75%) scale(1.05)
+    @keyframes lineeffect
+        to
+            transform: scale(1, 1)
+    @keyframes hand
+        80%
+            top: 30%
+            left: -50%
+        80%, 90%, 100%
+            top: 30%
+            left: -50%
+            transform: translate(-50%, -50%) scale(1)
+        85%, 95%
+            top: 30%
+            left: -50%
+            transform: translate(-50%, -50%) scale(0.9)
+        
+
+@media only screen and (max-width: 1440px)
+    .bam-exam-wrap
+        .badge
+            width: 125px
+        .outer-wrap
+            width: 1024px
+        .question
+            .outer-wrap
+                .bam-exam-q-deco
+                    width: 125px
+            .question-bg
+                .question-intro
+                    font-size: 1.35rem
+                    line-height: 175%
+                    h3
+                        font-size: 1.35rem
+                        margin: 0.5rem 0
+                    .question-btn
+                        width: 250px
+                        padding: 0.5rem 0
+
+        .info
+            font-size: 1.15rem
+            .info-left
+                .info-block
+                    article
+                        .info-dropdown
+                            &::after
+                                width: 3px
+                            .info-img
+                                border-radius: 50px
+
+        .intro
+            font-size: 1.2rem
+            .intro-left
+                .swiper
+                    padding-bottom: 50px
+                    .swiper-slide
+                        margin-top: 20px! important
+                        &::after
+                            border: 2px solid $navy
+                        div
+                            h4
+                                font-size: 1.25rem
+                                letter-spacing: 2px
+                            p
+                                font-size: 0.75rem
+            .intro-right
+                .intro-block
+                    h4
+                        font-size: 1.2rem
+                        letter-spacing: 2px
+
+        .link
+            h2
+                font-size: 1.5rem
+                img
+                    width: 150px
 
 @media only screen and (max-width: 1024px)
-    .bam-warm-wrap
+    .bam-exam-wrap
         width: 100%
+        .badge
+            width: 25%
+        .outer-wrap
+            width: 90%
+            margin: auto
+        .kv
+            .kv-img
+                padding-top: 160%
+            h1
+                top: 8%
+                left: 14%
+                img
+                    width: 62vw
+            .kv-title
+                top: 16%
+                left: 10%
+                img
+                    width: 75vw
+            .kv-des
+                top: 22%
+                left: 27%
+                img
+                    width: 60vw
+            .kv-hat
+                width: 20%
+                top: 3%
+                left: 5%
+
+        .question
+            margin-top: -30%
+            overflow: hidden
+            padding: 10% 0
+            .outer-wrap
+                width: 98%
+                .bam-exam-q-deco
+                    width: 20%
+                .bam-exam-q-deco-1
+                    top: 0%
+                    left: -8%
+                    transform: translate(50%, 30%) scale(0.8) rotate(15deg)
+                .bam-exam-q-deco-2
+                    top: 88%
+                    left: 3%
+                    transform: translate(40%, -10%) scale(0.8) rotate(15deg)
+                .bam-exam-q-deco-3
+                    display: none
+                .bam-exam-q-deco-4
+                    top: -8%
+                    left: 12%
+                    transform: translate(45%, 40%) scale(0.8) rotate(15deg)
+                .bam-exam-q-deco-5
+                    top: 3%
+                    left: 80%
+                    transform: translate(-50%, 30%) scale(0.8) rotate(15deg)
+                .bam-exam-q-deco-6
+                    top: -8%
+                    left: 88%
+                    transform: translate(-50%, 35%) scale(0.8) rotate(15deg)
+                .bam-exam-q-deco-7
+                    top: 83%
+                    left: 85%
+                    transform: translate(-45%, -20%) scale(0.8) rotate(15deg)
+            .question-bg
+                width: 100%
+                padding-top: 125%
+                .question-intro
+                    top: 45%
+                    letter-spacing: 0.1vw
+                    font-size: 4vw
+                    line-height: 200%
+                    .bam-exam-pen
+                        display: block
+                        width: 15%
+                        margin: 3% auto
+                    h3
+                        font-size: 4vw
+                        padding: 0 3vw
+                        margin: 1vw 0
+                    .question-btn
+                        width: 45%
+                        padding: 1.5vw 0
+
+        .wave-info
+            width: 100%
+            margin: -15% auto
+        .info
+            font-size: 3.5vw
+            .info-left
+                width: 100%
+                .bam-exam-h2-deco
+                    width: 50%
+                    margin: auto
+                .bam-exam-h2
+                    width: 70%
+                    margin: auto
+                .info-block
+                    border-left-width: 0.75vw
+                    article
+                        a
+                            position: relative
+                            display: block
+                            font-size: 4vw
+                            &.active::after
+                                opacity: 0
+                            &::after
+                                position: absolute
+                                display: block
+                                content: ''
+                                width: 5vw
+                                height: 5vw
+                                top: 47%
+                                right: 5%
+                                background-repeat: no-repeat! important
+                                background-position: center center! important
+                                background-size: contain! important
+                                transform: translateY(-50%)
+                                transition: opacity 0.5s
+                            p
+                                padding-left: 5vw
+                        .info-dropdown
+                            position: relative
+                            top: 0
+                            right: 0
+                            width: 90%
+                            margin: 5% auto
+                            p
+                                &::after
+                                    width: 0.5vw
+                                    right: 1px
+                            .info-img
+                                border-radius: 10vw
+        .wave
+            margin: -10% auto -5% auto
+            .wave-deco
+                width: 40%
+                transform: translate(50%, 10%)
+
+        .intro
+            font-size: 3.5vw
+            .outer-wrap
+                display: block
+            .intro-left
+                width: 100%
+                .bam-exam-h2-deco
+                    width: 50%
+                    margin: auto
+                .bam-exam-h2
+                    width: 70%
+                    margin: auto
+                .swiper
+                    padding: 5%
+                    .swiper-button-prev,
+                    .swiper-button-next
+                        width: 8%
+                        &::after
+                            display: none
+                    .swiper-button-prev
+                        left: -4%
+                    .swiper-button-next
+                        right: -4%
+                    .swiper-slide
+                        width: auto
+                        height: auto
+                        border-radius: 6vw
+                        padding: 3vw
+                        margin-top: 0! important
+                        box-shadow: 0 0.5vw 5vw -1vw rgba(0,0,0,0.25)
+                        &::before,
+                        &::after
+                            border-radius: 6vw
+                        &::before
+                            transform: translate(1vw, 1.5vw)
+                        &::after
+                            border-width: 2px
+                        img
+                            width: 12vw
+                            margin-right: 3vw
+                        div
+                            width: auto
+                            padding: 0
+                            h4
+                                font-size: 5vw
+                                letter-spacing: 0.5vw
+                            p
+
+                                font-size: 3vw
+            .intro-right
+                margin-top: 0
+                .intro-block
+                    .intro-title
+                        position: relative
+                        padding-left: 12vw
+                        font-weight: 500
+                        font-size: 5vw
+                        margin: 3% 0 5% 0
+                        img
+                            position: absolute
+                            width: 10vw
+                            top: 50%
+                            left: 0
+                            transform: translateY(-50%)
+                    h4
+                        display: inline-block
+                        font-size: 4vw
+                        color: #FFF
+                        background: $water
+                        padding: 0.25vw 3vw
+                        letter-spacing: 0.5vw
+                        font-weight: 500
+                        border-radius: 50px
+                    p
+                        margin: 1.5% 0 5% 0
+
+        .link
+            .link-deco-1
+                right: -8%
+                top: 20%
+                width: 20%
+            .link-deco-2
+                left: -15%
+                top: 85%
+                width: 30%
+            .link-deco-3
+                left: -15%
+                top: 0
+                width: 25%
+            h2
+                font-size: 5vw
+                img
+                    width: 35%
+                    margin: 3% auto
+            .link-flex
+                display: block
+                width: 80%
+                div
+                    width: 100%
+                    margin: 5% 0
+                    a
+                        width: 70%
+                        font-size: 4.5vw
+                        padding: 3vw 0

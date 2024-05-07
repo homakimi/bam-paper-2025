@@ -9,11 +9,12 @@ body
     &.fix
         overflow: hidden
 
-.bam-warm-wrap
+.bam-exam-wrap
     width: 100%
+    letter-spacing: 1px
     background: #FFF
     font-family: 'Noto Sans TC'
-    *
+    *:not(.swiper-button)
         margin: 0
         padding: 0
         box-sizing: border-box
@@ -58,6 +59,24 @@ body
                 border-radius: 50%
                 font-size: 0.9rem
         
+@mixin showeffect
+    position: relative
+    &::after
+        display: block
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        background: #FFF
+        transform-origin: center right
+    &.active::after
+        animation: showeffect 1.5s forwards
+    @keyframes showeffect
+        to
+            transform: scale(0, 1)
+
 
 @media only screen and (min-width: 1025px)
     .for-m
@@ -68,7 +87,7 @@ body
         display: none! important
 
 @media only screen and (max-width: 480px)
-    .bam-warm-wrap
+    .bam-exam-wrap
         ol
             li
                 &::before
