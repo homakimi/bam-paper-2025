@@ -3,6 +3,7 @@
 $navy: #0e5b7b
 $blue: #53ccfb
 $water: #3293d9
+$sky: #43aad4
 $light: #ededed
 $orange: #ffdfbb
 
@@ -141,20 +142,31 @@ $orange: #ffdfbb
                 font-size: 1.75rem
                 text-align: center
                 line-height: 200%
-                p
+                > p
                     display: inline-block
+                    font-weight: 500
                     +showeffect
                 h3
                     display: inline-block
                     font-size: 1.75rem
-                    font-weight: normal
-                    padding: 0 1rem
-                    margin: 0.75rem 0
-                    background: linear-gradient(to right, $blue, $orange)
-                    border-radius: 50px
                     +showeffect
-                    span
-                        font-weight: bold
+                    p
+                        display: inline-block
+                        padding: 0 1rem
+                        margin: 0.25rem 0
+                        background: linear-gradient(to right, $blue, $orange)
+                        border-radius: 50px
+                h4
+                    font-weight: normal
+                    font-size: 1.1rem
+                    color: $sky
+                    letter-spacing: 1px
+                    line-height: normal
+                    margin-top: 1%
+                    opacity: 0
+                    transform: translateY(50px)
+                    &.active
+                        animation: fadein 0.5s 2s forwards
                 .question-btn
                     display: block
                     width: 300px
@@ -167,12 +179,13 @@ $orange: #ffdfbb
                     border-radius: 100px
                     filter: brightness(1.25)
                     opacity: 0
-                    transform: translateY(50px)
+                    transform: scale(1.5) rotate(15deg)
                     &.active
-                        animation: fadein 1s 3s forwards
+                        animation: fadein 0.5s 1.5s forwards
 
     .info
-        font-size: 1.5rem
+        z-index: 1
+        position: relative
         .outer-wrap
             position: relative
         .info-left
@@ -190,53 +203,109 @@ $orange: #ffdfbb
                 &.active::after
                     animation-delay: 0.5s
             .info-block
-                margin-top: 5%
-                border-left: 3px solid $navy
                 counter-reset: aaa
+                margin-top: 2.5%
+                opacity: 0
+                &.active
+                    animation: fadefix 1s 1.5s forwards
+                h5
+                    margin-top: 5%
+                    font-size: 1.15rem
+                    font-weight: 500
+                    color: $sky
+                    a
+                        text-decoration: underline
                 article
                     a
                         position: relative
-                        display: block
-                        img
-                            opacity: 0
-                            transition: opacity 0.5s
-                        p
+                        display: inline-block
+                        padding: 3% 5%
+                        margin: 2.5% 0
+                        border-radius: 25px
+                        box-shadow: 0 5px 25px -5px rgba(0,0,0,0.25)
+                        background: #FFF
+                        font-size: 1.5rem
+                        &.active
+                            box-shadow: none
+                            &::before,
+                            &::after
+                                opacity: 1
+                        &::before,
+                        &::after
                             position: absolute
-                            top: 45%
-                            left: 5%
-                            padding-left: 1.75rem
-                            transform: translateY(-50%)
-                            transition: left 0.5s
-                            &.effect
-                                animation: hint 1s 2s forwards
+                            display: block
+                            content: ''
+                            width: 100%
+                            height: 100%
+                            top: 0
+                            left: 0
+                            border-radius: 25px
+                            opacity: 0
+                        &::before
+                            background: linear-gradient(to right, $blue, $orange)
+                            transform: translate(10px, 8px)
+                            opacity: 0
+                        &::after
+                            background: #FFF
+                            border: 3px solid $navy
+                        p
+                            z-index: 1
+                            position: relative
+                            padding-left: 2rem
                             &::before
                                 position: absolute
                                 top: 0
                                 left: 0
                                 counter-increment: aaa
                                 content: counter(aaa) '. '
-                        &.active
-                            img
-                                opacity: 1
-                            p
-                                left: 8%
                     .info-dropdown
                         display: none
                         position: absolute
-                        top: 100px
+                        top: 0
                         right: 0
                         width: 57%
-                        p
+                        font-size: 1.25rem
+                        line-height: 170%
+                        text-align: justify
+                        ul,
+                        ol
+                            margin-left: 2rem
+                        .info-img
+                            width: 60%
+                            padding-top: calc(50% * 0.6)
+                            background-repeat: no-repeat! important
+                            background-position: center center! important
+                            background-size: cover! important
+                            margin-top: 3%
+                            border-radius: 75px
+                        .info-content
                             position: relative
-                            padding: 6% 4% 1% 1%
-                            text-align: justify
-                            line-height: 175%
+                            padding: 6% 2% 1% 1%
+                            margin-top: 3%
+                            .info-scroll
+                                height: 400px
+                                overflow-y: auto
+                                padding-right: 3%
+                                -webkit-overflow-scrolling: touch
+                                &::-webkit-scrollbar
+                                    width: 5px
+                                &::-webkit-scrollbar-track
+                                    border-radius: 10px
+                                    background: $light
+                                &::-webkit-scrollbar-thumb
+                                    background: $navy
+                                    border-radius: 10px
+                            p
+                                display: inline
+                                text-decoration: underline
+                                text-decoration-thickness: 3px
+                                text-decoration-color: $orange
                             &::after
                                 position: absolute
                                 display: block
                                 content: ''
                                 width: 4px
-                                height: 100%
+                                height: 30%
                                 top: 0
                                 right: 0
                                 background: $blue
@@ -250,26 +319,41 @@ $orange: #ffdfbb
                             +showeffect
                             position: absolute
                             animation-timing-function: linear
-                        .info-img
-                            width: 100%
-                            padding-top: 50%
-                            background-repeat: no-repeat! important
-                            background-position: center center! important
-                            background-size: cover! important
-                            margin-top: 3%
-                            border-radius: 75px
+        .info-default
+            position: absolute
+            top: 20%
+            right: 0
+            width: 57%
+            opacity: 0
+            &.active
+                animation: fadefix 1s 1.5s forwards
+            > div
+                width: 100%
+                padding-top: 66%
+                background-repeat: no-repeat! important
+                background-position: center center! important
+                background-size: cover! important
+                border-radius: 75px
+            .info-hand
+                z-index: 1
+                position: absolute
+                pointer-events: none
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                &.active
+                    animation: handinfo 4s 3s infinite
 
     .wave
+        z-index: 0
+        position: relative
         margin: -20% auto -5% auto
         overflow: hidden
-        .outer-wrap
-            position: relative
         .wave-deco
             position: absolute
-            top: 0
+            bottom: 10%
             right: 0
-            width: 20%
-            transform: translate(30%, 90%)
+            width: 15%
 
     .intro
         font-size: 1.25rem
@@ -280,6 +364,20 @@ $orange: #ffdfbb
             justify-content: space-between
             align-items: flex-start
             gap: 5%
+            padding-bottom: 2.5rem
+        h5
+            position: absolute
+            bottom: 3px
+            left: 0
+            font-weight: 500
+            font-size: 1.15rem
+            width: 38%
+            color: $sky
+            opacity: 0
+            &.active
+                animation: fadefix 1s 1.5s forwards
+            a
+                text-decoration: underline
         .intro-deco
             position: absolute
             width: 10%
@@ -300,8 +398,12 @@ $orange: #ffdfbb
                 &.active::after
                     animation-delay: 0.5s
             .swiper
+                z-index: 0
                 padding-bottom: 50px
                 overflow: visible
+                opacity: 0
+                &.active
+                    animation: fadefix 1s 1.5s forwards
                 .swiper-wrapper
                     flex-direction: row
                 .swiper-slide
@@ -359,24 +461,29 @@ $orange: #ffdfbb
                             letter-spacing: 0
         .intro-right
             flex: 1 0 0
-            margin-top: 20%
+            margin-top: 15%
+            opacity: 0
+            &.active
+                animation: fadefix 1s 1.5s forwards
             .intro-default
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
                 position: relative
                 background: $light
                 border-radius: 50px
                 width: 100%
-                padding-top: 85%
+                padding-top: 80%
                 margin-top: -10%
-                p
+                article
                     position: absolute
                     top: 50%
                     left: 50%
+                    width: 60%
                     font-size: 1.25rem
-                    letter-spacing: 3px
-                    color: #FFF
-                    padding: 0.25rem 1.5rem
-                    background: $water
-                    border-radius: 100px
+                    line-height: 175%
+                    text-align: center
                     transform: translate(-50%, -50%)
                 .intro-default-deco-1,
                 .intro-default-deco-2
@@ -391,15 +498,33 @@ $orange: #ffdfbb
                 .intro-hand
                     z-index: 1
                     position: absolute
+                    pointer-events: none
                     width: 10%
-                    top: 65%
+                    top: 75%
                     left: 50%
                     transform: translate(-50%, -50%)
                     &.active
-                        animation: hand 4s 1s infinite
+                        animation: handintro 4s 3s infinite
             .intro-block
                 display: none
                 text-align: justify
+                padding-top: 5%
+                ul,
+                ol
+                    margin-left: 2rem
+                .intro-scroll
+                    height: 500px
+                    overflow-y: auto
+                    padding-right: 3%
+                    -webkit-overflow-scrolling: touch
+                    &::-webkit-scrollbar
+                        width: 5px
+                    &::-webkit-scrollbar-track
+                        border-radius: 10px
+                        background: $light
+                    &::-webkit-scrollbar-thumb
+                        background: $navy
+                        border-radius: 10px
                 h4
                     display: inline-block
                     font-size: 1.25rem
@@ -409,8 +534,13 @@ $orange: #ffdfbb
                     letter-spacing: 3px
                     font-weight: 500
                     border-radius: 50px
-                p
+                article
                     margin: 1rem 0 1.5rem 0
+                    p
+                        display: inline
+                        text-decoration: underline
+                        text-decoration-thickness: 3px
+                        text-decoration-color: $orange
 
     .link
         padding-top: 5%
@@ -433,12 +563,13 @@ $orange: #ffdfbb
             width: 15%
         h2
             font-size: 1.75rem
-            font-weight: 500
             p
                 display: inline-block
                 +showeffect
                 &.active::after
                     animation-delay: 0.5s
+            p.des
+                font-weight: normal
             img
                 display: block
                 width: 200px
@@ -451,6 +582,7 @@ $orange: #ffdfbb
             display: flex
             width: 70%
             margin: auto
+            margin-top: 3%
             gap: 5%
             div
                 width: 100%
@@ -487,6 +619,9 @@ $orange: #ffdfbb
     @keyframes kv
         to
             width: 100%
+    @keyframes fadefix
+        to
+            opacity: 1
     @keyframes fadein
         to
             opacity: 1
@@ -498,14 +633,23 @@ $orange: #ffdfbb
     @keyframes lineeffect
         to
             transform: scale(1, 1)
-    @keyframes hand
+    @keyframes handintro
         60%, 70%, 80%, 100%
-            top: 30%
+            top: 40%
             left: -50%
             transform: translate(-50%, -50%) scale(1)
         65%, 75%
-            top: 30%
+            top: 40%
             left: -50%
+            transform: translate(-50%, -50%) scale(0.9)
+    @keyframes handinfo
+        60%, 70%, 80%, 100%
+            top: 42%
+            left: -35%
+            transform: translate(-50%, -50%) scale(1)
+        65%, 75%
+            top: 42%
+            left: -35%
             transform: translate(-50%, -50%) scale(0.9)
         
 
@@ -526,23 +670,36 @@ $orange: #ffdfbb
                     h3
                         font-size: 1.35rem
                         margin: 0.5rem 0
+                    h4
+                        font-size: 1rem
                     .question-btn
                         width: 250px
                         padding: 0.5rem 0
 
         .info
-            font-size: 1.15rem
             .info-left
                 .info-block
+                    h5
+                        font-size: 1.1rem
                     article
+                        a
+                            font-size: 1.25rem
+                            p
+                                padding-left: 1.5rem
                         .info-dropdown
+                            font-size: 1.15rem
                             &::after
                                 width: 3px
                             .info-img
                                 border-radius: 50px
+                            .info-content
+                                .info-scroll
+                                    height: 300px
 
         .intro
             font-size: 1.2rem
+            h5
+                font-size: 1.1rem
             .intro-left
                 .swiper
                     padding-bottom: 50px
@@ -558,9 +715,15 @@ $orange: #ffdfbb
                                 font-size: 0.75rem
             .intro-right
                 .intro-block
+                    .intro-scroll
+                        height: 350px
                     h4
                         font-size: 1.2rem
                         letter-spacing: 2px
+                .intro-default
+                    article
+                        width: 75%
+                        font-size: 1.1rem
 
         .link
             h2
@@ -573,6 +736,7 @@ $orange: #ffdfbb
         width: 100%
         .badge
             width: 25%
+            top: 65%
         .outer-wrap
             width: 90%
             margin: auto
@@ -647,7 +811,13 @@ $orange: #ffdfbb
                     h3
                         font-size: 4vw
                         padding: 0 3vw
-                        margin: 1vw 0
+                        margin: 0
+                        p
+                            margin: 1.5vw 0
+                    h4
+                        font-size: 3vw
+                        letter-spacing: 0
+                        margin-top: 3%
                     .question-btn
                         width: 45%
                         padding: 1.5vw 0
@@ -656,7 +826,6 @@ $orange: #ffdfbb
             width: 100%
             margin: -15% auto
         .info
-            font-size: 3.5vw
             .info-left
                 width: 100%
                 .bam-exam-h2-deco
@@ -667,50 +836,79 @@ $orange: #ffdfbb
                     margin: auto
                 .info-block
                     border-left-width: 0.75vw
+                    h5
+                        font-size: 3vw
+                        letter-spacing: 0
+                        text-align: center
+                        margin-top: 5vw
                     article
                         a
                             position: relative
                             display: block
                             font-size: 4vw
-                            &.active::after
-                                opacity: 0
+                            &.active p::after
+                                display: none
+                            &::before,
                             &::after
-                                position: absolute
-                                display: block
-                                content: ''
-                                width: 5vw
-                                height: 5vw
-                                top: 47%
-                                right: 5%
-                                background-repeat: no-repeat! important
-                                background-position: center center! important
-                                background-size: contain! important
-                                transform: translateY(-50%)
-                                transition: opacity 0.5s
-                            p
+                                border-radius: 4vw
+                            &::before
+                                transform: translate(1vw, 1.5vw)
                                 padding-left: 5vw
+                            &::after
+                                border-width: 0.75vw
+                            p
+                                &::after
+                                    position: absolute
+                                    display: block
+                                    content: ''
+                                    top: 50%
+                                    right: 0
+                                    width: 5vw
+                                    height: 5vw
+                                    background-repeat: no-repeat! important
+                                    background-position: center center! important
+                                    background-size: contain! important
+                                    transform: translateY(-50%)
                         .info-dropdown
                             position: relative
-                            top: 0
-                            right: 0
-                            width: 90%
-                            margin: 5% auto
-                            p
+                            width: 100%
+                            padding: 3% 0
+                            font-size: 3.5vw
+                            ul,
+                            ol
+                                margin-left: 5vw
+                            .info-content
+                                padding: 6% 5% 3% 5%
                                 &::after
                                     width: 0.5vw
                                     right: 1px
+                                    height: 40vw
+                                .info-scroll
+                                    padding: 0
+                                    height: auto
                             .info-img
-                                border-radius: 10vw
+                                width: 90%
+                                padding-top: calc(50% * 0.9)
+                                margin: 3vw auto
+                                border-radius: 7vw
         .wave
             margin: -10% auto -5% auto
             .wave-deco
-                width: 40%
-                transform: translate(50%, 10%)
+                width: 25%
+                bottom: 5%
 
         .intro
             font-size: 3.5vw
             .outer-wrap
                 display: block
+                padding-bottom: 0
+            h5
+                position: static
+                width: 100%
+                font-size: 3vw
+                letter-spacing: 0
+                text-align: center
+                margin-top: 0
             .intro-left
                 width: 100%
                 .bam-exam-h2-deco
@@ -739,31 +937,36 @@ $orange: #ffdfbb
                         box-shadow: 0 0.5vw 5vw -1vw rgba(0,0,0,0.25)
                         &::before,
                         &::after
-                            border-radius: 6vw
+                            border-radius: 5vw
                         &::before
                             transform: translate(1vw, 1.5vw)
                         &::after
                             border-width: 2px
                         img
-                            width: 12vw
+                            width: 10vw
                             margin-right: 3vw
                         div
                             width: auto
                             padding: 0
                             h4
-                                font-size: 5vw
-                                letter-spacing: 0.5vw
+                                font-size: 4.5vw
+                                letter-spacing: 0.25vw
                             p
-
                                 font-size: 3vw
             .intro-right
                 margin-top: 0
                 .intro-block
+                    padding-top: 0
+                    ul,
+                    ol
+                        margin-left: 5vw
+                    .intro-scroll
+                        height: auto
                     .intro-title
                         position: relative
                         padding-left: 12vw
                         font-weight: 500
-                        font-size: 5vw
+                        font-size: 4.5vw
                         margin: 3% 0 5% 0
                         img
                             position: absolute
@@ -780,7 +983,7 @@ $orange: #ffdfbb
                         letter-spacing: 0.5vw
                         font-weight: 500
                         border-radius: 50px
-                    p
+                    article
                         margin: 1.5% 0 5% 0
 
         .link
@@ -797,7 +1000,9 @@ $orange: #ffdfbb
                 top: 0
                 width: 25%
             h2
-                font-size: 5vw
+                font-size: 4.5vw
+                p.des
+                    font-size: 3.75vw
                 img
                     width: 35%
                     margin: 3% auto

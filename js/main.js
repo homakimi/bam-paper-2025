@@ -1,6 +1,5 @@
 var headerHeight;
-var infoTimeout;
-var introSwiper
+var introSwiper;
 $(function() {
     // for nanshan
     if($('header').length > 0) {
@@ -8,13 +7,39 @@ $(function() {
     } else {
         headerHeight = 0;
     }
+
     resize();
+    // detect device change start
+    var isMobile, isMobileFirst, widthPC;
+    if(window.innerWidth > 1024) {
+        widthPC = true;
+    } else {
+        widthPC = false;
+    }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobileFirst = true;
+    } else {
+        isMobileFirst = false;
+    }
+    $(window).resize(function() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            isMobile = true;
+        } else {
+            isMobile = false;
+        }
+        if(isMobileFirst != isMobile) {
+            resize();
+        }
+        if(widthPC && window.innerWidth <= 1024) {
+            resize();
+        } else if(!widthPC && window.innerWidth > 1024) {
+            resize();
+        }
+    })
+
     scrollEffect();
     $(window).scroll(function() {
         scrollEffect();
-    })
-    $(window).resize(function() {
-        resize();
     })
     urlDetect();
 
@@ -51,15 +76,19 @@ $(function() {
         }
     });
 
-    $('.info-block article:first-child a').addClass('active');
-    if(window.innerWidth <= 1024) $('.info-block article:first-child .info-dropdown').show();
     if(window.innerWidth <= 1024) $('.intro-block:first-child').show();
 })
 
-var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, linkEffect = false;
+var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
 
 function resize() {
     if(window.innerWidth > 1024) {
+        if(infoEffect) {
+            $('.info-default, .info-hand').hide();
+        }
+        if(infoEffect && !infoClick) {
+            $('.info-default, .info-hand').show();
+        }
         if(introEffect) {
             $('.intro-default, .intro-hand').hide();
         }
@@ -76,7 +105,7 @@ function resize() {
     }
 }
 function scrollEffect() {
-    if($(window).scrollTop() + window.innerHeight*0.25 > $('.info').offset().top && $(window).scrollTop() < $('.info').offset().top + $('.info').height() - window.innerHeight*0.25 ) {
+    if($(window).scrollTop() + window.innerHeight*0.5 > $('.info').offset().top && $(window).scrollTop() < $('.info').offset().top + $('.info').height() - window.innerHeight*0.5 ) {
         $('.info .badge').addClass('show');
         infoBadge = true;
     } else {
@@ -84,7 +113,7 @@ function scrollEffect() {
             $('.info .badge').removeClass('show');
         }
     }
-    if($(window).scrollTop() + window.innerHeight*0.25 > $('.intro').offset().top && $(window).scrollTop() < $('.intro').offset().top + $('.intro').height() - window.innerHeight*0.25) {
+    if($(window).scrollTop() + window.innerHeight*0.5 > $('.intro').offset().top && $(window).scrollTop() < $('.intro').offset().top + $('.intro').height() - window.innerHeight*0.5) {
         $('.intro .badge').addClass('show');
         introBadge = true;
     } else {
@@ -101,30 +130,27 @@ function scrollEffect() {
                     $(this).addClass('active')
                 }.bind(this), index*500)
             })
-            $('.question-btn').addClass('active')
+            $('.question-btn').addClass('active');
+            $('.question-intro h4').addClass('active');
         }
     }
     if($(window).scrollTop() > $('.info').offset().top - window.innerHeight*0.5) {
         if(!infoEffect) {
             infoEffect = true;
-            $('.info .bam-exam-h2, .info .bam-exam-h2-deco').addClass('active');
+            $('.info .bam-exam-h2, .info .bam-exam-h2-deco, .info-hand, .info-block, .info-default').addClass('active');
             if(window.innerWidth > 1024) {
                 $('.info-block article a').each(function(index) {
                     setTimeout(function() {
                         $(this).find('p').addClass('effect')
                     }.bind(this), index*250)
-                })
-                infoTimeout = setTimeout(function() {
-                    $('.info-block article:first-child .info-dropdown').fadeIn();
-                }, 3000)
+                });
             }
         }
     }
     if($(window).scrollTop() > $('.intro').offset().top - window.innerHeight*0.5) {
         if(!introEffect) {
             introEffect = true;
-            $('.intro .bam-exam-h2, .intro .bam-exam-h2-deco').addClass('active');
-            $('.intro-hand').addClass('active');
+            $('.intro .bam-exam-h2, .intro .bam-exam-h2-deco, .intro-hand, .intro .swiper, .intro-right, .intro h5').addClass('active');
         }
     }
     if($(window).scrollTop() > $('.link').offset().top - window.innerHeight*0.5) {
@@ -159,8 +185,9 @@ $(document)
     $('.bam-exam-q-deco').addClass('active');
 })
 .on('click', '.info-block a', function() {
-    clearTimeout(infoTimeout);
     if(!$(this).hasClass('active')) {
+        infoClick = true;
+        $('.info-default, .info-hand').hide();
         $('.info-block a').removeClass('active');
         $(this).addClass('active');
         if(window.innerWidth > 1024) {
@@ -169,7 +196,15 @@ $(document)
         } else {
             $('.info-dropdown').stop().slideUp();
             $(this).next('.info-dropdown').stop().slideDown();
-
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $(this).offset().top - headerHeight }, 1000);
+            }.bind(this), 500)
+        }
+    } else {
+        if(window.innerWidth <= 1024) {
+            infoClick = false;
+            $(this).removeClass('active');
+            $(this).next('.info-dropdown').stop().slideUp();
         }
     }
 })
@@ -179,8 +214,13 @@ $(document)
         $('.intro-default, .intro-hand').hide();
         $('.intro .swiper-slide').removeClass('active');
         $(this).addClass('active');
-        $('.intro-block').hide();
-        $('.intro-block').eq($(this).index()).fadeIn();
+        if(window.innerWidth > 1024) {
+            $('.intro-block').hide();
+            $('.intro-block').eq($(this).index()).fadeIn();
+        } else {
+            $('.intro-block').stop().slideUp();
+            $('.intro-block').eq($(this).index()).stop().slideDown();
+        }
     }
 })
 

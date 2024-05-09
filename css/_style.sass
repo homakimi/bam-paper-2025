@@ -27,37 +27,6 @@ body
     .fullimg 
         display: block
         width: 100%
-    ul
-        list-style: none
-        margin-left: 1rem
-        li
-            position: relative
-            &::before
-                position: absolute
-                content: '・'
-                left: -1rem
-                color: #ff978d
-    ol
-        list-style: none
-        margin-left: 1.5rem
-        counter-reset: olol
-        li
-            position: relative
-            counter-increment: olol
-            &::before
-                position: absolute
-                left: -1.5rem
-                top: 0.15rem
-                display: inline-flex
-                justify-content: center
-                align-items: center
-                content: counter(olol)
-                color: #ff978d
-                border: 1px solid #ff978d
-                width: 1.25rem
-                height: 1.25rem
-                border-radius: 50%
-                font-size: 0.9rem
         
 @mixin showeffect
     position: relative

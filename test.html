@@ -5,960 +5,643 @@
 
 <style>
 
-@charset "UTF-8";@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap";html{font-size:16px}body{padding:0;margin:0}body.fix{overflow:hidden}.bam-warm-wrap{width:100%;background:#FFF;font-family:'Noto Sans TC'}.bam-warm-wrap *{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}.bam-warm-wrap ::before,.bam-warm-wrap ::after{-webkit-box-sizing:border-box;box-sizing:border-box}.bam-warm-wrap a{text-decoration:none;color:inherit}.bam-warm-wrap .fullimg{display:block;width:100%}.bam-warm-wrap ul{list-style:none;margin-left:1rem}.bam-warm-wrap ul li{position:relative}.bam-warm-wrap ul li::before{position:absolute;content:'・';left:-1rem;color:#ff978d}.bam-warm-wrap ol{list-style:none;margin-left:1.5rem;counter-reset:olol}.bam-warm-wrap ol li{position:relative;counter-increment:olol}.bam-warm-wrap ol li::before{position:absolute;left:-1.5rem;top:.15rem;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;content:counter(olol);color:#ff978d;border:1px solid #ff978d;width:1.25rem;height:1.25rem;border-radius:50%;font-size:.9rem}@media only screen and (min-width: 1025px){.for-m{display:none!important}}@media only screen and (max-width: 1024px){.for-pc{display:none!important}}@media only screen and (max-width: 480px){.bam-warm-wrap ol li::before{top:.2rem;width:1.1rem;height:1.1rem;font-size:.8rem}}.bam-warm-wrap{position:relative;color:#5d4f4c;width:calc(100% - 30px);margin:auto;padding-bottom:15px}.bam-warm-wrap .apply-btn{display:block;z-index:9;position:fixed;bottom:5%;right:4%;width:120px}.bam-warm-wrap .apply-btn img{-webkit-animation:rrr 10s linear infinite;animation:rrr 10s linear infinite}@-webkit-keyframes rrr{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes rrr{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.bam-warm-wrap .apply-btn p{position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:50%;left:50%;width:100%;height:100%;border:1px solid #ff978d;-webkit-transform:translate(-50%,-50%) scale(0.7);transform:translate(-50%,-50%) scale(0.7);font-size:1.75rem;line-height:120%;background:#FFF;border-radius:50%;-webkit-transition:color 0.5s,background .5s;transition:color 0.5s,background .5s;background:#ff5b4d;color:#FFF;-webkit-box-shadow:2px 2px 0 #7eccc1;box-shadow:2px 2px 0 #7eccc1}.bam-warm-wrap .apply-btn p::after{position:absolute;display:block;content:'';width:100%;height:100%;top:0;left:0;border:5px solid #ffdfd7;border-radius:50%;-webkit-transform:scale(0.9);transform:scale(0.9)}.bam-warm-wrap .border-v-left,.bam-warm-wrap .border-v-right{position:absolute;top:0;width:15px;height:100%;background-color:#ff978d!important;background-repeat:repeat-y!important;background-size:100% auto!important}.bam-warm-wrap .border-v-left{left:-15px;background-position:top 200px center!important}.bam-warm-wrap .border-v-right{right:-15px;background-position:top 500px center!important}.bam-warm-wrap .border-h-bottom{position:absolute;bottom:0;width:100%;height:15px;background-color:#ff978d!important;background-repeat:no-repeat!important;background-size:auto 100%!important;background-position:bottom left 15%!important}.bam-warm-wrap .kv{position:relative;background:#ffdfd7}.bam-warm-wrap .kv .kv-img{z-index:1;position:relative;width:90%;margin:auto}.bam-warm-wrap .kv .kv-b{margin-top:-9%}.bam-warm-wrap .kv .kv-d-1,.bam-warm-wrap .kv .kv-d-2{z-index:1;position:absolute;width:9%}.bam-warm-wrap .kv .kv-d-1{top:0;left:0}.bam-warm-wrap .kv .kv-d-2{top:50%;right:0}.bam-warm-wrap .kv article{z-index:1;position:absolute;width:25%;top:37%;left:14%}.bam-warm-wrap .kv article > div{position:absolute;padding:2.5% 10% 5%;width:100%;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.bam-warm-wrap .kv article > div h2{color:#ff5b4d;font-weight:400;font-size:1.5vw}.bam-warm-wrap .kv article > div p{margin-top:2%;font-size:1vw}.bam-warm-wrap .kv .kv-p{z-index:1;display:block;position:absolute;width:10%;top:45%;left:6%}.bam-warm-wrap .kv h1{z-index:1;position:absolute;top:8%;left:14%;font-size:3vw;letter-spacing:.2vw;font-weight:400}.bam-warm-wrap .kv h1 p{color:#ff5b4d}.bam-warm-wrap .kv h1 p span{display:inline-block;border-radius:1vw;background:#FFF;padding:0 .75vw;margin:0 .5vw}.bam-warm-wrap .kv .scrolldown{z-index:1;position:absolute;bottom:35%;left:0;right:0;margin:auto;width:100px;color:#ff5b4d;text-align:center}.bam-warm-wrap .kv .scrolldown > div{position:relative;width:45%;padding-top:75%;margin:auto;margin-top:8px;background:rgba(255,255,255,0.5);border-radius:20px;overflow:hidden}.bam-warm-wrap .kv .scrolldown > div > p{position:absolute;width:16px;height:16px;top:15%;left:0;right:0;margin:auto;border:5px solid #ff978d;border-radius:50%}.bam-warm-wrap .kv .scrolldown > div img{display:block;position:absolute;width:45%;top:45%;left:0;right:0;margin:auto;-webkit-animation:scrolldown 2s infinite;animation:scrolldown 2s infinite}@-webkit-keyframes scrolldown{to{-webkit-transform:translateY(200%);transform:translateY(200%)}}@keyframes scrolldown{to{-webkit-transform:translateY(200%);transform:translateY(200%)}}.bam-warm-wrap .intro{position:relative;margin-top:-20%}.bam-warm-wrap .intro .intro-wrap{width:1280px;margin:auto}.bam-warm-wrap .intro h2{font-size:2rem;color:#ff5b4d;text-align:center}.bam-warm-wrap .intro .intro-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:3% 0}.bam-warm-wrap .intro .intro-flex a{position:relative;display:block;width:24%;padding-top:28.5%;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;border-radius:75px;-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.25);box-shadow:0 10px 25px rgba(0,0,0,0.25);-webkit-transition:opacity 1s,-webkit-transform 1s;transition:opacity 1s,-webkit-transform 1s;transition:transform 1s,opacity 1s;transition:transform 1s,opacity 1s,-webkit-transform 1s}.bam-warm-wrap .intro .intro-flex a::before{position:absolute;display:block;content:'';width:100%;height:50%;bottom:0;left:0;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.75)));background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.75));border-radius:0 0 75px 75px}.bam-warm-wrap .intro .intro-flex a > div{display:block;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;-webkit-transition:opacity 1s;transition:opacity 1s}.bam-warm-wrap .intro .intro-flex a > div img{position:absolute;top:0;left:0}.bam-warm-wrap .intro .intro-flex a > div article{position:absolute;top:75%;left:50%;width:100%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-align:center;-webkit-transition:top 1s;transition:top 1s}.bam-warm-wrap .intro .intro-flex a > div article h4{font-weight:400;font-size:.9rem}.bam-warm-wrap .intro .intro-flex a h3{position:absolute;color:#FFF;font-size:2rem;top:70%;left:0;width:100%;font-weight:500;text-align:center;-webkit-transition:top 1s,color 1s;transition:top 1s,color 1s}.bam-warm-wrap .intro .intro-flex a p{position:absolute;top:calc(70% + 3rem);left:0;width:100%;text-align:center;color:#FFF;-webkit-transition:top 1s,color 1s;transition:top 1s,color 1s}.bam-warm-wrap .intro .intro-flex a p span{opacity:0;display:block;-webkit-transform:scale(0.8);transform:scale(0.8);-webkit-transition:opacity 1s;transition:opacity 1s}.bam-warm-wrap .content{opacity:0;-webkit-transition:opacity .5s;transition:opacity .5s}.bam-warm-wrap .content.active{opacity:1}.bam-warm-wrap .content .tab-wrap{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:500px;margin:auto;padding:5% 0 1%}.bam-warm-wrap .content .tab-wrap::after{position:absolute;display:block;content:'';width:25%;padding-top:6%;bottom:0;left:0;background:url(https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-arrow.png) no-repeat center top;background:contain;-webkit-transition:left .5s;transition:left .5s}.bam-warm-wrap .content .tab-wrap.active-0::after{left:0}.bam-warm-wrap .content .tab-wrap.active-1::after{left:25%}.bam-warm-wrap .content .tab-wrap.active-2::after{left:50%}.bam-warm-wrap .content .tab-wrap.active-3::after{left:75%}.bam-warm-wrap .content .tab-wrap a{display:block;width:25%;font-size:1.25rem;text-align:center;-webkit-transition:color 0.5s,-webkit-transform .5s;transition:color 0.5s,-webkit-transform .5s;transition:color 0.5s,transform .5s;transition:color 0.5s,transform 0.5s,-webkit-transform .5s}.bam-warm-wrap .content .tab-wrap a img{display:block;width:1.5rem;margin:auto}.bam-warm-wrap .content .content-bg{position:relative;width:calc(100% - (100% - 1280px)*0.5);margin:auto;margin-right:0;background:#fff6eb;border-radius:75px 0 0 75px}.bam-warm-wrap .content .content-bg .content-wrap{position:relative;width:1280px;margin:0}.bam-warm-wrap .content .content-bg .content-block{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.bam-warm-wrap .content .content-bg .content-block .content-img{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:30%;height:750px;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;border-radius:75px;opacity:0;-webkit-transform:scale(0.9);transform:scale(0.9);-webkit-animation:fadein 1s forwards;animation:fadein 1s forwards}@-webkit-keyframes fadein{to{opacity:1;-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1)}}@keyframes fadein{to{opacity:1;-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1)}}.bam-warm-wrap .content .content-bg .content-block .content-img article{background:rgba(255,255,255,0.8);border-radius:50px;width:90%;margin:0 auto;text-align:center;padding:1rem}.bam-warm-wrap .content .content-bg .content-block .content-img article h3{display:inline-block;font-size:2rem;padding-bottom:5px;margin-bottom:.5rem;font-weight:500;background:url(https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-line.png) repeat-x left bottom;background-size:15px}.bam-warm-wrap .content .content-bg .content-block .content-info{-webkit-box-flex:1;-ms-flex:1 0 0;flex:1 0 0;padding:1.5rem 0}.bam-warm-wrap .content .content-bg .content-block .content-info h4{font-weight:500;font-size:2rem}.bam-warm-wrap .content .content-bg .content-block .content-info h5{font-weight:500;font-size:1.5rem;color:#ff978d}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab{position:relative;margin-bottom:1rem;padding:0 2.5rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper .swiper-slide{display:block;width:auto;padding:.5rem 1rem;color:#ff978d;background:#FFF;border-radius:50px;border:3px solid #ff978d;-webkit-transition:color 0.5s,background .5s;transition:color 0.5s,background .5s}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper .swiper-slide.active{color:#FFF;background:#ff978d}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-prev,.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-next{width:1.75rem;height:1.75rem;border:2px solid #7eccc1;border-radius:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-prev::after,.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-next::after{display:none}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-prev{left:5px}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper-button-next{right:5px}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content{margin:0 2.5rem;opacity:0;-webkit-transform:translateY(1rem);transform:translateY(1rem);-webkit-animation:fadein 1s forwards;animation:fadein 1s forwards}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll{margin-top:1rem;padding-right:.5rem;max-height:500px;overflow-y:auto;-webkit-overflow-scrolling:touch}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-flex{margin-bottom:1.5rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white{margin:.5rem 0;padding:.75rem 1rem;border-radius:20px;background:#FFF;border:1px solid #7eccc1}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white h6{position:relative;font-size:1.2rem;font-weight:400;color:#009090;padding-left:1rem;margin-bottom:.25rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white h6::before{position:absolute;display:block;content:'';width:4px;height:60%;background:#009090;top:55%;left:3px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.bam-warm-wrap .notice{position:relative;margin-top:3%}.bam-warm-wrap .notice .notice-wrap{position:relative;background:url(https://demo.homakimi-digital.com/bam-warm/img/bam-warm-notice-bg.jpg) repeat-y top center;background-size:100% auto;padding:3% 0;margin:3% 0 0}.bam-warm-wrap .notice .notice-block{display:none;width:1280px;margin:auto}.bam-warm-wrap .notice .notice-more{display:block;margin:auto;width:100px}.bam-warm-wrap .notice .notice-more .icon-less{display:none}.bam-warm-wrap .notice .notice-more.active{padding:35px 0}.bam-warm-wrap .notice .notice-more.active .icon-more{display:none}.bam-warm-wrap .notice .notice-more.active .icon-less{display:block}.bam-warm-wrap .notice h2{position:relative;font-size:2rem;color:#ff5b4d;text-align:center;top:12px}.bam-warm-wrap .deco-1{position:absolute;top:100%;left:0;width:9%}.bam-warm-wrap .deco-2{position:absolute;top:110%;right:0;width:7%}.bam-warm-wrap .deco-3{position:absolute;width:14%;bottom:100%;left:0}.bam-warm-wrap .deco-5{position:absolute;width:3.5%;bottom:100%;left:20%}.bam-warm-wrap .deco-4{position:absolute;width:12%;bottom:-5%;right:-5%}.bam-warm-wrap .kv .kv-img,.bam-warm-wrap .kv .kv-p,.bam-warm-wrap .kv article{opacity:0;-webkit-transform:translateY(3rem);transform:translateY(3rem)}.bam-warm-wrap .kv .kv-img{-webkit-transition:opacity 1s,-webkit-transform 1s;transition:opacity 1s,-webkit-transform 1s;transition:opacity 1s,transform 1s;transition:opacity 1s,transform 1s,-webkit-transform 1s}.bam-warm-wrap .kv h1{opacity:0;-webkit-transform:translateX(-3rem);transform:translateX(-3rem);-webkit-transition:opacity 1s 0.5s,-webkit-transform 1s .5s;transition:opacity 1s 0.5s,-webkit-transform 1s .5s;transition:opacity 1s 0.5s,transform 1s .5s;transition:opacity 1s 0.5s,transform 1s 0.5s,-webkit-transform 1s .5s}.bam-warm-wrap .kv .kv-p{-webkit-transition:opacity 1s 1s,-webkit-transform 1s 1s;transition:opacity 1s 1s,-webkit-transform 1s 1s;transition:opacity 1s 1s,transform 1s 1s;transition:opacity 1s 1s,transform 1s 1s,-webkit-transform 1s 1s}.bam-warm-wrap .kv article{-webkit-transition:opacity 1s 1.5s,-webkit-transform 1s 1.5s;transition:opacity 1s 1.5s,-webkit-transform 1s 1.5s;transition:opacity 1s 1.5s,transform 1s 1.5s;transition:opacity 1s 1.5s,transform 1s 1.5s,-webkit-transform 1s 1.5s}.bam-warm-wrap .kv .scrolldown{opacity:0;-webkit-transition:opacity 1s 1.5s,-webkit-transform 1s 1.5s;transition:opacity 1s 1.5s,-webkit-transform 1s 1.5s;transition:opacity 1s 1.5s,transform 1s 1.5s;transition:opacity 1s 1.5s,transform 1s 1.5s,-webkit-transform 1s 1.5s}.bam-warm-wrap .kv.active .kv-img,.bam-warm-wrap .kv.active h1,.bam-warm-wrap .kv.active .kv-p,.bam-warm-wrap .kv.active article,.bam-warm-wrap .kv.active .scrolldown{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.bam-warm-wrap .kv.active .kv-p{-webkit-animation:shake 3s 2s infinite;animation:shake 3s 2s infinite}@-webkit-keyframes shake{0%,30%,100%{-webkit-transform:rotate(0);transform:rotate(0)}10%{-webkit-transform:rotate(3deg);transform:rotate(3deg)}20%{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}}@keyframes shake{0%,30%,100%{-webkit-transform:rotate(0);transform:rotate(0)}10%{-webkit-transform:rotate(3deg);transform:rotate(3deg)}20%{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}}.bam-warm-wrap .intro{opacity:0;-webkit-animation:fadein 1s 3s forwards;animation:fadein 1s 3s forwards}.bam-warm-wrap .intro .intro-flex a{opacity:0;-webkit-transform:translateY(3rem);transform:translateY(3rem)}.bam-warm-wrap .intro .intro-flex a.active{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.bam-warm-wrap .content .tab-wrap a{opacity:0;-webkit-transform:translateY(3rem);transform:translateY(3rem)}.bam-warm-wrap .content .tab-wrap a.show{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.bam-warm-wrap .content .tab-wrap a.active{color:#ff5b4d;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.bam-warm-wrap .content .tab-wrap a.active img{-webkit-animation:jump .75s forwards;animation:jump .75s forwards}@-webkit-keyframes jump{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-1rem);transform:translateY(-1rem)}}@keyframes jump{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-1rem);transform:translateY(-1rem)}}@media only screen and (max-width: 1440px){.bam-warm-wrap .intro .intro-wrap{width:950px}.bam-warm-wrap .intro .intro-wrap h2{font-size:1.5rem}.bam-warm-wrap .intro .intro-flex a{border-radius:50px;-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.25);box-shadow:0 5px 15px rgba(0,0,0,0.25)}.bam-warm-wrap .intro .intro-flex a::before{border-radius:0 0 50px 50px}.bam-warm-wrap .intro .intro-flex a h3{font-size:1.5rem;top:65%}.bam-warm-wrap .intro .intro-flex a p{top:calc(65% + 2.25rem)}.bam-warm-wrap .content .tab-wrap{width:450px}.bam-warm-wrap .content .content-bg{width:calc(100% - (100% - 950px)*0.5);border-radius:75px 0 0 75px}.bam-warm-wrap .content .content-bg .content-wrap{width:950px}.bam-warm-wrap .content .content-bg .content-block .content-img{height:550px}.bam-warm-wrap .content .content-bg .content-block .content-img article{border-radius:35px}.bam-warm-wrap .content .content-bg .content-block .content-img article h3{font-size:1.75rem}.bam-warm-wrap .content .content-bg .content-block .content-info h4{font-size:1.75rem}.bam-warm-wrap .content .content-bg .content-block .content-info h5{font-size:1.25rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll{max-height:350px}.bam-warm-wrap .notice h2{font-size:1.5rem}.bam-warm-wrap .notice .notice-block{width:950px}.bam-warm-wrap .deco-4{width:12%;bottom:-5%;right:-5%}}@media only screen and (min-width: 1025px){.bam-warm-wrap .content-toggle-dropdown{display:block!important}.bam-warm-wrap .apply-btn:hover p{color:#FFF;background:#ff978d}.bam-warm-wrap .intro .intro-flex a.hoverable:hover{-webkit-transform:translateY(30px);transform:translateY(30px)}.bam-warm-wrap .intro .intro-flex a.hoverable:hover > div{opacity:1}.bam-warm-wrap .intro .intro-flex a.hoverable:hover > div article{top:50%}.bam-warm-wrap .intro .intro-flex a.hoverable:hover h3{top:10%;color:#ff978d}.bam-warm-wrap .intro .intro-flex a.hoverable:hover p{color:#7eccc1}.bam-warm-wrap .intro .intro-flex a.hoverable:hover p span{opacity:1}.bam-warm-wrap .content .tab-wrap a:hover{color:#ff5b4d}.bam-warm-wrap .content .content-bg .content-block .content-info .content-tab .swiper .swiper-slide:hover{color:#FFF;background:#ff978d}}@media only screen and (max-width: 1024px){.bam-warm-wrap{width:calc(100% - 20px);padding-bottom:10px}.bam-warm-wrap.adjusted .tab-wrap{top:55px!important}.bam-warm-wrap.adjusted .content-toggle-a.active{top:120px!important}.bam-warm-wrap .border-v-left,.bam-warm-wrap .border-v-right{width:10px}.bam-warm-wrap .border-v-left{left:-10px}.bam-warm-wrap .border-v-right{right:-10px}.bam-warm-wrap .border-h-bottom{height:10px}.bam-warm-wrap .kv{padding-bottom:15%}.bam-warm-wrap .kv .kv-d-1,.bam-warm-wrap .kv .kv-d-2{width:12%}.bam-warm-wrap .kv .kv-d-2{top:50%}.bam-warm-wrap .kv article{width:60%;top:89%;left:27%}.bam-warm-wrap .kv article > div{padding:2% 5% 2% 11%}.bam-warm-wrap .kv article > div h2{font-size:3.75vw}.bam-warm-wrap .kv article > div p{font-size:3.1vw;margin-top:2%}.bam-warm-wrap .kv .kv-p{width:22%;top:80%;left:5%}.bam-warm-wrap .kv h1{top:8%;left:0;right:0;margin:auto;font-size:6vw;text-align:center}.bam-warm-wrap .kv h1 p span{border-radius:2.5vw}.bam-warm-wrap .intro{margin-top:0;background:url(https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-bg.jpg) no-repeat center center;background-size:cover;padding-top:25%}.bam-warm-wrap .content{margin:8% 0 10%}.bam-warm-wrap .content h2{font-size:1.35rem;color:#ff5b4d;text-align:center;margin-bottom:3rem}.bam-warm-wrap .content .tab-wrap{z-index:3;position:-webkit-sticky;position:sticky;top:0;width:360px;padding:1% 0}.bam-warm-wrap .content .tab-wrap::before{position:absolute;display:block;content:'';top:0;left:50%;width:calc(100vw - 20px);height:100%;background:#fff6eb;-webkit-transform:translateX(-50%);transform:translateX(-50%);opacity:0;-webkit-transition:opacity .25s;transition:opacity .25s;-webkit-box-shadow:0 0 15px -8px rgba(0,0,0,0.5);box-shadow:0 0 15px -8px rgba(0,0,0,0.5)}.bam-warm-wrap .content .tab-wrap.fix::before{opacity:1}.bam-warm-wrap .content .tab-wrap.fix::after{display:none}.bam-warm-wrap .content .tab-wrap.fix a{-webkit-transform:scale(0.8);transform:scale(0.8)}.bam-warm-wrap .content .tab-wrap.fix a.active{-webkit-transform:scale(0.8);transform:scale(0.8)}.bam-warm-wrap .content .tab-wrap::after{padding-top:7%}.bam-warm-wrap .content .tab-wrap a{position:relative;font-size:1.1rem}.bam-warm-wrap .content .tab-wrap a img{width:2rem}.bam-warm-wrap .content .content-bg{width:100%;border-radius:0;padding-bottom:10%}.bam-warm-wrap .content .content-bg .content-wrap{width:90%;max-width:500px;margin:auto}.bam-warm-wrap .content .content-bg .content-block{display:block}.bam-warm-wrap .content .content-bg .content-block .content-img{display:block;width:100%;height:auto;background-size:0 0!important;border-radius:0}.bam-warm-wrap .content .content-bg .content-block .content-img article{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;background:none;border-radius:0;width:100%;text-align:left;padding:1rem 0}.bam-warm-wrap .content .content-bg .content-block .content-img article h3{display:block;white-space:nowrap;font-size:1.5rem;padding-bottom:5px;background-size:10px}.bam-warm-wrap .content .content-bg .content-block .content-img article p{-webkit-box-flex:1;-ms-flex:1 0 0;flex:1 0 0;margin-top:-5px}.bam-warm-wrap .content .content-bg .content-block .content-info h4{font-size:1.5rem}.bam-warm-wrap .content .content-bg .content-block .content-info h5{font-size:1.75rem;text-align:center;color:#ff5b4d;padding-top:1rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content{display:block!important;margin:0}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a{position:relative;display:block;width:100%;padding:.25rem 0;text-align:center;border:2px solid #ff978d;color:#ff978d;border-radius:50px;background:#FFF;margin:.5rem 0;-webkit-transition:color 0.5s,background .5s;transition:color 0.5s,background .5s}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a::before{z-index:-1;position:absolute;display:block;content:'';width:calc(100vw - 20px);height:calc(100% + 4px);top:-2px;left:50%;background:#ff978d;-webkit-transform:translateX(-50%);transform:translateX(-50%);opacity:0;-webkit-box-shadow:0 0 15px -5px rgba(0,0,0,0.5);box-shadow:0 0 15px -5px rgba(0,0,0,0.5);-webkit-transition:opacity .25s;transition:opacity .25s}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a::after{position:absolute;display:block;content:'＋';top:50%;right:1rem;-webkit-transform:translateY(-55%);transform:translateY(-55%)}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active{z-index:3;background:#ff978d;color:#FFF;position:-webkit-sticky;position:sticky;top:68px}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active::after{content:'－'}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active.fix::before{opacity:1}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-dropdown{display:none}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll{margin-top:0;padding-right:0;max-height:none}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll article{text-align:center}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white h6{font-size:1.1rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-img-m{width:100%;padding-top:30%;background-position:center center!important;background-repeat:no-repeat!important;background-size:cover!important;border-radius:30px;margin-top:1rem}.bam-warm-wrap .notice{margin-top:15%}.bam-warm-wrap .notice .notice-wrap{padding:5% 0}.bam-warm-wrap .notice .notice-block{width:90%;max-width:500px}.bam-warm-wrap .notice h2{top:0;font-size:1.35rem}.bam-warm-wrap .deco-1{display:none}.bam-warm-wrap .deco-2{display:none}.bam-warm-wrap .deco-3{width:12%;top:100%}.bam-warm-wrap .deco-5{width:10%;left:10%}.bam-warm-wrap .deco-4{width:25%;bottom:0;right:0;-webkit-transform:translateY(125%);transform:translateY(125%)}.bam-warm-wrap .kv h1{-webkit-transform:translateX(0) translateY(3rem);transform:translateX(0) translateY(3rem)}.bam-warm-wrap .intro .intro-flex a.zoom{-webkit-transform:scale(1.07);transform:scale(1.07)}}@media only screen and (max-width: 480px){.bam-warm-wrap.adjusted .content-toggle-a.active{top:110px!important}.bam-warm-wrap .apply-btn{bottom:1rem;right:1rem;width:90px}.bam-warm-wrap .apply-btn p{font-size:1.25rem}.bam-warm-wrap .apply-btn p::after{border-width:3px}.bam-warm-wrap .intro .intro-flex a{gap:1%}.bam-warm-wrap .intro .intro-flex a > div article h4{font-size:.85rem}.bam-warm-wrap .intro .intro-flex a h3{font-size:1.1rem;font-weight:400}.bam-warm-wrap .intro .intro-flex a h3 span{bottom:25%}.bam-warm-wrap .content .tab-wrap{width:300px}.bam-warm-wrap .content .tab-wrap a{font-size:1rem}.bam-warm-wrap .content .tab-wrap a img{width:1.5rem}.bam-warm-wrap .content .content-bg .content-block .content-img article h3{font-size:1.35rem}.bam-warm-wrap .content .content-bg .content-block .content-img article p{font-size:.9rem}.bam-warm-wrap .content .content-bg .content-block .content-info h5{font-size:1.35rem}.bam-warm-wrap .content .content-bg .content-block .content-info .content-content .content-toggle-a.active{top:55px}.bam-warm-wrap .content .content-bg .content-block .content-info .content-scroll .content-white h6{font-size:1.2rem}.bam-warm-wrap .notice .notice-wrap{padding-bottom:35px}.bam-warm-wrap .deco-3{width:15%}}
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap";html{font-size:16px}body{padding:0;margin:0}body.fix{overflow:hidden}.bam-exam-wrap{width:100%;letter-spacing:1px;background:#FFF;font-family:'Noto Sans TC'}.bam-exam-wrap :not(.swiper-button){margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}.bam-exam-wrap :not(.swiper-button)::before,.bam-exam-wrap :not(.swiper-button)::after{-webkit-box-sizing:border-box;box-sizing:border-box}.bam-exam-wrap a{text-decoration:none;color:inherit}.bam-exam-wrap .fullimg{display:block;width:100%}@media only screen and (min-width: 1025px){.for-m{display:none!important}}@media only screen and (max-width: 1024px){.for-pc{display:none!important}}@media only screen and (max-width: 480px){.bam-exam-wrap ol li::before{top:.2rem;width:1.1rem;height:1.1rem;font-size:.8rem}}.bam-exam-wrap{color:#0e5b7b}.bam-exam-wrap .badge{z-index:9;position:fixed;display:block;width:150px;top:10%;right:0;-webkit-transform:translateX(100%);transform:translateX(100%);-webkit-animation:badgehide .35s linear forwards;animation:badgehide .35s linear forwards}.bam-exam-wrap .badge.show{-webkit-animation:badge .35s linear forwards;animation:badge .35s linear forwards}.bam-exam-wrap .badge.show .badge-word{-webkit-animation:fadein .5s .25s forwards;animation:fadein .5s .25s forwards}.bam-exam-wrap .badge .badge-word{position:absolute;top:0;left:0;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .outer-wrap{width:1440px;margin:auto}.bam-exam-wrap .kv{position:relative;overflow:hidden}.bam-exam-wrap .kv .kv-img{width:100%;padding-top:66.5%;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important}.bam-exam-wrap .kv h1{position:absolute;width:0;top:10%;left:15%;overflow:hidden;-webkit-animation:kv 2s 1s forwards;animation:kv 2s 1s forwards}.bam-exam-wrap .kv h1 img{display:block;width:23vw}.bam-exam-wrap .kv h1 p{display:none}.bam-exam-wrap .kv .kv-title{position:absolute;width:0;top:32%;left:8%;overflow:hidden;-webkit-animation:kv 2s 1.75s forwards;animation:kv 2s 1.75s forwards}.bam-exam-wrap .kv .kv-title img{display:block;width:40vw}.bam-exam-wrap .kv .kv-des{position:absolute;width:34vw;top:41%;left:11%;overflow:hidden;opacity:0;-webkit-transform:scale(1.5) rotate(15deg);transform:scale(1.5) rotate(15deg);-webkit-animation:fadein .5s 2.5s forwards;animation:fadein .5s 2.5s forwards}.bam-exam-wrap .kv .kv-des img{display:block;width:100%}.bam-exam-wrap .kv .kv-hat{position:absolute;display:block;width:7%;top:12%;left:35%;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px);-webkit-animation:fadein 1s 1.25s forwards;animation:fadein 1s 1.25s forwards}.bam-exam-wrap .question{position:relative;margin-top:-30%;overflow:hidden;padding:5% 0}.bam-exam-wrap .question .outer-wrap{position:relative}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco{position:absolute;width:175px}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco.active{-webkit-animation:fadein 1s forwards;animation:fadein 1s forwards}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-1{top:35%;left:-10%;-webkit-transform:translate(90%,0) scale(0.8) rotate(15deg);transform:translate(90%,0) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-2{top:60%;left:-3%;-webkit-transform:translate(50%,-10%) scale(0.8) rotate(15deg);transform:translate(50%,-10%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-3{top:80%;left:4%;-webkit-transform:translate(40%,-15%) scale(0.8) rotate(15deg);transform:translate(40%,-15%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-4{top:1%;left:5%;-webkit-transform:translate(35%,20%) scale(0.8) rotate(15deg);transform:translate(35%,20%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-5{top:3%;left:85%;-webkit-transform:translate(-40%,30%) scale(0.8) rotate(15deg);transform:translate(-40%,30%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-6{top:20%;left:95%;-webkit-transform:translate(-30%,25%) scale(0.8) rotate(15deg);transform:translate(-30%,25%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-7{top:75%;left:88%;-webkit-transform:translate(-25%,-10%) scale(0.8) rotate(15deg);transform:translate(-25%,-10%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .question-bg{position:relative;width:80%;padding-top:55%;margin:auto;background-repeat:no-repeat!important;background-position:center center!important;background-size:contain!important}.bam-exam-wrap .question .question-bg .question-intro{position:absolute;top:55%;left:50%;width:100%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);letter-spacing:3px;font-size:1.75rem;text-align:center;line-height:200%}.bam-exam-wrap .question .question-bg .question-intro > p{display:inline-block;font-weight:500;position:relative}.bam-exam-wrap .question .question-bg .question-intro > p::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .question .question-bg .question-intro > p.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@-webkit-keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .question .question-bg .question-intro h3{display:inline-block;font-size:1.75rem;position:relative}.bam-exam-wrap .question .question-bg .question-intro h3::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .question .question-bg .question-intro h3.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .question .question-bg .question-intro h3 p{display:inline-block;padding:0 1rem;margin:.25rem 0;background:-webkit-gradient(linear,left top,right top,from(#53ccfb),to(#ffdfbb));background:linear-gradient(to right,#53ccfb,#ffdfbb);border-radius:50px}.bam-exam-wrap .question .question-bg .question-intro h4{font-weight:400;font-size:1.1rem;color:#43aad4;letter-spacing:1px;line-height:normal;margin-top:1%;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .question .question-bg .question-intro h4.active{-webkit-animation:fadein .5s 2s forwards;animation:fadein .5s 2s forwards}.bam-exam-wrap .question .question-bg .question-intro .question-btn{display:block;width:300px;color:#FFF;padding:.75rem 0;margin:auto;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;border-radius:100px;-webkit-filter:brightness(1.25);filter:brightness(1.25);opacity:0;-webkit-transform:scale(1.5) rotate(15deg);transform:scale(1.5) rotate(15deg)}.bam-exam-wrap .question .question-bg .question-intro .question-btn.active{-webkit-animation:fadein .5s 1.5s forwards;animation:fadein .5s 1.5s forwards}.bam-exam-wrap .info{z-index:1;position:relative}.bam-exam-wrap .info .outer-wrap{position:relative}.bam-exam-wrap .info .info-left{width:38%}.bam-exam-wrap .info .info-left .bam-exam-h2-deco{display:block;width:50%;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .info .info-left .bam-exam-h2-deco.active{-webkit-animation:fadein .5s forwards;animation:fadein .5s forwards}.bam-exam-wrap .info .info-left .bam-exam-h2{width:80%;position:relative}.bam-exam-wrap .info .info-left .bam-exam-h2::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .info .info-left .bam-exam-h2.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .info .info-left .bam-exam-h2.active::after{-webkit-animation-delay:.5s;animation-delay:.5s}.bam-exam-wrap .info .info-left .info-block{counter-reset:aaa;margin-top:2.5%;opacity:0}.bam-exam-wrap .info .info-left .info-block.active{-webkit-animation:fadefix 1s 1.5s forwards;animation:fadefix 1s 1.5s forwards}.bam-exam-wrap .info .info-left .info-block h5{margin-top:5%;font-size:1.15rem;font-weight:500;color:#43aad4}.bam-exam-wrap .info .info-left .info-block h5 a{text-decoration:underline}.bam-exam-wrap .info .info-left .info-block article a{position:relative;display:inline-block;padding:3% 5%;margin:2.5% 0;border-radius:25px;-webkit-box-shadow:0 5px 25px -5px rgba(0,0,0,0.25);box-shadow:0 5px 25px -5px rgba(0,0,0,0.25);background:#FFF;font-size:1.5rem}.bam-exam-wrap .info .info-left .info-block article a.active{-webkit-box-shadow:none;box-shadow:none}.bam-exam-wrap .info .info-left .info-block article a.active::before,.bam-exam-wrap .info .info-left .info-block article a.active::after{opacity:1}.bam-exam-wrap .info .info-left .info-block article a::before,.bam-exam-wrap .info .info-left .info-block article a::after{position:absolute;display:block;content:'';width:100%;height:100%;top:0;left:0;border-radius:25px;opacity:0}.bam-exam-wrap .info .info-left .info-block article a::before{background:-webkit-gradient(linear,left top,right top,from(#53ccfb),to(#ffdfbb));background:linear-gradient(to right,#53ccfb,#ffdfbb);-webkit-transform:translate(10px,8px);transform:translate(10px,8px);opacity:0}.bam-exam-wrap .info .info-left .info-block article a::after{background:#FFF;border:3px solid #0e5b7b}.bam-exam-wrap .info .info-left .info-block article a p{z-index:1;position:relative;padding-left:2rem}.bam-exam-wrap .info .info-left .info-block article a p::before{position:absolute;top:0;left:0;counter-increment:aaa;content:counter(aaa) ". "}.bam-exam-wrap .info .info-left .info-block article .info-dropdown{display:none;position:absolute;top:0;right:0;width:57%;font-size:1.25rem;line-height:170%;text-align:justify}.bam-exam-wrap .info .info-left .info-block article .info-dropdown ul,.bam-exam-wrap .info .info-left .info-block article .info-dropdown ol{margin-left:2rem}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-img{width:60%;padding-top:calc(50% * 0.6);background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;margin-top:3%;border-radius:75px}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content{position:relative;padding:6% 2% 1% 1%;margin-top:3%}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll{height:400px;overflow-y:auto;padding-right:3%;-webkit-overflow-scrolling:touch}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar{width:5px}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar-track{border-radius:10px;background:#ededed}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar-thumb{background:#0e5b7b;border-radius:10px}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content p{display:inline;text-decoration:underline;text-decoration-thickness:3px;-webkit-text-decoration-color:#ffdfbb;text-decoration-color:#ffdfbb}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content::after{position:absolute;display:block;content:'';width:4px;height:30%;top:0;right:0;background:#53ccfb;-webkit-transform-origin:top center;transform-origin:top center;-webkit-transform:scale(1,0);transform:scale(1,0);-webkit-animation:lineeffect .5s 1.35s linear forwards;animation:lineeffect .5s 1.35s linear forwards}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line{top:0;left:0;width:100%;position:relative;position:absolute;-webkit-animation-timing-function:linear;animation-timing-function:linear}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .info .info-default{position:absolute;top:20%;right:0;width:57%;opacity:0}.bam-exam-wrap .info .info-default.active{-webkit-animation:fadefix 1s 1.5s forwards;animation:fadefix 1s 1.5s forwards}.bam-exam-wrap .info .info-default > div{width:100%;padding-top:66%;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;border-radius:75px}.bam-exam-wrap .info .info-default .info-hand{z-index:1;position:absolute;pointer-events:none;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.bam-exam-wrap .info .info-default .info-hand.active{-webkit-animation:handinfo 4s 3s infinite;animation:handinfo 4s 3s infinite}.bam-exam-wrap .wave{z-index:0;position:relative;margin:-20% auto -5%;overflow:hidden}.bam-exam-wrap .wave .wave-deco{position:absolute;bottom:10%;right:0;width:15%}.bam-exam-wrap .intro{font-size:1.25rem;overflow:hidden}.bam-exam-wrap .intro .outer-wrap{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;gap:5%;padding-bottom:2.5rem}.bam-exam-wrap .intro h5{position:absolute;bottom:3px;left:0;font-weight:500;font-size:1.15rem;width:38%;color:#43aad4;opacity:0}.bam-exam-wrap .intro h5.active{-webkit-animation:fadefix 1s 1.5s forwards;animation:fadefix 1s 1.5s forwards}.bam-exam-wrap .intro h5 a{text-decoration:underline}.bam-exam-wrap .intro .intro-deco{position:absolute;width:10%;top:50%;left:-18%}.bam-exam-wrap .intro .intro-left{width:38%}.bam-exam-wrap .intro .intro-left .bam-exam-h2-deco{display:block;width:50%;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .intro .intro-left .bam-exam-h2-deco.active{-webkit-animation:fadein .5s forwards;animation:fadein .5s forwards}.bam-exam-wrap .intro .intro-left .bam-exam-h2{width:80%;position:relative}.bam-exam-wrap .intro .intro-left .bam-exam-h2::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .intro .intro-left .bam-exam-h2.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .intro .intro-left .bam-exam-h2.active::after{-webkit-animation-delay:.5s;animation-delay:.5s}.bam-exam-wrap .intro .intro-left .swiper{z-index:0;padding-bottom:50px;overflow:visible;opacity:0}.bam-exam-wrap .intro .intro-left .swiper.active{-webkit-animation:fadefix 1s 1.5s forwards;animation:fadefix 1s 1.5s forwards}.bam-exam-wrap .intro .intro-left .swiper .swiper-wrapper{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:25px;padding:3% 1.5%;margin-top:30px!important;margin-bottom:0!important;-webkit-box-shadow:0 5px 25px -5px rgba(0,0,0,0.25);box-shadow:0 5px 25px -5px rgba(0,0,0,0.25);background:#FFF}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active{-webkit-box-shadow:none;box-shadow:none}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active::before,.bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active::after{opacity:1}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before,.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after{position:absolute;display:block;content:'';width:100%;height:100%;top:0;left:0;border-radius:25px;opacity:0}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before{background:-webkit-gradient(linear,left top,right top,from(#53ccfb),to(#ffdfbb));background:linear-gradient(to right,#53ccfb,#ffdfbb);-webkit-transform:translate(10px,8px);transform:translate(10px,8px);opacity:0}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after{background:#FFF;border:3px solid #0e5b7b}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide img{z-index:1;position:relative;display:block;width:25%}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div{z-index:1;position:relative;width:75%;text-align:center}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div h4{font-size:1.5rem;letter-spacing:3px;font-weight:500}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div p{white-space:nowrap;font-size:.85rem;font-weight:500;letter-spacing:0}.bam-exam-wrap .intro .intro-right{-webkit-box-flex:1;-ms-flex:1 0 0;flex:1 0 0;margin-top:15%;opacity:0}.bam-exam-wrap .intro .intro-right.active{-webkit-animation:fadefix 1s 1.5s forwards;animation:fadefix 1s 1.5s forwards}.bam-exam-wrap .intro .intro-right .intro-default{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:relative;background:#ededed;border-radius:50px;width:100%;padding-top:80%;margin-top:-10%}.bam-exam-wrap .intro .intro-right .intro-default article{position:absolute;top:50%;left:50%;width:60%;font-size:1.25rem;line-height:175%;text-align:center;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-1,.bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-2{position:absolute;width:20%}.bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-1{bottom:0;left:-10%}.bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-2{top:-10%;right:3%}.bam-exam-wrap .intro .intro-right .intro-default .intro-hand{z-index:1;position:absolute;pointer-events:none;width:10%;top:75%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.bam-exam-wrap .intro .intro-right .intro-default .intro-hand.active{-webkit-animation:handintro 4s 3s infinite;animation:handintro 4s 3s infinite}.bam-exam-wrap .intro .intro-right .intro-block{display:none;text-align:justify;padding-top:5%}.bam-exam-wrap .intro .intro-right .intro-block ul,.bam-exam-wrap .intro .intro-right .intro-block ol{margin-left:2rem}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll{height:500px;overflow-y:auto;padding-right:3%;-webkit-overflow-scrolling:touch}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar{width:5px}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar-track{border-radius:10px;background:#ededed}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar-thumb{background:#0e5b7b;border-radius:10px}.bam-exam-wrap .intro .intro-right .intro-block h4{display:inline-block;font-size:1.25rem;color:#FFF;background:#3293d9;padding:.1rem 1rem;letter-spacing:3px;font-weight:500;border-radius:50px}.bam-exam-wrap .intro .intro-right .intro-block article{margin:1rem 0 1.5rem}.bam-exam-wrap .intro .intro-right .intro-block article p{display:inline;text-decoration:underline;text-decoration-thickness:3px;-webkit-text-decoration-color:#ffdfbb;text-decoration-color:#ffdfbb}.bam-exam-wrap .link{padding-top:5%;text-align:center;overflow:hidden}.bam-exam-wrap .link .outer-wrap{position:relative}.bam-exam-wrap .link .link-deco-1,.bam-exam-wrap .link .link-deco-2,.bam-exam-wrap .link .link-deco-3{position:absolute;opacity:.5}.bam-exam-wrap .link .link-deco-1{right:3%;top:15%;width:10%}.bam-exam-wrap .link .link-deco-2{left:-5%;top:50%;width:15%}.bam-exam-wrap .link h2{font-size:1.75rem}.bam-exam-wrap .link h2 p{display:inline-block;position:relative}.bam-exam-wrap .link h2 p::after{display:block;content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:#FFF;-webkit-transform-origin:center right;transform-origin:center right}.bam-exam-wrap .link h2 p.active::after{-webkit-animation:showeffect 1.5s forwards;animation:showeffect 1.5s forwards}@keyframes showeffect{to{-webkit-transform:scale(0,1);transform:scale(0,1)}}.bam-exam-wrap .link h2 p.active::after{-webkit-animation-delay:.5s;animation-delay:.5s}.bam-exam-wrap .link h2 p.des{font-weight:400}.bam-exam-wrap .link h2 img{display:block;width:200px;margin:1% auto;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .link h2 img.active{-webkit-animation:fadein .5s forwards;animation:fadein .5s forwards}.bam-exam-wrap .link .link-flex{display:-webkit-box;display:-ms-flexbox;display:flex;width:70%;margin:auto;margin-top:3%;gap:5%}.bam-exam-wrap .link .link-flex div{width:100%;opacity:0;-webkit-transform:translateY(50px);transform:translateY(50px)}.bam-exam-wrap .link .link-flex div.active{-webkit-animation:fadein 1s 1s forwards;animation:fadein 1s 1s forwards}.bam-exam-wrap .link .link-flex div a{display:block;width:60%;color:#FFF;font-size:1.25rem;padding:.75rem 0;margin:5% auto;background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;border-radius:100px}@-webkit-keyframes badge{0%{-webkit-transform:translateX(100%);transform:translateX(100%)}70%{-webkit-transform:translateX(0%);transform:translateX(0%)}100%{-webkit-transform:translateX(10%);transform:translateX(10%)}}@keyframes badge{0%{-webkit-transform:translateX(100%);transform:translateX(100%)}70%{-webkit-transform:translateX(0%);transform:translateX(0%)}100%{-webkit-transform:translateX(10%);transform:translateX(10%)}}@-webkit-keyframes badgehide{from{-webkit-transform:translateX(10%);transform:translateX(10%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes badgehide{from{-webkit-transform:translateX(10%);transform:translateX(10%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@-webkit-keyframes kv{to{width:100%}}@keyframes kv{to{width:100%}}@-webkit-keyframes fadefix{to{opacity:1}}@keyframes fadefix{to{opacity:1}}@-webkit-keyframes fadein{to{opacity:1;-webkit-transform:translate(0,0) scale(1) rotate(0);transform:translate(0,0) scale(1) rotate(0)}}@keyframes fadein{to{opacity:1;-webkit-transform:translate(0,0) scale(1) rotate(0);transform:translate(0,0) scale(1) rotate(0)}}@-webkit-keyframes hint{50%{-webkit-filter:grayscale(1);filter:grayscale(1);-webkit-transform:translateY(-75%) scale(1.05);transform:translateY(-75%) scale(1.05)}}@keyframes hint{50%{-webkit-filter:grayscale(1);filter:grayscale(1);-webkit-transform:translateY(-75%) scale(1.05);transform:translateY(-75%) scale(1.05)}}@-webkit-keyframes lineeffect{to{-webkit-transform:scale(1,1);transform:scale(1,1)}}@keyframes lineeffect{to{-webkit-transform:scale(1,1);transform:scale(1,1)}}@-webkit-keyframes handintro{60%,70%,80%,100%{top:40%;left:-50%;-webkit-transform:translate(-50%,-50%) scale(1);transform:translate(-50%,-50%) scale(1)}65%,75%{top:40%;left:-50%;-webkit-transform:translate(-50%,-50%) scale(0.9);transform:translate(-50%,-50%) scale(0.9)}}@keyframes handintro{60%,70%,80%,100%{top:40%;left:-50%;-webkit-transform:translate(-50%,-50%) scale(1);transform:translate(-50%,-50%) scale(1)}65%,75%{top:40%;left:-50%;-webkit-transform:translate(-50%,-50%) scale(0.9);transform:translate(-50%,-50%) scale(0.9)}}@-webkit-keyframes handinfo{60%,70%,80%,100%{top:42%;left:-35%;-webkit-transform:translate(-50%,-50%) scale(1);transform:translate(-50%,-50%) scale(1)}65%,75%{top:42%;left:-35%;-webkit-transform:translate(-50%,-50%) scale(0.9);transform:translate(-50%,-50%) scale(0.9)}}@keyframes handinfo{60%,70%,80%,100%{top:42%;left:-35%;-webkit-transform:translate(-50%,-50%) scale(1);transform:translate(-50%,-50%) scale(1)}65%,75%{top:42%;left:-35%;-webkit-transform:translate(-50%,-50%) scale(0.9);transform:translate(-50%,-50%) scale(0.9)}}@media only screen and (max-width: 1440px){.bam-exam-wrap .badge{width:125px}.bam-exam-wrap .outer-wrap{width:1024px}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco{width:125px}.bam-exam-wrap .question .question-bg .question-intro{font-size:1.35rem;line-height:175%}.bam-exam-wrap .question .question-bg .question-intro h3{font-size:1.35rem;margin:.5rem 0}.bam-exam-wrap .question .question-bg .question-intro h4{font-size:1rem}.bam-exam-wrap .question .question-bg .question-intro .question-btn{width:250px;padding:.5rem 0}.bam-exam-wrap .info .info-left .info-block h5{font-size:1.1rem}.bam-exam-wrap .info .info-left .info-block article a{font-size:1.25rem}.bam-exam-wrap .info .info-left .info-block article a p{padding-left:1.5rem}.bam-exam-wrap .info .info-left .info-block article .info-dropdown{font-size:1.15rem}.bam-exam-wrap .info .info-left .info-block article .info-dropdown::after{width:3px}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-img{border-radius:50px}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll{height:300px}.bam-exam-wrap .intro{font-size:1.2rem}.bam-exam-wrap .intro h5{font-size:1.1rem}.bam-exam-wrap .intro .intro-left .swiper{padding-bottom:50px}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide{margin-top:20px!important}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after{border:2px solid #0e5b7b}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div h4{font-size:1.25rem;letter-spacing:2px}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div p{font-size:.75rem}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll{height:350px}.bam-exam-wrap .intro .intro-right .intro-block h4{font-size:1.2rem;letter-spacing:2px}.bam-exam-wrap .intro .intro-right .intro-default article{width:75%;font-size:1.1rem}.bam-exam-wrap .link h2{font-size:1.5rem}.bam-exam-wrap .link h2 img{width:150px}}@media only screen and (max-width: 1024px){.bam-exam-wrap{width:100%}.bam-exam-wrap .badge{width:25%;top:65%}.bam-exam-wrap .outer-wrap{width:90%;margin:auto}.bam-exam-wrap .kv .kv-img{padding-top:160%}.bam-exam-wrap .kv h1{top:8%;left:14%}.bam-exam-wrap .kv h1 img{width:62vw}.bam-exam-wrap .kv .kv-title{top:16%;left:10%}.bam-exam-wrap .kv .kv-title img{width:75vw}.bam-exam-wrap .kv .kv-des{top:22%;left:27%;width:60vw}.bam-exam-wrap .kv .kv-hat{width:20%;top:3%;left:5%}.bam-exam-wrap .question{margin-top:-30%;overflow:hidden;padding:10% 0}.bam-exam-wrap .question .outer-wrap{width:98%}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco{width:20%}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-1{top:0;left:-8%;-webkit-transform:translate(50%,30%) scale(0.8) rotate(15deg);transform:translate(50%,30%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-2{top:88%;left:3%;-webkit-transform:translate(40%,-10%) scale(0.8) rotate(15deg);transform:translate(40%,-10%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-3{display:none}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-4{top:-8%;left:12%;-webkit-transform:translate(45%,40%) scale(0.8) rotate(15deg);transform:translate(45%,40%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-5{top:3%;left:80%;-webkit-transform:translate(-50%,30%) scale(0.8) rotate(15deg);transform:translate(-50%,30%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-6{top:-8%;left:88%;-webkit-transform:translate(-50%,35%) scale(0.8) rotate(15deg);transform:translate(-50%,35%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-7{top:83%;left:85%;-webkit-transform:translate(-45%,-20%) scale(0.8) rotate(15deg);transform:translate(-45%,-20%) scale(0.8) rotate(15deg)}.bam-exam-wrap .question .question-bg{width:100%;padding-top:125%}.bam-exam-wrap .question .question-bg .question-intro{top:45%;letter-spacing:.1vw;font-size:4vw;line-height:200%}.bam-exam-wrap .question .question-bg .question-intro .bam-exam-pen{display:block;width:15%;margin:3% auto}.bam-exam-wrap .question .question-bg .question-intro h3{font-size:4vw;padding:0 3vw;margin:0}.bam-exam-wrap .question .question-bg .question-intro h3 p{margin:1.5vw 0}.bam-exam-wrap .question .question-bg .question-intro h4{font-size:3vw;letter-spacing:0;margin-top:3%}.bam-exam-wrap .question .question-bg .question-intro .question-btn{width:45%;padding:1.5vw 0}.bam-exam-wrap .wave-info{width:100%;margin:-15% auto}.bam-exam-wrap .info .info-left{width:100%}.bam-exam-wrap .info .info-left .bam-exam-h2-deco{width:50%;margin:auto}.bam-exam-wrap .info .info-left .bam-exam-h2{width:70%;margin:auto}.bam-exam-wrap .info .info-left .info-block{border-left-width:.75vw}.bam-exam-wrap .info .info-left .info-block h5{font-size:3vw;letter-spacing:0;text-align:center;margin-top:5vw}.bam-exam-wrap .info .info-left .info-block article a{position:relative;display:block;font-size:4vw}.bam-exam-wrap .info .info-left .info-block article a.active p::after{display:none}.bam-exam-wrap .info .info-left .info-block article a::before,.bam-exam-wrap .info .info-left .info-block article a::after{border-radius:4vw}.bam-exam-wrap .info .info-left .info-block article a::before{-webkit-transform:translate(1vw,1.5vw);transform:translate(1vw,1.5vw);padding-left:5vw}.bam-exam-wrap .info .info-left .info-block article a::after{border-width:.75vw}.bam-exam-wrap .info .info-left .info-block article a p::after{position:absolute;display:block;content:'';top:50%;right:0;width:5vw;height:5vw;background-repeat:no-repeat!important;background-position:center center!important;background-size:contain!important;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.bam-exam-wrap .info .info-left .info-block article .info-dropdown{position:relative;width:100%;padding:3% 0;font-size:3.5vw}.bam-exam-wrap .info .info-left .info-block article .info-dropdown ul,.bam-exam-wrap .info .info-left .info-block article .info-dropdown ol{margin-left:5vw}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content{padding:6% 5% 3%}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content::after{width:.5vw;right:1px;height:40vw}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll{padding:0;height:auto}.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-img{width:90%;padding-top:calc(50% * 0.9);margin:3vw auto;border-radius:7vw}.bam-exam-wrap .wave{margin:-10% auto -5%}.bam-exam-wrap .wave .wave-deco{width:25%;bottom:5%}.bam-exam-wrap .intro{font-size:3.5vw}.bam-exam-wrap .intro .outer-wrap{display:block;padding-bottom:0}.bam-exam-wrap .intro h5{position:static;width:100%;font-size:3vw;letter-spacing:0;text-align:center;margin-top:0}.bam-exam-wrap .intro .intro-left{width:100%}.bam-exam-wrap .intro .intro-left .bam-exam-h2-deco{width:50%;margin:auto}.bam-exam-wrap .intro .intro-left .bam-exam-h2{width:70%;margin:auto}.bam-exam-wrap .intro .intro-left .swiper{padding:5%}.bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev,.bam-exam-wrap .intro .intro-left .swiper .swiper-button-next{width:8%}.bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev::after,.bam-exam-wrap .intro .intro-left .swiper .swiper-button-next::after{display:none}.bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev{left:-4%}.bam-exam-wrap .intro .intro-left .swiper .swiper-button-next{right:-4%}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide{width:auto;height:auto;border-radius:6vw;padding:3vw;margin-top:0!important;-webkit-box-shadow:0 .5vw 5vw -1vw rgba(0,0,0,0.25);box-shadow:0 .5vw 5vw -1vw rgba(0,0,0,0.25)}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before,.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after{border-radius:5vw}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before{-webkit-transform:translate(1vw,1.5vw);transform:translate(1vw,1.5vw)}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after{border-width:2px}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide img{width:10vw;margin-right:3vw}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div{width:auto;padding:0}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div h4{font-size:4.5vw;letter-spacing:.25vw}.bam-exam-wrap .intro .intro-left .swiper .swiper-slide div p{font-size:3vw}.bam-exam-wrap .intro .intro-right{margin-top:0}.bam-exam-wrap .intro .intro-right .intro-block{padding-top:0}.bam-exam-wrap .intro .intro-right .intro-block ul,.bam-exam-wrap .intro .intro-right .intro-block ol{margin-left:5vw}.bam-exam-wrap .intro .intro-right .intro-block .intro-scroll{height:auto}.bam-exam-wrap .intro .intro-right .intro-block .intro-title{position:relative;padding-left:12vw;font-weight:500;font-size:4.5vw;margin:3% 0 5%}.bam-exam-wrap .intro .intro-right .intro-block .intro-title img{position:absolute;width:10vw;top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.bam-exam-wrap .intro .intro-right .intro-block h4{display:inline-block;font-size:4vw;color:#FFF;background:#3293d9;padding:.25vw 3vw;letter-spacing:.5vw;font-weight:500;border-radius:50px}.bam-exam-wrap .intro .intro-right .intro-block article{margin:1.5% 0 5%}.bam-exam-wrap .link .link-deco-1{right:-8%;top:20%;width:20%}.bam-exam-wrap .link .link-deco-2{left:-15%;top:85%;width:30%}.bam-exam-wrap .link .link-deco-3{left:-15%;top:0;width:25%}.bam-exam-wrap .link h2{font-size:4.5vw}.bam-exam-wrap .link h2 p.des{font-size:3.75vw}.bam-exam-wrap .link h2 img{width:35%;margin:3% auto}.bam-exam-wrap .link .link-flex{display:block;width:80%}.bam-exam-wrap .link .link-flex div{width:100%;margin:5% 0}.bam-exam-wrap .link .link-flex div a{width:70%;font-size:4.5vw;padding:3vw 0}}
 
-.bam-warm-wrap{margin-top: 55px;}
+.bam-exam-wrap{margin-top: 55px;}
+.enjoy-editor .bam-exam-wrap img {max-width: none;}
+.enjoy-editor .bam-exam-wrap span {display: inline;}
 body {line-height: normal;}
 body::after {display: none;}
 main {padding-top: 0}
 .enjoy-editor {margin: 0; font-size: inherit}
-.enjoy-editor .bam-village-scroll-wrap img {max-width: none; margin: 0}
 main .container {max-width: none; padding: 0; margin: 0}
 .bread-crumb {display: none;}
 p {margin-bottom: 0}
 
+
+.question-bg {
+    background-image: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-bg.png');
+}
+@media only screen and (max-width: 1024px) {
+    .question-bg {
+        background-image: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-bg-m.png');
+    }
+    .info .info-block article a p::after{
+        background-image: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-plus.svg');
+    }
+}
 </style>
 
 
-
-<div class="bam-warm-wrap">
-    <a class="apply-btn" href=""><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-apply-out.png"><p>立即<br>申請</p></a>
-    <div class="border-v-left" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-border-v.png')"></div>
-    <div class="border-v-right" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-border-v.png')"></div>
-    <div class="border-h-bottom" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-border-h.png')"></div>
+<div class="bam-exam-wrap">
     <section class="kv">
-        <img class="kv-img fullimg for-pc" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv.png">
-        <img class="kv-img fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-m.png">
-        <img class="kv-b fullimg for-pc" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-bg.jpg">
-        <img class="kv-d-1 for-pc" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-d-1.png">
-        <img class="kv-d-2 for-pc" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-d-2.png">
-        <img class="kv-d-1 for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-d-1-m.png">
-        <img class="kv-d-2 for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-d-2-m.png">
-        <article>
-            <img class="fullimg for-pc" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-b.png">
-            <img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-b-m.png">
-            <div>
-                <h2>南山保戶專屬暖心關懷服務</h2>
-                <p>如您符合特定資格條件，即可取得健康守護圈合作夥伴提供的健康促進或醫療照護等相關免費服務。</p>
+        <div class="for-pc">
+            <div class="kv-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-kv.jpg')"></div>
+            <h1 class="kv-h1"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-h1.png"><p>健檢知識家</p></h1>
+            <div class="kv-title"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title.png"></div>
+            <div class="kv-des"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-des.png"></div>
+            <img class="kv-hat" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-hat.png">
+        </div>
+        <div class="for-m">
+            <div class="kv-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-kv-m.jpg')"></div>
+            <h1 class="kv-h1"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-h1-m.png"><p>健檢知識家</p></h1>
+            <div class="kv-title"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title-m.png"></div>
+            <div class="kv-des"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-des-m.png"></div>
+            <img class="kv-hat" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-hat-m.png">
+        </div>
+    </section>
+
+    <section class="question">
+        <div class="outer-wrap">
+            <div class="question-bg">
+                <div class="question-intro">
+                    <img class="bam-exam-pen for-m" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-pen.png">
+                    <h3 data-show>
+                        <p>尋找健檢知識家</p><br>
+                        <p>5千份LINE POINTS等你抽</p>
+                    </h3>
+                    <br>
+                    <p data-show>7/31前到南山人壽LINE官方賬號<br>天天快問快答天天抽獎</p><br>
+                    <br>
+                    <a class="question-btn" href="https://liff.line.me/1660705007-Z4733BYb?app=1660705007-Z4733BYb&feedbackId=8dd965b[…]ckingid=09802f5e-0340-4451-aec2-e6acf07eb091&module=add-friend" target="_blank" rel="noreferrer noopener" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-btn-bg.jpg')">立即前往</a>
+                    <h4>※本活動限南山人壽LINE官方帳號好友參與，<br class="for-m">若您尚不是好友，<br class="for-pc">請按「加入好友」</h4>
+                </div>
             </div>
-        </article>
-        <img class="kv-p" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-kv-p.png">
-        <h1>您的健康我們在乎<p>南山人壽<span>暖心關懷服務</span></p></h1>
-        <div class="deco-1"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-1.png"></div>
-        <div class="deco-2"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-2.png"></div>
-        <div class="scrolldown for-pc"><p>Scroll down</p><div><p></p><img src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-scroll.svg"></div></div>
+            <img class="bam-exam-q-deco bam-exam-q-deco-1" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-1.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-2" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-2.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-3" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-3.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-4" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-4.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-5" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-5.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-6" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-6.png">
+            <img class="bam-exam-q-deco bam-exam-q-deco-7" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-7.png">
+        </div>
+    </section>
+
+    <section class="wave-info for-m">
+        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-wave.jpg">
+    </section>
+
+    <section class="info">
+        <a class="badge" href="https://health.nanshanlife.com.tw/search/%E6%89%BE%E5%81%A5%E5%BA%B7/None/%E5%81%A5%E6%AA%A2" target="_blank" rel="noreferrer noopener"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-badge-1.png"><img class="badge-word fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-badge-1-word.png"></a>
+        <div class="outer-wrap">
+            <div class="info-left">
+                <h2>
+                    <img class="bam-exam-h2-deco" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title-1-deco.png">
+                    <div class="bam-exam-h2"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title-1.png"></div>
+                </h2>
+                <div class="info-block">
+                    <article>
+                        <a href=""><p>定期健康檢查有什麼好處？</p></a>
+                        <div class="info-dropdown">
+                            <div class="info-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-1.jpg')"></div>
+                            <div class="info-content">
+                                <div class="info-line active"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-line.svg"></div>
+                                <div class="info-scroll">
+                                    <ul>
+                                        <li><b>早期發現、早期治療</b>：</li>
+                                        早期發現三高、慢性病、癌症等重大疾病，可即早進行治療，防止病情惡化或延誤。
+                                        <li><b>預防疾病</b>：</li>
+                                        有助於了解生活習慣對健康的影響，適度調整步調、飲食與運動習慣，以降低風險、預防疾病發生。
+                                        <li><b>高風險風族群更應注意</b>：</li>
+                                        長期接觸噪音、粉塵或放射線等高風險職業者，應定期檢查肺部和心血管。家族遺傳病史（如糖尿病、癌症）、過去有腫瘤或癌前病變者，更應定期檢查。
+                                        <li><b>健檢的年齡與頻率</b>：</li>
+                                        建議30歲起開始全身健康檢查，40-64歲者約每2-3年檢查一次，65歲以上長者建議每年固定檢查。若情況允許，可每年都為自己安排一次健檢。
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <a href=""><p>健康檢查的種類有哪些？</p></a>
+                        <div class="info-dropdown">
+                            <div class="info-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-2.jpg')"></div>
+                            <div class="info-content">
+                                <div class="info-line active"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-line.svg"></div>
+                                <div class="info-scroll">
+                                    <b>健康檢查可以分為常規以及精密檢查。</b><br>
+                                    <b>常規健康檢查項目有：</b><br>
+                                    <ul>
+                                        <li><b>理學檢查</b></li>
+                                        透過問診、觸診，檢查身體有無腫塊、呼吸音有無異常、或有心律不整的情形，並檢查是否可能有皮膚方面的疾病。<br>
+                                        <li><b>尿液檢查</b></li>
+                                        可透過篩檢其中的尿蛋白、尿糖等指標，來了解腎功能，<p><span>評估是否有感染、發炎、結石或糖尿病的可能</span></p>。<br>
+                                        <li><b>糞便檢查</b></li>
+                                        <p><span>檢查是否有糞便潛血、感染或是寄生蟲</span></p>。糞便潛血也可做為大腸癌的早期篩選，若檢查結果有異，建議進一步做大腸鏡檢查，確定是否有息肉、癌症病變的可能。<br>
+                                        <li><b>血液檢查</b></li>
+                                        過紅血球、白血球、血小板的指數，<p><span>觀察是否有感染、貧血、或血液凝固不正常的情況</span></p>。<br>
+                                        <li><b>X光檢查</b></li>
+                                        透過胸腔X光可檢查心臟有無異常，並<p><span>評估是否有潛在的心臟疾病</span></p>。對於肺癌篩檢則無明顯幫助，需要進一步透過低劑量的肺部電腦斷層做檢測。<br>
+                                    </ul>
+                                    <br>
+                                    <b>精密健康檢查項目有：</b><br>
+                                    <ul>
+                                        <li><b>超音波檢查</b></li>
+                                        透過腹腔超音波<p><span>檢查肝臟、膽囊、脾臟、腎臟、胰臟等器官是否異常</span></p>。特別是B肝、C肝帶原者，建議應定期追蹤檢查。<br>
+                                        <li><b>內視鏡檢查</b></li>
+                                        透過內視鏡檢查消化道、胃食道、小腸，大腸等，<p><span>觀察是否有胃潰瘍、胃炎、食道癌、大腸息肉或大腸癌等病變</span></p>。<br>
+                                        <li><b>電腦斷層</b></li>
+                                        低劑量肺部電腦斷層相較X光的敏感度更高，並且具多角度觀察的優點，<p><span>可檢測到0.5公分以下的腫瘤</span></p>，有助於肺癌的早期篩檢。<br>
+                                        <li><b>MRI核磁共振檢查</b></li>
+                                        屬於非侵入性、無輻射、精確度高的檢查，可早期篩查全身癌症腫瘤。<p><span>若有腦中風家族史，建議健檢時可加入核磁共振檢查</span></p>。<br>
+                                    </ul>
+                                </div>
+                        </div>
+                    </article>
+                    <article>
+                        <a href=""><p>該如何挑選健檢項目與機構？</p></a>
+                        <div class="info-dropdown">
+                            <div class="info-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-3.jpg')"></div>
+                            <div class="info-content">
+                                <div class="info-line active"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-line.svg"></div>
+                                <div class="info-scroll">
+                                    <b>項目篇：</b><br>
+                                    <ul>
+                                        <li><b>一般癌症篩檢外的建議項目</b></li>
+                                        建議女性定期做乳房攝影、超音波和子宮頸抹片檢查，可篩查乳癌和子宮內膜癌、子宮頸癌等。男性則應定期做攝護腺癌檢查。<br>
+                                        <li><b>年齡與工作習慣的影響</b></li>
+                                        40歲以上建議可搭配腦血管與心血管檢查。若有長期吸菸、經常暴露在空氣污染或油煙的環境、工作壓力大者，則建議增加肺癌篩檢。<br>
+                                        <li><b>高風險族群</b></li>
+                                        糖尿病、慢性病、高血壓、膽固醇異常等高風險族群，建議定期檢查心血管。若有家族病史，則建議針對相關的特定器官進行定期追蹤檢查，例如B肝、C肝帶原者應定期做肝癌篩檢。<br>
+                                    </ul>
+                                    <br>
+                                    <b>機構篇：</b><br>
+                                    健檢機構通常可以分為診所、中心、醫院，建議選擇具<p><span>國家品質認證的機構</span></p>，以確保檢查的品質與結果。通常大型醫院的健檢中心更能提供先進的設備和檢查。另外進行腸胃鏡等侵入性檢查時，由於仍可能有麻醉藥過敏、穿孔等風險，須事先確認該機構具備處理緊急情況的能力。<br>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <a href=""><p>有哪些指標與癌症有關？</p></a>
+                        <div class="info-dropdown">
+                            <div class="info-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-4.jpg')"></div>
+                            <div class="info-content">
+                                <div class="info-line active"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-line.svg"></div>
+                                <div class="info-scroll">
+                                    <b>【腫瘤標記指數】</b><br>
+                                    <ul>
+                                        <li><b>頭頸癌：</b><br></li>
+                                        <ol>
+                                            <li>鱗狀上皮癌關聯抗原 (SCC-Ag)：與頭頸部鱗狀細胞癌相關。</li>
+                                            <li>愛氏巴爾通體病毒抗體 (EB-VCA IgA)：與愛氏巴爾通體感染相關，常見於鼻咽癌。</li>
+                                        </ol>
+                                        <li><b>肺癌：</b></li>
+                                        <ol>
+                                            <li>神經特異性烯醇化酶 (NSE)：與小細胞肺癌相關。</li>
+                                            <li>細胞角蛋白19片段 (Cyfra 21-1)：與非小細胞肺癌相關。</li>
+                                        </ol>
+                                        <li><b>腹部癌症 (腸胃、肝、膽、胰臟)：</b></li>
+                                        <ol>
+                                            <li>癌胚胎抗原 (CEA)：廣泛用於多種腹部腫瘤的監測，特別是<p><span>腸癌</span></p>。</li>
+                                            <li>癌抗原72-4 (CA72-4)：主要用於<p><span>胃癌</span></p>的監測。</li>
+                                            <li>癌抗原199 (CA19-9)：主要與<p><span>胰腺癌</span></p>相關。</li>
+                                            <li>甲型胎兒蛋白 (AFP)：<p><span>肝癌</span></p>的主要腫瘤標記。</li>
+                                        </ol>
+                                        <li><b>攝護腺癌：</b></li>
+                                        <ol>
+                                            <li>攝護腺特異抗原 (PSA)：用於攝護腺癌的篩查和監測。</li>
+                                        </ol>
+                                        <li><b>乳房和卵巢癌：</b></li>
+                                        <ol>
+                                            <li>癌抗原125 (CA125)：與卵巢癌相關，亦用於其他腹部腫瘤。</li>
+                                            <li>癌抗原15-3 (CA15-3)：與乳房癌相關。</li>
+                                        </ol>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <a href=""><p>健康檢查多久要做一次？</p></a>
+                        <div class="info-dropdown">
+                            <div class="info-img" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-5.jpg')"></div>
+                            <div class="info-content">
+                                <div class="info-line active"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-line.svg"></div>
+                                <div class="info-scroll">
+                                    國民健康署提供<p><span>至64歲民眾每3年一次</span></p>，55歲以上原住民、 35歲以上小兒麻痺患者及<p><span>65歲以上民眾每年一次</span></p>的成人健檢服務。建議民眾參考國健署建議頻率接受定期健康檢查，如有<p><span>家族遺傳病史者、或是長期暴露於高風險環境</span></p>，如油煙、輻射、粉塵等，更應<p><span>每年檢查</span></p>。除一般基礎健檢項目外，也建議依照自身風險加做更精密的篩檢。<br>
+                                    <b>【五癌篩檢】</b><br>
+                                    <ul>
+                                        <li><b>子宮頸癌篩檢</b>：</li>
+                                        30歲以上婦女<p><span>每三年</span></p>應至少接受一次子宮頸抹片檢查。<br>
+                                        <li><b>乳癌篩檢</b>：</li>
+                                        45-69歲女性、或40-44歲女性但有二等親乳癌病史，<p><span>每兩年</span></p>一次乳房攝影檢查。<br>
+                                        <li><b>大腸癌篩檢</b>：</li>
+                                        50-74歲者<p><span>每兩年</span></p>一次免費糞便潛血檢查。<br>
+                                        <li><b>口腔癌篩檢</b>：</li>
+                                        30歲以上曾嚼檳榔(含已戒檳榔)或吸菸者。18歲以上有嚼檳榔(含已戒檳榔)之原住民，<p><span>每兩年</span></p>一次免費口腔黏膜檢查。<br>
+                                        <li><b>肺癌篩檢</b>：</li>
+                                        50-74歲男性或45-74歲女性，且其父母、子女或兄弟姊妹經診斷為肺癌之民眾。50-74歲吸菸史達30年以上，有意願戒菸或戒菸15年內之重度吸菸者，每兩年一次低劑量電腦斷層檢查(LDCT)。<br>
+                                    </ul>
+                                    <b>【心腦血管檢查】</b><br>不論年紀與性別，如工作壓力大、時常日夜顛倒，則應定期檢查心血管和腦血管。
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <h5>以上資訊感謝林嘉俊醫師提供，如想了解更多醫師資訊，請<a href="https://drlimkc.com/" target="_blank" rel="noreferrer noopener">點此</a></h5>
+                </div>
+            </div>
+            <div class="info-default for-pc">
+                <div style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-info-default.jpg')"></div>
+                <img class="info-hand" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-hand.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="wave">
+        <img class="wave-deco" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-3.png">
+        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-wave.jpg">
     </section>
 
     <section class="intro">
-        <div class="intro-wrap for-pc">
-            <h2>我們提供哪些暖心關懷服務？</h2>
-            <div class="intro-flex">
-                <a href="" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-1.jpg')">
-                    <div>
-                        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-b.png">
-                        <article>
-                            <h4>AMH卵巢功能健康檢查</h4>
-                            <h4>兒童早療服務支持</h4>
-                            <h4>Malldj寶寶祝賀禮</h4>
-                        </article>
+        <a class="badge" href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E7%B7%9A%E4%B8%8A%E9%86%AB%E5%B8%AB%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99" target="_blank" rel="noreferrer noopener"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-badge-2.png"><img class="badge-word fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-badge-2-word.png"></a>
+        <div class="outer-wrap">
+            <img class="intro-deco for-pc" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-1.png">
+            <div class="intro-left">
+                <h2>
+                    <img class="bam-exam-h2-deco" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title-2-deco.png">
+                    <div class="bam-exam-h2"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-title-2.png"></div>
+                </h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-1.png"><div><h4>BMI</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-2.png"><div><h4>腫瘤標記</h4><p>(LDCT、AFP、CEA)</p></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-3.png"><div><h4>腰圍</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-4.png"><div><h4>尼古丁</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-5.png"><div><h4>血壓</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-6.png"><div><h4>血脂</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-7.png"><div><h4>空腹血糖</h4></div></a>
+                        <a href="" class="swiper-slide"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-9.png"><div><h4>糖化血色素</h4></div></a>
                     </div>
-                    <h3><img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-1-m.png"><span>婦嬰關懷</span></h3>
-                    <p>了解更多<span>▼</span></p>
-                </a>
-                <a href="" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-2.jpg')">
-                    <div>
-                        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-b.png">
-                        <article>
-                            <h4>失智防走失緊急連絡卡</h4>
-                            <h4>牙醫到宅服務</h4>
-                            <h4>WaCare失智照顧專家</h4>
-                            <h4>照顧者諮詢與陪伴服務</h4>
-                            <h4>輔具到宅適配</h4>
-                        </article>
-                    </div>
-                    <h3><img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-2-m.png"><span>長期照護</span></h3>
-                    <p>了解更多<span>▼</span></p>
-                </a>
-                <a href="" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-3.jpg')">
-                    <div>
-                        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-b.png">
-                        <article>
-                            <h4>疾病第二意見諮詢</h4>
-                            <h4>Hope暖心關懷包</h4>
-                            <h4>高齡友善聽力照護</h4>
-                            <h4>整合物理治療</h4>
-                        </article>
-                    </div>
-                    <h3><img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-3-m.png"><span>疾病傷害</span></h3>
-                    <p>了解更多<span>▼</span></p>
-                </a>
-                <a href="" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-4.jpg')">
-                    <div>
-                        <img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-b.png">
-                        <article>
-                            <h4>FarHugs遠距抱抱</h4>
-                            <h4>心理諮詢服務</h4>
-                        </article>
-                    </div>
-                    <h3><img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-intro-4-m.png"><span>心理健康</span></h3>
-                    <p>了解更多<span>▼</span></p>
-                </a>
+                    <div class="swiper-button swiper-button-prev for-m"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-swiper-prev.svg"></div>
+                    <div class="swiper-button swiper-button-next for-m"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-swiper-next.svg"></div>
+                </div>
             </div>
+            <div class="intro-right">
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-1.png">BMI</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li><p><span>18.5-24</span></p>表示體重正常</li>
+                                <li><p><span>小於18.5</span></p>表示體重過輕</li>
+                                <li>介於<p><span>24-27</span></p>表示體重過重</li>
+                                <li><p><span>大於27</span></p>則為肥胖程度</li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>減少高熱量、高糖分和高脂肪的攝取。<br>中等強度運動每週至少150分鐘。</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-2.png">腫瘤標記</div>
+                        <article>腫瘤標記指數僅是參考指標，主要用於治療後患者的追蹤檢查，以觀察治療效果。<p><span>在健康檢查階段，不應單憑指標高低判斷是否罹癌</span></p>。有時候良性狀況（如發炎、感染）也會導致指數上升，<p><span>須結合其他如核磁共振、電腦斷層、超音波等精密檢查，再進行綜合判讀</span></p>。如果健檢結果某些指數很高，不妨與醫師進一步諮詢，別自己嚇自己呦！</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-3.png">腰圍</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li>男性正常腰圍比應<p><span>小於90公分（約35吋）</span></p></li>
+                                <li>女性正常腰圍比應<p><span>小於80公分（約31吋）</span></p></li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>避免長時間坐著或久坐，多走動。</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-4.png">尼古丁</div>
+                        <h4>正常標準區間</h4><br><article>待</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-5.png">血壓</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li>正常範圍一般應低於<p><span>120/80 mmHg</span></p></li>
+                                <li><p><span>120/80-140/90 mm/Hg</span></p>屬於高血壓前期</li>
+                                <li>大於<p><span>140/90 mmHg</span></p>即為高血壓</li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>避免高鹽食物，增加有氧運動和重量訓練。<br>減少飲酒有助於降低血壓。</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-6.png">血脂</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li>總膽固醇正常值應<p><span>低於200 mg/d</span></p></li>
+                                <li>低密度膽固醇正常值應<p><span>低於130 mg/dL</span></p></li>
+                                <li>高密度膽固醇男性<p><span>高於40 mg/d</span></p></li>
+                                <li>高密度膽固醇女性<p><span>高於50 mg/dL</span></p></li>
+                                <li>三酸甘油正常值低於<p><span>150 mg/dL</span></p></li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>選擇健康的脂肪來源，減少飽和脂肪和反式脂肪。<br>減少含糖飲料和精製澱粉的攝取。</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-7.png">空腹血糖</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li>正常值應介於<p><span>70-100 mg/dL</span></p></li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>多攝取含高纖維食物，減少精製糖和精製穀物。</article>
+                    </div>
+                </div>
+                <div class="intro-block">
+                    <div class="intro-scroll">
+                        <div class="intro-title for-m"><img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-intro-9.png">糖化血色素</div>
+                        <h4>正常標準區間</h4><br>
+                        <article>
+                            <ul>
+                                <li>正常範圍一般應介於<p><span>4.0-5.6%</span></p>之間</li>
+                                <li><p><span>介於5.7-6.4%</span></p>之間表示數值偏高，有風險</li>
+                                <li><p><span>大於6.5%</span></p>則確診為糖尿病</li>
+                            </ul>
+                        </article>
+                        <h4>如何改善數值</h4><br><article>減少含糖飲料、甜點和含糖零食，多吃蛋白質和健康脂肪，有助於血糖穩定。</article>
+                    </div>
+                </div>
+                <div class="intro-default for-pc">
+                    <article>
+                        【促進健康小技巧】在未達用藥程度前，建議從生活習慣著手，多選擇口味清淡、蔬果、優質蛋白質與全穀物等食物，盡量避免酒精與含糖飲料，並每日攝入足夠水分。還有，建立每週運動150分鐘的習慣，以及規律的睡眠作息，都有助於優化身體各項數值。<br>
+                    </article>
+                    <img class="intro-default-deco-1" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-2.png">
+                    <img class="intro-default-deco-2" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-4.png">
+                    <img class="intro-hand" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-hand.png">
+                </div>
+            </div>
+            <h5>以上資訊感謝林嘉俊醫師提供，如想了解更多醫師資訊，請<a href="https://drlimkc.com/" target="_blank" rel="noreferrer noopener">點此</a></h5>
         </div>
     </section>
 
-    <section class="content">
-        <h2 class="for-m">我們提供哪些暖心關懷服務？</h2>
-        <div class="tab-wrap">
-            <a href=""><img src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-tab-1.png">婦嬰關懷</a>
-            <a href=""><img src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-tab-2.png">長期照護</a>
-            <a href=""><img src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-tab-3.png">疾病傷害</a>
-            <a href=""><img src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-tab-4.png">心理健康</a>
-        </div>
-        <div class="content-bg">
-            <div class="content-wrap">
-
-                <!-- CONTENT 1 婦嬰關懷 -->
-                <div class="content-block">
-                    <div class="content-img for-pc" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-1.jpg')">
-                        <article>
-                            <h3>婦嬰關懷</h3>
-                            <p>守護一個新生命的奇蹟<br class="for-pc"><span class="for-m">，</span>打造健康成長的環境</p>
-                        </article>
-                    </div>
-                    <div class="content-info">
-                        <div class="content-tab for-pc">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide">AMH卵巢功能健康檢查</a>
-                                    <a href="" class="swiper-slide">兒童早療服務支持</a>
-                                    <a href="" class="swiper-slide">Malldj寶寶祝賀禮</a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-prev.png"></div>
-                            <div class="swiper-button-next"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-next.png"></div>
-                        </div>
-                        <div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">AMH卵巢功能健康檢查</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">AMH卵巢功能健康檢查</h4>
-                                    <h5>掌握最佳卵實力</h5>
-                                    <div class="content-scroll">
-                                        <article>華育生殖醫學中心(台北市)、茂盛醫院(台中市)合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-1.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>全方位生殖醫學專家，一站式服務</li>
-                                                <li>了解卵子庫存量，掌握生育自主權</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            投保南山人壽婦嬰險，年齡25至35歲有生育計畫之女性保戶。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊內含服務兌換序號</li>
-                                                <li>至指定合作機構進行AMH卵巢功能健康檢查。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限定300組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">兒童早療服務支持</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">兒童早療服務支持—幸福護苗計劃</h4>
-                                    <h5>解鎖孩子溝通發展的神助手！</h5>
-                                    <div class="content-scroll">
-                                        <article>輝健康科技合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-2.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>綜合發育篩查，檢測學齡前多元發展</li>
-                                                <li>語療師教學團隊1：1諮詢+量身定制訓練計畫</li>
-                                                <li>以家長教育為核心，多面向多情景鍛煉方案</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            6歲(含)以下有早療需求之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將簡訊發送線上綜合發育篩查連結及服務專屬序號</li>
-                                                <li>線上檢核異常，經評估確認符合資格條件，即可啟動服務。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限定30組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">Malldj寶寶祝賀禮</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">Malldj寶寶祝賀禮</h4>
-                                    <h5>為您與寶寶送上最誠摯的祝福</h5>
-                                    <div class="content-scroll">
-                                        <article>Malldj合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-3.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>精選實用好物，守護寶貝健康成長</li>
-                                                <li>育兒好幫手，保戶專屬貼心好禮+量身定制訓練計畫</li>
-                                                <li>南山人壽專屬禮盒及祝福賀卡</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            因生育申請醫療理賠之個人險保戶，且新生兒當年度投保健康暨意外個人險，申請時新生兒實際年齡須未滿1歲者。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊內含賣場連結及兌換序號</li>
-                                                <li>請進入賣場輸入序號折抵金額並下單，即會寄發祝賀禮至您填寫之指定地址。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            <ul>
-                                                <li>本活動限定500組。</li>
-                                                <li>如遇品項缺貨或其他因素無法供貨，將替換為其他等值商品。</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="link">
+        <div class="outer-wrap">
+            <img class="link-deco-1" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-1.png">
+            <img class="link-deco-2" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-6.png">
+            <img class="link-deco-3 for-m" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-q-deco-1.png">
+            <h2>
+                <img src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-paper.png">
+                <p data-show>健檢知識收穫滿滿 身體也要頭好壯壯</p><br><p class="des" data-show>讓南山人壽的加值服務與保險商品助你一臂之力！</p>
+            </h2>
+            <div class="link-flex">
+                <div>
+                    <img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-link-1.png">
+                    <a href="https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E9%81%A0%E8%B7%9D%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86" target="_blank" rel="noreferrer noopener" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-btn-bg.jpg')">遠距健康管理</a>
                 </div>
-
-                <!-- CONTENT 2 長期照護 -->
-                <div class="content-block">
-                    <div class="content-img for-pc" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-2.jpg')">
-                        <article>
-                            <h3>長期照護</h3>
-                            <p>全方位照護，提供最貼心的支援</p>
-                        </article>
-                    </div>
-                    <div class="content-info">
-                        <div class="content-tab for-pc">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide">失智防走失緊急連絡卡</a>
-                                    <a href="" class="swiper-slide">牙醫到宅服務</a>
-                                    <a href="" class="swiper-slide">WaCare失智照顧專家</a>
-                                    <a href="" class="swiper-slide">照顧者諮詢與陪伴服務</a>
-                                    <a href="" class="swiper-slide">輔具到宅適配</a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-prev.png"></div>
-                            <div class="swiper-button-next"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-next.png"></div>
-                        </div>
-                        <div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">失智防走失緊急連絡卡</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">失智防走失緊急連絡卡</h4>
-                                    <h5>縮短迷路長輩的尋獲時間</h5>
-                                    <div class="content-scroll">
-                                        <article>台灣失智症協會合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-4.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>愛心圖示減少標籤化識別</li>
-                                                <li>醫療救助符號表示可能需要的協助</li>
-                                                <li>內卡可填寫佩戴者狀況及聯絡資料</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            65歲以上有失智照護需求之個人險保戶。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>完成身分驗證</li>
-                                                <li>符合資格者，您將會收到南山人壽贊助台灣失智症協會所製作之失智防走失【緊急連絡卡】。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            <ul>
-                                                <li>本活動限定300張。</li>
-                                                <li>失智防走失緊急連絡卡每次申請1張為限，每人限申請2次。</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">牙醫到宅服務</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">牙醫到宅服務</h4>
-                                    <h5>協助行動不便者照護牙口健康</h5>
-                                    <div class="content-scroll">
-                                        <article>台灣牙e通合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-5.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>到宅服務經驗豐富的牙醫師團隊</li>
-                                                <li>服務超過百位以上的在宅病患</li>
-                                                <li>專屬預約平台專業團隊協助送件</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            符合身心障礙程度重度(含)以上或符合長照2.0資格之被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊，請依簡訊說明預約服務</li>
-                                                <li>填寫後3-5工作天將有專人致電聯繫協助申請送件。</li>
-                                                <li>填寫後3-經牙醫師公會全國聯合會審核通過即可享有「牙醫到宅服務」。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            此服務僅限雙北地區。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">WaCare失智照顧專家</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">WaCare失智照顧專家</h4>
-                                    <h5>失智照顧數位解方，9大線上精選課程</h5>
-                                    <div class="content-scroll">
-                                        <article>WaCare合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-6.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>對抗失智、初期與中後期9部精選課程影片</li>
-                                                <li>失智照顧者完整能力建構</li>
-                                                <li>兌換後線上課程無限重複觀看</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            符合失智相關疾病理賠之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊，請依簡訊專屬連結領取服務，即可購買折抵9大精選失智照護線上影片。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限350組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">照顧者諮詢與陪伴服務</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">照顧者諮詢與陪伴服務</h4>
-                                    <h5>由專業照顧管家提供照顧者所需支持</h5>
-                                    <div class="content-scroll">
-                                        <article>愛長照合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-7.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>40天免費服務有效提升照顧能力</li>
-                                                <li>照顧管家｜遠距諮詢擬定照顧計畫</li>
-                                                <li>跨專業團隊｜目標到行動一站掌握</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            符合長期照顧保險金、癌症/重大疾病或重大傷病保險金理賠給付之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊，請依簡訊內容填寫服務問卷。</li>
-                                                <li>填寫後2-3工作天將有專人致電說明服務內容，即可享有40天線上諮詢服務。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限100組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">輔具到宅適配</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">輔具到宅適配</h4>
-                                    <h5>輔具先試再買，買對不浪費</h5>
-                                    <div class="content-scroll">
-                                        <article>輔具家合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-8.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>線上預約服務到家，輔具送到您的指定地點</li>
-                                                <li>輔具專業諮詢、試用及個人化配適</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            長照險及意外險之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶線上提出申請</li>
-                                                <li>南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊內含專屬序號及LINE@預約連結。</li>
-                                                <li>保戶進行預約後，輔具家團隊會專人致電聯絡，了解並確認您的需求準備所需輔具後團隊將到宅服務。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            <ul>
-                                                <li>本活動限定100組。</li>
-                                                <li>適用輔具包含斜坡板、減壓座墊、助步器、助步車、移位機、氣墊床、電動輪椅、洗便椅、手推輪椅、兒童早療特製推車、擺位型輪椅。</li>
-                                                <li>服務提供地區以雙北為主。</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <img class="fullimg" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-link-2.png">
+                    <a href="https://www.nanshanlife.com.tw/nanshanlife/features-spillover" target="_blank" rel="noreferrer noopener" style="background: url('https://demo.homakimi-digital.com/bam-exam/img/bam-exam-btn-bg.jpg')">外溢保單推薦</a>
                 </div>
-
-                <!-- CONTENT 3 疾病傷害 -->
-                <div class="content-block">
-                    <div class="content-img for-pc" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-3.jpg')">
-                        <article>
-                            <h3>疾病傷害</h3>
-                            <p>堅定前行，協助重返健康軌道</p>
-                        </article>
-                    </div>
-                    <div class="content-info">
-                        <div class="content-tab for-pc">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide">疾病第二意見諮詢</a>
-                                    <a href="" class="swiper-slide">Hope暖心關懷包</a>
-                                    <a href="" class="swiper-slide">高齡友善聽力照護</a>
-                                    <a href="" class="swiper-slide">整合物理治療</a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-prev.png"></div>
-                            <div class="swiper-button-next"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-next.png"></div>
-                        </div>
-                        <div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">疾病第二意見諮詢</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">疾病第二意見諮詢</h4>
-                                    <h5>醫療意見更全面，治療選擇更踏實</h5>
-                                    <div class="content-scroll">
-                                        <article>合作醫院詳注意事項</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-9.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>一對一專科醫師諮詢，助您掌握身體病況</li>
-                                                <li>提供後續治療建議，讓您跟家人更安心</li>
-                                                <li>諮詢費用零負擔</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            投保南山人壽長期照顧、防癌或重大疾病險之個人險被保險人於保險期間內初次診斷罹患癌症且尚未開始治療、或需進行重大器官/造血幹細胞移植者。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>南山客服確認適用資格及條件申請</li>
-                                                <li>符合資格者，醫院專人聯繫安排門診時間並說明須準備之病歷資料</li>
-                                                <li>醫院護理師進行就診前關懷服務</li>
-                                                <li>保戶於約診日前往醫院進行諮詢</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            依照諮詢疾病類別合作院所如下
-                                            <ul>
-                                                <li> 癌症(確診且尚未接受治療)：和信治癌中心醫院、台北醫學大學附設醫院、衛福部雙和醫院、亞東紀念醫院、彰濱秀傳紀念醫院、高雄醫學大學附設中和紀念醫院。</li>
-                                                <li>重大器官移植或造血幹細胞移植(尚未接受移植)：台北醫學大學附設醫院、衛福部雙和醫院、亞東紀念醫院、高雄醫學大學附設中和紀念醫院。</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">Hope暖心關懷包</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">Hope暖心關懷包</h4>
-                                    <h5>抗癌路上的療癒關懷</h5>
-                                    <div class="content-scroll">
-                                        <article>癌症希望基金會合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-10.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>《高效率癌症照顧心法》書籍，教您照顧罹癌家人5大安心祕訣</li>
-                                                <li>希望小站提供專業諮詢及多樣化支援服務</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            首次罹患癌症且符合第一次(首次)罹患癌症保險金、重大疾病保險金或重大傷病保險金等理賠給付之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            本服務將於理賠完成後，自動啟動後續相關作業。<br>
-                                            （透過業務員人員申請理賠者，將由業務人員遞送；保戶自行申請理賠者，將以郵局掛號寄送。）
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">高齡友善聽力照護</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">高齡友善聽力照護</h4>
-                                    <h5>幫助聽損者重回有聲世界</h5>
-                                    <div class="content-scroll">
-                                        <article>科林儀器合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-11.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>全面聽力檢測，準確了解自己的聽力狀況</li>
-                                                <li>高規格助聽器選配服務，提供最適合的助聽器</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            60歲以上符合中低收入標準，且領有聽障證明之個人險保戶。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>完成身分驗證</li>
-                                                <li>填寫預約諮詢表單</li>
-                                                <li>科林儀器股份有限公司客服人員即會協助預約安排聽力檢測，符合申請資格者，即可享有助聽器配戴。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限定100組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">整合物理治療</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">整合物理治療</h4>
-                                    <h5>專業診療+數位處方，讓您快速恢復健康</h5>
-                                    <div class="content-scroll">
-                                        <article>梅科科技及生生優動合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-12.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>生生優動物理治療所評估診療乙次(60分鐘治療師1對1評估與徒手治療及開立運動計畫)</li>
-                                                <li>個人AI運動處方居家運動復健Youdon APP單月免費</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            意外險理賠之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊內含專屬序號及APP連結</li>
-                                                <li>請下載Youdon APP依指示完成註冊並輸入專屬序號，即可享有APP首月免費服務，同時生生優動團隊專人將聯繫協助預約院所，提供實體診療與評估。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            <ul>
-                                                <li>本活動限定100組。</li>
-                                                <li>服務提供地區以申請頁面公告為主，其他地區將改配送「桂冠營養研究室」禮盒組。</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CONTENT 4 心理健康 -->
-                <div class="content-block">
-                    <div class="content-img for-pc" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-4.jpg')">
-                        <article>
-                            <h3>心理健康</h3>
-                            <p>從心出發，探索內在寧靜與健康</p>
-                        </article>
-                    </div>
-                    <div class="content-info">
-                        <div class="content-tab for-pc">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide">FarHugs遠距抱抱 心理諮詢服務</a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-prev.png"></div>
-                            <div class="swiper-button-next"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-next.png"></div>
-                        </div>
-                        <div>
-                            <div class="content-content">
-                                <a class="content-toggle-a for-m" href="">FarHugs遠距抱抱 心理諮詢服務</a>
-                                <div class="content-toggle-dropdown">
-                                    <h4 class="for-pc">FarHugs遠距抱抱 心理諮詢服務</h4>
-                                    <h5>幫你的心情帶來正能量</h5>
-                                    <div class="content-scroll">
-                                        <article>FarHugs遠距抱抱合作提供</article>
-                                        <div class="content-img-m for-m" style="background: url('https://demo.homakimi-digital.com/bam-warm/img/bam-warm-content-m-13.jpg')"></div>
-                                        <div class="content-white">
-                                            <h6>服務特色</h6>
-                                            <ul>
-                                                <li>支持年輕族群心理健康</li>
-                                                <li>提供50分鐘心理諮詢服務</li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>適用對象</h6>
-                                            15～30歲投保健康暨意外險之個人險被保險人。
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>服務流程</h6>
-                                            <ol>
-                                                <li>保戶提出申請</li>
-                                                <li>經南山人壽審查資格</li>
-                                                <li>符合資格者將發送暖心關懷簡訊，請依指示完成註冊及預約流程，即可享有50分鐘免費心理諮詢服務一次。</li>
-                                            </ol>
-                                        </div>
-                                        <div class="content-white">
-                                            <h6>注意事項</h6>
-                                            本活動限定200組。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="deco-4"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-4.png"></div>
             </div>
-            <div class="deco-3 for-m"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-3-m.png"></div>
         </div>
-    </section>
-
-    <section class="notice">
-        <h2>注意事項</h2>
-        <div class="notice-wrap">
-            <div class="notice-block">
-                一、依FarHugs 遠距抱抱之說明，其所提供之服務為單純的『心理輔導』及『心理支持』 ，不會涉及心理師法所規定臨床心理師、諮商心理師業務範圍，或醫療行為/醫療業務。倘參加者有心理諮商與心理治療之需求，建議至依法設立登記之心理治療所或心理諮商所看診。<br>
-                <br>
-                二、依據中華民國所得稅法規定，當年度致贈兌換商品等其他所得金額累計達NT$1,001元（含）以上時，須申報所得人其他所得，倘受贈對象為非中華民國境內居住之個人時，禮贈品價值不論金額大小均須歸入個人所得。若您非中華民國境內居住之個人，應主動告知南山人壽，南山人壽將於給付10日內依所得稅法第92條之規定向管徵機關開具扣繳憑單並申報，以利所得人進行報稅事宜。<br>
-                <br>
-                三、暖心關懷服務為南山人壽無償提供予保戶之加值服務，非保險契約之權利義務，南山人壽保留對暖心關懷服務資格審核及修改其取得標準之權利，若有疑義，以南山人壽最後審核結果為準。<br>
-                <br>
-                四、健康守護圈之加值服務或合作廠商所提供之商品、服務或優惠訊息等，均非屬保險契約權利義務之一部分，本公司與合作廠商間亦無代理或類似關係，合作廠商提供之商品、服務或優惠，係由合作廠商各自提供及負責。<br>
-                <br>
-                五、南山人壽保留隨時修改、取消或終止本服務內容之權利，並以公告於南山人壽企業網站時即時生效，不另行通知。<br>
-                <br>
-                六、最新服務內容以南山人壽企業網站公告為準，歡迎隨時上網查詢，或可以與您的服務人員聯絡，或致電24小時貴賓服務專線0800-020-060。<br>
-            </div>
-            <a class="notice-more" href=""><img class="icon-more fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-more.png"><img class="icon-less fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-icon-less.png"></a>
-            <div class="deco-3 for-pc"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-3.png"></div>
-            <div class="deco-5"><img class="fullimg" src="https://demo.homakimi-digital.com/bam-warm/img/bam-warm-deco-5.png"></div>
-        </div>
+        <img class="fullimg for-pc" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-link-bg.jpg">
+        <img class="fullimg for-m" src="https://demo.homakimi-digital.com/bam-exam/img/bam-exam-link-bg-m.jpg">
     </section>
 </div>
 
-
 <script nonce="rAnd0m123">
+var headerHeight;
+var introSwiper;
+$(function() {
+    // for nanshan
+    if($('header').length > 0) {
+        headerHeight = 55;
+    } else {
+        headerHeight = 0;
+    }
 
-    $('.content-tab').each(function(index) {
-        $(this).addClass('content-tab-'+index);
-        new Swiper('.content-tab-'+index+' .swiper', {
-            mousewheel: true,
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-            freeMode: true,
-            navigation: {
-                nextEl: '.content-tab-'+index+' .swiper-button-next',
-                prevEl: '.content-tab-'+index+' .swiper-button-prev',
-            },
-            on: {
-                click: function () {
-                    this.slideTo(this.clickedIndex)
-                }
-            }
-        });
-    })
-    var zoomAlready = false;
-    var tabAlready = false;
-    var clickTab = false;
-    var fixable = true;
-
-    var headerHeight;
-    $(function() {
-        scrollEffect();
-        $(window).scroll(function() {
-            scrollEffect();
-        })
-        $('.swiper .swiper-slide:first-child').addClass('active');
-        $('.content-block:not(:first-child)').hide();
-        $('.content-content:not(:first-child)').hide();
-        setTimeout(function() {
-            $('.kv').addClass('active')
-        }, 1000)
-
-        // for nanshan
-        if($('header').length > 0) {
-            headerHeight = 55;
-            $('.bam-warm-wrap').addClass('adjusted');
+    resize();
+    // detect device change start
+    var isMobile, isMobileFirst, widthPC;
+    if(window.innerWidth > 1024) {
+        widthPC = true;
+    } else {
+        widthPC = false;
+    }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobileFirst = true;
+    } else {
+        isMobileFirst = false;
+    }
+    $(window).resize(function() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            isMobile = true;
         } else {
-            headerHeight = 0;
+            isMobile = false;
         }
-        urlDetect();
+        if(isMobileFirst != isMobile) {
+            resize();
+        }
+        if(widthPC && window.innerWidth <= 1024) {
+            resize();
+        } else if(!widthPC && window.innerWidth > 1024) {
+            resize();
+        }
     })
 
-    function scrollEffect() {
-        if($(window).scrollTop() > $('.intro').offset().top - window.innerHeight*0.25) {
-            if(fixable) {
-                if(window.innerWidth > 1024) {
-                    // $('body').addClass('fix');
-                    setTimeout(function() {
-                        fixable = false;
-                        $('.intro-flex a').addClass('hoverable');
-                        // $('body').removeClass('fix');
-                    }, 2000)
-                } else {
-                    $('.intro-flex a').addClass('hoverable');
-                    fixable = false;
-                }
+    scrollEffect();
+    $(window).scroll(function() {
+        scrollEffect();
+    })
+    urlDetect();
+
+    introSwiper = new Swiper('.intro .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        breakpoints: {
+            1025: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 5,
+                },
+                spaceBetween: 20,
+            },
+            1441: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 5,
+                },
+            },
+        },
+        navigation: {
+            nextEl: '.intro .swiper-button-next',
+            prevEl: '.intro .swiper-button-prev',
+        },
+        on: {
+            init: function() {
+                if(window.innerWidth <= 1024) this.slides.eq(0).addClass('active');
+            },
+            click: function () {
+                this.slideTo(this.clickedIndex)
             }
-            $('.intro-flex a').each(function(index) {
+        }
+    });
+
+    if(window.innerWidth <= 1024) $('.intro-block:first-child').show();
+})
+
+var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
+
+function resize() {
+    if(window.innerWidth > 1024) {
+        if(infoEffect) {
+            $('.info-default, .info-hand').hide();
+        }
+        if(infoEffect && !infoClick) {
+            $('.info-default, .info-hand').show();
+        }
+        if(introEffect) {
+            $('.intro-default, .intro-hand').hide();
+        }
+    } else {
+        if(introEffect && !introClick) {
+            $('.intro .swiper-slide').eq(0).addClass('active');
+            $('.intro-block').eq(0).show();
+        }
+        if(introEffect && introClick) {
+            setTimeout(function() {
+                introSwiper.slideTo($('.intro .swiper-slide.active').index());
+            }, 500)
+        }
+    }
+}
+function scrollEffect() {
+    if($(window).scrollTop() + window.innerHeight*0.5 > $('.info').offset().top && $(window).scrollTop() < $('.info').offset().top + $('.info').height() - window.innerHeight*0.5 ) {
+        $('.info .badge').addClass('show');
+        infoBadge = true;
+    } else {
+        if(infoBadge) {
+            $('.info .badge').removeClass('show');
+        }
+    }
+    if($(window).scrollTop() + window.innerHeight*0.5 > $('.intro').offset().top && $(window).scrollTop() < $('.intro').offset().top + $('.intro').height() - window.innerHeight*0.5) {
+        $('.intro .badge').addClass('show');
+        introBadge = true;
+    } else {
+        if(introBadge) {
+            $('.intro .badge').removeClass('show');
+        }
+    }
+    
+    if($(window).scrollTop() > $('.question').offset().top - window.innerHeight*0.5) {
+        if(!qEffect) {
+            qEffect = true;
+            $('.question-intro [data-show]').each(function(index) {
                 setTimeout(function() {
                     $(this).addClass('active')
-                }.bind(this), index*250)
-            });
-            if(!zoomAlready) {
-                setTimeout(function() {
-                    zoomAlready = true;
-                    intro();
-                }, 1000)
-            }
+                }.bind(this), index*500)
+            })
+            $('.question-btn').addClass('active');
+            $('.question-intro h4').addClass('active');
         }
-        if($(window).scrollTop() > $('.content').offset().top - window.innerHeight*0.75) {
-            $('.content').addClass('active');
-            $('.tab-wrap a').each(function(index) {
-                setTimeout(function() {
-                    $(this).addClass('show')
-                }.bind(this), index*250)
-            });
-            setTimeout(function() {
-                if(!clickTab) {
-                    if(!tabAlready) {
-                        tabAlready = true;
-                        $('.tab-wrap a:first-child').addClass('active');
-                    }
-                }
-            }, 250);
-        }
-
-        if($('.tab-wrap').offset().top - headerHeight - 5 <= $(window).scrollTop()) {
-            $('.tab-wrap').addClass('fix')
-        } else {
-            $('.tab-wrap').removeClass('fix')
-        }
-        if($('.content-toggle-a.active').length > 0) {
-            if($('.content-toggle-a.active').offset().top - headerHeight - $('.tab-wrap').height() - 12 <= $(window).scrollTop()) {
-                $('.content-toggle-a.active').addClass('fix')
-            } else {
-                $('.content-toggle-a.active').removeClass('fix')
+    }
+    if($(window).scrollTop() > $('.info').offset().top - window.innerHeight*0.5) {
+        if(!infoEffect) {
+            infoEffect = true;
+            $('.info .bam-exam-h2, .info .bam-exam-h2-deco, .info-hand, .info-block, .info-default').addClass('active');
+            if(window.innerWidth > 1024) {
+                $('.info-block article a').each(function(index) {
+                    setTimeout(function() {
+                        $(this).find('p').addClass('effect')
+                    }.bind(this), index*250)
+                });
             }
         }
     }
-
-    function intro() {
-        var _in = 0;
-        setInterval(function() {
-            if(_in < $('.intro-flex a').length) {
-                $('.intro-flex a').removeClass('zoom');
-                $('.intro-flex a').eq(_in).addClass('zoom');
-                _in++;
-            }
-            if(_in == $('.intro-flex a').length) {
-                _in = 0;
-            }
-        }, 2000)
-    }
-    $(document)
-    .on('click', 'a', function(e) {
-        if($(this).attr('href').length == 0) {
-            e.preventDefault();
-            e.stopPropagation();
+    if($(window).scrollTop() > $('.intro').offset().top - window.innerHeight*0.5) {
+        if(!introEffect) {
+            introEffect = true;
+            $('.intro .bam-exam-h2, .intro .bam-exam-h2-deco, .intro-hand, .intro .swiper, .intro-right, .intro h5').addClass('active');
         }
-    })
-    .on('mousedown', 'img', function(e) {
+    }
+    if($(window).scrollTop() > $('.link').offset().top - window.innerHeight*0.5) {
+        if(!linkEffect) {
+            linkEffect = true;
+            $('.link h2 img').addClass('active')
+            $('.link [data-show]').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*500)
+            })
+            $('.link-flex > div').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*500)
+            })
+        }
+    }
+}
+
+$(document)
+.on('click', 'a', function(e) {
+    if($(this).attr('href').length == 0) {
         e.preventDefault();
-    })
-    .on('click', '.tab-wrap a', function() {
-        if(!$(this).hasClass('active')) {
-            $('.tab-wrap a').removeClass('active');
-            $(this).addClass('active');
-            $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-            $('.tab-wrap').addClass('active-'+$(this).index());
-            $('.content-block').hide()
-            $('.content-block').eq($(this).index()).show();
-            // for m tab
-            $('.content-toggle-a').removeClass('active');
-            $('.content-toggle-dropdown').hide();
-            if(window.innerWidth <= 1024) {
-                $('body, html').animate({ scrollTop: $('.content-bg').offset().top - headerHeight - $('.tab-wrap').height() }, 1000)
-            }
+        e.stopPropagation();
+    }
+})
+.on('mousedown', 'img', function(e) {
+    e.preventDefault();
+})
+.on('click', '.question-btn', function() {
+    $('.bam-exam-q-deco').addClass('active');
+})
+.on('click', '.info-block a', function() {
+    if(!$(this).hasClass('active')) {
+        infoClick = true;
+        $('.info-default, .info-hand').hide();
+        $('.info-block a').removeClass('active');
+        $(this).addClass('active');
+        if(window.innerWidth > 1024) {
+            $('.info-dropdown').hide();
+            $(this).next('.info-dropdown').fadeIn();
+        } else {
+            $('.info-dropdown').stop().slideUp();
+            $(this).next('.info-dropdown').stop().slideDown();
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $(this).offset().top - headerHeight }, 1000);
+            }.bind(this), 500)
         }
-    })
-    .on('click', '.swiper .swiper-slide', function() {
-        if(!$(this).hasClass('active')) {
-            $(this).closest('.swiper').find('.swiper-slide').removeClass('active');
-            $(this).addClass('active');
-            $(this).closest('.content-info').find('.content-content').hide();
-            $(this).closest('.content-info').find('.content-content').eq($(this).index()).show();
-            // for m tab
-            $(this).closest('.content-block').find('.content-toggle-a').removeClass('active');
-            $(this).closest('.content-block').find('.content-content').eq($(this).index()).find('.content-toggle-a').addClass('active');
-            $(this).closest('.content-block').find('.content-toggle-dropdown').hide();
-            $(this).closest('.content-block').find('.content-content').eq($(this).index()).find('.content-toggle-dropdown').css('display', 'block');
-        }
-    })
-    .on('click', '.intro-flex a', function() {
-        if(!fixable) {
-            clickTab = true;
-            var _index = $(this).index();
-            $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
-            $('.tab-wrap a').removeClass('active');
-            $('.tab-wrap a').eq(_index).addClass('active');
-            $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-            $('.tab-wrap').addClass('active-'+_index);
-            $('.content-block').hide()
-            $('.content-block').eq(_index).show();
-        }
-    })
-    .on('click', '.content-toggle-a', function() {
+    } else {
         if(window.innerWidth <= 1024) {
-            if($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).next('.content-toggle-dropdown').stop().slideUp();
-            } else {
-                $(this).closest('.content-block').find('.content-toggle-a').removeClass('active');
-                $(this).toggleClass('active');
-                $(this).closest('.content-block').find('.content-toggle-dropdown').stop().slideUp();
-                $(this).next('.content-toggle-dropdown').stop().slideToggle();
-                // for pc tab
-                $(this).closest('.content-block').find('.swiper .swiper-slide').removeClass('active');
-                $(this).closest('.content-block').find('.swiper .swiper-slide').eq($(this).closest('.content-content').index()).addClass('active');
-                $(this).closest('.content-block').find('.content-content').hide();
-                $(this).closest('.content-block').find('.content-content').eq($(this).closest('.content-content').index()).show();
-
-                setTimeout(function() {
-                    $('body, html').animate({ scrollTop: $(this).next('.content-toggle-dropdown').offset().top - headerHeight - $(this).height() - $('.tab-wrap').height() - 5 }, 1000)
-                }.bind(this), 500)
-            }
-        }
-    })
-    .on('click', '.notice-more', function() {
-        $('.notice-block').stop().slideToggle();
-        $('.notice-wrap, .notice-more').toggleClass('active')
-    })
-
-    function urlDetect() {
-        if(window.location.href.indexOf('pin') > 0) {
-            var _url = new URL(window.location.href);
-            var _searchParams = _url.searchParams.get('pin');
-            var _mainCategory, _subCategory;
-            if(_searchParams == 'maternal') {_mainCategory = 0; _subCategory = 0;}
-            if(_searchParams == 'longtermcare') {_mainCategory = 1; _subCategory = 0;}
-            if(_searchParams == 'disease') {_mainCategory = 2; _subCategory = 0;}
-            if(_searchParams == 'mental') {_mainCategory = 3; _subCategory = 0;}
-            if(_searchParams == 'amh') {_mainCategory = 0; _subCategory = 0;}
-            if(_searchParams == 'earlyintervention') {_mainCategory = 0; _subCategory = 1;}
-            if(_searchParams == 'malldj') {_mainCategory = 0; _subCategory = 2;}
-            if(_searchParams == 'lost') {_mainCategory = 1; _subCategory = 0;}
-            if(_searchParams == 'dental') {_mainCategory = 1; _subCategory = 1;}
-            if(_searchParams == 'wacare') {_mainCategory = 1; _subCategory = 2;}
-            if(_searchParams == 'caregiver') {_mainCategory = 1; _subCategory = 3;}
-            if(_searchParams == 'aid') {_mainCategory = 1; _subCategory = 4;}
-            if(_searchParams == 'secondopinion') {_mainCategory = 2; _subCategory = 0;}
-            if(_searchParams == 'hope') {_mainCategory = 2; _subCategory = 1;}
-            if(_searchParams == 'hearing') {_mainCategory = 2; _subCategory = 2;}
-            if(_searchParams == 'physiotherapy') {_mainCategory = 2; _subCategory = 3;}
-            if(_searchParams == 'farhugs') {_mainCategory = 3; _subCategory = 0;}
-
-            clickTab = true;
-            $('body, html').animate({ scrollTop: $('.content').offset().top - headerHeight }, 1000)
-            $('.tab-wrap a').removeClass('active');
-            $('.tab-wrap a').eq(_mainCategory).addClass('active');
-            $('.tab-wrap').removeClass('active-0 active-1 active-2 active-3')
-            $('.tab-wrap').addClass('active-'+_mainCategory);
-            $('.content-block').hide()
-            $('.content-block').eq(_mainCategory).show();
-            // pc
-            $('.content-block').eq(_mainCategory).find('.swiper .swiper-slide').removeClass('active');
-            $('.content-block').eq(_mainCategory).find('.swiper .swiper-slide').eq(_subCategory).addClass('active');
-            $('.content-block').eq(_mainCategory).find('.content-content').hide();
-            $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).show();
-            // m
-            $('.content-block').eq(_mainCategory).find('.content-content').find('.content-toggle-a').removeClass('active');
-            $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).find('.content-toggle-a').addClass('active');
-            $('.content-block').eq(_mainCategory).find('.content-content').find('.content-toggle-dropdown').stop().slideUp();
-            $('.content-block').eq(_mainCategory).find('.content-content').eq(_subCategory).find('.content-toggle-dropdown').stop().slideDown();
+            infoClick = false;
+            $(this).removeClass('active');
+            $(this).next('.info-dropdown').stop().slideUp();
         }
     }
-</script>
+})
+.on('click', '.intro .swiper-slide', function() {
+    if(!$(this).hasClass('active')) {
+        introClick = true;
+        $('.intro-default, .intro-hand').hide();
+        $('.intro .swiper-slide').removeClass('active');
+        $(this).addClass('active');
+        if(window.innerWidth > 1024) {
+            $('.intro-block').hide();
+            $('.intro-block').eq($(this).index()).fadeIn();
+        } else {
+            $('.intro-block').stop().slideUp();
+            $('.intro-block').eq($(this).index()).stop().slideDown();
+        }
+    }
+})
 
+function urlDetect() {
+    if(window.location.href.indexOf('pin') > 0) {
+        var _url = new URL(window.location.href);
+        var _searchParams = _url.searchParams.get('pin');
+        $('body, html').animate({ scrollTop: $('.'+_searchParams).offset().top - headerHeight }, 1000);
+    }
+}
+</script>
