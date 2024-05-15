@@ -125,6 +125,9 @@ $highlight: #ffe360
                 top: 75%
                 left: 88%
                 transform: translate(-25%, -10%) scale(0.8) rotate(15deg)
+        .question-wrap
+            width: 85%
+            margin: auto
         .question-bg
             position: relative
             width: 80%
@@ -146,10 +149,14 @@ $highlight: #ffe360
                     display: inline-block
                     +showeffectv
                 h3
-                    font-size: 2.25rem
+                    font-size: 2.5rem
+                    font-weight: bold
+                    line-height: normal
                 h4
                     font-size: 1.75rem
                     margin-bottom: 0.5rem
+                    font-weight: bold
+                    line-height: normal
                 h5
                     font-weight: normal
                     font-size: 1.1rem
@@ -542,7 +549,7 @@ $highlight: #ffe360
                         padding: 0.5rem
 
     .link
-        padding-top: 5%
+        padding-top: 8%
         text-align: center
         overflow: hidden
         .outer-wrap
@@ -561,23 +568,18 @@ $highlight: #ffe360
             top: 50%
             width: 15%
         h2
-            display: inline-block
             position: relative
+            width: 35%
+            margin: auto
             .bam-exam-h2-deco
-                z-index: 1
                 display: block
-                position: absolute
-                width: 45%
-                top: -20%
-                left: -27%
+                width: 50%
                 opacity: 0
+                margin: auto
                 transform: translateY(50px)
                 &.active
                     animation: fadein 0.5s forwards
             .bam-exam-h2
-                display: block
-                width: 500px
-                margin: auto
                 +showeffect
                 &.active::after
                     animation-delay: 0.5s
@@ -585,7 +587,7 @@ $highlight: #ffe360
             display: flex
             width: 100%
             margin: auto
-            margin-top: 5%
+            margin-top: 3%
             div
                 width: 100%
                 opacity: 0
@@ -663,6 +665,8 @@ $highlight: #ffe360
             .outer-wrap
                 .bam-exam-q-deco
                     width: 125px
+            .question-wrap
+                width: 100%
             .question-bg
                 .question-intro
                     font-size: 1.25rem
@@ -727,11 +731,6 @@ $highlight: #ffe360
                         width: 75%
                         font-size: 1.1rem
 
-        .link
-            h2
-                .bam-exam-h2
-                    width: 400px
-
 @media only screen and (max-width: 1024px)
     .bam-exam-wrap
         width: 100%
@@ -764,7 +763,7 @@ $highlight: #ffe360
                 left: 5%
 
         .question
-            margin-top: -30%
+            margin-top: -50%
             overflow: hidden
             padding: 10% 0
             .outer-wrap
@@ -772,8 +771,8 @@ $highlight: #ffe360
                 .bam-exam-q-deco
                     width: 20%
                 .bam-exam-q-deco-1
-                    top: 0%
-                    left: -8%
+                    top: -4%
+                    left: -10%
                     transform: translate(50%, 30%) scale(0.8) rotate(15deg)
                 .bam-exam-q-deco-2
                     top: 88%
@@ -794,8 +793,8 @@ $highlight: #ffe360
                     left: 88%
                     transform: translate(-50%, 35%) scale(0.8) rotate(15deg)
                 .bam-exam-q-deco-7
-                    top: 83%
-                    left: 85%
+                    top: 85%
+                    left: 87%
                     transform: translate(-45%, -20%) scale(0.8) rotate(15deg)
             .question-bg
                 width: 100%
@@ -907,7 +906,7 @@ $highlight: #ffe360
                 font-size: 3vw
                 letter-spacing: 0
                 text-align: center
-                margin-top: 0
+                margin-top: 5%
             .intro-left
                 width: 100%
                 .bam-exam-h2-deco
@@ -965,7 +964,7 @@ $highlight: #ffe360
                     ol
                         margin-left: 5vw
                     .intro-scroll
-                        height: auto
+                        height: 70vw
                         padding-right: 0
                     .intro-title
                         position: relative
@@ -989,14 +988,14 @@ $highlight: #ffe360
                         font-weight: 500
                         border-radius: 50px
                     article
-                        margin: 1.5% 0 5% 0
+                        margin: 2.5% 0 8% 0
                     table
                         width: 100%
                         td, th
                             padding: 3%
 
         .link
-            padding-top: 15%
+            padding-top: 20%
             .link-deco-1
                 right: -8%
                 top: 20%
@@ -1010,12 +1009,13 @@ $highlight: #ffe360
                 top: 0
                 width: 25%
             h2
+                width: 100%
                 .bam-exam-h2-deco
-                    width: 30%
-                    top: -15%
-                    left: -5%
+                    width: 50%
+                    margin: auto
                 .bam-exam-h2
                     width: 70%
+                    margin: auto
             .link-flex
                 display: block
                 margin-top: 5%

@@ -209,13 +209,8 @@ $(document)
         $('.intro-default, .intro-hand').hide();
         $('.intro .swiper-slide').removeClass('active');
         $(this).addClass('active');
-        if(window.innerWidth > 1024) {
-            $('.intro-block').hide();
-            $('.intro-block').eq($(this).index()).fadeIn();
-        } else {
-            $('.intro-block').stop().slideUp();
-            $('.intro-block').eq($(this).index()).stop().slideDown();
-        }
+        $('.intro-block').hide();
+        $('.intro-block').eq($(this).index()).fadeIn();
     }
 })
 
