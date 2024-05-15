@@ -131,7 +131,7 @@ function scrollEffect() {
                 }.bind(this), index*500)
             })
             $('.question-btn').addClass('active');
-            $('.question-intro h4').addClass('active');
+            $('.question-intro h5').addClass('active');
         }
     }
     if($(window).scrollTop() > $('.info').offset().top - window.innerHeight*0.5) {
@@ -156,12 +156,7 @@ function scrollEffect() {
     if($(window).scrollTop() > $('.link').offset().top - window.innerHeight*0.5) {
         if(!linkEffect) {
             linkEffect = true;
-            $('.link h2 img').addClass('active')
-            $('.link [data-show]').each(function(index) {
-                setTimeout(function() {
-                    $(this).addClass('active')
-                }.bind(this), index*500)
-            })
+            $('.link h2 .bam-exam-h2-deco, .link h2 .bam-exam-h2').addClass('active')
             $('.link-flex > div').each(function(index) {
                 setTimeout(function() {
                     $(this).addClass('active')

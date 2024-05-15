@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #0e5b7b;
+        fill: #3293d9;
       }
 
       .cls-1, .cls-2 {
@@ -12,17 +12,18 @@
 
       .cls-3 {
         fill: none;
-        stroke: #0e5b7b;
+        stroke: #fff;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
 
       .cls-2 {
+        display: none;
         fill: #fff;
       }
     </style>
   </defs>
   <circle class="cls-2" cx="12.5" cy="12.5" r="12.5"/>
+  <path class="cls-1" d="M12.5,0C5.6,0,0,5.6,0,12.5s5.6,12.5,12.5,12.5,12.5-5.6,12.5-12.5S19.4,0,12.5,0h0Z"/>
   <polyline class="cls-3" points="14.8 18.1 8.2 12.4 14.7 6.9"/>
-  <path class="cls-1" d="M12.5,1c6.3,0,11.5,5.2,11.5,11.5s-5.2,11.5-11.5,11.5S1,18.8,1,12.5,6.2,1,12.5,1M12.5,0C5.6,0,0,5.6,0,12.5s5.6,12.5,12.5,12.5,12.5-5.6,12.5-12.5S19.4,0,12.5,0h0Z"/>
 </svg>

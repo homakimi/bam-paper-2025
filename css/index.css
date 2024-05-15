@@ -269,18 +269,16 @@ body.fix {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   letter-spacing: 3px;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   text-align: center;
-  line-height: 200%;
 }
 
-.bam-exam-wrap .question .question-bg .question-intro > p {
+.bam-exam-wrap .question .question-bg .question-intro > div {
   display: inline-block;
-  font-weight: 500;
   position: relative;
 }
 
-.bam-exam-wrap .question .question-bg .question-intro > p::after {
+.bam-exam-wrap .question .question-bg .question-intro > div::after {
   display: block;
   content: '';
   position: absolute;
@@ -289,70 +287,39 @@ body.fix {
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
 }
 
-.bam-exam-wrap .question .question-bg .question-intro > p.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
+.bam-exam-wrap .question .question-bg .question-intro > div.active::after {
+  -webkit-animation: showeffectv 1s forwards;
+          animation: showeffectv 1s forwards;
 }
 
-@-webkit-keyframes showeffect {
+@-webkit-keyframes showeffectv {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
 }
 
-@keyframes showeffect {
+@keyframes showeffectv {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
   }
 }
 
 .bam-exam-wrap .question .question-bg .question-intro h3 {
-  display: inline-block;
-  font-size: 1.75rem;
-  position: relative;
-}
-
-.bam-exam-wrap .question .question-bg .question-intro h3::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
-}
-
-.bam-exam-wrap .question .question-bg .question-intro h3.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
-}
-
-@keyframes showeffect {
-  to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
-  }
-}
-
-.bam-exam-wrap .question .question-bg .question-intro h3 p {
-  display: inline-block;
-  padding: 0 1rem;
-  margin: 0.25rem 0;
-  background: -webkit-gradient(linear, left top, right top, from(#53ccfb), to(#ffdfbb));
-  background: linear-gradient(to right, #53ccfb, #ffdfbb);
-  border-radius: 50px;
+  font-size: 2.25rem;
 }
 
 .bam-exam-wrap .question .question-bg .question-intro h4 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.bam-exam-wrap .question .question-bg .question-intro h5 {
   font-weight: normal;
   font-size: 1.1rem;
   color: #43aad4;
@@ -364,9 +331,9 @@ body.fix {
           transform: translateY(50px);
 }
 
-.bam-exam-wrap .question .question-bg .question-intro h4.active {
-  -webkit-animation: fadein 0.5s 2s forwards;
-          animation: fadein 0.5s 2s forwards;
+.bam-exam-wrap .question .question-bg .question-intro h5.active {
+  -webkit-animation: fadein 0.5s 1.5s forwards;
+          animation: fadein 0.5s 1.5s forwards;
 }
 
 .bam-exam-wrap .question .question-bg .question-intro .question-btn {
@@ -379,6 +346,7 @@ body.fix {
   background-position: center center !important;
   background-size: cover !important;
   border-radius: 100px;
+  font-size: 2rem;
   -webkit-filter: brightness(1.25);
           filter: brightness(1.25);
   opacity: 0;
@@ -387,8 +355,8 @@ body.fix {
 }
 
 .bam-exam-wrap .question .question-bg .question-intro .question-btn.active {
-  -webkit-animation: fadein 0.5s 1.5s forwards;
-          animation: fadein 0.5s 1.5s forwards;
+  -webkit-animation: fadein 0.5s 1s forwards;
+          animation: fadein 0.5s 1s forwards;
 }
 
 .bam-exam-wrap .info {
@@ -440,6 +408,13 @@ body.fix {
           animation: showeffect 1.5s forwards;
 }
 
+@-webkit-keyframes showeffect {
+  to {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+}
+
 @keyframes showeffect {
   to {
     -webkit-transform: scale(0, 1);
@@ -466,11 +441,12 @@ body.fix {
 .bam-exam-wrap .info .info-left .info-block h5 {
   margin-top: 5%;
   font-size: 1.15rem;
-  font-weight: 500;
+  font-weight: normal;
   color: #43aad4;
 }
 
 .bam-exam-wrap .info .info-left .info-block h5 a {
+  color: #0e5b7b;
   text-decoration: underline;
 }
 
@@ -566,6 +542,10 @@ body.fix {
   margin-top: 3%;
 }
 
+.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content h4 {
+  font-size: 1.2em;
+}
+
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll {
   height: 400px;
   overflow-y: auto;
@@ -587,12 +567,9 @@ body.fix {
   border-radius: 10px;
 }
 
-.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content p {
-  display: inline;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  -webkit-text-decoration-color: #ffdfbb;
-          text-decoration-color: #ffdfbb;
+.bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, transparent), color-stop(19%, #ffe360), color-stop(90%, #ffe360), color-stop(91%, transparent));
+  background: linear-gradient(to bottom, transparent 18%, #ffe360 19%, #ffe360 90%, transparent 91%);
 }
 
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content::after {
@@ -722,7 +699,7 @@ body.fix {
   position: absolute;
   bottom: 3px;
   left: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 1.15rem;
   width: 38%;
   color: #43aad4;
@@ -735,6 +712,7 @@ body.fix {
 }
 
 .bam-exam-wrap .intro h5 a {
+  color: #0e5b7b;
   text-decoration: underline;
 }
 
@@ -1023,12 +1001,19 @@ body.fix {
   margin: 1rem 0 1.5rem 0;
 }
 
-.bam-exam-wrap .intro .intro-right .intro-block article p {
-  display: inline;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  -webkit-text-decoration-color: #ffdfbb;
-          text-decoration-color: #ffdfbb;
+.bam-exam-wrap .intro .intro-right .intro-block article span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, transparent), color-stop(19%, #ffe360), color-stop(90%, #ffe360), color-stop(91%, transparent));
+  background: linear-gradient(to bottom, transparent 18%, #ffe360 19%, #ffe360 90%, transparent 91%);
+}
+
+.bam-exam-wrap .intro .intro-right .intro-block table {
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+.bam-exam-wrap .intro .intro-right .intro-block table td, .bam-exam-wrap .intro .intro-right .intro-block table th {
+  border: 1px solid #3293d9;
+  padding: 0.5rem;
 }
 
 .bam-exam-wrap .link {
@@ -1061,15 +1046,35 @@ body.fix {
 }
 
 .bam-exam-wrap .link h2 {
-  font-size: 1.75rem;
-}
-
-.bam-exam-wrap .link h2 p {
   display: inline-block;
   position: relative;
 }
 
-.bam-exam-wrap .link h2 p::after {
+.bam-exam-wrap .link h2 .bam-exam-h2-deco {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  width: 45%;
+  top: -20%;
+  left: -27%;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.bam-exam-wrap .link h2 .bam-exam-h2-deco.active {
+  -webkit-animation: fadein 0.5s forwards;
+          animation: fadein 0.5s forwards;
+}
+
+.bam-exam-wrap .link h2 .bam-exam-h2 {
+  display: block;
+  width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.bam-exam-wrap .link h2 .bam-exam-h2::after {
   display: block;
   content: '';
   position: absolute;
@@ -1082,7 +1087,7 @@ body.fix {
           transform-origin: center right;
 }
 
-.bam-exam-wrap .link h2 p.active::after {
+.bam-exam-wrap .link h2 .bam-exam-h2.active::after {
   -webkit-animation: showeffect 1.5s forwards;
           animation: showeffect 1.5s forwards;
 }
@@ -1094,37 +1099,18 @@ body.fix {
   }
 }
 
-.bam-exam-wrap .link h2 p.active::after {
+.bam-exam-wrap .link h2 .bam-exam-h2.active::after {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-}
-
-.bam-exam-wrap .link h2 p.des {
-  font-weight: normal;
-}
-
-.bam-exam-wrap .link h2 img {
-  display: block;
-  width: 200px;
-  margin: 1% auto;
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-}
-
-.bam-exam-wrap .link h2 img.active {
-  -webkit-animation: fadein 0.5s forwards;
-          animation: fadein 0.5s forwards;
 }
 
 .bam-exam-wrap .link .link-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  width: 100%;
   margin: auto;
-  margin-top: 3%;
-  gap: 5%;
+  margin-top: 5%;
 }
 
 .bam-exam-wrap .link .link-flex div {
@@ -1141,15 +1127,11 @@ body.fix {
 
 .bam-exam-wrap .link .link-flex div a {
   display: block;
-  width: 60%;
   color: #FFF;
-  font-size: 1.25rem;
-  padding: 0.75rem 0;
-  margin: 5% auto;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  border-radius: 100px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @-webkit-keyframes badge {
@@ -1336,6 +1318,13 @@ body.fix {
   }
 }
 
+@media only screen and (min-width: 1025px) {
+  .bam-exam-wrap .link-flex a:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
 @media only screen and (max-width: 1440px) {
   .bam-exam-wrap .badge {
     width: 125px;
@@ -1347,25 +1336,28 @@ body.fix {
     width: 125px;
   }
   .bam-exam-wrap .question .question-bg .question-intro {
-    font-size: 1.35rem;
-    line-height: 175%;
+    font-size: 1.25rem;
   }
   .bam-exam-wrap .question .question-bg .question-intro h3 {
-    font-size: 1.35rem;
-    margin: 0.5rem 0;
+    font-size: 1.75rem;
   }
   .bam-exam-wrap .question .question-bg .question-intro h4 {
+    font-size: 1.5rem;
+  }
+  .bam-exam-wrap .question .question-bg .question-intro h5 {
     font-size: 1rem;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn {
     width: 250px;
     padding: 0.5rem 0;
+    font-size: 1.5rem;
   }
   .bam-exam-wrap .info .info-left .info-block h5 {
     font-size: 1.1rem;
   }
   .bam-exam-wrap .info .info-left .info-block article a {
     font-size: 1.25rem;
+    border-radius: 20px;
   }
   .bam-exam-wrap .info .info-left .info-block article a p {
     padding-left: 1.5rem;
@@ -1415,11 +1407,8 @@ body.fix {
     width: 75%;
     font-size: 1.1rem;
   }
-  .bam-exam-wrap .link h2 {
-    font-size: 1.5rem;
-  }
-  .bam-exam-wrap .link h2 img {
-    width: 150px;
+  .bam-exam-wrap .link h2 .bam-exam-h2 {
+    width: 400px;
   }
 }
 
@@ -1439,26 +1428,26 @@ body.fix {
     padding-top: 160%;
   }
   .bam-exam-wrap .kv h1 {
-    top: 8%;
+    top: 11%;
     left: 14%;
   }
   .bam-exam-wrap .kv h1 img {
     width: 62vw;
   }
   .bam-exam-wrap .kv .kv-title {
-    top: 16%;
+    top: 19%;
     left: 10%;
   }
   .bam-exam-wrap .kv .kv-title img {
     width: 75vw;
   }
   .bam-exam-wrap .kv .kv-des {
-    top: 22%;
+    top: 25%;
     left: 27%;
     width: 60vw;
   }
   .bam-exam-wrap .kv .kv-hat {
-    width: 20%;
+    width: 23%;
     top: 3%;
     left: 5%;
   }
@@ -1520,7 +1509,6 @@ body.fix {
     top: 45%;
     letter-spacing: 0.1vw;
     font-size: 4vw;
-    line-height: 200%;
   }
   .bam-exam-wrap .question .question-bg .question-intro .bam-exam-pen {
     display: block;
@@ -1528,20 +1516,19 @@ body.fix {
     margin: 3% auto;
   }
   .bam-exam-wrap .question .question-bg .question-intro h3 {
-    font-size: 4vw;
-    padding: 0 3vw;
-    margin: 0;
-  }
-  .bam-exam-wrap .question .question-bg .question-intro h3 p {
-    margin: 1.5vw 0;
+    font-size: 7vw;
   }
   .bam-exam-wrap .question .question-bg .question-intro h4 {
+    font-size: 5vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-intro h5 {
     font-size: 3vw;
     letter-spacing: 0;
     margin-top: 3%;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn {
     width: 45%;
+    font-size: 4.5vw;
     padding: 1.5vw 0;
   }
   .bam-exam-wrap .wave-info {
@@ -1668,6 +1655,13 @@ body.fix {
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev,
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-next {
     width: 8%;
+    height: auto;
+    margin: 0;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.75);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev::after,
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-next::after {
@@ -1725,6 +1719,7 @@ body.fix {
   }
   .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll {
     height: auto;
+    padding-right: 0;
   }
   .bam-exam-wrap .intro .intro-right .intro-block .intro-title {
     position: relative;
@@ -1754,6 +1749,15 @@ body.fix {
   .bam-exam-wrap .intro .intro-right .intro-block article {
     margin: 1.5% 0 5% 0;
   }
+  .bam-exam-wrap .intro .intro-right .intro-block table {
+    width: 100%;
+  }
+  .bam-exam-wrap .intro .intro-right .intro-block table td, .bam-exam-wrap .intro .intro-right .intro-block table th {
+    padding: 3%;
+  }
+  .bam-exam-wrap .link {
+    padding-top: 15%;
+  }
   .bam-exam-wrap .link .link-deco-1 {
     right: -8%;
     top: 20%;
@@ -1769,28 +1773,21 @@ body.fix {
     top: 0;
     width: 25%;
   }
-  .bam-exam-wrap .link h2 {
-    font-size: 4.5vw;
+  .bam-exam-wrap .link h2 .bam-exam-h2-deco {
+    width: 30%;
+    top: -15%;
+    left: -5%;
   }
-  .bam-exam-wrap .link h2 p.des {
-    font-size: 3.75vw;
-  }
-  .bam-exam-wrap .link h2 img {
-    width: 35%;
-    margin: 3% auto;
+  .bam-exam-wrap .link h2 .bam-exam-h2 {
+    width: 70%;
   }
   .bam-exam-wrap .link .link-flex {
     display: block;
-    width: 80%;
+    margin-top: 5%;
   }
   .bam-exam-wrap .link .link-flex div {
     width: 100%;
-    margin: 5% 0;
-  }
-  .bam-exam-wrap .link .link-flex div a {
-    width: 70%;
-    font-size: 4.5vw;
-    padding: 3vw 0;
+    margin: 3% 0;
   }
 }
 /*# sourceMappingURL=index.css.map */
