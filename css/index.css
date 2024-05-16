@@ -1422,7 +1422,12 @@ body.fix {
   }
   .bam-exam-wrap .badge {
     width: 25%;
-    top: 65%;
+    top: 80%;
+  }
+  .bam-exam-wrap .badge .badge-word {
+    width: 120%;
+    top: -3%;
+    left: -3%;
   }
   .bam-exam-wrap .outer-wrap {
     width: 90%;
@@ -1640,7 +1645,6 @@ body.fix {
     font-size: 3vw;
     letter-spacing: 0;
     text-align: center;
-    margin-top: 5%;
   }
   .bam-exam-wrap .intro .intro-left {
     width: 100%;
@@ -1722,8 +1726,9 @@ body.fix {
     margin-left: 5vw;
   }
   .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll {
-    height: 70vw;
+    height: auto;
     padding-right: 0;
+    min-height: 122vw;
   }
   .bam-exam-wrap .intro .intro-right .intro-block .intro-title {
     position: relative;
@@ -1757,7 +1762,7 @@ body.fix {
     width: 100%;
   }
   .bam-exam-wrap .intro .intro-right .intro-block table td, .bam-exam-wrap .intro .intro-right .intro-block table th {
-    padding: 3%;
+    padding: 1.5% 3%;
   }
   .bam-exam-wrap .link {
     padding-top: 20%;

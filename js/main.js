@@ -179,11 +179,11 @@ $(document)
 .on('click', '.question-btn', function() {
     $('.bam-exam-q-deco').addClass('active');
 })
-.on('click', '.info-block a', function() {
+.on('click', '.info-a', function() {
     if(!$(this).hasClass('active')) {
         infoClick = true;
         $('.info-default, .info-hand').hide();
-        $('.info-block a').removeClass('active');
+        $('.info-a').removeClass('active');
         $(this).addClass('active');
         if(window.innerWidth > 1024) {
             $('.info-dropdown').hide();
