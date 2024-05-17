@@ -544,9 +544,14 @@ $highlight: #ffe360
                 table
                     border-collapse: collapse
                     max-width: 100%
+                    th
+                        text-align: center
                     td, th
                         border: 1px solid $water
                         padding: 0.5rem
+                    .td-width
+                        width: 3.75rem
+                        text-align: center
 
     .link
         padding-top: 8%
@@ -859,6 +864,7 @@ $highlight: #ffe360
                             &::after
                                 border-width: 0.75vw
                             p
+                                padding-left: 5vw
                                 &::after
                                     position: absolute
                                     display: block
@@ -967,9 +973,8 @@ $highlight: #ffe360
                     ol
                         margin-left: 5vw
                     .intro-scroll
-                        height: auto
                         padding-right: 0
-                        min-height: 122vw
+                        height: 122vw
                     .intro-title
                         position: relative
                         padding-left: 12vw
@@ -997,6 +1002,16 @@ $highlight: #ffe360
                         width: 100%
                         td, th
                             padding: 1.5% 3%
+                    .table-scroll
+                        width: 100%
+                        padding: 2px
+                        overflow-x: auto
+                        -webkit-overflow-scrolling: touch
+                        table
+                            width: 125vw
+                            max-width: none
+                            .td-width
+                                width: 17vw
 
         .link
             padding-top: 20%
