@@ -7,7 +7,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
 body.fix {
   overflow: hidden;
 }
@@ -16,30 +15,23 @@ body.fix {
   width: 100%;
   letter-spacing: 1px;
   background: #FFF;
-  font-family: 'Noto Sans TC';
+  font-family: "Noto Sans TC";
   -moz-text-size-adjust: none;
-   -ms-text-size-adjust: none;
        text-size-adjust: none;
   -webkit-text-size-adjust: none;
 }
-
 .bam-exam-wrap *:not(.swiper-button) {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .bam-exam-wrap *:not(.swiper-button)::before, .bam-exam-wrap *:not(.swiper-button)::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .bam-exam-wrap a {
   text-decoration: none;
   color: inherit;
 }
-
 .bam-exam-wrap .fullimg {
   display: block;
   width: 100%;
@@ -50,13 +42,11 @@ body.fix {
     display: none !important;
   }
 }
-
 @media only screen and (max-width: 1024px) {
   .for-pc {
     display: none !important;
   }
 }
-
 @media only screen and (max-width: 480px) {
   .bam-exam-wrap ol li::before {
     top: 0.2rem;
@@ -65,11 +55,9 @@ body.fix {
     font-size: 0.8rem;
   }
 }
-
 .bam-exam-wrap {
   color: #0e5b7b;
 }
-
 .bam-exam-wrap .badge {
   z-index: 9;
   position: fixed;
@@ -77,41 +65,30 @@ body.fix {
   width: 150px;
   top: 10%;
   right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: badgehide 0.35s linear forwards;
-          animation: badgehide 0.35s linear forwards;
+  transform: translateX(100%);
+  animation: badgehide 0.35s linear forwards;
 }
-
 .bam-exam-wrap .badge.show {
-  -webkit-animation: badge 0.35s linear forwards;
-          animation: badge 0.35s linear forwards;
+  animation: badge 0.35s linear forwards;
 }
-
 .bam-exam-wrap .badge.show .badge-word {
-  -webkit-animation: fadein 0.5s 0.25s forwards;
-          animation: fadein 0.5s 0.25s forwards;
+  animation: fadein 0.5s 0.25s forwards;
 }
-
 .bam-exam-wrap .badge .badge-word {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .outer-wrap {
   width: 1440px;
   margin: auto;
 }
-
 .bam-exam-wrap .kv {
   position: relative;
   overflow: hidden;
 }
-
 .bam-exam-wrap .kv .kv-img {
   width: 100%;
   padding-top: 66.5%;
@@ -119,41 +96,33 @@ body.fix {
   background-position: center center !important;
   background-size: cover !important;
 }
-
 .bam-exam-wrap .kv h1 {
   position: absolute;
   width: 0;
   top: 10%;
   left: 15%;
   overflow: hidden;
-  -webkit-animation: kv 2s 1s forwards;
-          animation: kv 2s 1s forwards;
+  animation: kv 2s 1s forwards;
 }
-
 .bam-exam-wrap .kv h1 img {
   display: block;
   width: 23vw;
 }
-
 .bam-exam-wrap .kv h1 p {
   display: none;
 }
-
 .bam-exam-wrap .kv .kv-title {
   position: absolute;
   width: 0;
   top: 32%;
   left: 8%;
   overflow: hidden;
-  -webkit-animation: kv 2s 1.75s forwards;
-          animation: kv 2s 1.75s forwards;
+  animation: kv 2s 1.75s forwards;
 }
-
 .bam-exam-wrap .kv .kv-title img {
   display: block;
   width: 40vw;
 }
-
 .bam-exam-wrap .kv .kv-des {
   position: absolute;
   width: 34vw;
@@ -161,17 +130,13 @@ body.fix {
   left: 11%;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: scale(1.5) rotate(15deg);
-          transform: scale(1.5) rotate(15deg);
-  -webkit-animation: fadein 0.5s 2.5s forwards;
-          animation: fadein 0.5s 2.5s forwards;
+  transform: scale(1.5) rotate(15deg);
+  animation: fadein 0.5s 2.5s forwards;
 }
-
 .bam-exam-wrap .kv .kv-des img {
   display: block;
   width: 100%;
 }
-
 .bam-exam-wrap .kv .kv-hat {
   position: absolute;
   display: block;
@@ -179,87 +144,64 @@ body.fix {
   top: 12%;
   left: 35%;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  -webkit-animation: fadein 1s 1.25s forwards;
-          animation: fadein 1s 1.25s forwards;
+  transform: translateY(50px);
+  animation: fadein 1s 1.25s forwards;
 }
-
 .bam-exam-wrap .question {
   position: relative;
   margin-top: -30%;
   overflow: hidden;
   padding: 5% 0;
 }
-
 .bam-exam-wrap .question .outer-wrap {
   position: relative;
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco {
   position: absolute;
   width: 175px;
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco.active {
-  -webkit-animation: fadein 1s forwards;
-          animation: fadein 1s forwards;
+  animation: fadein 1s forwards;
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-1 {
   top: 35%;
   left: -10%;
-  -webkit-transform: translate(90%, 0) scale(0.8) rotate(15deg);
-          transform: translate(90%, 0) scale(0.8) rotate(15deg);
+  transform: translate(90%, 0) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-2 {
   top: 60%;
   left: -3%;
-  -webkit-transform: translate(50%, -10%) scale(0.8) rotate(15deg);
-          transform: translate(50%, -10%) scale(0.8) rotate(15deg);
+  transform: translate(50%, -10%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-3 {
   top: 80%;
   left: 4%;
-  -webkit-transform: translate(40%, -15%) scale(0.8) rotate(15deg);
-          transform: translate(40%, -15%) scale(0.8) rotate(15deg);
+  transform: translate(40%, -15%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-4 {
   top: 1%;
   left: 5%;
-  -webkit-transform: translate(35%, 20%) scale(0.8) rotate(15deg);
-          transform: translate(35%, 20%) scale(0.8) rotate(15deg);
+  transform: translate(35%, 20%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-5 {
   top: 3%;
   left: 85%;
-  -webkit-transform: translate(-40%, 30%) scale(0.8) rotate(15deg);
-          transform: translate(-40%, 30%) scale(0.8) rotate(15deg);
+  transform: translate(-40%, 30%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-6 {
   top: 20%;
   left: 95%;
-  -webkit-transform: translate(-30%, 25%) scale(0.8) rotate(15deg);
-          transform: translate(-30%, 25%) scale(0.8) rotate(15deg);
+  transform: translate(-30%, 25%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-7 {
   top: 75%;
   left: 88%;
-  -webkit-transform: translate(-25%, -10%) scale(0.8) rotate(15deg);
-          transform: translate(-25%, -10%) scale(0.8) rotate(15deg);
+  transform: translate(-25%, -10%) scale(0.8) rotate(15deg);
 }
-
 .bam-exam-wrap .question .question-wrap {
   width: 85%;
   margin: auto;
 }
-
 .bam-exam-wrap .question .question-bg {
   position: relative;
   width: 80%;
@@ -269,69 +211,50 @@ body.fix {
   background-position: center center !important;
   background-size: contain !important;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro {
   position: absolute;
   top: 55%;
   left: 50%;
   width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   letter-spacing: 3px;
   font-size: 1.25rem;
   text-align: center;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro > div {
   display: inline-block;
   position: relative;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro > div::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
+  transform-origin: bottom center;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro > div.active::after {
-  -webkit-animation: showeffectv 1s forwards;
-          animation: showeffectv 1s forwards;
+  animation: showeffectv 1s forwards;
 }
-
-@-webkit-keyframes showeffectv {
-  to {
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
-  }
-}
-
 @keyframes showeffectv {
   to {
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
+    transform: scale(1, 0);
   }
 }
-
 .bam-exam-wrap .question .question-bg .question-intro h3 {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: normal;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro h4 {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   line-height: normal;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro h5 {
   font-weight: normal;
   font-size: 1.1rem;
@@ -340,154 +263,115 @@ body.fix {
   line-height: normal;
   margin-top: 1%;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .question .question-bg .question-intro h5.active {
-  -webkit-animation: fadein 0.5s 1.5s forwards;
-          animation: fadein 0.5s 1.5s forwards;
+  animation: fadein 0.5s 1.5s forwards;
 }
-
 .bam-exam-wrap .question .question-bg .question-intro .question-btn {
   display: block;
-  width: 300px;
+  width: 350px;
   color: #FFF;
   padding: 0.75rem 0;
+  padding-left: 1rem;
   margin: auto;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
   border-radius: 100px;
-  font-size: 2rem;
-  -webkit-filter: brightness(1.25);
-          filter: brightness(1.25);
+  font-size: 1.75rem;
+  filter: brightness(1.25);
   opacity: 0;
-  -webkit-transform: scale(1.5) rotate(15deg);
-          transform: scale(1.5) rotate(15deg);
+  transform: scale(1.5) rotate(15deg);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
-
 .bam-exam-wrap .question .question-bg .question-intro .question-btn.active {
-  -webkit-animation: fadein 0.5s 1s forwards;
-          animation: fadein 0.5s 1s forwards;
+  animation: fadein 0.5s 1s forwards;
 }
-
 .bam-exam-wrap .info {
   z-index: 1;
   position: relative;
 }
-
 .bam-exam-wrap .info .outer-wrap {
   position: relative;
 }
-
 .bam-exam-wrap .info .info-left {
   width: 38%;
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2-deco {
   display: block;
   width: 50%;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2-deco.active {
-  -webkit-animation: fadein 0.5s forwards;
-          animation: fadein 0.5s forwards;
+  animation: fadein 0.5s forwards;
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2 {
   width: 80%;
   position: relative;
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  transform-origin: center right;
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
+  animation: showeffect 1.5s forwards;
 }
-
-@-webkit-keyframes showeffect {
-  to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
-  }
-}
-
 @keyframes showeffect {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    transform: scale(0, 1);
   }
 }
-
 .bam-exam-wrap .info .info-left .bam-exam-h2.active::after {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-
 .bam-exam-wrap .info .info-left .info-block {
   counter-reset: aaa;
   margin-top: 2.5%;
   opacity: 0;
 }
-
 .bam-exam-wrap .info .info-left .info-block.active {
-  -webkit-animation: fadefix 1s 1.5s forwards;
-          animation: fadefix 1s 1.5s forwards;
+  animation: fadefix 1s 1.5s forwards;
 }
-
 .bam-exam-wrap .info .info-left .info-block h5 {
   margin-top: 5%;
   font-size: 1.15rem;
   font-weight: normal;
   color: #43aad4;
 }
-
 .bam-exam-wrap .info .info-left .info-block h5 a {
   color: #0e5b7b;
   text-decoration: underline;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a {
   position: relative;
   display: inline-block;
   padding: 3% 5%;
   margin: 2.5% 0;
   border-radius: 25px;
-  -webkit-box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
   background: #FFF;
   font-size: 1.5rem;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a.active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a.active::before, .bam-exam-wrap .info .info-left .info-block article a.active::after {
   opacity: 1;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a::before, .bam-exam-wrap .info .info-left .info-block article a::after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
@@ -495,26 +379,20 @@ body.fix {
   border-radius: 25px;
   opacity: 0;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a::before {
-  background: -webkit-gradient(linear, left top, right top, from(#53ccfb), to(#ffdfbb));
   background: linear-gradient(to right, #53ccfb, #ffdfbb);
-  -webkit-transform: translate(10px, 8px);
-          transform: translate(10px, 8px);
+  transform: translate(10px, 8px);
   opacity: 0;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a::after {
   background: #FFF;
   border: 3px solid #0e5b7b;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a p {
   z-index: 1;
   position: relative;
   padding-left: 2rem;
 }
-
 .bam-exam-wrap .info .info-left .info-block article a p::before {
   position: absolute;
   top: 0;
@@ -522,7 +400,6 @@ body.fix {
   counter-increment: aaa;
   content: counter(aaa) ". ";
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown {
   display: none;
   position: absolute;
@@ -533,110 +410,87 @@ body.fix {
   line-height: 170%;
   text-align: justify;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown ul,
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown ol {
   margin-left: 2rem;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-img {
   width: 60%;
-  padding-top: calc(50% * 0.6);
+  padding-top: 30%;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
   margin-top: 3%;
   border-radius: 75px;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content {
   position: relative;
   padding: 6% 2% 1% 1%;
   margin-top: 3%;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content h4 {
   font-size: 1.2em;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll {
   height: 400px;
   overflow-y: auto;
   padding-right: 3%;
   -webkit-overflow-scrolling: touch;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar {
   width: 5px;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar-track {
   border-radius: 10px;
   background: #ededed;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content .info-scroll::-webkit-scrollbar-thumb {
   background: #0e5b7b;
   border-radius: 10px;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content span {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, transparent), color-stop(19%, #ffe360), color-stop(90%, #ffe360), color-stop(91%, transparent));
   background: linear-gradient(to bottom, transparent 18%, #ffe360 19%, #ffe360 90%, transparent 91%);
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-content::after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 4px;
   height: 30%;
   top: 0;
   right: 0;
   background: #53ccfb;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-animation: lineeffect 0.5s 1.35s linear forwards;
-          animation: lineeffect 0.5s 1.35s linear forwards;
+  transform-origin: top center;
+  transform: scale(1, 0);
+  animation: lineeffect 0.5s 1.35s linear forwards;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line {
   top: 0;
   left: 0;
   width: 100%;
   position: relative;
   position: absolute;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  transform-origin: center right;
 }
-
 .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-line.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
+  animation: showeffect 1.5s forwards;
 }
-
 @keyframes showeffect {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    transform: scale(0, 1);
   }
 }
-
 .bam-exam-wrap .info .info-default {
   position: absolute;
   top: 20%;
@@ -644,12 +498,9 @@ body.fix {
   width: 57%;
   opacity: 0;
 }
-
 .bam-exam-wrap .info .info-default.active {
-  -webkit-animation: fadefix 1s 1.5s forwards;
-          animation: fadefix 1s 1.5s forwards;
+  animation: fadefix 1s 1.5s forwards;
 }
-
 .bam-exam-wrap .info .info-default > div {
   width: 100%;
   padding-top: 66%;
@@ -658,56 +509,41 @@ body.fix {
   background-size: cover !important;
   border-radius: 75px;
 }
-
 .bam-exam-wrap .info .info-default .info-hand {
   z-index: 1;
   position: absolute;
   pointer-events: none;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .bam-exam-wrap .info .info-default .info-hand.active {
-  -webkit-animation: handinfo 4s 3s infinite;
-          animation: handinfo 4s 3s infinite;
+  animation: handinfo 4s 3s infinite;
 }
-
 .bam-exam-wrap .wave {
   z-index: 0;
   position: relative;
   margin: -20% auto -5% auto;
   overflow: hidden;
 }
-
 .bam-exam-wrap .wave .wave-deco {
   position: absolute;
   bottom: 10%;
   right: 0;
   width: 15%;
 }
-
 .bam-exam-wrap .intro {
   font-size: 1.25rem;
   overflow: hidden;
 }
-
 .bam-exam-wrap .intro .outer-wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 5%;
   padding-bottom: 2.5rem;
 }
-
 .bam-exam-wrap .intro h5 {
   position: absolute;
   bottom: 3px;
@@ -718,128 +554,91 @@ body.fix {
   color: #43aad4;
   opacity: 0;
 }
-
 .bam-exam-wrap .intro h5.active {
-  -webkit-animation: fadefix 1s 1.5s forwards;
-          animation: fadefix 1s 1.5s forwards;
+  animation: fadefix 1s 1.5s forwards;
 }
-
 .bam-exam-wrap .intro h5 a {
   color: #0e5b7b;
   text-decoration: underline;
 }
-
 .bam-exam-wrap .intro .intro-deco {
   position: absolute;
   width: 10%;
   top: 50%;
   left: -18%;
 }
-
 .bam-exam-wrap .intro .intro-left {
   width: 38%;
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2-deco {
   display: block;
   width: 50%;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2-deco.active {
-  -webkit-animation: fadein 0.5s forwards;
-          animation: fadein 0.5s forwards;
+  animation: fadein 0.5s forwards;
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2 {
   width: 80%;
   position: relative;
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  transform-origin: center right;
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
+  animation: showeffect 1.5s forwards;
 }
-
 @keyframes showeffect {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    transform: scale(0, 1);
   }
 }
-
 .bam-exam-wrap .intro .intro-left .bam-exam-h2.active::after {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper {
   z-index: 0;
   padding-bottom: 50px;
   overflow: visible;
   opacity: 0;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper.active {
-  -webkit-animation: fadefix 1s 1.5s forwards;
-          animation: fadefix 1s 1.5s forwards;
+  animation: fadefix 1s 1.5s forwards;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 25px;
   padding: 3% 1.5%;
   margin-top: 30px !important;
   margin-bottom: 0 !important;
-  -webkit-box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
   background: #FFF;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active::before, .bam-exam-wrap .intro .intro-left .swiper .swiper-slide.active::after {
   opacity: 1;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before, .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
@@ -847,74 +646,51 @@ body.fix {
   border-radius: 25px;
   opacity: 0;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before {
-  background: -webkit-gradient(linear, left top, right top, from(#53ccfb), to(#ffdfbb));
   background: linear-gradient(to right, #53ccfb, #ffdfbb);
-  -webkit-transform: translate(10px, 8px);
-          transform: translate(10px, 8px);
+  transform: translate(10px, 8px);
   opacity: 0;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after {
   background: #FFF;
   border: 3px solid #0e5b7b;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide img {
   z-index: 1;
   position: relative;
   display: block;
   width: 25%;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide div {
   z-index: 1;
   position: relative;
   width: 75%;
   text-align: center;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide div h4 {
   font-size: 1.5rem;
   letter-spacing: 3px;
   font-weight: 500;
 }
-
 .bam-exam-wrap .intro .intro-left .swiper .swiper-slide div p {
   white-space: nowrap;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0;
 }
-
 .bam-exam-wrap .intro .intro-right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+  flex: 1 0 0;
   margin-top: 15%;
   opacity: 0;
 }
-
 .bam-exam-wrap .intro .intro-right.active {
-  -webkit-animation: fadefix 1s 1.5s forwards;
-          animation: fadefix 1s 1.5s forwards;
+  animation: fadefix 1s 1.5s forwards;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   background: #ededed;
   border-radius: 50px;
@@ -922,7 +698,6 @@ body.fix {
   padding-top: 80%;
   margin-top: -10%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default article {
   position: absolute;
   top: 50%;
@@ -931,26 +706,21 @@ body.fix {
   font-size: 1.25rem;
   line-height: 175%;
   text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-1,
 .bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-2 {
   position: absolute;
   width: 20%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-1 {
   bottom: 0;
   left: -10%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default .intro-default-deco-2 {
   top: -10%;
   right: 3%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default .intro-hand {
   z-index: 1;
   position: absolute;
@@ -958,47 +728,37 @@ body.fix {
   width: 10%;
   top: 75%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .bam-exam-wrap .intro .intro-right .intro-default .intro-hand.active {
-  -webkit-animation: handintro 4s 3s infinite;
-          animation: handintro 4s 3s infinite;
+  animation: handintro 4s 3s infinite;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block {
   display: none;
   text-align: justify;
   padding-top: 5%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block ul,
 .bam-exam-wrap .intro .intro-right .intro-block ol {
   margin-left: 2rem;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll {
   height: 500px;
   overflow-y: auto;
   padding-right: 3%;
   -webkit-overflow-scrolling: touch;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar {
   width: 5px;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar-track {
   border-radius: 10px;
   background: #ededed;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block .intro-scroll::-webkit-scrollbar-thumb {
   background: #0e5b7b;
   border-radius: 10px;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block h4 {
   display: inline-block;
   font-size: 1.25rem;
@@ -1009,339 +769,186 @@ body.fix {
   font-weight: 500;
   border-radius: 50px;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block article {
   margin: 1rem 0 1.5rem 0;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block article span {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, transparent), color-stop(19%, #ffe360), color-stop(90%, #ffe360), color-stop(91%, transparent));
   background: linear-gradient(to bottom, transparent 18%, #ffe360 19%, #ffe360 90%, transparent 91%);
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block table {
   border-collapse: collapse;
   max-width: 100%;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block table th {
   text-align: center;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block table td, .bam-exam-wrap .intro .intro-right .intro-block table th {
   border: 1px solid #3293d9;
   padding: 0.5rem;
 }
-
 .bam-exam-wrap .intro .intro-right .intro-block table .td-width {
   width: 3.75rem;
   text-align: center;
 }
-
 .bam-exam-wrap .link {
   padding-top: 8%;
   text-align: center;
   overflow: hidden;
 }
-
 .bam-exam-wrap .link .outer-wrap {
   position: relative;
 }
-
 .bam-exam-wrap .link .link-deco-1,
 .bam-exam-wrap .link .link-deco-2,
 .bam-exam-wrap .link .link-deco-3 {
   position: absolute;
   opacity: 0.5;
 }
-
 .bam-exam-wrap .link .link-deco-1 {
   right: 3%;
   top: 15%;
   width: 10%;
 }
-
 .bam-exam-wrap .link .link-deco-2 {
   left: -5%;
   top: 50%;
   width: 15%;
 }
-
 .bam-exam-wrap .link h2 {
   position: relative;
   width: 35%;
   margin: auto;
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2-deco {
   display: block;
   width: 50%;
   opacity: 0;
   margin: auto;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2-deco.active {
-  -webkit-animation: fadein 0.5s forwards;
-          animation: fadein 0.5s forwards;
+  animation: fadein 0.5s forwards;
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2 {
   position: relative;
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: #FFF;
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
+  transform-origin: center right;
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2.active::after {
-  -webkit-animation: showeffect 1.5s forwards;
-          animation: showeffect 1.5s forwards;
+  animation: showeffect 1.5s forwards;
 }
-
 @keyframes showeffect {
   to {
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
+    transform: scale(0, 1);
   }
 }
-
 .bam-exam-wrap .link h2 .bam-exam-h2.active::after {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-
 .bam-exam-wrap .link .link-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: auto;
   margin-top: 3%;
 }
-
 .bam-exam-wrap .link .link-flex div {
   width: 100%;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
-
 .bam-exam-wrap .link .link-flex div.active {
-  -webkit-animation: fadein 1s 1s forwards;
-          animation: fadein 1s 1s forwards;
+  animation: fadein 1s 1s forwards;
 }
-
 .bam-exam-wrap .link .link-flex div a {
   display: block;
   color: #FFF;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
-
-@-webkit-keyframes badge {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  70% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
-  }
-}
-
 @keyframes badge {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   70% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
+    transform: translateX(10%);
   }
 }
-
-@-webkit-keyframes badgehide {
-  from {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
-  }
-  to {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
 @keyframes badgehide {
   from {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
+    transform: translateX(10%);
   }
   to {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
-
-@-webkit-keyframes kv {
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes kv {
   to {
     width: 100%;
   }
 }
-
-@-webkit-keyframes fadefix {
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadefix {
   to {
     opacity: 1;
   }
 }
-
-@-webkit-keyframes fadein {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, 0) scale(1) rotate(0);
-            transform: translate(0, 0) scale(1) rotate(0);
-  }
-}
-
 @keyframes fadein {
   to {
     opacity: 1;
-    -webkit-transform: translate(0, 0) scale(1) rotate(0);
-            transform: translate(0, 0) scale(1) rotate(0);
+    transform: translate(0, 0) scale(1) rotate(0);
   }
 }
-
-@-webkit-keyframes hint {
-  50% {
-    -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-    -webkit-transform: translateY(-75%) scale(1.05);
-            transform: translateY(-75%) scale(1.05);
-  }
-}
-
 @keyframes hint {
   50% {
-    -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-    -webkit-transform: translateY(-75%) scale(1.05);
-            transform: translateY(-75%) scale(1.05);
+    filter: grayscale(1);
+    transform: translateY(-75%) scale(1.05);
   }
 }
-
-@-webkit-keyframes lineeffect {
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-
 @keyframes lineeffect {
   to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
-
-@-webkit-keyframes handintro {
-  60%, 70%, 80%, 100% {
-    top: 40%;
-    left: -50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-  65%, 75% {
-    top: 40%;
-    left: -50%;
-    -webkit-transform: translate(-50%, -50%) scale(0.9);
-            transform: translate(-50%, -50%) scale(0.9);
-  }
-}
-
 @keyframes handintro {
   60%, 70%, 80%, 100% {
     top: 40%;
     left: -50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
   65%, 75% {
     top: 40%;
     left: -50%;
-    -webkit-transform: translate(-50%, -50%) scale(0.9);
-            transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
   }
 }
-
-@-webkit-keyframes handinfo {
-  60%, 70%, 80%, 100% {
-    top: 42%;
-    left: -35%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-  65%, 75% {
-    top: 42%;
-    left: -35%;
-    -webkit-transform: translate(-50%, -50%) scale(0.9);
-            transform: translate(-50%, -50%) scale(0.9);
-  }
-}
-
 @keyframes handinfo {
   60%, 70%, 80%, 100% {
     top: 42%;
     left: -35%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
   65%, 75% {
     top: 42%;
     left: -35%;
-    -webkit-transform: translate(-50%, -50%) scale(0.9);
-            transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .bam-exam-wrap .link-flex a:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
-
 @media only screen and (max-width: 1440px) {
   .bam-exam-wrap .badge {
     width: 125px;
@@ -1368,8 +975,9 @@ body.fix {
     font-size: 1rem;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn {
-    width: 250px;
+    width: 325px;
     padding: 0.5rem 0;
+    padding-left: 1rem;
     font-size: 1.5rem;
   }
   .bam-exam-wrap .info .info-left .info-block h5 {
@@ -1428,7 +1036,6 @@ body.fix {
     font-size: 1.1rem;
   }
 }
-
 @media only screen and (max-width: 1024px) {
   .bam-exam-wrap {
     width: 100%;
@@ -1487,14 +1094,12 @@ body.fix {
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-1 {
     top: -4%;
     left: -10%;
-    -webkit-transform: translate(50%, 30%) scale(0.8) rotate(15deg);
-            transform: translate(50%, 30%) scale(0.8) rotate(15deg);
+    transform: translate(50%, 30%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-2 {
     top: 88%;
     left: 3%;
-    -webkit-transform: translate(40%, -10%) scale(0.8) rotate(15deg);
-            transform: translate(40%, -10%) scale(0.8) rotate(15deg);
+    transform: translate(40%, -10%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-3 {
     display: none;
@@ -1502,26 +1107,22 @@ body.fix {
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-4 {
     top: -8%;
     left: 12%;
-    -webkit-transform: translate(45%, 40%) scale(0.8) rotate(15deg);
-            transform: translate(45%, 40%) scale(0.8) rotate(15deg);
+    transform: translate(45%, 40%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-5 {
     top: 3%;
     left: 80%;
-    -webkit-transform: translate(-50%, 30%) scale(0.8) rotate(15deg);
-            transform: translate(-50%, 30%) scale(0.8) rotate(15deg);
+    transform: translate(-50%, 30%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-6 {
     top: -8%;
     left: 88%;
-    -webkit-transform: translate(-50%, 35%) scale(0.8) rotate(15deg);
-            transform: translate(-50%, 35%) scale(0.8) rotate(15deg);
+    transform: translate(-50%, 35%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .outer-wrap .bam-exam-q-deco-7 {
     top: 85%;
     left: 87%;
-    -webkit-transform: translate(-45%, -20%) scale(0.8) rotate(15deg);
-            transform: translate(-45%, -20%) scale(0.8) rotate(15deg);
+    transform: translate(-45%, -20%) scale(0.8) rotate(15deg);
   }
   .bam-exam-wrap .question .question-bg {
     width: 100%;
@@ -1549,9 +1150,10 @@ body.fix {
     margin-top: 3%;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn {
-    width: 45%;
+    width: 60%;
     font-size: 4.5vw;
     padding: 1.5vw 0;
+    padding-left: 1.5vw;
   }
   .bam-exam-wrap .wave-info {
     width: 100%;
@@ -1589,8 +1191,7 @@ body.fix {
     border-radius: 4vw;
   }
   .bam-exam-wrap .info .info-left .info-block article a::before {
-    -webkit-transform: translate(1vw, 1.5vw);
-            transform: translate(1vw, 1.5vw);
+    transform: translate(1vw, 1.5vw);
     padding-left: 5vw;
   }
   .bam-exam-wrap .info .info-left .info-block article a::after {
@@ -1602,7 +1203,7 @@ body.fix {
   .bam-exam-wrap .info .info-left .info-block article a p::after {
     position: absolute;
     display: block;
-    content: '';
+    content: "";
     top: 50%;
     right: 0;
     width: 5vw;
@@ -1610,8 +1211,7 @@ body.fix {
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: contain !important;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   .bam-exam-wrap .info .info-left .info-block article .info-dropdown {
     position: relative;
@@ -1637,7 +1237,7 @@ body.fix {
   }
   .bam-exam-wrap .info .info-left .info-block article .info-dropdown .info-img {
     width: 90%;
-    padding-top: calc(50% * 0.9);
+    padding-top: 45%;
     margin: 3vw auto;
     border-radius: 7vw;
   }
@@ -1682,10 +1282,8 @@ body.fix {
     height: auto;
     margin: 0;
     border-radius: 50%;
-    -webkit-box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.75);
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.75);
+    transform: translateY(-50%);
   }
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-prev::after,
   .bam-exam-wrap .intro .intro-left .swiper .swiper-button-next::after {
@@ -1703,15 +1301,13 @@ body.fix {
     border-radius: 6vw;
     padding: 3vw;
     margin-top: 0 !important;
-    -webkit-box-shadow: 0 0.5vw 5vw -1vw rgba(0, 0, 0, 0.25);
-            box-shadow: 0 0.5vw 5vw -1vw rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.5vw 5vw -1vw rgba(0, 0, 0, 0.25);
   }
   .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before, .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after {
     border-radius: 5vw;
   }
   .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::before {
-    -webkit-transform: translate(1vw, 1.5vw);
-            transform: translate(1vw, 1.5vw);
+    transform: translate(1vw, 1.5vw);
   }
   .bam-exam-wrap .intro .intro-left .swiper .swiper-slide::after {
     border-width: 2px;
@@ -1757,8 +1353,7 @@ body.fix {
     width: 10vw;
     top: 50%;
     left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   .bam-exam-wrap .intro .intro-right .intro-block h4 {
     display: inline-block;
@@ -1829,5 +1424,4 @@ body.fix {
     width: 100%;
     margin: 3% 0;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
