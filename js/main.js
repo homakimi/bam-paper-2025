@@ -1,5 +1,10 @@
 var headerHeight;
 var introSwiper;
+var randomEasy = parseInt(Math.random()*5);
+var randomMedium = parseInt(Math.random()*5);
+var randomHard = parseInt(Math.random()*5);
+var score = 0;
+
 $(function() {
     // for nanshan
     if($('header').length > 0) {
@@ -77,6 +82,16 @@ $(function() {
     });
 
     if(window.innerWidth <= 1024) $('.intro-block:first-child').show();
+
+    $('.question-block-1 .question-block-effect h3 p').text(qEasy[randomEasy].q);
+    $('.question-block-1 .question-block-flex a:first-child').html(qEasy[randomEasy].aa);
+    $('.question-block-1 .question-block-flex a:last-child').html(qEasy[randomEasy].ab);
+    $('.question-block-2 .question-block-effect h3 p').text(qMedium[randomMedium].q);
+    $('.question-block-2 .question-block-flex a:first-child').html(qMedium[randomMedium].aa);
+    $('.question-block-2 .question-block-flex a:last-child').html(qMedium[randomMedium].ab);
+    $('.question-block-3 .question-block-effect h3 p').text(qHard[randomHard].q);
+    $('.question-block-3 .question-block-flex a:first-child').html(qHard[randomHard].aa);
+    $('.question-block-3 .question-block-flex a:last-child').html(qHard[randomHard].ab);
 })
 
 var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
@@ -176,9 +191,6 @@ $(document)
 .on('mousedown', 'img', function(e) {
     e.preventDefault();
 })
-.on('click', '.question-btn', function() {
-    $('.bam-exam-q-deco').addClass('active');
-})
 .on('click', '.info-a', function() {
     if(!$(this).hasClass('active')) {
         infoClick = true;
@@ -213,6 +225,49 @@ $(document)
         $('.intro-block').eq($(this).index()).fadeIn();
     }
 })
+.on('click', '.question-btn', function() {
+    $('.bam-exam-q-deco').addClass('active');
+    $('.question-intro').hide();
+    $('.question-intro').next('.question-block').show();
+    $('.question-intro').next('.question-block').find('.question-block-effect').addClass('active');
+})
+.on('click', '.question-block-flex a', function() {
+    if(!$(this).hasClass('active')) {
+        $(this).closest('.question-block-flex').find('a').removeClass('active');
+        $(this).addClass('active');
+        $(this).closest('.question-block').find('.question-block-btn').addClass('active');
+    }
+})
+.on('click', '.question-block-btn.active', function() {
+    $(this).closest('.question-block').hide();
+    $(this).closest('.question-block').next('.question-block').show();
+    $(this).closest('.question-block').next('.question-block').find('.question-block-effect').addClass('active');
+    if($(this).closest('.question-block').find('.question-block-flex a.active [data-correct]').data('correct') !== undefined) {
+        score = score + parseInt($(this).closest('.question-block').find('.question-block-flex a.active [data-correct]').data('correct'));
+    }
+    console.log(score);
+    
+    if($('.question-result').css('display') == 'block') {
+        if(score <= 4) {
+            $('.question-result-img-1').show();
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $('.info').offset().top - headerHeight }, 1000 )
+            }, 2000)
+        }
+        if(score >= 5 && score <=7) {
+            $('.question-result-img-2').show();
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $('.info').offset().top - headerHeight }, 1000 )
+            }, 2000)
+        }
+        if(score >= 8) {
+            $('.question-result-img-3').show();
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $('.intro').offset().top - headerHeight }, 2000 )
+            }, 2000)
+        }
+    }
+})
 
 function urlDetect() {
     if(window.location.href.indexOf('pin') > 0) {
@@ -221,3 +276,85 @@ function urlDetect() {
         $('body, html').animate({ scrollTop: $('.'+_searchParams).offset().top - headerHeight }, 1000);
     }
 }
+
+var qEasy = [
+    {
+        'q': '40-64歲者，全身健康檢查應多久做一次？',
+        'aa': '<p>有空再做即可</p>',
+        'ab': '<p data-correct="2">約2~3年要做一次</p>',
+    },
+    {
+        'q': '腰圍的增加會提高心臟疾病的風險。',
+        'aa': '<p data-correct="2">正確</p>',
+        'ab': '<p>錯誤</p>',
+    },
+    {
+        'q': '18歲以上的民眾建議每年至少要量一次血壓。',
+        'aa': '<p data-correct="2">正確</p>',
+        'ab': '<p>錯誤</p>',
+    },
+    {
+        'q': '只有糖尿病患者才需要定期檢測血糖。',
+        'aa': '<p>正確</p>',
+        'ab': '<p data-correct="2">錯誤</p>',
+    },
+    {
+        'q': '適量的鹽分攝取可以降低高血壓的風險。',
+        'aa': '<p data-correct="2">正確</p>',
+        'ab': '<p>錯誤</p>',
+    },
+]
+var qMedium = [
+    {
+        'q': '我有做過勞工體檢了，可以取代健康檢查。',
+        'aa': '<p>正確</p>',
+        'ab': '<p data-correct="3">錯誤</p>',
+    },
+    {
+        'q': '理想的BMI值範圍應為18.5~24.9。',
+        'aa': '<p data-correct="3">正確</p>',
+        'ab': '<p>錯誤</p>',
+    },
+    {
+        'q': '理想的血壓值範圍應等於或小於＿＿＿？',
+        'aa': '<p data-correct="3">120/80mmHg</p>',
+        'ab': '<p>140/100mmHg</p>',
+    },
+    {
+        'q': '飲食中完全避免糖分可以防止糖尿病的發生。',
+        'aa': '<p>正確</p>',
+        'ab': '<p data-correct="3">錯誤</p>',
+    },
+    {
+        'q': '只有肥胖的人才會患高血糖。',
+        'aa': '<p>正確</p>',
+        'ab': '<p data-correct="3">錯誤</p>',
+    },
+]
+var qHard = [
+    {
+        'q': '隔天早上要健檢，我從什麼時候開始要空腹？',
+        'aa': '<p data-correct="5">前一天晚上12:00開始</p>',
+        'ab': '<p>前一天晚餐就禁食保持空腹</p>',
+    },
+    {
+        'q': '我會計算我的BMI值：',
+        'aa': '<p>BMI = 腰圍(公分) / 身高<span class="num-upper">2</span>(公尺)</p>',
+        'ab': '<p data-correct="5">BMI = 體重(公斤) / 身高<span class="num-upper">2</span>(公尺)</p>',
+    },
+    {
+        'q': '高血壓病患只要運動和飲食控制，就不用借助藥物治療了。',
+        'aa': '<p>正確</p>',
+        'ab': '<p data-correct="5">錯誤</p>',
+    },
+    {
+        'q': '我聽過血糖密碼126，是指空腹八小時的血糖值多少則為糖尿病？',
+        'aa': '<p>小於或等於126 mg/dl</p>',
+        'ab': '<p data-correct="5">大於或等於126 mg/dl</p>',
+    },
+    {
+        'q': '高密度脂蛋白（好的膽固醇）過低也可能增加心血管疾病的風險。',
+        'aa': '<p data-correct="5">正確</p>',
+        'ab': '<p>錯誤</p>',
+    },
+]

@@ -147,46 +147,173 @@ $highlight: #ffe360
                 text-align: center
                 > div
                     display: inline-block
+                    width: 60%
+                    margin: auto
                     +showeffectv
-                h3
-                    font-size: 2.5rem
-                    font-weight: bold
-                    line-height: normal
-                h4
-                    font-size: 1.75rem
-                    margin-bottom: 0.5rem
-                    font-weight: bold
-                    line-height: normal
-                h5
-                    font-weight: normal
-                    font-size: 1.1rem
-                    color: $sky
-                    letter-spacing: 1px
-                    line-height: normal
-                    margin-top: 1%
-                    opacity: 0
-                    transform: translateY(50px)
-                    &.active
-                        animation: fadein 0.5s 1.5s forwards
+                    .bam-exam-q-title
+                        display: block
+                        width: 100%
                 .question-btn
+                    position: relative
                     display: block
-                    width: 350px
+                    width: 10rem
                     color: #FFF
                     padding: 0.75rem 0
-                    padding-left: 1rem
                     margin: auto
-                    background-repeat: no-repeat! important
-                    background-position: center center! important
-                    background-size: cover! important
-                    border-radius: 100px
-                    font-size: 1.75rem
-                    filter: brightness(1.25)
+                    border-radius: 20px
+                    font-size: 1.5rem
                     opacity: 0
                     transform: scale(1.5) rotate(15deg)
-                    text-shadow: 0 2px 2px rgba(0,0,0,0.5)
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.35)
+                    background: $water
+                    &::before,
+                    &::after
+                        z-index: -1
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        border-radius: 20px
+                    &::before
+                        background: linear-gradient(to right, $blue, $orange)
+                        transform: translate(8px, 8px)
+                    &::after
+                        background: $water
+                        border: 2px solid #FFF
                     &.active
                         animation: fadein 0.5s 1s forwards
+
+            .question-block
+                position: absolute
+                top: 55%
+                left: 50%
+                width: 100%
+                height: 100%
+                transform: translate(-50%, -50%)
+                font-size: 1.5rem
+                text-align: center
+                .question-block-center
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    width: 85%
+                    height: 50%
+                    margin: 0 auto
+                    margin-top: 20%
+                    border-radius: 0 0 150px 150px
+                    overflow: hidden
+                .question-block-effect
+                    +showeffect
+                    width: 100%
+                    height: 100%
+                    h3
+                        font-weight: normal
+                        font-size: 1.6rem
+                        p
+                            display: inline-block
+                    .question-block-flex
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        gap: 1rem
+                        padding: 0 10%
+                        margin: 1.5rem 0
+                        a
+                            position: relative
+                            display: block
+                            flex: 1 0 0
+                            padding: 0.5rem 0
+                            margin: auto
+                            border-radius: 20px
+                            font-size: 1.25rem
+                            box-shadow: 0 5px 12px rgba(0,0,0,0.25)
+                            &:nth-child(1)
+                                animation: btnpop 0.25s 1s 2 alternate
+                            &:nth-child(2)
+                                animation: btnpop 0.25s 1.1s 2 alternate
+                            @keyframes btnpop
+                                to
+                                    transform: translateY(-15%)
+                            .num-upper
+                                display: inline-block
+                                transform-origin: top center
+                                transform: scale(0.75)
+                            &::before,
+                            &::after
+                                z-index: -1
+                                position: absolute
+                                display: block
+                                content: ''
+                                width: 100%
+                                height: 100%
+                                top: 0
+                                left: 0
+                                opacity: 0
+                                border-radius: 20px
+                            &::before
+                                background: linear-gradient(to right, $blue, $orange)
+                                transform: translate(8px, 8px)
+                            &::after
+                                background: #FFF
+                                border: 2px solid $navy
+                            &.active
+                                &::before,
+                                &::after
+                                    opacity: 1
+                    .question-block-page
+                        position: absolute
+                        right: 0
+                        left: 0
+                        margin: auto
+                        bottom: 5rem
+                        color: $water
+                    .question-block-btn
+                        display: block
+                        position: absolute
+                        right: 0
+                        left: 0
+                        bottom: 1rem
+                        padding: 0.5rem 0
+                        margin: auto
+                        color: #FFF
+                        background: #CCC
+                        width: 7rem
+                        border-radius: 20px
+                        border: 2px solid #FFF
+                        cursor: default
+                        &.active
+                            cursor: pointer
+                            background: $water
+                            &::before
+                                filter: none
+                        &::before
+                            z-index: -1
+                            position: absolute
+                            display: block
+                            content: ''
+                            width: 100%
+                            height: 100%
+                            top: 0
+                            left: 0
+                            border-radius: 20px
+                            background: linear-gradient(to right, $blue, $orange)
+                            transform: translate(0, 10px)
+                            filter: grayscale(1)
+            .question-result
+                .question-block-center
+                    margin-top: 15%
+                .question-block-effect
+                    height: auto
+                img
+                    width: 80%
+                    margin: 1.5% auto
+                p
+                    opacity: 0
+                    transform: translateY(25%)
+                    animation: fadein 0.5s 1s forwards
 
     .info
         z-index: 1
@@ -678,17 +805,18 @@ $highlight: #ffe360
             .question-bg
                 .question-intro
                     font-size: 1.25rem
-                    h3
-                        font-size: 1.75rem
-                    h4
-                        font-size: 1.5rem
-                    h5
-                        font-size: 1rem
-                    .question-btn
-                        width: 325px
-                        padding: 0.5rem 0
-                        padding-left: 1rem
-                        font-size: 1.5rem
+                .question-block
+                    font-size: 1.25rem
+                    .question-block-effect
+                        .question-block-flex
+                            padding: 0 5%
+                            a
+                                font-size: 1.2rem
+                        .question-block-page
+                            bottom: 4.5rem
+                        h3
+                            font-size: 1.35rem
+
 
         .info
             .info-left
@@ -813,26 +941,77 @@ $highlight: #ffe360
                 width: 100%
                 padding-top: 125%
                 .question-intro
-                    top: 45%
+                    top: 50%
                     letter-spacing: 0.1vw
                     font-size: 4vw
                     .bam-exam-pen
                         display: block
                         width: 15%
                         margin: 3% auto
-                    h3
-                        font-size: 7vw
-                    h4
-                        font-size: 5vw
-                    h5
-                        font-size: 3vw
-                        letter-spacing: 0
-                        margin-top: 3%
+                    > div
+                        width: 70%
                     .question-btn
-                        width: 60%
+                        width: 40%
+                        padding: 2.5vw 0
                         font-size: 4.5vw
-                        padding: 1.5vw 0
-                        padding-left: 1.5vw
+                        &::before,
+                        &::after
+                            border-radius: 5vw
+                        &::before
+                            transform: translate(1.5vw, 1.5vw)
+
+                .question-block
+                    top: 55%
+                    font-size: 4vw
+                    .question-block-center
+                        width: 75%
+                        height: 60%
+                        margin-top: 20%
+                        border-radius: 10vw 10vw 25vw 25vw
+                    .question-block-effect
+                        h3
+                            font-size: 4vw
+                            padding: 0 5%
+                            p
+                                display: block
+                                margin-top: 3%
+                        .question-block-flex
+                            display: block
+                            padding: 0 3%
+                            margin: 5vw 0
+                            a
+                                width: 100%
+                                padding: 2vw 0
+                                border-radius: 4vw
+                                margin: 3vw 0
+                                font-size: 4vw
+                                box-shadow: 0 1vw 2.5vw rgba(0,0,0,0.25)
+                                &::before,
+                                &::after
+                                    border-radius: 4vw
+                                &::before
+                                    transform: translate(1.5vw, 1.5vw)
+                        .question-block-page
+                            bottom: 14vw
+                            font-size: 3vw
+                        .question-block-btn
+                            bottom: 2.5vw
+                            padding: 2vw 0
+                            width: 30%
+                            border-radius: 4vw
+                            border: 2px solid #FFF
+                            &::before
+                                border-radius: 4vw
+                                transform: translate(0, 2vw)
+                .question-result
+                    .question-block-center
+                        margin-top: 20%
+                    .question-block-effect
+                        h3
+                            padding: 0
+                    img
+                        width: 100%
+                        margin: 3% auto
 
         .wave-info
             width: 100%

@@ -223,6 +223,8 @@ body.fix {
 }
 .bam-exam-wrap .question .question-bg .question-intro > div {
   display: inline-block;
+  width: 60%;
+  margin: auto;
   position: relative;
 }
 .bam-exam-wrap .question .question-bg .question-intro > div::after {
@@ -244,49 +246,212 @@ body.fix {
     transform: scale(1, 0);
   }
 }
-.bam-exam-wrap .question .question-bg .question-intro h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: normal;
-}
-.bam-exam-wrap .question .question-bg .question-intro h4 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  line-height: normal;
-}
-.bam-exam-wrap .question .question-bg .question-intro h5 {
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #43aad4;
-  letter-spacing: 1px;
-  line-height: normal;
-  margin-top: 1%;
-  opacity: 0;
-  transform: translateY(50px);
-}
-.bam-exam-wrap .question .question-bg .question-intro h5.active {
-  animation: fadein 0.5s 1.5s forwards;
+.bam-exam-wrap .question .question-bg .question-intro > div .bam-exam-q-title {
+  display: block;
+  width: 100%;
 }
 .bam-exam-wrap .question .question-bg .question-intro .question-btn {
+  position: relative;
   display: block;
-  width: 350px;
+  width: 10rem;
   color: #FFF;
   padding: 0.75rem 0;
-  padding-left: 1rem;
   margin: auto;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  border-radius: 100px;
-  font-size: 1.75rem;
-  filter: brightness(1.25);
+  border-radius: 20px;
+  font-size: 1.5rem;
   opacity: 0;
   transform: scale(1.5) rotate(15deg);
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background: #3293d9;
+}
+.bam-exam-wrap .question .question-bg .question-intro .question-btn::before, .bam-exam-wrap .question .question-bg .question-intro .question-btn::after {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+.bam-exam-wrap .question .question-bg .question-intro .question-btn::before {
+  background: linear-gradient(to right, #53ccfb, #ffdfbb);
+  transform: translate(8px, 8px);
+}
+.bam-exam-wrap .question .question-bg .question-intro .question-btn::after {
+  background: #3293d9;
+  border: 2px solid #FFF;
 }
 .bam-exam-wrap .question .question-bg .question-intro .question-btn.active {
+  animation: fadein 0.5s 1s forwards;
+}
+.bam-exam-wrap .question .question-bg .question-block {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 20%;
+  border-radius: 0 0 150px 150px;
+  overflow: hidden;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  transform-origin: center right;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect.active::after {
+  animation: showeffect 1.5s forwards;
+}
+@keyframes showeffect {
+  to {
+    transform: scale(0, 1);
+  }
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect h3 {
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect h3 p {
+  display: inline-block;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 10%;
+  margin: 1.5rem 0;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a {
+  position: relative;
+  display: block;
+  flex: 1 0 0;
+  padding: 0.5rem 0;
+  margin: auto;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a:nth-child(1) {
+  animation: btnpop 0.25s 1s 2 alternate;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a:nth-child(2) {
+  animation: btnpop 0.25s 1.1s 2 alternate;
+}
+@keyframes btnpop {
+  to {
+    transform: translateY(-15%);
+  }
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a .num-upper {
+  display: inline-block;
+  transform-origin: top center;
+  transform: scale(0.75);
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::before, .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::after {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 20px;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::before {
+  background: linear-gradient(to right, #53ccfb, #ffdfbb);
+  transform: translate(8px, 8px);
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::after {
+  background: #FFF;
+  border: 2px solid #0e5b7b;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a.active::before, .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a.active::after {
+  opacity: 1;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-page {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 5rem;
+  color: #3293d9;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 1rem;
+  padding: 0.5rem 0;
+  margin: auto;
+  color: #FFF;
+  background: #CCC;
+  width: 7rem;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+  cursor: default;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn.active {
+  cursor: pointer;
+  background: #3293d9;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn.active::before {
+  filter: none;
+}
+.bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn::before {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(to right, #53ccfb, #ffdfbb);
+  transform: translate(0, 10px);
+  filter: grayscale(1);
+}
+.bam-exam-wrap .question .question-bg .question-result .question-block-center {
+  margin-top: 15%;
+}
+.bam-exam-wrap .question .question-bg .question-result .question-block-effect {
+  height: auto;
+}
+.bam-exam-wrap .question .question-bg .question-result img {
+  width: 80%;
+  margin: 1.5% auto;
+}
+.bam-exam-wrap .question .question-bg .question-result p {
+  opacity: 0;
+  transform: translateY(25%);
   animation: fadein 0.5s 1s forwards;
 }
 .bam-exam-wrap .info {
@@ -965,20 +1130,20 @@ body.fix {
   .bam-exam-wrap .question .question-bg .question-intro {
     font-size: 1.25rem;
   }
-  .bam-exam-wrap .question .question-bg .question-intro h3 {
-    font-size: 1.75rem;
+  .bam-exam-wrap .question .question-bg .question-block {
+    font-size: 1.25rem;
   }
-  .bam-exam-wrap .question .question-bg .question-intro h4 {
-    font-size: 1.5rem;
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex {
+    padding: 0 5%;
   }
-  .bam-exam-wrap .question .question-bg .question-intro h5 {
-    font-size: 1rem;
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a {
+    font-size: 1.2rem;
   }
-  .bam-exam-wrap .question .question-bg .question-intro .question-btn {
-    width: 325px;
-    padding: 0.5rem 0;
-    padding-left: 1rem;
-    font-size: 1.5rem;
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-page {
+    bottom: 4.5rem;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect h3 {
+    font-size: 1.35rem;
   }
   .bam-exam-wrap .info .info-left .info-block h5 {
     font-size: 1.1rem;
@@ -1129,7 +1294,7 @@ body.fix {
     padding-top: 125%;
   }
   .bam-exam-wrap .question .question-bg .question-intro {
-    top: 45%;
+    top: 50%;
     letter-spacing: 0.1vw;
     font-size: 4vw;
   }
@@ -1138,22 +1303,81 @@ body.fix {
     width: 15%;
     margin: 3% auto;
   }
-  .bam-exam-wrap .question .question-bg .question-intro h3 {
-    font-size: 7vw;
-  }
-  .bam-exam-wrap .question .question-bg .question-intro h4 {
-    font-size: 5vw;
-  }
-  .bam-exam-wrap .question .question-bg .question-intro h5 {
-    font-size: 3vw;
-    letter-spacing: 0;
-    margin-top: 3%;
+  .bam-exam-wrap .question .question-bg .question-intro > div {
+    width: 70%;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn {
-    width: 60%;
+    width: 40%;
+    padding: 2.5vw 0;
     font-size: 4.5vw;
-    padding: 1.5vw 0;
-    padding-left: 1.5vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-intro .question-btn::before, .bam-exam-wrap .question .question-bg .question-intro .question-btn::after {
+    border-radius: 5vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-intro .question-btn::before {
+    transform: translate(1.5vw, 1.5vw);
+  }
+  .bam-exam-wrap .question .question-bg .question-block {
+    top: 55%;
+    font-size: 4vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-center {
+    width: 75%;
+    height: 60%;
+    margin-top: 20%;
+    border-radius: 10vw 10vw 25vw 25vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect h3 {
+    font-size: 4vw;
+    padding: 0 5%;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect h3 p {
+    display: block;
+    margin-top: 3%;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex {
+    display: block;
+    padding: 0 3%;
+    margin: 5vw 0;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a {
+    width: 100%;
+    padding: 2vw 0;
+    border-radius: 4vw;
+    margin: 3vw 0;
+    font-size: 4vw;
+    box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.25);
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::before, .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::after {
+    border-radius: 4vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-flex a::before {
+    transform: translate(1.5vw, 1.5vw);
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-page {
+    bottom: 14vw;
+    font-size: 3vw;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn {
+    bottom: 2.5vw;
+    padding: 2vw 0;
+    width: 30%;
+    border-radius: 4vw;
+    border: 2px solid #FFF;
+  }
+  .bam-exam-wrap .question .question-bg .question-block .question-block-effect .question-block-btn::before {
+    border-radius: 4vw;
+    transform: translate(0, 2vw);
+  }
+  .bam-exam-wrap .question .question-bg .question-result .question-block-center {
+    margin-top: 20%;
+  }
+  .bam-exam-wrap .question .question-bg .question-result .question-block-effect h3 {
+    padding: 0;
+  }
+  .bam-exam-wrap .question .question-bg .question-result img {
+    width: 100%;
+    margin: 3% auto;
   }
   .bam-exam-wrap .wave-info {
     width: 100%;
