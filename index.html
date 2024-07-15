@@ -13,9 +13,15 @@
             .question-bg {
                 background-image: url('img/bam-exam-q-bg.png');
             }
+            .question-bg::after {
+                background-image: url('img/bam-exam-q-bg-front.png');
+            }
             @media only screen and (max-width: 1024px) {
                 .question-bg {
                     background-image: url('img/bam-exam-q-bg-m.png');
+                }
+                .question-bg::after {
+                    background-image: url('img/bam-exam-q-bg-m-front.png');
                 }
                 .info .info-block article a p::after{
                     background-image: url('img/bam-exam-plus.svg');

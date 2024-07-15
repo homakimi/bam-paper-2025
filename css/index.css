@@ -211,6 +211,19 @@ body.fix {
   background-position: center center !important;
   background-size: contain !important;
 }
+.bam-exam-wrap .question .question-bg::after {
+  pointer-events: none;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+}
 .bam-exam-wrap .question .question-bg .question-intro {
   position: absolute;
   top: 55%;
