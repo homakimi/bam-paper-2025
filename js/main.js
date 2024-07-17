@@ -252,13 +252,13 @@ $(document)
             $('.question-result-img-1').show();
             setTimeout(function() {
                 $('body, html').animate({ scrollTop: $('.info').offset().top - headerHeight }, 1000 )
-            }, 2000)
+            }, 4000)
         }
         if(score >= 5 && score <=7) {
             $('.question-result-img-2').show();
             setTimeout(function() {
                 $('body, html').animate({ scrollTop: $('.info').offset().top - headerHeight }, 1000 )
-            }, 2000)
+            }, 4000)
         }
         if(score >= 8) {
             $('.question-result-img-3').show();
@@ -266,7 +266,7 @@ $(document)
             $('.info .bam-exam-h2, .info .bam-exam-h2-deco, .info-hand, .info-block, .info-default').addClass('active');
             setTimeout(function() {
                 $('body, html').animate({ scrollTop: $('.intro').offset().top - headerHeight }, 2000 )
-            }, 2000)
+            }, 4000)
         }
     }
 })

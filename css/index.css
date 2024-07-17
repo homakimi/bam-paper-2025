@@ -1323,6 +1323,7 @@ body.fix {
     width: 40%;
     padding: 2.5vw 0;
     font-size: 4.5vw;
+    border-radius: 5vw;
   }
   .bam-exam-wrap .question .question-bg .question-intro .question-btn::before, .bam-exam-wrap .question .question-bg .question-intro .question-btn::after {
     border-radius: 5vw;
