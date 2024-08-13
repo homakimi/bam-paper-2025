@@ -1,14 +1,484 @@
 @import 'style'
 
-$navy: #0e5b7b
-$blue: #53ccfb
-$water: #3293d9
-$sky: #43aad4
-$light: #ededed
-$orange: #ffdfbb
-$highlight: #ffe360
+$blue: #288fad
+$water: #25a7db
+$sky: #a6e6f7
+$light: #e6f0f3
+$orange: #fe7c3a
+$skin: #ffc0a4
 
 .bam-cancer-wrap
+    color: #626262
+    font-size: 1.25vw
+    letter-spacing: 0.1vw
+    .bam-cancer-title
+        display: block
+        width: 30%
+    .kv
+        position: relative
+        .front
+            position: absolute
+            top: 0
+            left: 0
+        h1
+            position: absolute
+            width: 28%
+            top: 15%
+            left: 6%
+        h2
+            position: absolute
+            color: $blue
+            font-size: 1.65vw
+            top: 65%
+            right: 4%
+        .kv-href
+            p
+                position: absolute
+                width: 12%
+                &:nth-child(1)
+                    top: 42%
+                    left: 22.5%
+                &:nth-child(2)
+                    top: 12%
+                    left: 35%
+                &:nth-child(3)
+                    top: 15%
+                    left: 53%
+                &:nth-child(4)
+                    top: 42%
+                    left: 64%
+
+    .map
+        position: relative
+        .map-top
+            position: relative
+            background: linear-gradient(to bottom, #FFF 75%, $light)
+            .map-talk,
+            .map-route
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+            .bam-cancer-title
+                position: absolute
+                top: 15%
+                right: 0
+                left: 0
+                margin: auto
+            .bam-cancer-bird
+                position: absolute
+                top: 15%
+                left: 66%
+                width: 4%
+            .map-swiper
+                position: absolute
+                width: 38%
+                top: 32%
+                right: 15%
+                overflow: hidden
+                .swiper
+                    overflow: visible
+                    padding: 3% 10%
+                .swiper-slide
+                    border-radius: 1.5vw
+                    padding: 5% 10% 5% 10%
+                    background: #FFF
+                    box-shadow: 0 0.25vw 1vw rgba(0,0,0,0.25)
+                    h3
+                        color: $blue
+                        text-align: center
+                        font-size: 3vw
+                        font-weight: 500
+                    article
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        flex-direction: row-reverse
+                        width: 100%
+                        gap: 5%
+                        margin: 5% 0
+                        img
+                            width: 38%
+                        p
+                            flex: 1 0 0
+                            font-size: 1.45vw
+                            span
+                                color: $orange
+                                font-size: 1.1em
+                    p.des
+                        font-size: 1vw
+                        text-align: center
+                .swiper-button-prev,
+                .swiper-button-next
+                    width: 12%
+                .swiper-button-prev
+                    left: 3%
+                .swiper-button-next
+                    right: 3%
+        .map-bottom
+            position: relative
+            background: $light
+            .bam-cancer-title
+                position: absolute
+                top: 9.5%
+                margin: auto
+                right: 0
+                left: 0
+            a
+                display: block
+                position: absolute
+                border-radius: 1.5vw
+                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.25)
+                white-space: nowrap
+                &.active
+                    p
+                        border-color: $orange
+                        &::before
+                            opacity: 1
+                &:nth-child(1)
+                    top: 10%
+                    left: 23.5%
+                &:nth-child(2)
+                    top: 11%
+                    left: 66%
+                &:nth-child(3)
+                    top: 59%
+                    left: 69.25%
+                &:nth-child(4)
+                    top: 55%
+                    left: 41%
+                p
+                    position: relative
+                    padding: 0.75vw 1.5vw
+                    background: #FFF
+                    border-radius: 1.5vw
+                    font-size: 1.5vw
+                    color: $orange
+                    border: 2px solid #FFF
+                &::before
+                    position: absolute
+                    display: block
+                    content: ''
+                    width: calc( 100% + 12px )
+                    height: calc( 100% + 12px )
+                    top: 50%
+                    left: 50%
+                    background: $skin
+                    border: 3px solid $orange
+                    border-radius: 1.9vw
+                    opacity: 0
+                    transform: translate(-50%, -50%)
+
+    .info
+        position: relative
+        &.protect
+            background: linear-gradient(to bottom, $light, #fff2da 12%)
+        &.support
+            background: linear-gradient(to bottom, #fff2da, #FFFFFF 15%, #FFFFFF 88%, #fcefe6 90%)
+        &.recover
+            background: #fcefe6
+        .bg
+            position: absolute
+            bottom: 0
+            left: 0
+        .bam-cancer-title
+            margin-left: 15%
+            padding-top: 8%
+        .info-wrap
+            width: 75%
+            height: 30vw
+            margin-left: 15%
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            .info-left
+                width: 40%
+                article
+                    position: relative
+                    color: #FFF
+                    border-radius: 1.5vw
+                    background: $blue
+                    padding: 5%
+                    margin-top: 5%
+                    &::after
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 4vw
+                        height: 4vw
+                        bottom: 0
+                        left: 15%
+                        transform: translateY(calc(100% - 1px))
+                    h3
+                        font-size: 1.5vw
+                        font-weight: 500
+                        margin-bottom: 1.5%
+            .info-right
+                width: 60%
+                margin-top: -9%
+                .info-tab
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    gap: 3%
+                    .icon-triangle
+                        display: block
+                        width: 1.5vw
+                        margin-top: 12%
+                    a
+                        position: relative
+                        display: block
+                        width: 7vw
+                        height: 7vw
+                        border-radius: 50%
+                        box-shadow: 0 0 1.5vw rgba(0,0,0,0.15)
+                        background: #FFF
+                        &.active
+                            img
+                                filter: none
+                            p
+                                color: #FFF
+                                background: $orange
+                        img
+                            display: block
+                            margin: auto
+                            margin-top: 10%
+                            width: 45%
+                            filter: hue-rotate(-180deg) brightness(0.9)
+                        p
+                            position: absolute
+                            border-radius: 10vw
+                            font-weight: 500
+                            color: $blue
+                            background: #FFF
+                            padding: 8% 16%
+                            font-size: 1.25vw
+                            white-space: nowrap
+                            left: 50%
+                            bottom: 0
+                            transform: translate(-50%, 10%)
+                            box-shadow: 0 0.35vw 1.5vw rgba(0,0,0,0.15)
+                .info-swiper
+                    position: relative
+                    width: 90%
+                    margin: auto
+                    overflow: hidden
+                    padding: 3% 15%
+                    text-align: center
+                    color: $blue
+                    .swiper
+                        overflow: visible
+                    .swiper-slide
+                        position: relative
+                        padding: 5% 0
+                        background: #FFF
+                        border-radius: 1.5vw
+                        box-shadow: 0 0 1vw rgba(0,0,0,0.25)
+                        font-weight: 500
+                        overflow: hidden
+                        img
+                            display: block
+                            width: 80%
+                            margin: auto
+                        article
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            flex-direction: column
+                            height: 5vw
+                        p
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            width: 5vw
+                            height: 5vw
+                            font-size: 0.9vw
+                            padding-left: 5%
+                            padding-top: 3%
+                            line-height: 125%
+                            position: absolute
+                            bottom: 0
+                            right: 0
+                            opacity: 0
+                            color: #FFF
+                            background: $blue
+                            border-top-left-radius: 100%
+                        &:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev)
+                            pointer-events: none
+                            opacity: 0
+                            transform: scale(0)! important
+                    .swiper-slide-prev
+                        pointer-events: none
+                        opacity: 0.75
+                        transform: translate3d(80%, 0, 0) scale(0.8)! important
+                    .swiper-slide-next
+                        pointer-events: none
+                        opacity: 0.75
+                        transform: translate3d(-80%, 0, 0) scale(0.8)! important
+                    .swiper-button-prev,
+                    .swiper-button-next
+                        width: 10%
+                    .swiper-button-prev
+                        left: 4%
+                    .swiper-button-next
+                        right: 4%
+
+    .insure
+        padding: 8% 0
+        .bam-cancer-title
+            margin-left: 15%
+        .insure-wrap
+            width: 70%
+            margin: auto
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .insure-block
+                position: relative
+                width: 49%
+                border-radius: 1.5vw
+                text-align: center
+                margin-top: 10%
+                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.25)
+                img
+                    display: block
+                    margin: auto
+                    width: 85%
+                    border-radius: 1.5vw
+                    margin-top: -12%
+                h3
+                    font-weight: 500
+                    color: $blue
+                    font-size: 1.75vw
+                    margin: 3% 0 1.5% 0
+                a
+                    width: 35%
+                    display: block
+                    padding: 2.5% 0
+                    margin: auto
+                    border-radius: 1.25vw
+                    color: #FFF
+                    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.25)
+                    background: linear-gradient(45deg, #f4996b, #f5af8b)
+                    transform: translateY(50%)
+
+    .notice
+        position: relative
+        background: linear-gradient(to bottom, #FFF, #e6f0f3 8%)
+        padding: 5% 0
+        .bam-cancer-title
+            margin-left: 15%
+        .notice-wrap
+            position: relative
+            width: 70%
+            margin: auto
+            margin-top: 1.5%
+            .bam-cancer-notice
+                position: absolute
+                display: block
+                width: 43%
+                right: 5%
+                top: 0
+                transform: translateY(-100%)
+            article
+                padding: 3%
+                border-radius: 2vw
+                border: 3px solid $sky
+                background: #FFF
+                ul
+                    margin-left: 1.5vw
+                    li
+                        margin: 1.5% 0
+                        &::marker
+                            color: $blue
     
+
+    .guide-lightbox
+        display: none
+        z-index: 99
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(0,0,0,0.75)
+        .guide-close
+            position: absolute
+            top: -8%
+            right: -1.5%
+            width: 5%
+        .guide-block
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 80%
+            border: 3px solid $sky
+            background: #FFF
+            transform: translate(-50%, -50%)
+            border-radius: 2vw
+            padding: 3% 3% 0 3%
+            h4
+                text-align: center
+                font-size: 2vw
+                color: $water
+                img
+                    display: inline-block
+                    width: 4.5%
+                    vertical-align: middle
+                    margin-right: 1%
+                    transform: translateY(-12%)
+            .guide-flex
+                display: flex
+                justify-content: center
+                align-items: stretch
+                margin-top: 1.5%
+                div
+                    position: relative
+                    width: 33.3%
+                    border-right: 1px solid $sky
+                    padding: 0 3%
+                    padding-bottom: 8%
+                    font-weight: 500
+                    &:last-child
+                        border: 0
+                    article
+                        margin: 8% 0
+                        a
+                            display: inline-block
+                            background: $light
+                            padding: 1% 5%
+                            border-radius: 5vw
+                            color: $blue
+                        p
+                            display: none
+                            color: $water
+                            margin-top: 3%
+                            img
+                                display: inline-block
+                                width: 7%
+                                vertical-align: middle
+                                margin-right: 1%
+                                transform: translateY(-8%)
+                    p.des
+                        position: absolute
+                        bottom: 10%
+                        width: 100%
+                        color: $water
+                        img
+                            display: inline-block
+                            width: 7%
+                            vertical-align: middle
+                            margin-right: 1%
+                            transform: translateY(-8%)
+
+
+    .btn-guide
+        position: fixed
+        display: block
+        width: 10%
+        right: 1.5%
+        top: 3%
+
 @media only screen and (max-width: 1024px)
     .bam-cancer-wrap

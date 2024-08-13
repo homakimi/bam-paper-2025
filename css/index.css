@@ -35,6 +35,9 @@ body.fix {
   display: block;
   width: 100%;
 }
+.bam-cancer-wrap .swiper-button::after {
+  display: none;
+}
 
 @media only screen and (min-width: 1025px) {
   .for-m {
@@ -45,4 +48,565 @@ body.fix {
   .for-pc {
     display: none !important;
   }
+}
+.bam-cancer-wrap {
+  color: #626262;
+  font-size: 1.25vw;
+  letter-spacing: 0.1vw;
+}
+.bam-cancer-wrap .bam-cancer-title {
+  display: block;
+  width: 30%;
+}
+.bam-cancer-wrap .kv {
+  position: relative;
+}
+.bam-cancer-wrap .kv .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bam-cancer-wrap .kv h1 {
+  position: absolute;
+  width: 28%;
+  top: 15%;
+  left: 6%;
+}
+.bam-cancer-wrap .kv h2 {
+  position: absolute;
+  color: #288fad;
+  font-size: 1.65vw;
+  top: 65%;
+  right: 4%;
+}
+.bam-cancer-wrap .kv .kv-href p {
+  position: absolute;
+  width: 12%;
+}
+.bam-cancer-wrap .kv .kv-href p:nth-child(1) {
+  top: 42%;
+  left: 22.5%;
+}
+.bam-cancer-wrap .kv .kv-href p:nth-child(2) {
+  top: 12%;
+  left: 35%;
+}
+.bam-cancer-wrap .kv .kv-href p:nth-child(3) {
+  top: 15%;
+  left: 53%;
+}
+.bam-cancer-wrap .kv .kv-href p:nth-child(4) {
+  top: 42%;
+  left: 64%;
+}
+.bam-cancer-wrap .map {
+  position: relative;
+}
+.bam-cancer-wrap .map .map-top {
+  position: relative;
+  background: linear-gradient(to bottom, #FFF 75%, #e6f0f3);
+}
+.bam-cancer-wrap .map .map-top .map-talk,
+.bam-cancer-wrap .map .map-top .map-route {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bam-cancer-wrap .map .map-top .bam-cancer-title {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.bam-cancer-wrap .map .map-top .bam-cancer-bird {
+  position: absolute;
+  top: 15%;
+  left: 66%;
+  width: 4%;
+}
+.bam-cancer-wrap .map .map-top .map-swiper {
+  position: absolute;
+  width: 38%;
+  top: 32%;
+  right: 15%;
+  overflow: hidden;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper {
+  overflow: visible;
+  padding: 3% 10%;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide {
+  border-radius: 1.5vw;
+  padding: 5% 10% 5% 10%;
+  background: #FFF;
+  box-shadow: 0 0.25vw 1vw rgba(0, 0, 0, 0.25);
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide h3 {
+  color: #288fad;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 500;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 5%;
+  margin: 5% 0;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article img {
+  width: 38%;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p {
+  flex: 1 0 0;
+  font-size: 1.45vw;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p span {
+  color: #fe7c3a;
+  font-size: 1.1em;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide p.des {
+  font-size: 1vw;
+  text-align: center;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev,
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
+  width: 12%;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev {
+  left: 3%;
+}
+.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
+  right: 3%;
+}
+.bam-cancer-wrap .map .map-bottom {
+  position: relative;
+  background: #e6f0f3;
+}
+.bam-cancer-wrap .map .map-bottom .bam-cancer-title {
+  position: absolute;
+  top: 9.5%;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+.bam-cancer-wrap .map .map-bottom a {
+  display: block;
+  position: absolute;
+  border-radius: 1.5vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+.bam-cancer-wrap .map .map-bottom a.active p {
+  border-color: #fe7c3a;
+}
+.bam-cancer-wrap .map .map-bottom a.active p::before {
+  opacity: 1;
+}
+.bam-cancer-wrap .map .map-bottom a:nth-child(1) {
+  top: 10%;
+  left: 23.5%;
+}
+.bam-cancer-wrap .map .map-bottom a:nth-child(2) {
+  top: 11%;
+  left: 66%;
+}
+.bam-cancer-wrap .map .map-bottom a:nth-child(3) {
+  top: 59%;
+  left: 69.25%;
+}
+.bam-cancer-wrap .map .map-bottom a:nth-child(4) {
+  top: 55%;
+  left: 41%;
+}
+.bam-cancer-wrap .map .map-bottom a p {
+  position: relative;
+  padding: 0.75vw 1.5vw;
+  background: #FFF;
+  border-radius: 1.5vw;
+  font-size: 1.5vw;
+  color: #fe7c3a;
+  border: 2px solid #FFF;
+}
+.bam-cancer-wrap .map .map-bottom a::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  top: 50%;
+  left: 50%;
+  background: #ffc0a4;
+  border: 3px solid #fe7c3a;
+  border-radius: 1.9vw;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+.bam-cancer-wrap .info {
+  position: relative;
+}
+.bam-cancer-wrap .info.protect {
+  background: linear-gradient(to bottom, #e6f0f3, #fff2da 12%);
+}
+.bam-cancer-wrap .info.support {
+  background: linear-gradient(to bottom, #fff2da, #FFFFFF 15%, #FFFFFF 88%, #fcefe6 90%);
+}
+.bam-cancer-wrap .info.recover {
+  background: #fcefe6;
+}
+.bam-cancer-wrap .info .bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.bam-cancer-wrap .info .bam-cancer-title {
+  margin-left: 15%;
+  padding-top: 8%;
+}
+.bam-cancer-wrap .info .info-wrap {
+  width: 75%;
+  height: 30vw;
+  margin-left: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bam-cancer-wrap .info .info-wrap .info-left {
+  width: 40%;
+}
+.bam-cancer-wrap .info .info-wrap .info-left article {
+  position: relative;
+  color: #FFF;
+  border-radius: 1.5vw;
+  background: #288fad;
+  padding: 5%;
+  margin-top: 5%;
+}
+.bam-cancer-wrap .info .info-wrap .info-left article::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4vw;
+  height: 4vw;
+  bottom: 0;
+  left: 15%;
+  transform: translateY(calc(100% - 1px));
+}
+.bam-cancer-wrap .info .info-wrap .info-left article h3 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 1.5%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right {
+  width: 60%;
+  margin-top: -9%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab .icon-triangle {
+  display: block;
+  width: 1.5vw;
+  margin-top: 12%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab a {
+  position: relative;
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.15);
+  background: #FFF;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab a.active img {
+  filter: none;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab a.active p {
+  color: #FFF;
+  background: #fe7c3a;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab a img {
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  width: 45%;
+  filter: hue-rotate(-180deg) brightness(0.9);
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-tab a p {
+  position: absolute;
+  border-radius: 10vw;
+  font-weight: 500;
+  color: #288fad;
+  background: #FFF;
+  padding: 8% 16%;
+  font-size: 1.25vw;
+  white-space: nowrap;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 10%);
+  box-shadow: 0 0.35vw 1.5vw rgba(0, 0, 0, 0.15);
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 3% 15%;
+  text-align: center;
+  color: #288fad;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper {
+  overflow: visible;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide {
+  position: relative;
+  padding: 5% 0;
+  background: #FFF;
+  border-radius: 1.5vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  overflow: hidden;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 5vw;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 5vw;
+  font-size: 0.9vw;
+  padding-left: 5%;
+  padding-top: 3%;
+  line-height: 125%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  color: #FFF;
+  background: #288fad;
+  border-top-left-radius: 100%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev) {
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0) !important;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide-prev {
+  pointer-events: none;
+  opacity: 0.75;
+  transform: translate3d(80%, 0, 0) scale(0.8) !important;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide-next {
+  pointer-events: none;
+  opacity: 0.75;
+  transform: translate3d(-80%, 0, 0) scale(0.8) !important;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev,
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
+  width: 10%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev {
+  left: 4%;
+}
+.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
+  right: 4%;
+}
+.bam-cancer-wrap .insure {
+  padding: 8% 0;
+}
+.bam-cancer-wrap .insure .bam-cancer-title {
+  margin-left: 15%;
+}
+.bam-cancer-wrap .insure .insure-wrap {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bam-cancer-wrap .insure .insure-wrap .insure-block {
+  position: relative;
+  width: 49%;
+  border-radius: 1.5vw;
+  text-align: center;
+  margin-top: 10%;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
+}
+.bam-cancer-wrap .insure .insure-wrap .insure-block img {
+  display: block;
+  margin: auto;
+  width: 85%;
+  border-radius: 1.5vw;
+  margin-top: -12%;
+}
+.bam-cancer-wrap .insure .insure-wrap .insure-block h3 {
+  font-weight: 500;
+  color: #288fad;
+  font-size: 1.75vw;
+  margin: 3% 0 1.5% 0;
+}
+.bam-cancer-wrap .insure .insure-wrap .insure-block a {
+  width: 35%;
+  display: block;
+  padding: 2.5% 0;
+  margin: auto;
+  border-radius: 1.25vw;
+  color: #FFF;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
+  background: linear-gradient(45deg, #f4996b, #f5af8b);
+  transform: translateY(50%);
+}
+.bam-cancer-wrap .notice {
+  position: relative;
+  background: linear-gradient(to bottom, #FFF, #e6f0f3 8%);
+  padding: 5% 0;
+}
+.bam-cancer-wrap .notice .bam-cancer-title {
+  margin-left: 15%;
+}
+.bam-cancer-wrap .notice .notice-wrap {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  margin-top: 1.5%;
+}
+.bam-cancer-wrap .notice .notice-wrap .bam-cancer-notice {
+  position: absolute;
+  display: block;
+  width: 43%;
+  right: 5%;
+  top: 0;
+  transform: translateY(-100%);
+}
+.bam-cancer-wrap .notice .notice-wrap article {
+  padding: 3%;
+  border-radius: 2vw;
+  border: 3px solid #a6e6f7;
+  background: #FFF;
+}
+.bam-cancer-wrap .notice .notice-wrap article ul {
+  margin-left: 1.5vw;
+}
+.bam-cancer-wrap .notice .notice-wrap article ul li {
+  margin: 1.5% 0;
+}
+.bam-cancer-wrap .notice .notice-wrap article ul li::marker {
+  color: #288fad;
+}
+.bam-cancer-wrap .guide-lightbox {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+.bam-cancer-wrap .guide-lightbox .guide-close {
+  position: absolute;
+  top: -8%;
+  right: -1.5%;
+  width: 5%;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  border: 3px solid #a6e6f7;
+  background: #FFF;
+  transform: translate(-50%, -50%);
+  border-radius: 2vw;
+  padding: 3% 3% 0 3%;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block h4 {
+  text-align: center;
+  font-size: 2vw;
+  color: #25a7db;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block h4 img {
+  display: inline-block;
+  width: 4.5%;
+  vertical-align: middle;
+  margin-right: 1%;
+  transform: translateY(-12%);
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1.5%;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div {
+  position: relative;
+  width: 33.3%;
+  border-right: 1px solid #a6e6f7;
+  padding: 0 3%;
+  padding-bottom: 8%;
+  font-weight: 500;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div:last-child {
+  border: 0;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article {
+  margin: 8% 0;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article a {
+  display: inline-block;
+  background: #e6f0f3;
+  padding: 1% 5%;
+  border-radius: 5vw;
+  color: #288fad;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p {
+  display: none;
+  color: #25a7db;
+  margin-top: 3%;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p img {
+  display: inline-block;
+  width: 7%;
+  vertical-align: middle;
+  margin-right: 1%;
+  transform: translateY(-8%);
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  color: #25a7db;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img {
+  display: inline-block;
+  width: 7%;
+  vertical-align: middle;
+  margin-right: 1%;
+  transform: translateY(-8%);
+}
+.bam-cancer-wrap .btn-guide {
+  position: fixed;
+  display: block;
+  width: 10%;
+  right: 1.5%;
+  top: 3%;
 }/*# sourceMappingURL=index.css.map */
