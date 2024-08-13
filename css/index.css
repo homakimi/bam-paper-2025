@@ -57,6 +57,15 @@ body.fix {
   font-size: 1.25vw;
   letter-spacing: 0.1vw;
 }
+.bam-cancer-wrap [data-scroll-show] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s, opacity 1s;
+}
+.bam-cancer-wrap [data-scroll-show].scrollShowActive {
+  opacity: 1;
+  transform: translateY(0);
+}
 .bam-cancer-wrap .bam-cancer-title {
   display: block;
   width: 30%;
@@ -213,36 +222,37 @@ body.fix {
   right: 0;
   left: 0;
 }
-.bam-cancer-wrap .map .map-bottom a {
+.bam-cancer-wrap .map .map-bottom article {
   display: block;
   position: absolute;
   border-radius: 1.5vw;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
-.bam-cancer-wrap .map .map-bottom a.active {
+.bam-cancer-wrap .map .map-bottom article.active {
   font-weight: 500;
 }
-.bam-cancer-wrap .map .map-bottom a.active p::before, .bam-cancer-wrap .map .map-bottom a.active p::after {
+.bam-cancer-wrap .map .map-bottom article.active p::before, .bam-cancer-wrap .map .map-bottom article.active p::after {
   opacity: 1;
+  transition: opacity 0.25s;
 }
-.bam-cancer-wrap .map .map-bottom a:nth-child(1) {
+.bam-cancer-wrap .map .map-bottom article:nth-child(1) {
   top: 10%;
   left: 23.5%;
 }
-.bam-cancer-wrap .map .map-bottom a:nth-child(2) {
+.bam-cancer-wrap .map .map-bottom article:nth-child(2) {
   top: 11%;
   left: 66%;
 }
-.bam-cancer-wrap .map .map-bottom a:nth-child(3) {
+.bam-cancer-wrap .map .map-bottom article:nth-child(3) {
   top: 59%;
   left: 69.25%;
 }
-.bam-cancer-wrap .map .map-bottom a:nth-child(4) {
+.bam-cancer-wrap .map .map-bottom article:nth-child(4) {
   top: 55%;
   left: 41%;
 }
-.bam-cancer-wrap .map .map-bottom a p {
+.bam-cancer-wrap .map .map-bottom article p {
   z-index: 1;
   position: relative;
   padding: 0.75vw 1.5vw;
@@ -252,7 +262,7 @@ body.fix {
   color: #fe7c3a;
   border: 2px solid #FFF;
 }
-.bam-cancer-wrap .map .map-bottom a p::before, .bam-cancer-wrap .map .map-bottom a p::after {
+.bam-cancer-wrap .map .map-bottom article p::before, .bam-cancer-wrap .map .map-bottom article p::after {
   z-index: -1;
   position: absolute;
   display: block;
@@ -262,20 +272,46 @@ body.fix {
   opacity: 0;
   transform: translate(-50%, -50%);
 }
-.bam-cancer-wrap .map .map-bottom a p::before {
+.bam-cancer-wrap .map .map-bottom article p::before {
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   background: #ffc0a4;
   border: 3px solid #fe7c3a;
   border-radius: 1.9vw;
 }
-.bam-cancer-wrap .map .map-bottom a p::after {
+.bam-cancer-wrap .map .map-bottom article p::after {
   width: 100%;
   height: 100%;
   background: #ffc0a4;
   border: 2px solid #fe7c3a;
   border-radius: 1.5vw;
   background: #FFF;
+}
+.bam-cancer-wrap .map .map-bottom .map-bottom-href a {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 9.75%;
+  height: 7.5%;
+  top: 0;
+  left: 0;
+  border-radius: 10vw;
+}
+.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(1) {
+  top: 22%;
+  left: 23.5%;
+}
+.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(2) {
+  top: 22%;
+  left: 66.15%;
+}
+.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(3) {
+  top: 74.8%;
+  left: 69%;
+}
+.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(4) {
+  top: 71%;
+  left: 41%;
 }
 .bam-cancer-wrap .info {
   position: relative;
@@ -337,6 +373,8 @@ body.fix {
   margin-top: -9%;
 }
 .bam-cancer-wrap .info .info-wrap .info-right .info-tab {
+  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,8 +418,8 @@ body.fix {
   font-size: 1.25vw;
   white-space: nowrap;
   left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 10%);
+  bottom: -5%;
+  transform: translate(-50%, 0);
   box-shadow: 0 0.35vw 1.5vw rgba(0, 0, 0, 0.15);
 }
 .bam-cancer-wrap .info .info-wrap .info-right .info-swiper {
@@ -434,6 +472,7 @@ body.fix {
   color: #FFF;
   background: #288fad;
   border-top-left-radius: 100%;
+  transition: opacity 0.5s;
 }
 .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev) {
   pointer-events: none;
@@ -592,46 +631,55 @@ body.fix {
   align-items: stretch;
   margin-top: 1.5%;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub {
   position: relative;
   width: 33.3%;
+  height: 25vw;
   border-right: 1px solid #a6e6f7;
   padding: 0 3%;
   padding-bottom: 8%;
   font-weight: 500;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div:last-child {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub:last-child {
   border: 0;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article {
   margin: 8% 0;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article a {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article a {
   display: inline-block;
   background: #e6f0f3;
   padding: 1% 5%;
   border-radius: 5vw;
   color: #288fad;
+  transition: background 0.5s, color 0.5s;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article p {
   display: none;
   color: #25a7db;
-  margin-top: 3%;
+  padding-top: 3%;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p img {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article p img {
   display: inline-block;
   width: 7%;
   vertical-align: middle;
   margin-right: 1%;
   transform: translateY(-8%);
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des {
   position: absolute;
   bottom: 10%;
+  left: 0;
   width: 100%;
+  padding: 0 10%;
   color: #25a7db;
+  transition: opacity 0.5s 0.5s;
 }
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img {
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des.hide {
+  opacity: 0;
+  transition: opacity 0.5s 0s;
+}
+.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des img {
   display: inline-block;
   width: 7%;
   vertical-align: middle;
@@ -641,12 +689,21 @@ body.fix {
 .bam-cancer-wrap .btn-guide {
   z-index: 3;
   position: fixed;
-  display: block;
+  display: none;
   width: 10%;
   right: 1.5%;
   top: 3%;
 }
 
+@media only screen and (min-width: 1025px) {
+  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:hover p {
+    opacity: 1;
+  }
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article a:hover {
+    color: #FFF;
+    background: #25a7db;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .bam-cancer-wrap {
     font-size: 4vw;
@@ -761,36 +818,56 @@ body.fix {
     left: 5%;
     margin-left: 0;
   }
-  .bam-cancer-wrap .map .map-bottom a {
+  .bam-cancer-wrap .map .map-bottom article {
     border-radius: 5vw;
     box-shadow: 0 0.5vw 3vw rgba(0, 0, 0, 0.25);
   }
-  .bam-cancer-wrap .map .map-bottom a:nth-child(1) {
+  .bam-cancer-wrap .map .map-bottom article:nth-child(1) {
     top: 21.5%;
     left: 11.5%;
   }
-  .bam-cancer-wrap .map .map-bottom a:nth-child(2) {
+  .bam-cancer-wrap .map .map-bottom article:nth-child(2) {
     top: 25.5%;
     left: 58%;
   }
-  .bam-cancer-wrap .map .map-bottom a:nth-child(3) {
+  .bam-cancer-wrap .map .map-bottom article:nth-child(3) {
     top: 59%;
     left: 61%;
   }
-  .bam-cancer-wrap .map .map-bottom a:nth-child(4) {
+  .bam-cancer-wrap .map .map-bottom article:nth-child(4) {
     top: 62.5%;
     left: 7%;
   }
-  .bam-cancer-wrap .map .map-bottom a p {
+  .bam-cancer-wrap .map .map-bottom article p {
     padding: 1.5vw 4vw;
     border-radius: 5vw;
     font-size: 4vw;
   }
-  .bam-cancer-wrap .map .map-bottom a p::before {
+  .bam-cancer-wrap .map .map-bottom article p::before {
     border-radius: 6vw;
   }
-  .bam-cancer-wrap .map .map-bottom a p::after {
+  .bam-cancer-wrap .map .map-bottom article p::after {
     border-radius: 5vw;
+  }
+  .bam-cancer-wrap .map .map-bottom .map-bottom-href a {
+    width: 25%;
+    height: 7.5%;
+  }
+  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(1) {
+    top: 32%;
+    left: 11%;
+  }
+  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(2) {
+    top: 36.5%;
+    left: 55%;
+  }
+  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(3) {
+    top: 70%;
+    left: 59%;
+  }
+  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(4) {
+    top: 73.5%;
+    left: 7%;
   }
   .bam-cancer-wrap .info.protect {
     background: linear-gradient(to bottom, #e6f0f3, #fff2da 8%);
@@ -863,7 +940,7 @@ body.fix {
   }
   .bam-cancer-wrap .info .info-wrap .info-right .info-tab a p {
     font-size: 4.5vw;
-    transform: translate(-50%, 15%);
+    bottom: -10%;
     box-shadow: 0 0.5vw 5vw rgba(0, 0, 0, 0.15);
   }
   .bam-cancer-wrap .info .info-wrap .info-right .info-swiper {
@@ -952,98 +1029,6 @@ body.fix {
   .bam-cancer-wrap .notice .notice-wrap article ul li {
     margin: 3% 0;
   }
-  .bam-cancer-wrap .guide-lightbox {
-    display: none;
-    z-index: 99;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.75);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-close {
-    position: absolute;
-    top: -8%;
-    right: -1.5%;
-    width: 5%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    border: 3px solid #a6e6f7;
-    background: #FFF;
-    transform: translate(-50%, -50%);
-    border-radius: 2vw;
-    padding: 3% 3% 0 3%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block h4 {
-    text-align: center;
-    font-size: 2vw;
-    color: #25a7db;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block h4 img {
-    display: inline-block;
-    width: 4.5%;
-    vertical-align: middle;
-    margin-right: 1%;
-    transform: translateY(-12%);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    margin-top: 1.5%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div {
-    position: relative;
-    width: 33.3%;
-    border-right: 1px solid #a6e6f7;
-    padding: 0 3%;
-    padding-bottom: 8%;
-    font-weight: 500;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div:last-child {
-    border: 0;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article {
-    margin: 8% 0;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article a {
-    display: inline-block;
-    background: #e6f0f3;
-    padding: 1% 5%;
-    border-radius: 5vw;
-    color: #288fad;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p {
-    display: none;
-    color: #25a7db;
-    margin-top: 3%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p img {
-    display: inline-block;
-    width: 7%;
-    vertical-align: middle;
-    margin-right: 1%;
-    transform: translateY(-8%);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des {
-    display: block;
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
-    color: #25a7db;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img {
-    display: inline-block;
-    width: 7%;
-    vertical-align: middle;
-    margin-right: 1%;
-    transform: translateY(-8%);
-  }
   .bam-cancer-wrap .guide-lightbox .guide-close {
     top: -7%;
     right: -3%;
@@ -1072,38 +1057,41 @@ body.fix {
     display: block;
     margin-top: 5%;
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub {
     width: 100%;
+    height: auto;
     border-right: 0;
     border-bottom: 1px solid #a6e6f7;
     padding: 0 3%;
     font-weight: 500;
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article {
     margin: 4% 0;
     width: 70%;
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div article p {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article p {
     display: none !important;
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des {
     bottom: 50%;
     width: 25%;
+    left: auto;
     right: 0;
+    padding: 0;
     text-align: center;
     transform: translateY(90%);
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des img {
     position: absolute;
     width: 30%;
     margin: 0;
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img:nth-child(1) {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des img:nth-child(1) {
     top: 50%;
     left: 0;
     transform: translate(-75%, -100%);
   }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex div p.des img:nth-child(2) {
+  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub p.des img:nth-child(2) {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%);

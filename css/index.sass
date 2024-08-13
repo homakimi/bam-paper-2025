@@ -11,6 +11,13 @@ $skin: #ffc0a4
     color: #626262
     font-size: 1.25vw
     letter-spacing: 0.1vw
+    [data-scroll-show]
+        opacity: 0
+        transform: translateY(50px)
+        transition: transform 1s, opacity 1s
+        &.scrollShowActive
+            opacity: 1
+            transform: translateY(0)
     .bam-cancer-title
         display: block
         width: 30%
@@ -138,11 +145,11 @@ $skin: #ffc0a4
                 margin: auto
                 right: 0
                 left: 0
-            a
+            article
                 display: block
                 position: absolute
                 border-radius: 1.5vw
-                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.25)
+                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.15)
                 white-space: nowrap
                 &.active
                     font-weight: 500
@@ -150,6 +157,7 @@ $skin: #ffc0a4
                         &::before,
                         &::after
                             opacity: 1
+                            transition: opacity 0.25s
                 &:nth-child(1)
                     top: 10%
                     left: 23.5%
@@ -194,7 +202,28 @@ $skin: #ffc0a4
                         border: 2px solid $orange
                         border-radius: 1.5vw
                         background: #FFF
-
+            .map-bottom-href
+                a
+                    z-index: 1
+                    position: absolute
+                    display: block
+                    width: 9.75%
+                    height: 7.5%
+                    top: 0
+                    left: 0
+                    border-radius: 10vw
+                    &:nth-child(1)
+                        top: 22%
+                        left: 23.5%
+                    &:nth-child(2)
+                        top: 22%
+                        left: 66.15%
+                    &:nth-child(3)
+                        top: 74.8%
+                        left: 69%
+                    &:nth-child(4)
+                        top: 71%
+                        left: 41%
     .info
         position: relative
         &.protect
@@ -243,6 +272,8 @@ $skin: #ffc0a4
                 width: 60%
                 margin-top: -9%
                 .info-tab
+                    z-index: 1
+                    position: relative
                     display: flex
                     justify-content: center
                     align-items: center
@@ -281,8 +312,8 @@ $skin: #ffc0a4
                             font-size: 1.25vw
                             white-space: nowrap
                             left: 50%
-                            bottom: 0
-                            transform: translate(-50%, 10%)
+                            bottom: -5%
+                            transform: translate(-50%, 0)
                             box-shadow: 0 0.35vw 1.5vw rgba(0,0,0,0.15)
                 .info-swiper
                     position: relative
@@ -329,6 +360,7 @@ $skin: #ffc0a4
                             color: #FFF
                             background: $blue
                             border-top-left-radius: 100%
+                            transition: opacity 0.5s
                         &:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev)
                             pointer-events: none
                             opacity: 0
@@ -461,9 +493,10 @@ $skin: #ffc0a4
                 justify-content: center
                 align-items: stretch
                 margin-top: 1.5%
-                div
+                .guide-sub
                     position: relative
                     width: 33.3%
+                    height: 25vw
                     border-right: 1px solid $sky
                     padding: 0 3%
                     padding-bottom: 8%
@@ -478,10 +511,11 @@ $skin: #ffc0a4
                             padding: 1% 5%
                             border-radius: 5vw
                             color: $blue
+                            transition: background 0.5s, color 0.5s
                         p
                             display: none
                             color: $water
-                            margin-top: 3%
+                            padding-top: 3%
                             img
                                 display: inline-block
                                 width: 7%
@@ -491,8 +525,14 @@ $skin: #ffc0a4
                     p.des
                         position: absolute
                         bottom: 10%
+                        left: 0
                         width: 100%
+                        padding: 0 10%
                         color: $water
+                        transition: opacity 0.5s 0.5s
+                        &.hide
+                            opacity: 0
+                            transition: opacity 0.5s 0s
                         img
                             display: inline-block
                             width: 7%
@@ -503,10 +543,17 @@ $skin: #ffc0a4
     .btn-guide
         z-index: 3
         position: fixed
-        display: block
+        display: none
         width: 10%
         right: 1.5%
         top: 3%
+
+@media only screen and (min-width: 1025px)
+    .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:hover p
+        opacity: 1
+    .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article a:hover
+        color: #FFF
+        background: $water
 
 @media only screen and (max-width: 1024px)
     .bam-cancer-wrap
@@ -600,7 +647,7 @@ $skin: #ffc0a4
                     top: 4.5%
                     left: 5%
                     margin-left: 0
-                a
+                article
                     border-radius: 5vw
                     box-shadow: 0 0.5vw 3vw rgba(0,0,0,0.25)
                     &:nth-child(1)
@@ -623,6 +670,22 @@ $skin: #ffc0a4
                             border-radius: 6vw
                         &::after
                             border-radius: 5vw
+                .map-bottom-href
+                    a
+                        width: 25%
+                        height: 7.5%
+                        &:nth-child(1)
+                            top: 32%
+                            left: 11%
+                        &:nth-child(2)
+                            top: 36.5%
+                            left: 55%
+                        &:nth-child(3)
+                            top: 70%
+                            left: 59%
+                        &:nth-child(4)
+                            top: 73.5%
+                            left: 7%
         .info
             &.protect
                 background: linear-gradient(to bottom, $light, #fff2da 8%)
@@ -678,7 +741,7 @@ $skin: #ffc0a4
                                 width: 50%
                             p
                                 font-size: 4.5vw
-                                transform: translate(-50%, 15%)
+                                bottom: -10%
                                 box-shadow: 0 0.5vw 5vw rgba(0,0,0,0.15)
                     .info-swiper
                         width: 100%
@@ -747,86 +810,6 @@ $skin: #ffc0a4
                         margin-left: 4vw
                         li
                             margin: 3% 0
-        
-
-        .guide-lightbox
-            display: none
-            z-index: 99
-            position: fixed
-            width: 100%
-            height: 100%
-            top: 0
-            left: 0
-            background: rgba(0,0,0,0.75)
-            .guide-close
-                position: absolute
-                top: -8%
-                right: -1.5%
-                width: 5%
-            .guide-block
-                position: absolute
-                top: 50%
-                left: 50%
-                width: 80%
-                border: 3px solid $sky
-                background: #FFF
-                transform: translate(-50%, -50%)
-                border-radius: 2vw
-                padding: 3% 3% 0 3%
-                h4
-                    text-align: center
-                    font-size: 2vw
-                    color: $water
-                    img
-                        display: inline-block
-                        width: 4.5%
-                        vertical-align: middle
-                        margin-right: 1%
-                        transform: translateY(-12%)
-                .guide-flex
-                    display: flex
-                    justify-content: center
-                    align-items: stretch
-                    margin-top: 1.5%
-                    div
-                        position: relative
-                        width: 33.3%
-                        border-right: 1px solid $sky
-                        padding: 0 3%
-                        padding-bottom: 8%
-                        font-weight: 500
-                        &:last-child
-                            border: 0
-                        article
-                            margin: 8% 0
-                            a
-                                display: inline-block
-                                background: $light
-                                padding: 1% 5%
-                                border-radius: 5vw
-                                color: $blue
-                            p
-                                display: none
-                                color: $water
-                                margin-top: 3%
-                                img
-                                    display: inline-block
-                                    width: 7%
-                                    vertical-align: middle
-                                    margin-right: 1%
-                                    transform: translateY(-8%)
-                        p.des
-                            display: block
-                            position: absolute
-                            bottom: 10%
-                            width: 100%
-                            color: $water
-                            img
-                                display: inline-block
-                                width: 7%
-                                vertical-align: middle
-                                margin-right: 1%
-                                transform: translateY(-8%)
 
         .guide-lightbox
             .guide-close
@@ -852,8 +835,9 @@ $skin: #ffc0a4
                 .guide-flex
                     display: block
                     margin-top: 5%
-                    div
+                    .guide-sub
                         width: 100%
+                        height: auto
                         border-right: 0
                         border-bottom: 1px solid $sky
                         padding: 0 3%
@@ -866,7 +850,9 @@ $skin: #ffc0a4
                         p.des
                             bottom: 50%
                             width: 25%
+                            left: auto
                             right: 0
+                            padding: 0
                             text-align: center
                             transform: translateY(90%)
                             img
