@@ -28,9 +28,11 @@ body
     .fullimg 
         display: block
         width: 100%
-    .swiper-button::after
-        display: none
-        
+    .swiper-button
+        z-index: 1
+        &::after
+            display: none
+
 @mixin showeffect
     position: relative
     &::after
