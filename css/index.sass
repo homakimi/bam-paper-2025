@@ -333,6 +333,10 @@ $skin: #ffc0a4
                         box-shadow: 0 0 1vw rgba(0,0,0,0.25)
                         font-weight: 500
                         overflow: hidden
+                        &.disabled
+                            cursor: default
+                            p
+                                filter: grayscale(1)
                         img
                             display: block
                             width: 80%
@@ -540,13 +544,47 @@ $skin: #ffc0a4
                             margin-right: 1%
                             transform: translateY(-8%)
 
+    .guide-fix
+        display: none
+        position: fixed
+        left: 0
+        top: 50%
+        padding: 1.5% 0.75%
+        background: #FFF
+        border-radius: 0 1.5vw 1.5vw 0
+        box-shadow: 0 0.75vw 1.5vw rgba(0,0,0,0.25)
+        transform: translateY(-50%)
+        text-align: center
+        a
+            display: block
+            padding: 0.25vw 0.5vw
+            font-weight: 500
+            border-radius: 1.25vw
+            background: #FFF
+            color: $orange
+            transition: background 0.25s
+            &.active
+                background: #fdf2dd
+                &+p
+                    opacity: 1
+            img
+                display: block
+                width: 40%
+                margin: auto
+        p
+            color: $blue
+            padding: 3% 0
+            opacity: 0
+            font-size: 0.9vw
+            transition: opacity 0.25s
+
     .btn-guide
         z-index: 3
         position: fixed
         display: none
         width: 10%
         right: 1.5%
-        top: 3%
+        top: calc(3% + 55px)
 
 @media only screen and (min-width: 1025px)
     .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:hover p
@@ -871,4 +909,4 @@ $skin: #ffc0a4
 
         .btn-guide
             width: 25%
-            top: 1.5%
+            top: calc(1.5% + 55px)

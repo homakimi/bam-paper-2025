@@ -1,4 +1,5 @@
 var headerHeight;
+var mapInterval;
 
 $(function() {
     // for nanshan
@@ -46,14 +47,27 @@ $(function() {
     })
 
     var mapArticle = 0;
-    setInterval(function() {
+    runInterval();
+    function runInterval() {
+        mapInterval = setInterval(function() {
+            $('.map-des article').removeClass('active');
+            $('.map-des article').eq(mapArticle).addClass('active');
+            mapArticle ++;
+            if(mapArticle == $('.map-des article').length) {
+                mapArticle = 0;
+            }
+        }, 2000)
+    }
+
+    $('.map-bottom-href a').hover(function() {
+        clearInterval(mapInterval)
         $('.map-des article').removeClass('active');
-        $('.map-des article').eq(mapArticle).addClass('active');
-        mapArticle ++;
-        if(mapArticle == $('.map-des article').length) {
-            mapArticle = 0;
-        }
-    }, 2000)
+        $('.map-des article').eq($(this).index()).addClass('active');
+    }, function() {
+        runInterval();
+        $('.map-des article').removeClass('active');
+        mapArticle = $(this).index();
+    })
 
     $('.guide-sub a, .guide-sub article p').hover(function() {
         $(this).closest('article').find('p').stop().slideDown(250);
@@ -147,8 +161,16 @@ function scrollEffect() {
     })
 
     if($(window).scrollTop() > $('.map-bottom').offset().top - $(window).height()*0.25 && $(window).scrollTop() < $('.insure').offset().top + $('.insure').height()) {
-        $('.btn-guide').fadeIn();
+        $('.btn-guide, .guide-fix').fadeIn();
     } else {
-        $('.btn-guide').fadeOut();
+        $('.btn-guide, .guide-fix').fadeOut();
     }
+
+    $('[data-scroll-target]').each(function() {
+        if($(window).scrollTop() > $(this).offset().top - headerHeight - 1 && $(window).scrollTop() < $(this).offset().top + $(this).height() - headerHeight - 1) {
+            $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').addClass('active');
+        } else {
+            $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').removeClass('active');
+        }
+    })
 }
