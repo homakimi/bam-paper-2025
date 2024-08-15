@@ -1,5 +1,6 @@
 var headerHeight;
 var mapInterval;
+var swipers = [];
 
 $(function() {
     // for nanshan
@@ -9,7 +10,6 @@ $(function() {
         headerHeight = 0;
     }
 
-    resize();
 
     scrollEffect();
     $(window).scroll(function() {
@@ -31,7 +31,8 @@ $(function() {
 
     $('.info-swiper').each(function(index) {
         $(this).addClass('info-swiper-'+index);
-        new Swiper('.info-swiper-'+index+' .swiper', {
+        $(this).attr('data-swiper', index);
+        var _swiper = new Swiper('.info-swiper-'+index+' .swiper', {
             effect: 'coverflow',
             speed: 500,
             allowTouchMove: false,
@@ -44,38 +45,40 @@ $(function() {
                 prevEl: '.info-swiper-'+index+' .swiper-button-prev',
             }
         });
+        swipers.push(_swiper);
     })
 
     var mapArticle = 0;
     runInterval();
     function runInterval() {
         mapInterval = setInterval(function() {
-            $('.map-des article').removeClass('active');
-            $('.map-des article').eq(mapArticle).addClass('active');
+            $('.map-des a').removeClass('active');
+            $('.map-des a').eq(mapArticle).addClass('active');
             mapArticle ++;
-            if(mapArticle == $('.map-des article').length) {
+            if(mapArticle == $('.map-des a').length) {
                 mapArticle = 0;
             }
         }, 2000)
     }
 
-    $('.map-bottom-href a').hover(function() {
+    $('.map-bottom-href a, .map-des a').hover(function() {
         clearInterval(mapInterval)
-        $('.map-des article').removeClass('active');
-        $('.map-des article').eq($(this).index()).addClass('active');
+        $('.map-des a').removeClass('active');
+        $('.map-des a').eq($(this).index()).addClass('active');
     }, function() {
         runInterval();
-        $('.map-des article').removeClass('active');
+        $('.map-des a').removeClass('active');
         mapArticle = $(this).index();
     })
 
-    $('.guide-sub a, .guide-sub article p').hover(function() {
-        $(this).closest('article').find('p').stop().slideDown(250);
-        $(this).closest('.guide-sub').find('p.des').addClass('hide');
+    $('.guide-sub-q, .guide-sub-a').hover(function() {
+        $(this).closest('article').find('.guide-sub-a').stop().slideDown(250);
+        $(this).closest('.guide-sub').find('a.des').addClass('hide');
     }, function() {
-        $(this).closest('article').find('p').stop().slideUp();
-        $(this).closest('.guide-sub').find('p.des').removeClass('hide');
+        $(this).closest('article').find('.guide-sub-a').stop().slideUp();
+        $(this).closest('.guide-sub').find('a.des').removeClass('hide');
     })
+    $('.guide-sub-a').hide();
 })
 
 var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
@@ -113,7 +116,20 @@ $(document)
     $('.guide-lightbox').fadeOut();
 })
 .on('click', '[data-scroll]', function() {
-    $('body, html').animate({ scrollTop: $('[data-scroll-target="'+$(this).data('scroll')+'"]').offset().top - headerHeight }, 1000)
+    if($(this).hasClass('guide-sub-q') && window.innerWidth <= 1024) {
+        $('body, html').animate({ scrollTop: $('[data-scroll-target="'+$(this).data('scroll')+'"]').offset().top - headerHeight + $($('[data-scroll-target="'+$(this).data('scroll')+'"]')).height() - window.innerHeight }, 1000)
+    } else {
+        $('body, html').animate({ scrollTop: $('[data-scroll-target="'+$(this).data('scroll')+'"]').offset().top - headerHeight }, 1000)
+    }
+})
+.on('click', '.guide-sub-q', function() {
+    var _thisBlock = $('[data-scroll-target='+$(this).data('scroll')+']');
+    var _thisSwiper = _thisBlock.find('.info-swiper').eq($(this).data('tab')).data('swiper');
+    _thisBlock.find('.info-tab a').removeClass('active');
+    _thisBlock.find('.info-tab a').eq($(this).data('tab')).addClass('active');
+    _thisBlock.find('.info-swiper').hide();
+    _thisBlock.find('.info-swiper').eq($(this).data('tab')).show();
+    swipers[_thisSwiper].slideTo($(this).data('slide'));
 })
 
 function urlDetect() {

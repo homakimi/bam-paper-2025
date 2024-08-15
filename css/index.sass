@@ -18,6 +18,20 @@ $skin: #ffc0a4
         &.scrollShowActive
             opacity: 1
             transform: translateY(0)
+        &.map-talk-block,
+        &.info-left
+            transform-origin: right bottom
+            transform: translateY(100%) rotate(-15deg)
+            &.scrollShowActive
+                animation: shake 1s forwards
+                @keyframes shake
+                    70%
+                        transform: rotate(5deg)
+                    80%
+                        transform: rotate(-2deg)
+                    100%
+                        transform: rotate(0deg)
+                    
     .bam-cancer-title
         display: block
         width: 30%
@@ -28,6 +42,41 @@ $skin: #ffc0a4
             position: absolute
             top: 0
             left: 0
+        .balloon,
+        .bike-1,
+        .bike-2
+            pointer-events: none
+            position: absolute
+            width: 6%
+        .balloon
+            top: 35%
+            left: 58%
+            animation: balloon 3s infinite alternate
+            @keyframes balloon
+                to
+                    transform: translateY(-80%)
+        .bike-1
+            top: 64%
+            left: 28%
+            animation: bike1 10s infinite
+            @keyframes bike1
+                50%
+                    transform: translateX(300%)
+                51%
+                    transform: translateX(300%) scale(-1, 1)
+                100%
+                    transform: translateX(0%) scale(-1, 1)
+        .bike-2
+            top: 71%
+            left: 53%
+            animation: bike2 8s infinite
+            @keyframes bike2
+                50%
+                    transform: translateX(-125%)
+                51%
+                    transform: translateX(-125%) scale(-1, 1)
+                100%
+                    transform: translateX(0%) scale(-1, 1)
         h1
             position: absolute
             width: 28%
@@ -79,6 +128,11 @@ $skin: #ffc0a4
                 left: 0
                 width: 100%
                 height: 100%
+            .map-talk-block
+                position: absolute
+                width: 24%
+                top: 32.5%
+                left: 14%
             .bam-cancer-title
                 position: absolute
                 top: 15%
@@ -145,31 +199,32 @@ $skin: #ffc0a4
                 margin: auto
                 right: 0
                 left: 0
-            article
-                display: block
-                position: absolute
-                border-radius: 1.5vw
-                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.15)
-                white-space: nowrap
-                &.active
-                    font-weight: 500
-                    p
-                        &::before,
-                        &::after
-                            opacity: 1
-                            transition: opacity 0.25s
-                &:nth-child(1)
-                    top: 10%
-                    left: 23.5%
-                &:nth-child(2)
-                    top: 11%
-                    left: 66%
-                &:nth-child(3)
-                    top: 59%
-                    left: 69.25%
-                &:nth-child(4)
-                    top: 55%
-                    left: 41%
+            .map-des
+                a
+                    display: block
+                    position: absolute
+                    border-radius: 1.5vw
+                    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.15)
+                    white-space: nowrap
+                    &.active
+                        font-weight: 500
+                        p
+                            &::before,
+                            &::after
+                                opacity: 1
+                                transition: opacity 0.25s
+                    &:nth-child(1)
+                        top: 10%
+                        left: 23.5%
+                    &:nth-child(2)
+                        top: 11%
+                        left: 66%
+                    &:nth-child(3)
+                        top: 59%
+                        left: 69.25%
+                    &:nth-child(4)
+                        top: 55%
+                        left: 41%
                 p
                     z-index: 1
                     position: relative
@@ -277,11 +332,7 @@ $skin: #ffc0a4
                     display: flex
                     justify-content: center
                     align-items: center
-                    gap: 3%
-                    .icon-triangle
-                        display: block
-                        width: 1.5vw
-                        margin-top: 12%
+                    gap: 5%
                     a
                         position: relative
                         display: block
@@ -509,15 +560,16 @@ $skin: #ffc0a4
                         border: 0
                     article
                         margin: 8% 0
-                        a
+                        .guide-sub-q
                             display: inline-block
                             background: $light
                             padding: 1% 5%
                             border-radius: 5vw
                             color: $blue
                             transition: background 0.5s, color 0.5s
-                        p
-                            display: none
+                        .guide-sub-a
+                            display: block
+                            width: auto
                             color: $water
                             padding-top: 3%
                             img
@@ -526,7 +578,7 @@ $skin: #ffc0a4
                                 vertical-align: middle
                                 margin-right: 1%
                                 transform: translateY(-8%)
-                    p.des
+                    a.des
                         position: absolute
                         bottom: 10%
                         left: 0
@@ -549,7 +601,7 @@ $skin: #ffc0a4
         position: fixed
         left: 0
         top: 50%
-        padding: 1.5% 0.75%
+        padding: 0.75%
         background: #FFF
         border-radius: 0 1.5vw 1.5vw 0
         box-shadow: 0 0.75vw 1.5vw rgba(0,0,0,0.25)
@@ -558,25 +610,24 @@ $skin: #ffc0a4
         a
             display: block
             padding: 0.25vw 0.5vw
+            margin: 1vw 0
             font-weight: 500
             border-radius: 1.25vw
             background: #FFF
-            color: $orange
-            transition: background 0.25s
+            color: $blue
+            transition: background 0.25s, color 0.25s
             &.active
+                color: $orange
                 background: #fdf2dd
-                &+p
-                    opacity: 1
+                img
+                    filter: none
             img
                 display: block
                 width: 40%
                 margin: auto
-        p
-            color: $blue
-            padding: 3% 0
-            opacity: 0
-            font-size: 0.9vw
-            transition: opacity 0.25s
+                filter: hue-rotate(-180deg) brightness(0.9)
+                transition: filter 0.25s
+
 
     .btn-guide
         z-index: 3
@@ -589,7 +640,7 @@ $skin: #ffc0a4
 @media only screen and (min-width: 1025px)
     .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:hover p
         opacity: 1
-    .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article a:hover
+    .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q:hover
         color: #FFF
         background: $water
 
@@ -599,6 +650,29 @@ $skin: #ffc0a4
         .bam-cancer-title
             width: 80%
         .kv
+            .balloon,
+            .bike-1,
+            .bike-2
+                width: 10%
+            .balloon
+                top: 55%
+                left: 50%
+                @keyframes balloon
+                    to
+                        transform: translateY(-150%)
+            .bike-1
+                top: 72%
+                left: 22%
+            .bike-2
+                top: 76%
+                left: 50%
+                @keyframes bike2
+                    50%
+                        transform: translateX(-225%)
+                    51%
+                        transform: translateX(-225%) scale(-1, 1)
+                    100%
+                        transform: translateX(0%) scale(-1, 1)
             h1
                 width: 70%
                 top: 8%
@@ -638,6 +712,10 @@ $skin: #ffc0a4
                     bottom: 0
                     width: 65%
                     height: auto
+                .map-talk-block
+                    width: 64%
+                    top: 61%
+                    left: 7%
                 .bam-cancer-title
                     top: 7%
                 .map-swiper
@@ -766,10 +844,7 @@ $skin: #ffc0a4
                     width: 100%
                     margin-top: 40%
                     .info-tab
-                        gap: 5%
-                        .icon-triangle
-                            width: 5vw
-                            margin-top: 20%
+                        gap: 8%
                         a
                             width: 24vw
                             height: 24vw
@@ -882,10 +957,11 @@ $skin: #ffc0a4
                         font-weight: 500
                         article
                             margin: 4% 0
+                        .guide-sub-q
                             width: 70%
-                            p
+                            .guide-sub-a
                                 display: none! important
-                        p.des
+                        a.des
                             bottom: 50%
                             width: 25%
                             left: auto
