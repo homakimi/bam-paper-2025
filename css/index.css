@@ -967,35 +967,35 @@ body.fix {
     left: 5%;
     margin-left: 0;
   }
-  .bam-cancer-wrap .map .map-bottom article {
+  .bam-cancer-wrap .map .map-bottom .map-des a {
     border-radius: 5vw;
     box-shadow: 0 0.5vw 3vw rgba(0, 0, 0, 0.25);
   }
-  .bam-cancer-wrap .map .map-bottom article:nth-child(1) {
+  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(1) {
     top: 21.5%;
     left: 11.5%;
   }
-  .bam-cancer-wrap .map .map-bottom article:nth-child(2) {
+  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(2) {
     top: 25.5%;
     left: 58%;
   }
-  .bam-cancer-wrap .map .map-bottom article:nth-child(3) {
+  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(3) {
     top: 59%;
     left: 61%;
   }
-  .bam-cancer-wrap .map .map-bottom article:nth-child(4) {
+  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(4) {
     top: 62.5%;
     left: 7%;
   }
-  .bam-cancer-wrap .map .map-bottom article p {
+  .bam-cancer-wrap .map .map-bottom .map-des p {
     padding: 1.5vw 4vw;
     border-radius: 5vw;
     font-size: 4vw;
   }
-  .bam-cancer-wrap .map .map-bottom article p::before {
+  .bam-cancer-wrap .map .map-bottom .map-des p::before {
     border-radius: 6vw;
   }
-  .bam-cancer-wrap .map .map-bottom article p::after {
+  .bam-cancer-wrap .map .map-bottom .map-des p::after {
     border-radius: 5vw;
   }
   .bam-cancer-wrap .map .map-bottom .map-bottom-href a {

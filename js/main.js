@@ -62,13 +62,17 @@ $(function() {
     }
 
     $('.map-bottom-href a, .map-des a').hover(function() {
-        clearInterval(mapInterval)
-        $('.map-des a').removeClass('active');
-        $('.map-des a').eq($(this).index()).addClass('active');
+        if(window.innerWidth > 1024) {
+            clearInterval(mapInterval)
+            $('.map-des a').removeClass('active');
+            $('.map-des a').eq($(this).index()).addClass('active');
+        }
     }, function() {
-        runInterval();
-        $('.map-des a').removeClass('active');
-        mapArticle = $(this).index();
+        if(window.innerWidth > 1024) {
+            runInterval();
+            $('.map-des a').removeClass('active');
+            mapArticle = $(this).index();
+        }
     })
 
     $('.guide-sub-q, .guide-sub-a').hover(function() {
