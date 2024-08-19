@@ -31,6 +31,16 @@ $skin: #ffc0a4
                         transform: rotate(-2deg)
                     100%
                         transform: rotate(0deg)
+        &.map-talk-block
+            &.scrollShowActive img
+                transform-origin: right bottom
+                animation: notice 2.5s 2s infinite
+                @keyframes notice
+                    10%
+                        transform: rotate(3deg) translateY(-3%)
+                    15%, 100%
+                        transform: rotate(0deg)
+
                     
     .bam-cancer-title
         display: block
@@ -155,14 +165,12 @@ $skin: #ffc0a4
                     padding: 3% 10%
                 .swiper-slide
                     border-radius: 1.5vw
-                    padding: 5% 10% 5% 10%
+                    padding: 10% 10% 5% 10%
                     background: #FFF
                     box-shadow: 0 0.25vw 1vw rgba(0,0,0,0.25)
                     h3
-                        color: $blue
-                        text-align: center
-                        font-size: 3vw
-                        font-weight: 500
+                        width: 70%
+                        margin: auto
                     article
                         display: flex
                         justify-content: center
@@ -960,8 +968,14 @@ $skin: #ffc0a4
                             margin: 4% 0
                         .guide-sub-q
                             width: 70%
+                            &.active
+                                animation: jump 0.5s 2 alternate
+                                @keyframes jump
+                                    to
+                                        transform: translateY(-25%) scale(1.02)
                             .guide-sub-a
                                 display: none! important
+                                        
                         a.des
                             bottom: 50%
                             width: 25%

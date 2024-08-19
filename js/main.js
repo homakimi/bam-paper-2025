@@ -87,12 +87,6 @@ $(function() {
 
 var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
 
-function resize() {
-    if(window.innerWidth > 1024) {
-    } else {
-    }
-}
-
 $(document)
 .on('click', 'a', function(e) {
     if($(this).attr('href').length == 0) {
@@ -114,6 +108,16 @@ $(document)
 .on('click', '.btn-guide', function() {
     $('body').addClass('fix');
     $('.guide-lightbox').fadeIn();
+    if(window.innerWidth <= 1024) {
+        $('.guide-sub-q').removeClass('active');
+        setTimeout(function() {
+            $('.guide-sub-q').each(function(index) {
+                setTimeout(function() {
+                    $(this).addClass('active')
+                }.bind(this), index*250)
+            })
+        }, 500)
+    }
 })
 .on('click', '.guide-close, [data-scroll]', function() {
     $('body').removeClass('fix');
