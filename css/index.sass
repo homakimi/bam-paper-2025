@@ -11,6 +11,35 @@ $skin: #ffc0a4
     color: #626262
     font-size: 1.25vw
     letter-spacing: 0.1vw
+    @keyframes shake
+        70%
+            transform: rotate(5deg)
+        80%
+            transform: rotate(-2deg)
+        100%
+            transform: rotate(0deg)
+    @keyframes notice
+        10%
+            transform: rotate(3deg) translateY(-3%)
+        15%, 100%
+            transform: rotate(0deg)
+    @keyframes balloon
+        to
+            transform: translateY(-80%)
+    @keyframes bikeone
+        50%
+            transform: translateX(300%)
+        51%
+            transform: translateX(300%) scale(-1, 1)
+        100%
+            transform: translateX(0%) scale(-1, 1)
+    @keyframes biketwo
+        50%
+            transform: translateX(-125%)
+        51%
+            transform: translateX(-125%) scale(-1, 1)
+        100%
+            transform: translateX(0%) scale(-1, 1)
     [data-scroll-show]
         opacity: 0
         transform: translateY(50px)
@@ -24,22 +53,10 @@ $skin: #ffc0a4
             transform: translateY(100%) rotate(-15deg)
             &.scrollShowActive
                 animation: shake 1s forwards
-                @keyframes shake
-                    70%
-                        transform: rotate(5deg)
-                    80%
-                        transform: rotate(-2deg)
-                    100%
-                        transform: rotate(0deg)
         &.map-talk-block
             &.scrollShowActive img
                 transform-origin: right bottom
                 animation: notice 2.5s 2s infinite
-                @keyframes notice
-                    10%
-                        transform: rotate(3deg) translateY(-3%)
-                    15%, 100%
-                        transform: rotate(0deg)
 
                     
     .bam-cancer-title
@@ -62,31 +79,14 @@ $skin: #ffc0a4
             top: 35%
             left: 58%
             animation: balloon 3s infinite alternate
-            @keyframes balloon
-                to
-                    transform: translateY(-80%)
         .bike-1
             top: 64%
             left: 28%
-            animation: bike1 10s infinite
-            @keyframes bike1
-                50%
-                    transform: translateX(300%)
-                51%
-                    transform: translateX(300%) scale(-1, 1)
-                100%
-                    transform: translateX(0%) scale(-1, 1)
+            animation: bikeone 10s infinite
         .bike-2
             top: 71%
             left: 53%
-            animation: bike2 8s infinite
-            @keyframes bike2
-                50%
-                    transform: translateX(-125%)
-                51%
-                    transform: translateX(-125%) scale(-1, 1)
-                100%
-                    transform: translateX(0%) scale(-1, 1)
+            animation: biketwo 8s infinite
         h1
             position: absolute
             width: 28%
@@ -655,6 +655,19 @@ $skin: #ffc0a4
 @media only screen and (max-width: 1024px)
     .bam-cancer-wrap
         font-size: 4vw
+        @keyframes balloon
+            to
+                transform: translateY(-150%)
+        @keyframes biketwo
+            50%
+                transform: translateX(-225%)
+            51%
+                transform: translateX(-225%) scale(-1, 1)
+            100%
+                transform: translateX(0%) scale(-1, 1)
+        @keyframes jump
+            to
+                transform: translateY(-25%) scale(1.02)
         .bam-cancer-title
             width: 80%
         .kv
@@ -665,22 +678,12 @@ $skin: #ffc0a4
             .balloon
                 top: 55%
                 left: 50%
-                @keyframes balloon
-                    to
-                        transform: translateY(-150%)
             .bike-1
                 top: 72%
                 left: 22%
             .bike-2
                 top: 76%
                 left: 50%
-                @keyframes bike2
-                    50%
-                        transform: translateX(-225%)
-                    51%
-                        transform: translateX(-225%) scale(-1, 1)
-                    100%
-                        transform: translateX(0%) scale(-1, 1)
             h1
                 width: 70%
                 top: 8%
@@ -970,9 +973,6 @@ $skin: #ffc0a4
                             width: 70%
                             &.active
                                 animation: jump 0.5s 2 alternate
-                                @keyframes jump
-                                    to
-                                        transform: translateY(-25%) scale(1.02)
                             .guide-sub-a
                                 display: none! important
                                         

@@ -57,6 +57,52 @@ body.fix {
   font-size: 1.25vw;
   letter-spacing: 0.1vw;
 }
+@keyframes shake {
+  70% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes notice {
+  10% {
+    transform: rotate(3deg) translateY(-3%);
+  }
+  15%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes balloon {
+  to {
+    transform: translateY(-80%);
+  }
+}
+@keyframes bikeone {
+  50% {
+    transform: translateX(300%);
+  }
+  51% {
+    transform: translateX(300%) scale(-1, 1);
+  }
+  100% {
+    transform: translateX(0%) scale(-1, 1);
+  }
+}
+@keyframes biketwo {
+  50% {
+    transform: translateX(-125%);
+  }
+  51% {
+    transform: translateX(-125%) scale(-1, 1);
+  }
+  100% {
+    transform: translateX(0%) scale(-1, 1);
+  }
+}
 .bam-cancer-wrap [data-scroll-show] {
   opacity: 0;
   transform: translateY(50px);
@@ -73,28 +119,9 @@ body.fix {
 .bam-cancer-wrap [data-scroll-show].map-talk-block.scrollShowActive, .bam-cancer-wrap [data-scroll-show].info-left.scrollShowActive {
   animation: shake 1s forwards;
 }
-@keyframes shake {
-  70% {
-    transform: rotate(5deg);
-  }
-  80% {
-    transform: rotate(-2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .bam-cancer-wrap [data-scroll-show].map-talk-block.scrollShowActive img {
   transform-origin: right bottom;
   animation: notice 2.5s 2s infinite;
-}
-@keyframes notice {
-  10% {
-    transform: rotate(3deg) translateY(-3%);
-  }
-  15%, 100% {
-    transform: rotate(0deg);
-  }
 }
 .bam-cancer-wrap .bam-cancer-title {
   display: block;
@@ -121,42 +148,15 @@ body.fix {
   left: 58%;
   animation: balloon 3s infinite alternate;
 }
-@keyframes balloon {
-  to {
-    transform: translateY(-80%);
-  }
-}
 .bam-cancer-wrap .kv .bike-1 {
   top: 64%;
   left: 28%;
-  animation: bike1 10s infinite;
-}
-@keyframes bike1 {
-  50% {
-    transform: translateX(300%);
-  }
-  51% {
-    transform: translateX(300%) scale(-1, 1);
-  }
-  100% {
-    transform: translateX(0%) scale(-1, 1);
-  }
+  animation: bikeone 10s infinite;
 }
 .bam-cancer-wrap .kv .bike-2 {
   top: 71%;
   left: 53%;
-  animation: bike2 8s infinite;
-}
-@keyframes bike2 {
-  50% {
-    transform: translateX(-125%);
-  }
-  51% {
-    transform: translateX(-125%) scale(-1, 1);
-  }
-  100% {
-    transform: translateX(0%) scale(-1, 1);
-  }
+  animation: biketwo 8s infinite;
 }
 .bam-cancer-wrap .kv h1 {
   position: absolute;
@@ -829,6 +829,27 @@ body.fix {
   .bam-cancer-wrap {
     font-size: 4vw;
   }
+  @keyframes balloon {
+    to {
+      transform: translateY(-150%);
+    }
+  }
+  @keyframes biketwo {
+    50% {
+      transform: translateX(-225%);
+    }
+    51% {
+      transform: translateX(-225%) scale(-1, 1);
+    }
+    100% {
+      transform: translateX(0%) scale(-1, 1);
+    }
+  }
+  @keyframes jump {
+    to {
+      transform: translateY(-25%) scale(1.02);
+    }
+  }
   .bam-cancer-wrap .bam-cancer-title {
     width: 80%;
   }
@@ -841,11 +862,6 @@ body.fix {
     top: 55%;
     left: 50%;
   }
-  @keyframes balloon {
-    to {
-      transform: translateY(-150%);
-    }
-  }
   .bam-cancer-wrap .kv .bike-1 {
     top: 72%;
     left: 22%;
@@ -853,17 +869,6 @@ body.fix {
   .bam-cancer-wrap .kv .bike-2 {
     top: 76%;
     left: 50%;
-  }
-  @keyframes bike2 {
-    50% {
-      transform: translateX(-225%);
-    }
-    51% {
-      transform: translateX(-225%) scale(-1, 1);
-    }
-    100% {
-      transform: translateX(0%) scale(-1, 1);
-    }
   }
   .bam-cancer-wrap .kv h1 {
     width: 70%;
@@ -1228,11 +1233,6 @@ body.fix {
   }
   .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q.active {
     animation: jump 0.5s 2 alternate;
-  }
-  @keyframes jump {
-    to {
-      transform: translateY(-25%) scale(1.02);
-    }
   }
   .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q .guide-sub-a {
     display: none !important;
