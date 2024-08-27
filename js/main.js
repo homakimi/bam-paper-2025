@@ -76,11 +76,11 @@ $(function() {
     })
 
     $('.guide-sub-q, .guide-sub-a').hover(function() {
-        $(this).closest('article').find('.guide-sub-a').stop().slideDown(250);
-        $(this).closest('.guide-sub').find('a.des').addClass('hide');
+        $(this).closest('article').find('.guide-sub-a').stop().fadeIn(250);
+        // $(this).closest('.guide-sub').find('a.des').addClass('hide');
     }, function() {
-        $(this).closest('article').find('.guide-sub-a').stop().slideUp();
-        $(this).closest('.guide-sub').find('a.des').removeClass('hide');
+        $(this).closest('article').find('.guide-sub-a').stop().fadeOut();
+        // $(this).closest('.guide-sub').find('a.des').removeClass('hide');
     })
     $('.guide-sub-a').hide();
 })

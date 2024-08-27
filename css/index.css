@@ -203,6 +203,7 @@ body.fix {
   border-radius: 10vw;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 .bam-cancer-wrap .map {
   position: relative;
@@ -269,7 +270,7 @@ body.fix {
   margin: 5% 0;
 }
 .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article img {
-  width: 38%;
+  width: 35%;
 }
 .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p {
   flex: 1 0 0;
@@ -278,7 +279,7 @@ body.fix {
 .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p span {
   color: #fe7c3a;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide p.des {
   font-size: 1vw;
@@ -537,7 +538,7 @@ body.fix {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 5vw;
+  height: 6vw;
 }
 .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide p {
   display: flex;
@@ -728,7 +729,8 @@ body.fix {
   border: 0;
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article {
-  margin: 8% 0;
+  margin: 10% 0;
+  position: relative;
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-q {
   display: inline-block;
@@ -739,17 +741,21 @@ body.fix {
   transition: background 0.5s, color 0.5s;
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-a {
+  position: absolute;
+  top: 95%;
+  left: 5%;
   display: block;
-  width: auto;
+  width: 100%;
   color: #25a7db;
-  padding-top: 3%;
+  transform-origin: left;
+  transform: scale(0.8);
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-a img {
   display: inline-block;
   width: 7%;
   vertical-align: middle;
   margin-right: 1%;
-  transform: translateY(-8%);
+  transform: translateY(-10%);
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des {
   position: absolute;
@@ -1112,14 +1118,16 @@ body.fix {
     border-radius: 5vw;
     padding-bottom: 10%;
     box-shadow: 0 0 3vw rgba(0, 0, 0, 0.25);
+    font-size: 3.5vw;
   }
   .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide article {
-    height: 10vw;
+    height: 12vw;
   }
   .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide p {
-    width: 13vw;
-    height: 14vw;
-    font-size: 3vw;
+    width: 10vw;
+    padding-right: 1%;
+    height: 11vw;
+    font-size: 2.5vw;
     line-height: 110%;
     opacity: 0.75;
   }
