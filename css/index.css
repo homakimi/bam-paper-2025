@@ -764,11 +764,11 @@ body.fix {
   width: 100%;
   padding: 0 10%;
   color: #25a7db;
-  transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.25s;
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des.hide {
   opacity: 0;
-  transition: opacity 0.5s 0s;
+  transition: opacity 0.25s 0s;
 }
 .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des img {
   display: inline-block;
