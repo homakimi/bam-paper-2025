@@ -1,6 +1,7 @@
 var headerHeight;
 var mapInterval;
 var swipers = [];
+var mapSwiper;
 
 $(function() {
     // for nanshan
@@ -15,9 +16,8 @@ $(function() {
     $(window).scroll(function() {
         scrollEffect();
     })
-    // urlDetect();
 
-    new Swiper('.map-swiper .swiper', {
+    mapSwiper = new Swiper('.map-swiper .swiper', {
         spaceBetween: 15,
         effect: 'fade',
         fadeEffect: {
@@ -83,6 +83,8 @@ $(function() {
         $(this).closest('.guide-sub').find('a.des').removeClass('hide');
     })
     $('.guide-sub-a').hide();
+
+    urlDetect();
 })
 
 var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
@@ -140,14 +142,6 @@ $(document)
     swipers[_thisSwiper].slideTo($(this).data('slide'));
 })
 
-function urlDetect() {
-    if(window.location.href.indexOf('pin') > 0) {
-        var _url = new URL(window.location.href);
-        var _searchParams = _url.searchParams.get('pin');
-        $('body, html').animate({ scrollTop: $('.'+_searchParams).offset().top - headerHeight }, 1000);
-    }
-}
-
 function scrollEffect() {
     $('[data-scroll-show-parent]').each(function() {
         if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
@@ -197,4 +191,57 @@ function scrollEffect() {
             $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').removeClass('active');
         }
     })
+}
+
+
+function urlDetect() {
+    if(window.location.href.indexOf('pin') > 0) {
+        var _url = new URL(window.location.href);
+        var _searchParams = _url.searchParams.get('pin');
+        if($('[data-pin="'+_searchParams+'"]').length > 0) {
+            $('body, html').animate({ scrollTop: $('[data-pin="'+_searchParams+'"]').offset().top - headerHeight }, 1000);
+        }
+        // 我們與癌的距離
+        if(_searchParams == 'distancepeople') {
+            $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
+            mapSwiper.slideTo(0);
+        }
+        if(_searchParams == 'distancecost') {
+            $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
+            mapSwiper.slideTo(1);
+        }
+        if(_searchParams == 'distancehelp') {
+            $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
+            mapSwiper.slideTo(2);
+        }
+        // 機構連結
+        var _infoParent, _infoTab, _infoSwiper, _infoSlide;
+        if(_searchParams == 'goodfuture') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 0 };
+        if(_searchParams == 'kimforest') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 1 };
+        if(_searchParams == 'gga') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 2 };
+        if(_searchParams == 'healthcheck') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 3 };
+        if(_searchParams == 'johnson') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 0 };
+        if(_searchParams == 'bam') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 1 };
+        if(_searchParams == 'cofit') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 2 };
+        if(_searchParams == 'secondopinion') { _infoParent = 1; _infoTab = 0; _infoSwiper = 2; _infoSlide = 0 };
+        if(_searchParams == 'hope') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 0 };
+        if(_searchParams == 'imosa') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 1 };
+        if(_searchParams == 'homeangel') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 2 };
+        if(_searchParams == 'laurel') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 3 };
+        if(_searchParams == 'athome') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 4 };
+        if(_searchParams == 'aicarept') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 0 };
+        if(_searchParams == 'mecotech') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 1 };
+        if(_searchParams == 'adlers') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 2 };
+        if(_searchParams == 'farhugs') { _infoParent = 2; _infoTab = 1; _infoSwiper = 5; _infoSlide = 0 };
+        if(_searchParams == 'telehealthcheck') { _infoParent = 2; _infoTab = 1; _infoSwiper = 5; _infoSlide = 1 };
+        if(_infoParent !== undefined && _infoTab !== undefined && _infoSwiper !== undefined && _infoSlide !== undefined) {
+            $('body, html').animate({ scrollTop: $('.info').eq(_infoParent).offset().top - headerHeight }, 1000);
+            console.log(_infoParent, _infoTab, _infoSwiper, _infoSlide)
+            $('.info').eq(_infoParent).find('.info-tab a').removeClass('active');
+            $('.info').eq(_infoParent).find('.info-tab a').eq(_infoTab).addClass('active');
+            $('.info').eq(_infoParent).find('.info-swiper').hide();
+            $('.info').eq(_infoParent).find('.info-swiper').eq(_infoTab).show();
+            swipers[_infoSwiper].slideTo(_infoSlide);
+        }
+    }
 }
