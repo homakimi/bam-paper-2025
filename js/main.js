@@ -6,25 +6,23 @@ $(function() {
         headerHeight = 0;
     }
 
+    // scrollEffect();
+    // $(window).scroll(function() {
+    //     scrollEffect();
+    // })
 
-    scrollEffect();
-    $(window).scroll(function() {
-        scrollEffect();
-    })
-
-    new Swiper('.map-swiper .swiper', {
-        spaceBetween: 15,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
+    new Swiper('.info-swiper .swiper', {
+        spaceBetween: 0,
+        slidesPerView: 3,
+        centeredSlides: true,
+        loop: true,
         navigation: {
-            nextEl: '.map-swiper .swiper-button-next',
-            prevEl: '.map-swiper .swiper-button-prev',
+            nextEl: '.info-swiper .swiper-button-next',
+            prevEl: '.info-swiper .swiper-button-prev',
         }
     });
 
-    urlDetect();
+    // urlDetect();
 })
 
 
