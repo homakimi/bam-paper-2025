@@ -5,6 +5,7 @@ $(function() {
     } else {
         headerHeight = 0;
     }
+    $('.bam-five-wrap').css('padding-top', headerHeight)
 
     // scrollEffect();
     // $(window).scroll(function() {
@@ -13,12 +14,17 @@ $(function() {
 
     new Swiper('.info-swiper .swiper', {
         spaceBetween: 0,
-        slidesPerView: 3,
+        slidesPerView: 1,
         centeredSlides: true,
         loop: true,
         navigation: {
             nextEl: '.info-swiper .swiper-button-next',
             prevEl: '.info-swiper .swiper-button-prev',
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 3
+            }
         }
     });
 
@@ -35,6 +41,23 @@ $(document)
 })
 .on('mousedown', 'img', function(e) {
     e.preventDefault();
+})
+.on('click', '.bam-five-hamburger', function() {
+    $('body').addClass('fix');
+    $('.bam-five-menu').stop().fadeIn();
+})
+.on('click', '.bam-five-close, .bam-five-lightbox-close', function() {
+    $('body').removeClass('fix');
+    $('.bam-five-menu, .bam-five-lightbox').stop().fadeOut();
+})
+.on('click', '.win-flex a',function() {
+    $('body').addClass('fix');
+    $('.bam-five-lightbox').stop().fadeIn();
+})
+.on('click', '.notice-more', function() {
+    $(this).toggleClass('active');
+    $('.notice article').stop().slideToggle();
+    $('body, html').animate({ scrollTop: $('.notice').offset().top - headerHeight }, 750);
 })
 
 function scrollEffect() {

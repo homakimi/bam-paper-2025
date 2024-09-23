@@ -14,23 +14,52 @@
                 background: url('img/bam-five-info-bg.png') no-repeat bottom center;
                 background-size: contain;
             }
+            @media only screen and (max-width: 1024px) {
+                .info {
+                    background: url('img/bam-five-info-bg-m.png') no-repeat bottom center;
+                    background-size: contain;
+                }
+            }
         </style>
     </head>
     <body>
         <div class="bam-five-wrap">
 
+            <a class="bam-five-hamburger" href=""><img class="fullimg" src="img/bam-five-hamburger.png"></a>
+            <a class="bam-five-badge" href=""><img class="for-pc fullimg" src="img/bam-five-badge.png"><img class="for-m fullimg" src="img/bam-five-badge-m.png"></a>
+
+            <div class="bam-five-menu">
+                <a class="bam-five-close" href=""><img class="fullimg" src="img/bam-five-close.png"></a>
+                <div>
+                    <a href="" class="yellow">註冊抽任天堂Switch健身遊戲組<p>會員大募集</p></a>
+                    <a href="" class="yellow">走路抽新加坡機票<p>年末走路派對</p></a>
+                    <a href="" class="yellow">減齡抽北海道機票<p>保戶旅行咖</p></a>
+                    <a href="">健康守護圈</a>
+                    <a href="">活動注意事項</a>
+                    <a href=""><img style="display: block; width: 1.5em; transform: scale(1, -1); margin: -0.25em auto;" src="img/bam-five-more.svg">TOP</a>
+                </div>
+            </div>
+
             <section class="kv">
-                <img class="fullimg" src="img/bam-five-kv-bg.jpg">
-                <img class="kv-dog fullimg" src="img/bam-five-kv-dog.png">
-                <img class="kv-title fullimg" src="img/bam-five-kv-tite.png">
-                <img class="kv-prize fullimg" src="img/bam-five-kv-prize.png">
+                <img class="fullimg for-pc" src="img/bam-five-kv-bg.jpg">
+                <img class="kv-dog fullimg for-pc" src="img/bam-five-kv-dog.png">
+                <img class="kv-title fullimg for-pc" src="img/bam-five-kv-tite.png">
+                <img class="kv-prize fullimg for-pc" src="img/bam-five-kv-prize.png">
+                <img class="fullimg for-m" src="img/bam-five-kv-bg-m.jpg">
+                <img class="kv-dog fullimg for-m" src="img/bam-five-kv-dog-m.png">
+                <img class="kv-title fullimg for-m" src="img/bam-five-kv-tite-m.png">
+                <img class="kv-prize fullimg for-m" src="img/bam-five-kv-prize-m.png">
             </section>
 
             <section class="prize">
-                <img class="fullimg" src="img/bam-five-prize-bg.png">
-                <img class="prize-1" src="img/bam-five-prize-1.png">
-                <img class="prize-2" src="img/bam-five-prize-2.png">
-                <img class="prize-3" src="img/bam-five-prize-3.png">
+                <img class="fullimg for-pc" src="img/bam-five-prize-bg.png">
+                <img class="prize-1 for-pc" src="img/bam-five-prize-1.png">
+                <img class="prize-2 for-pc" src="img/bam-five-prize-2.png">
+                <img class="prize-3 for-pc" src="img/bam-five-prize-3.png">
+                <img class="fullimg for-m" src="img/bam-five-prize-bg-m.png">
+                <img class="prize-1 for-m" src="img/bam-five-prize-1-m.png">
+                <img class="prize-2 for-m" src="img/bam-five-prize-2-m.png">
+                <img class="prize-3 for-m" src="img/bam-five-prize-3-m.png">
             </section>
 
             <section class="info">
@@ -110,21 +139,24 @@
                 <h2><img src="img/bam-five-star.png">得獎公告<img style="transform: scale(-1, 1);" src="img/bam-five-star.png"></h2>
                 <div class="win-flex">
                     <a href="">
-                        <img class="fullimg" src="img/bam-five-win-1.png">
+                        <img class="for-pc fullimg" src="img/bam-five-win-1.png">
+                        <img class="for-m fullimg" src="img/bam-five-win-1-m.png">
                         <article>
                             <h4>註冊抽</h4>
                             <p>任天堂Switch健身遊戲組</p>
                         </article>
                     </a>
                     <a href="">
-                        <img class="fullimg" src="img/bam-five-win-2.png">
+                        <img class="for-pc fullimg" src="img/bam-five-win-2.png">
+                        <img class="for-m fullimg" src="img/bam-five-win-2-m.png">
                         <article>
                             <h4>走路抽</h4>
                             <p>新加坡機票</p>
                         </article>
                     </a>
                     <a href="">
-                        <img class="fullimg" src="img/bam-five-win-3.png">
+                        <img class="for-pc fullimg" src="img/bam-five-win-3.png">
+                        <img class="for-m fullimg" src="img/bam-five-win-3-m.png">
                         <article>
                             <h4>減齡抽</h4>
                             <p>北海道機票</p>
@@ -148,6 +180,13 @@
                     </div>
                 </div>
             </section>
+
+            <div class="bam-five-lightbox">
+                <div>
+                    <a class="bam-five-lightbox-close" href=""><img class="fullimg" src="img/bam-five-close.png"></a>
+                    目前尚未開獎<br>敬請期待
+                </div>
+            </div>
         </div>
     </body>
 </html>

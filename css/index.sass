@@ -4,6 +4,7 @@ $blue: #0096e7
 $water: #028cd6
 $dark: #006fbc
 $orange: #ff9600
+$yellow: #ffe000
 $bg: #ffe985
 
 .bam-five-wrap
@@ -23,6 +24,106 @@ $bg: #ffe985
             vertical-align: middle
             top: -0.25vw
             margin: 0 1.5%! important
+
+
+    .bam-five-hamburger,
+    .bam-five-badge
+        z-index: 3
+        position: fixed
+        display: block
+        width: 4vw
+        top: 75px
+        right: 1%
+
+    .bam-five-badge
+        width: 6vw
+        right: 0
+        top: calc(75px + 5.5vw)
+
+    .bam-five-menu
+        display: none
+        z-index: 99
+        position: fixed
+        width: 100%
+        height: 100%
+        background: $blue
+        .bam-five-close
+            position: absolute
+            top: 5%
+            right: 5%
+            width: 3%
+            filter: brightness(0) invert(1)
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            width: 100%
+            height: 100%
+            color: #FFF
+            text-align: center
+            a
+                position: relative
+                display: block
+                font-size: 2.5vw
+                padding: 1.5% 0
+                width: 50%
+                margin: 0 auto
+                &:last-child::before
+                    display: none
+                &::before
+                    display: block
+                    content: ''
+                    position: absolute
+                    bottom: -1px
+                    left: 0
+                    right: 0
+                    height: 1px
+                    width: 30vw
+                    margin: auto
+                    background: #FFF
+                    opacity: 0.35
+                &.yellow
+                    color: $yellow
+                p
+                    color: #FFF
+                    font-size: 1.35vw
+
+    .bam-five-lightbox
+        display: none
+        z-index: 99
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        lef: 0
+        background: rgba(31, 130, 198, 0.75)
+        > div
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            width: 25vw
+            height: 25vw
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background: #FFF
+            box-shadow: 0 0 2vw rgba(0,0,0,0.5)
+            border-radius: 3vw
+            text-align: center
+            font-size: 2vw
+            color: $blue
+            font-weight: bold
+            .bam-five-lightbox-close
+                position: absolute
+                display: block
+                right: 8%
+                top: 8%
+                width: 8%
+
+
 
     .kv
         position: relative
@@ -151,6 +252,8 @@ $bg: #ffe985
             width: 5%
             margin: auto
             opacity: 0.75
+            &.active
+                transform: scale(1, -1)
         article
             display: none
             width: 80%
@@ -221,13 +324,141 @@ $bg: #ffe985
                     width: 30%
                     margin-bottom: 3%
                 a
+                    display: inline-block
                     color: #dd398b
                     border-bottom: 1px solid #dd398b
-                    padding-bottom: 3px
 
 // @media only screen and (min-width: 1025px)
     
 
 @media only screen and (max-width: 1024px)
     .bam-five-wrap
-        font-size: 4vw
+        font-size: 3.25vw
+        letter-spacing: 0
+        h2
+            font-size: 5.5vw
+            img
+                width: 5vw
+                margin: 0 3%! important
+
+        .bam-five-hamburger,
+        .bam-five-badge
+            width: 10vw
+            top: 65px
+            right: 2%
+        .bam-five-badge
+            width: 14vw
+            right: 0
+            top: calc(65px + 12vw)
+
+        .bam-five-menu
+            .bam-five-close
+                top: 3%
+                width: 8%
+            div
+                a
+                    font-size: 6vw
+                    padding: 3% 0
+                    width: 100%
+                    &::before
+                        width: 75vw
+                    p
+                        font-size: 3.75vw
+
+        .bam-five-lightbox
+            > div
+                width: 60vw
+                height: 80vw
+                border-radius: 5vw
+                font-size: 5vw
+                .bam-five-lightbox-close
+                    width: 10%
+
+        .prize
+            margin-top: -26.5vw
+            .prize-1,
+            .prize-2,
+            .prize-3
+                width: 100%
+                left: 0
+            .prize-1
+                top: 11%
+            .prize-2
+                top: 33%
+            .prize-3
+                top: 57%
+
+        .info
+            padding: 8% 0
+            .info-swiper
+                .swiper-button-prev,
+                .swiper-button-next
+                    width: 8vw
+                .swiper
+                    width: 75%
+                    overflow: visible
+                    .swiper-slide
+                        div
+                            border-radius: 5vw
+                            box-shadow: 0 1.5vw 3vw -1vw rgba(0,0,0,0.5)
+                        h3
+                            font-size: 4.5vw
+                            margin: 5% 0
+                        a
+                            width: 25vw
+                            font-size: 3.5vw
+
+        .notice
+            border-radius: 0 0 10vw 10vw
+            padding: 5% 0 3% 0
+            .notice-more
+                width: 8%
+            article
+                width: 90%
+                table
+                    margin: 3% 0
+                    width: 100%
+                    font-size: 3vw
+                    td
+                        &:nth-child(1)
+                            width: 50%
+                    td
+                        &:nth-child(2)
+                            width: 15%
+
+        .win
+            padding: 8% 0
+            .win-flex
+                display: block
+                padding: 0 15%
+                margin-top: 3%
+                a
+                    width: 100%
+                    article
+                        top: 70%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        white-space: nowrap
+                        text-align: center
+                        h4
+                            font-size: 5vw
+                        p
+                            font-size: 3.5vw
+
+        .bamapp
+            padding: 8% 5%
+            .bamapp-flex
+                display: block
+                margin-top: 8%
+                div
+                    width: 80%
+                    margin: auto
+                    margin-right: 0
+                    margin-top: -6vw
+                article
+                    width: 100%
+                    padding-right: 10%
+                    img
+                        width: 55%
+                    a
+                        margin-top: 5vw
