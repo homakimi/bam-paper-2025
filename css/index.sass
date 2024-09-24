@@ -25,6 +25,11 @@ $bg: #ffe985
             top: -0.25vw
             margin: 0 1.5%! important
 
+    [data-scroll-show]
+        transition: opacity 1s, transform 1s
+        &.scrollShowActive
+            opacity: 1! important
+            transform: translate(0, 0)! important
 
     .bam-five-hamburger,
     .bam-five-badge
@@ -124,19 +129,39 @@ $bg: #ffe985
                 width: 8%
 
 
-
+    @keyframes popin
+        from
+            transform: scale(0) rotate(-35deg)
+        to
+            transform: scale(1) rotate(0deg)
+            
+    @keyframes fadein
+        to
+            opacity: 1
+            transform: translateY(0) scale(1)
+            
     .kv
         position: relative
-        .kv-dog,
-        .kv-title,
-        .kv-prize
+        width: 100%
+        padding-top: percentage(926/1920)
+        img
             position: absolute
             top: 0
             left: 0
+        .kv-dog
+            transform: translateY(100%)
+            animation: fadein 1s forwards 0.5s
+        .kv-title
+            transform: scale(0)
+            animation: popin 0.5s forwards 1s
+        .kv-prize
+            transform: translateY(100%)
+            animation: fadein 1s forwards 1s
 
     .prize
         position: relative
         margin-top: -26vw
+        overflow: hidden
         &::before
             z-index: -1
             position: absolute
@@ -154,6 +179,7 @@ $bg: #ffe985
             position: absolute
             width: 85%
             left: 6%
+            transform: translateX(100vw)
         .prize-1
             top: 22%
         .prize-2
@@ -168,9 +194,14 @@ $bg: #ffe985
         margin-top: -3%
         background-color: $bg
         box-shadow: 0 1.5vw 1.5vw -0.5vw rgba(0,0,0,0.25)
+        h2
+            opacity: 0
+            transform: translateY(50px)
         .info-swiper
             position: relative
             overflow: hidden
+            opacity: 0
+            transform: translateY(50px)
             .swiper-button-prev,
             .swiper-button-next
                 width: 4vw
@@ -289,6 +320,8 @@ $bg: #ffe985
                 position: relative
                 display: block
                 width: 32%
+                opacity: 0
+                transform: translateY(50px)
                 article
                     position: absolute
                     top: 60%
@@ -331,134 +364,137 @@ $bg: #ffe985
 // @media only screen and (min-width: 1025px)
     
 
-@media only screen and (max-width: 1024px)
-    .bam-five-wrap
-        font-size: 3.25vw
-        letter-spacing: 0
-        h2
-            font-size: 5.5vw
-            img
-                width: 5vw
-                margin: 0 3%! important
+// @media only screen and (max-width: 1024px)
+//     .bam-five-wrap
+//         font-size: 3.25vw
+//         letter-spacing: 0
+//         h2
+//             font-size: 5.5vw
+//             img
+//                 width: 5vw
+//                 margin: 0 3%! important
 
-        .bam-five-hamburger,
-        .bam-five-badge
-            width: 10vw
-            top: 65px
-            right: 2%
-        .bam-five-badge
-            width: 14vw
-            right: 0
-            top: calc(65px + 12vw)
+//         .bam-five-hamburger,
+//         .bam-five-badge
+//             width: 10vw
+//             top: 65px
+//             right: 2%
+//         .bam-five-badge
+//             width: 14vw
+//             right: 0
+//             top: calc(65px + 12vw)
 
-        .bam-five-menu
-            .bam-five-close
-                top: 3%
-                width: 8%
-            div
-                a
-                    font-size: 6vw
-                    padding: 3% 0
-                    width: 100%
-                    &::before
-                        width: 75vw
-                    p
-                        font-size: 3.75vw
+//         .bam-five-menu
+//             .bam-five-close
+//                 top: 3%
+//                 width: 8%
+//             div
+//                 a
+//                     font-size: 6vw
+//                     padding: 3% 0
+//                     width: 100%
+//                     &::before
+//                         width: 75vw
+//                     p
+//                         font-size: 3.75vw
 
-        .bam-five-lightbox
-            > div
-                width: 60vw
-                height: 80vw
-                border-radius: 5vw
-                font-size: 5vw
-                .bam-five-lightbox-close
-                    width: 10%
+//         .bam-five-lightbox
+//             > div
+//                 width: 60vw
+//                 height: 80vw
+//                 border-radius: 5vw
+//                 font-size: 5vw
+//                 .bam-five-lightbox-close
+//                     width: 10%
 
-        .prize
-            margin-top: -26.5vw
-            .prize-1,
-            .prize-2,
-            .prize-3
-                width: 100%
-                left: 0
-            .prize-1
-                top: 11%
-            .prize-2
-                top: 33%
-            .prize-3
-                top: 57%
+//         .kv
+//             padding-top: percentage(1170/750)
 
-        .info
-            padding: 8% 0
-            .info-swiper
-                .swiper-button-prev,
-                .swiper-button-next
-                    width: 8vw
-                .swiper
-                    width: 75%
-                    overflow: visible
-                    .swiper-slide
-                        div
-                            border-radius: 5vw
-                            box-shadow: 0 1.5vw 3vw -1vw rgba(0,0,0,0.5)
-                        h3
-                            font-size: 4.5vw
-                            margin: 5% 0
-                        a
-                            width: 25vw
-                            font-size: 3.5vw
+//         .prize
+//             margin-top: -26.5vw
+//             .prize-1,
+//             .prize-2,
+//             .prize-3
+//                 width: 100%
+//                 left: 0
+//             .prize-1
+//                 top: 11%
+//             .prize-2
+//                 top: 33%
+//             .prize-3
+//                 top: 57%
 
-        .notice
-            border-radius: 0 0 10vw 10vw
-            padding: 5% 0 3% 0
-            .notice-more
-                width: 8%
-            article
-                width: 90%
-                table
-                    margin: 3% 0
-                    width: 100%
-                    font-size: 3vw
-                    td
-                        &:nth-child(1)
-                            width: 50%
-                    td
-                        &:nth-child(2)
-                            width: 15%
+//         .info
+//             padding: 8% 0
+//             .info-swiper
+//                 .swiper-button-prev,
+//                 .swiper-button-next
+//                     width: 8vw
+//                 .swiper
+//                     width: 75%
+//                     overflow: visible
+//                     .swiper-slide
+//                         div
+//                             border-radius: 5vw
+//                             box-shadow: 0 1.5vw 3vw -1vw rgba(0,0,0,0.5)
+//                         h3
+//                             font-size: 4.5vw
+//                             margin: 5% 0
+//                         a
+//                             width: 25vw
+//                             font-size: 3.5vw
 
-        .win
-            padding: 8% 0
-            .win-flex
-                display: block
-                padding: 0 15%
-                margin-top: 3%
-                a
-                    width: 100%
-                    article
-                        top: 70%
-                        left: 50%
-                        transform: translate(-50%, -50%)
-                        white-space: nowrap
-                        text-align: center
-                        h4
-                            font-size: 5vw
-                        p
-                            font-size: 3.5vw
+//         .notice
+//             border-radius: 0 0 10vw 10vw
+//             padding: 5% 0 3% 0
+//             .notice-more
+//                 width: 8%
+//             article
+//                 width: 90%
+//                 table
+//                     margin: 3% 0
+//                     width: 100%
+//                     font-size: 3vw
+//                     td
+//                         &:nth-child(1)
+//                             width: 50%
+//                     td
+//                         &:nth-child(2)
+//                             width: 15%
 
-        .bamapp
-            padding: 8% 5%
-            .bamapp-flex
-                display: block
-                margin-top: 8%
-                div
-                    width: 80%
-                    margin: auto
-                    margin-right: 0
-                    margin-top: -6vw
-                article
-                    width: 100%
-                    padding-right: 10%
-                    img
-                        width: 55%
-                    a
-                        margin-top: 5vw
+//         .win
+//             padding: 8% 0
+//             .win-flex
+//                 display: block
+//                 padding: 0 15%
+//                 margin-top: 3%
+//                 a
+//                     width: 100%
+//                     article
+//                         top: 70%
+//                         left: 50%
+//                         transform: translate(-50%, -50%)
+//                         white-space: nowrap
+//                         text-align: center
+//                         h4
+//                             font-size: 5vw
+//                         p
+//                             font-size: 3.5vw
+
+//         .bamapp
+//             padding: 8% 5%
+//             .bamapp-flex
+//                 display: block
+//                 margin-top: 8%
+//                 div
+//                     width: 80%
+//                     margin: auto
+//                     margin-right: 0
+//                     margin-top: -6vw
+//                 article
+//                     width: 100%
+//                     padding-right: 10%
+//                     img
+//                         width: 55%
+//                     a
+//                         margin-top: 5vw

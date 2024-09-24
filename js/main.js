@@ -7,10 +7,10 @@ $(function() {
     }
     $('.bam-five-wrap').css('padding-top', headerHeight)
 
-    // scrollEffect();
-    // $(window).scroll(function() {
-    //     scrollEffect();
-    // })
+    scrollEffect();
+    $(window).scroll(function() {
+        scrollEffect();
+    })
 
     new Swiper('.info-swiper .swiper', {
         spaceBetween: 0,
@@ -46,9 +46,16 @@ $(document)
     $('body').addClass('fix');
     $('.bam-five-menu').stop().fadeIn();
 })
-.on('click', '.bam-five-close, .bam-five-lightbox-close', function() {
+.on('click', '.bam-five-close, .bam-five-lightbox-close, [data-target]', function() {
     $('body').removeClass('fix');
     $('.bam-five-menu, .bam-five-lightbox').stop().fadeOut();
+})
+.on('click', '[data-target]', function() {
+    if($(this).data('target') == 'top') {
+        $('body, html').animate({ scrollTop: 0 }, 1000);
+    } else {
+        $('body, html').animate({ scrollTop: $('[data-pin="'+$(this).data('target')+'"]').offset().top - headerHeight }, 1000);
+    }
 })
 .on('click', '.win-flex a',function() {
     $('body').addClass('fix');
@@ -59,6 +66,7 @@ $(document)
     $('.notice article').stop().slideToggle();
     $('body, html').animate({ scrollTop: $('.notice').offset().top - headerHeight }, 750);
 })
+.on('click', '')
 
 function scrollEffect() {
     $('[data-scroll-show-parent]').each(function() {
@@ -93,20 +101,6 @@ function scrollEffect() {
                     }.bind(this), $(this).data('scroll-show'))
                 }
             }
-        }
-    })
-
-    if($(window).scrollTop() > $('.map-bottom').offset().top - $(window).height()*0.25 && $(window).scrollTop() < $('.insure').offset().top + $('.insure').height()) {
-        $('.btn-guide, .guide-fix').fadeIn();
-    } else {
-        $('.btn-guide, .guide-fix').fadeOut();
-    }
-
-    $('[data-scroll-target]').each(function() {
-        if($(window).scrollTop() > $(this).offset().top - headerHeight - 1 && $(window).scrollTop() < $(this).offset().top + $(this).height() - headerHeight - 1) {
-            $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').addClass('active');
-        } else {
-            $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').removeClass('active');
         }
     })
 }
