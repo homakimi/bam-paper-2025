@@ -254,6 +254,79 @@ body.fix {
 .bam-five-wrap .prize .prize-3 {
   top: 61.5%;
 }
+.bam-five-wrap .prize .cloud {
+  display: block;
+  position: absolute;
+}
+.bam-five-wrap .prize .cloud.cloud-1 {
+  width: 7%;
+  top: 24%;
+  left: 12%;
+  opacity: 0.2;
+  transform: translateX(100%);
+  animation: cloud 5s -1s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-2 {
+  width: 7%;
+  top: 19.5%;
+  left: 86%;
+  opacity: 0.1;
+  transform: translateX(-100%);
+  animation: cloud 3s -2s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-3 {
+  width: 20%;
+  top: 36.5%;
+  left: 83%;
+  opacity: 0.35;
+  transform: translateX(50%);
+  animation: cloud 7s -2s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-4 {
+  width: 15%;
+  top: 38.75%;
+  left: 88%;
+  opacity: 0.5;
+  transform: translateX(50%);
+  animation: cloud 6s -3s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-5 {
+  width: 12%;
+  top: 63%;
+  left: 5%;
+  opacity: 0.25;
+  transform: translateX(50%);
+  animation: cloud 6s -3s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-6 {
+  width: 10%;
+  top: 60%;
+  left: 82%;
+  opacity: 0.25;
+  transform: translateX(75%);
+  animation: cloud 5s -3s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-7 {
+  width: 9%;
+  top: 86%;
+  left: 41%;
+  opacity: 0.35;
+  transform: translateX(-100%);
+  animation: cloud 5s -3s linear alternate infinite;
+}
+.bam-five-wrap .prize .cloud.cloud-8 {
+  width: 17%;
+  top: 84%;
+  left: 85%;
+  opacity: 0.5;
+  transform: translateX(50%);
+  animation: cloud 6s -4s linear alternate infinite;
+}
+@keyframes cloud {
+  to {
+    transform: translateX(0);
+  }
+}
 .bam-five-wrap .info {
   width: 100%;
   text-align: center;
@@ -460,12 +533,12 @@ body.fix {
   text-align: justify;
   line-height: 175%;
 }
-.bam-five-wrap .bamapp .bamapp-flex article img {
+.bam-five-wrap .bamapp .bamapp-flex article .bamapp-logo {
   display: block;
   width: 30%;
   margin-bottom: 3%;
 }
-.bam-five-wrap .bamapp .bamapp-flex article a {
+.bam-five-wrap .bamapp .bamapp-flex article .bamapp-more {
   display: inline-block;
   color: #dd398b;
   border-bottom: 1px solid #dd398b;
@@ -538,6 +611,46 @@ body.fix {
   }
   .bam-five-wrap .prize .prize-3 {
     top: 57%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-1 {
+    width: 10%;
+    top: 10%;
+    left: 25%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-2 {
+    width: 15%;
+    top: 12%;
+    left: 50%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-3 {
+    width: 20%;
+    top: 32%;
+    left: 80%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-4 {
+    width: 15%;
+    top: 33%;
+    left: 84%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-5 {
+    width: 12%;
+    top: 34%;
+    left: 35%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-6 {
+    top: 61%;
+    left: 45%;
+  }
+  .bam-five-wrap .prize .cloud.cloud-7 {
+    width: 20%;
+    top: 58%;
+    left: 5%;
+    transform: translate(50%);
+  }
+  .bam-five-wrap .prize .cloud.cloud-8 {
+    width: 15%;
+    top: 89%;
+    left: 30%;
   }
   .bam-five-wrap .info {
     padding: 8% 0;
@@ -625,10 +738,10 @@ body.fix {
     width: 100%;
     padding-right: 10%;
   }
-  .bam-five-wrap .bamapp .bamapp-flex article img {
+  .bam-five-wrap .bamapp .bamapp-flex article .bamapp-logo {
     width: 55%;
   }
-  .bam-five-wrap .bamapp .bamapp-flex article a {
+  .bam-five-wrap .bamapp .bamapp-flex article .bamapp-more {
     margin-top: 5vw;
   }
 }/*# sourceMappingURL=index.css.map */

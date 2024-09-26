@@ -186,6 +186,69 @@ $bg: #ffe985
             top: 40%
         .prize-3
             top: 61.5%
+        .cloud
+            display: block
+            position: absolute
+            &.cloud-1
+                width: 7%
+                top: 24%
+                left: 12%
+                opacity: 0.2
+                transform: translateX(100%)
+                animation: cloud 5s -1s linear alternate infinite
+            &.cloud-2
+                width: 7%
+                top: 19.5%
+                left: 86%
+                opacity: 0.1
+                transform: translateX(-100%)
+                animation: cloud 3s -2s linear alternate infinite
+            &.cloud-3
+                width: 20%
+                top: 36.5%
+                left: 83%
+                opacity: 0.35
+                transform: translateX(50%)
+                animation: cloud 7s -2s linear alternate infinite
+            &.cloud-4
+                width: 15%
+                top: 38.75%
+                left: 88%
+                opacity: 0.5
+                transform: translateX(50%)
+                animation: cloud 6s -3s linear alternate infinite
+            &.cloud-5
+                width: 12%
+                top: 63%
+                left: 5%
+                opacity: 0.25
+                transform: translateX(50%)
+                animation: cloud 6s -3s linear alternate infinite
+            &.cloud-6
+                width: 10%
+                top: 60%
+                left: 82%
+                opacity: 0.25
+                transform: translateX(75%)
+                animation: cloud 5s -3s linear alternate infinite
+            &.cloud-7
+                width: 9%
+                top: 86%
+                left: 41%
+                opacity: 0.35
+                transform: translateX(-100%)
+                animation: cloud 5s -3s linear alternate infinite
+            &.cloud-8
+                width: 17%
+                top: 84%
+                left: 85%
+                opacity: 0.5
+                transform: translateX(50%)
+                animation: cloud 6s -4s linear alternate infinite
+            @keyframes cloud
+                to
+                    transform: translateX(0)
+                    
 
     .info
         width: 100%
@@ -362,11 +425,11 @@ $bg: #ffe985
                 flex: 1 0 0
                 text-align: justify
                 line-height: 175%
-                img
+                .bamapp-logo
                     display: block
                     width: 30%
                     margin-bottom: 3%
-                a
+                .bamapp-more
                     display: inline-block
                     color: #dd398b
                     border-bottom: 1px solid #dd398b
@@ -433,6 +496,39 @@ $bg: #ffe985
                 top: 30.5%
             .prize-3
                 top: 57%
+            .cloud
+                &.cloud-1
+                    width: 10%
+                    top: 10%
+                    left: 25%
+                &.cloud-2
+                    width: 15%
+                    top: 12%
+                    left: 50%
+                &.cloud-3
+                    width: 20%
+                    top: 32%
+                    left: 80%
+                &.cloud-4
+                    width: 15%
+                    top: 33%
+                    left: 84%
+                &.cloud-5
+                    width: 12%
+                    top: 34%
+                    left: 35%
+                &.cloud-6
+                    top: 61%
+                    left: 45%
+                &.cloud-7
+                    width: 20%
+                    top: 58%
+                    left: 5%
+                    transform: translate(50%)
+                &.cloud-8
+                    width: 15%
+                    top: 89%
+                    left: 30%
 
         .info
             padding: 8% 0
@@ -505,7 +601,7 @@ $bg: #ffe985
                 article
                     width: 100%
                     padding-right: 10%
-                    img
+                    .bamapp-logo
                         width: 55%
-                    a
+                    .bamapp-more
                         margin-top: 5vw

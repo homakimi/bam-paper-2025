@@ -28,7 +28,7 @@ $(function() {
         }
     });
 
-    // urlDetect();
+    urlDetect();
 })
 
 
@@ -111,7 +111,9 @@ function urlDetect() {
         var _url = new URL(window.location.href);
         var _searchParams = _url.searchParams.get('pin');
         if($('[data-pin="'+_searchParams+'"]').length > 0) {
-            $('body, html').animate({ scrollTop: $('[data-pin="'+_searchParams+'"]').offset().top - headerHeight }, 1000);
+            setTimeout(function() {
+                $('body, html').animate({ scrollTop: $('[data-pin="'+_searchParams+'"]').offset().top - headerHeight }, 1000);
+            }, 250)
         }
     }
 }
