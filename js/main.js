@@ -58,8 +58,11 @@ $(document)
     }
 })
 .on('click', '.win-flex a',function() {
-    $('body').addClass('fix');
-    $('.bam-five-lightbox').stop().fadeIn();
+    if(!$(this).attr('href').length > 0) {
+        $('body').addClass('fix');
+        $('.bam-five-lightbox').stop().fadeIn();
+        return false
+    }
 })
 .on('click', '.notice-more', function() {
     $(this).toggleClass('active');
