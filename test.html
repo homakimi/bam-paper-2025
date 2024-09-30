@@ -3,1286 +3,12 @@
 <link type="text/css" rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
-html {
-  font-size: 16px;
-}
 
-body {
-  padding: 0;
-  margin: 0;
-}
-body.fix {
-  overflow: hidden;
-}
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap";html{font-size:16px}body{padding:0;margin:0}body.fix{overflow:hidden}.bam-five-wrap{width:100%;font-family:"Noto Sans TC";-moz-text-size-adjust:none;text-size-adjust:none;-webkit-text-size-adjust:none}.bam-five-wrap :not(.swiper-button){margin:0;padding:0;box-sizing:border-box}.bam-five-wrap :not(.swiper-button)::before,.bam-five-wrap :not(.swiper-button)::after{box-sizing:border-box}.bam-five-wrap a{text-decoration:none;color:inherit}.bam-five-wrap .fullimg{display:block;width:100%}.bam-five-wrap .swiper-button{z-index:1}.bam-five-wrap .swiper-button::after{display:none}@media only screen and (min-width: 1025px){.for-m{display:none!important}}@media only screen and (max-width: 1024px){.for-pc{display:none!important}}.bam-five-wrap{color:#626262;font-size:1.25vw;letter-spacing:.1vw}.bam-five-wrap h2{font-size:2.5vw;color:#FFF;text-shadow:2px 2px 0 #006fbc,2px -2px 0 #006fbc,-2px 2px 0 #006fbc,-2px -2px 0 #006fbc,0 -2px 0 #006fbc,0 2px 0 #006fbc,2px 0 0 #006fbc,-2px 0 0 #006fbc;font-weight:400;text-align:center}.bam-five-wrap h2 img{position:relative;display:inline-block;width:2.25vw;vertical-align:middle;top:-.25vw;margin:0 1.5%!important}.bam-five-wrap [data-scroll-show]{transition:opacity 1s,transform 1s}.bam-five-wrap [data-scroll-show].scrollShowActive{opacity:1!important;transform:translate(0,0)!important}.bam-five-wrap .bam-five-hamburger,.bam-five-wrap .bam-five-badge{z-index:3;position:fixed;display:block;width:4vw;top:75px;right:1%}.bam-five-wrap .bam-five-badge{width:6vw;right:0;top:calc(75px + 5.5vw)}.bam-five-wrap .bam-five-menu{display:none;z-index:99;position:fixed;width:100%;height:100%;background:#0096e7}.bam-five-wrap .bam-five-menu .bam-five-close{position:absolute;top:5%;right:5%;width:3%;filter:brightness(0) invert(1)}.bam-five-wrap .bam-five-menu div{display:flex;justify-content:center;align-items:center;flex-direction:column;width:100%;height:100%;color:#FFF;text-align:center}.bam-five-wrap .bam-five-menu div a{position:relative;display:block;font-size:2.5vw;padding:1.5% 0;width:50%;margin:0 auto}.bam-five-wrap .bam-five-menu div a:last-child::before{display:none}.bam-five-wrap .bam-five-menu div a::before{display:block;content:"";position:absolute;bottom:-1px;left:0;right:0;height:1px;width:30vw;margin:auto;background:#FFF;opacity:.35}.bam-five-wrap .bam-five-menu div a.yellow{color:#ffe000}.bam-five-wrap .bam-five-menu div a p{color:#FFF;font-size:1.35vw}.bam-five-wrap .bam-five-lightbox{display:none;z-index:99;position:fixed;width:100%;height:100%;top:0;lef:0;background:rgba(31,130,198,0.75)}.bam-five-wrap .bam-five-lightbox > div{position:absolute;display:flex;justify-content:center;align-items:center;flex-direction:column;width:25vw;height:25vw;top:50%;left:50%;transform:translate(-50%,-50%);background:#FFF;box-shadow:0 0 2vw rgba(0,0,0,0.5);border-radius:3vw;text-align:center;font-size:2vw;color:#0096e7;font-weight:700}.bam-five-wrap .bam-five-lightbox > div .bam-five-lightbox-close{position:absolute;display:block;right:8%;top:8%;width:8%}@keyframes popin{from{transform:scale(0) rotate(-35deg)}to{transform:scale(1) rotate(0deg)}}@keyframes fadein{to{opacity:1;transform:translateY(0) scale(1)}}.bam-five-wrap .kv{position:relative;width:100%;padding-top:48.2291666667%}.bam-five-wrap .kv img{position:absolute;top:0;left:0}.bam-five-wrap .kv .kv-dog{transform:translateY(100%);animation:fadein 1s forwards .5s}.bam-five-wrap .kv .kv-title{transform:scale(0);animation:popin .5s forwards 1s}.bam-five-wrap .kv .kv-prize{transform:translateY(100%);animation:fadein 1s forwards 1s}.bam-five-wrap .prize{position:relative;margin-top:-26vw;overflow:hidden}.bam-five-wrap .prize::before{z-index:-1;position:absolute;display:block;content:"";top:0;left:0;width:100%;height:100%;background:#ffe985}.bam-five-wrap .prize .prize-1,.bam-five-wrap .prize .prize-2,.bam-five-wrap .prize .prize-3{display:block;position:absolute;width:85%;left:6%;transform:translateX(100vw)}.bam-five-wrap .prize .prize-1{top:22%}.bam-five-wrap .prize .prize-2{top:40%}.bam-five-wrap .prize .prize-3{top:61.5%}.bam-five-wrap .prize .cloud{display:block;position:absolute}.bam-five-wrap .prize .cloud.cloud-1{width:7%;top:24%;left:12%;opacity:.2;transform:translateX(100%);animation:cloud 5s -1s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-2{width:7%;top:19.5%;left:86%;opacity:.1;transform:translateX(-100%);animation:cloud 3s -2s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-3{width:20%;top:36.5%;left:83%;opacity:.35;transform:translateX(50%);animation:cloud 7s -2s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-4{width:15%;top:38.75%;left:88%;opacity:.5;transform:translateX(50%);animation:cloud 6s -3s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-5{width:12%;top:63%;left:5%;opacity:.25;transform:translateX(50%);animation:cloud 6s -3s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-6{width:10%;top:60%;left:82%;opacity:.25;transform:translateX(75%);animation:cloud 5s -3s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-7{width:9%;top:86%;left:41%;opacity:.35;transform:translateX(-100%);animation:cloud 5s -3s linear alternate infinite}.bam-five-wrap .prize .cloud.cloud-8{width:17%;top:84%;left:85%;opacity:.5;transform:translateX(50%);animation:cloud 6s -4s linear alternate infinite}@keyframes cloud{to{transform:translateX(0)}}.bam-five-wrap .info{width:100%;text-align:center;padding:5% 0 1.5%;margin-top:-3%;background-color:#ffe985;box-shadow:0 1.5vw 1.5vw -.5vw rgba(0,0,0,0.25)}.bam-five-wrap .info h2{opacity:0;transform:translateY(50px)}.bam-five-wrap .info .info-swiper{position:relative;overflow:hidden;opacity:0;transform:translateY(50px)}.bam-five-wrap .info .info-swiper .swiper-button-prev,.bam-five-wrap .info .info-swiper .swiper-button-next{width:4vw;top:29%;transform:none;margin:0}.bam-five-wrap .info .info-swiper .swiper-button-prev{left:2%}.bam-five-wrap .info .info-swiper .swiper-button-next{right:2%}.bam-five-wrap .info .info-swiper .swiper{width:95%;margin:auto;padding:3% 0}.bam-five-wrap .info .info-swiper .swiper .swiper-slide{color:#028cd6}.bam-five-wrap .info .info-swiper .swiper .swiper-slide.swiper-slide-active div{transform:none}.bam-five-wrap .info .info-swiper .swiper .swiper-slide.swiper-slide-active div::after{opacity:0}.bam-five-wrap .info .info-swiper .swiper .swiper-slide.swiper-slide-active h3{opacity:1}.bam-five-wrap .info .info-swiper .swiper .swiper-slide.swiper-slide-active a{opacity:1;pointer-events:all}.bam-five-wrap .info .info-swiper .swiper .swiper-slide div{position:relative;border-radius:1.5vw;transform:scale(0.9);box-shadow:0 1.5vw 1vw -1vw rgba(0,0,0,0.5);overflow:hidden;transition:transform .5s}.bam-five-wrap .info .info-swiper .swiper .swiper-slide div::after{position:absolute;display:block;content:"";width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.35)}.bam-five-wrap .info .info-swiper .swiper .swiper-slide h3{font-size:2vw;font-weight:400;margin:8% 0 5%;opacity:0;transition:opacity .5s}.bam-five-wrap .info .info-swiper .swiper .swiper-slide a{display:block;width:9vw;border:2px solid #028cd6;background:#FFF;padding:1.5% 0;margin:auto;border-radius:5vw;opacity:0;pointer-events:none;transition:opacity .5s}.bam-five-wrap .notice{position:relative;border-radius:0 0 4vw 4vw;overflow:hidden;padding:3% 0 1.5%;color:#FFF}.bam-five-wrap .notice::before{z-index:-1;display:block;position:absolute;content:"";width:100%;height:100%;top:0;left:0;background:#0096e7}.bam-five-wrap .notice .notice-more{display:block;width:5%;margin:auto;opacity:.75}.bam-five-wrap .notice .notice-more.active{transform:scale(1,-1)}.bam-five-wrap .notice article{display:none;width:80%;margin:auto;padding:1.5% 0;text-align:justify;line-height:175%}.bam-five-wrap .notice article table{border-collapse:collapse;border:1px solid #FFF;margin:1% 0}.bam-five-wrap .notice article table td,.bam-five-wrap .notice article table th{border:1px solid #FFF;padding:1% 2%;white-space:nowrap}.bam-five-wrap .notice article table td:nth-child(1){width:30vw}.bam-five-wrap .notice article table td:nth-child(2){width:12vw}.bam-five-wrap .win{padding:5% 0;background:#FFF}.bam-five-wrap .win .win-flex{display:flex;justify-content:space-between;align-items:center;padding:0 5%;margin-top:1.5%}.bam-five-wrap .win .win-flex a{position:relative;display:block;width:32%;opacity:0;transform:translateY(50px)}.bam-five-wrap .win .win-flex a article{position:absolute;top:60%;left:57%;transform:translate(-50%,-50%);white-space:nowrap}.bam-five-wrap .win .win-flex a article h4{font-size:2vw;color:#006fbc}.bam-five-wrap .win .win-flex a article p{color:#ff9600;font-size:1.35vw;font-weight:700}.bam-five-wrap .bamapp{background:#b6e9ff;padding:3% 5%;color:#000}.bam-five-wrap .bamapp .bamapp-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:8%;margin:5% 0}.bam-five-wrap .bamapp .bamapp-flex div{position:relative;width:40%}.bam-five-wrap .bamapp .bamapp-flex div a{position:absolute;display:block;width:46%;padding-top:54%;top:0;left:0}.bam-five-wrap .bamapp .bamapp-flex div a.bamapp-href-google{left:54%}.bam-five-wrap .bamapp .bamapp-flex article{flex:1 0 0;text-align:justify;line-height:175%}.bam-five-wrap .bamapp .bamapp-flex article .bamapp-logo{display:block;width:30%;margin-bottom:3%}.bam-five-wrap .bamapp .bamapp-flex article .bamapp-more{display:inline-block;color:#dd398b;border-bottom:1px solid #dd398b}@media only screen and (max-width: 1024px){.bam-five-wrap{font-size:3.25vw;letter-spacing:0}.bam-five-wrap h2{font-size:5.5vw}.bam-five-wrap h2 img{width:5vw;margin:0 3%!important}.bam-five-wrap .bam-five-hamburger,.bam-five-wrap .bam-five-badge{width:10vw;top:65px;right:2%}.bam-five-wrap .bam-five-badge{width:14vw;right:0;top:calc(65px + 12vw)}.bam-five-wrap .bam-five-menu .bam-five-close{top:3%;width:8%}.bam-five-wrap .bam-five-menu div a{font-size:6vw;padding:3% 0;width:100%}.bam-five-wrap .bam-five-menu div a::before{width:75vw}.bam-five-wrap .bam-five-menu div a p{font-size:3.75vw}.bam-five-wrap .bam-five-lightbox > div{width:60vw;height:80vw;border-radius:5vw;font-size:5vw}.bam-five-wrap .bam-five-lightbox > div .bam-five-lightbox-close{width:10%}.bam-five-wrap .kv{padding-top:156%}.bam-five-wrap .prize{margin-top:-26.5vw}.bam-five-wrap .prize .prize-1,.bam-five-wrap .prize .prize-2,.bam-five-wrap .prize .prize-3{width:100%;left:0}.bam-five-wrap .prize .prize-1{top:8%}.bam-five-wrap .prize .prize-2{top:30.5%}.bam-five-wrap .prize .prize-3{top:57%}.bam-five-wrap .prize .cloud.cloud-1{width:10%;top:10%;left:25%}.bam-five-wrap .prize .cloud.cloud-2{width:15%;top:12%;left:50%}.bam-five-wrap .prize .cloud.cloud-3{width:20%;top:32%;left:80%}.bam-five-wrap .prize .cloud.cloud-4{width:15%;top:33%;left:84%}.bam-five-wrap .prize .cloud.cloud-5{width:12%;top:34%;left:35%}.bam-five-wrap .prize .cloud.cloud-6{top:61%;left:45%}.bam-five-wrap .prize .cloud.cloud-7{width:20%;top:58%;left:5%;transform:translate(50%)}.bam-five-wrap .prize .cloud.cloud-8{width:15%;top:89%;left:30%}.bam-five-wrap .info{padding:8% 0}.bam-five-wrap .info .info-swiper .swiper-button-prev,.bam-five-wrap .info .info-swiper .swiper-button-next{width:8vw}.bam-five-wrap .info .info-swiper .swiper{width:75%;overflow:visible}.bam-five-wrap .info .info-swiper .swiper .swiper-slide div{border-radius:5vw;box-shadow:0 1.5vw 3vw -1vw rgba(0,0,0,0.5)}.bam-five-wrap .info .info-swiper .swiper .swiper-slide h3{font-size:4.5vw;margin:5% 0}.bam-five-wrap .info .info-swiper .swiper .swiper-slide a{width:25vw;font-size:3.5vw}.bam-five-wrap .notice{border-radius:0 0 10vw 10vw;padding:5% 0 3%}.bam-five-wrap .notice .notice-more{width:8%}.bam-five-wrap .notice article{width:90%}.bam-five-wrap .notice article table{margin:3% 0;width:100%;font-size:3vw}.bam-five-wrap .notice article table td:nth-child(1){width:50%}.bam-five-wrap .notice article table td:nth-child(2){width:15%}.bam-five-wrap .win{padding:8% 0}.bam-five-wrap .win .win-flex{display:block;padding:0 18%;margin-top:3%}.bam-five-wrap .win .win-flex a{width:100%;margin:3% 0}.bam-five-wrap .win .win-flex a article{top:74%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;text-align:center}.bam-five-wrap .win .win-flex a article h4{font-size:6vw}.bam-five-wrap .win .win-flex a article p{font-size:4vw}.bam-five-wrap .bamapp{padding:8% 5%}.bam-five-wrap .bamapp .bamapp-flex{display:block;margin-top:8%}.bam-five-wrap .bamapp .bamapp-flex div{width:80%;margin:auto;margin-right:0;margin-top:-6vw}.bam-five-wrap .bamapp .bamapp-flex article{width:100%;padding-right:10%}.bam-five-wrap .bamapp .bamapp-flex article .bamapp-logo{width:55%}.bam-five-wrap .bamapp .bamapp-flex article .bamapp-more{margin-top:5vw}}
 
-.bam-cancer-wrap {
-  width: 100%;
-  background: #FFF;
-  font-family: "Noto Sans TC";
-  -moz-text-size-adjust: none;
-       text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-}
-.bam-cancer-wrap *:not(.swiper-button) {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.bam-cancer-wrap *:not(.swiper-button)::before, .bam-cancer-wrap *:not(.swiper-button)::after {
-  box-sizing: border-box;
-}
-.bam-cancer-wrap a {
-  text-decoration: none;
-  color: inherit;
-}
-.bam-cancer-wrap .fullimg {
-  display: block;
-  width: 100%;
-}
-.bam-cancer-wrap .swiper-button {
-  z-index: 1;
-}
-.bam-cancer-wrap .swiper-button::after {
-  display: none;
-}
-
-@media only screen and (min-width: 1025px) {
-  .for-m {
-    display: none !important;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .for-pc {
-    display: none !important;
-  }
-}
-.bam-cancer-wrap {
-  color: #626262;
-  font-size: 1.25vw;
-  letter-spacing: 0.1vw;
-}
-@keyframes shake {
-  70% {
-    transform: rotate(5deg);
-  }
-  80% {
-    transform: rotate(-2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes notice {
-  10% {
-    transform: rotate(3deg) translateY(-3%);
-  }
-  15%, 100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes balloon {
-  to {
-    transform: translateY(-80%);
-  }
-}
-@keyframes bikeone {
-  50% {
-    transform: translateX(300%);
-  }
-  51% {
-    transform: translateX(300%) scale(-1, 1);
-  }
-  100% {
-    transform: translateX(0%) scale(-1, 1);
-  }
-}
-@keyframes biketwo {
-  50% {
-    transform: translateX(-125%);
-  }
-  51% {
-    transform: translateX(-125%) scale(-1, 1);
-  }
-  100% {
-    transform: translateX(0%) scale(-1, 1);
-  }
-}
-.bam-cancer-wrap [data-scroll-show] {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 1s, opacity 1s;
-}
-.bam-cancer-wrap [data-scroll-show].scrollShowActive {
-  opacity: 1;
-  transform: translateY(0);
-}
-.bam-cancer-wrap [data-scroll-show].map-talk-block, .bam-cancer-wrap [data-scroll-show].info-left {
-  transform-origin: right bottom;
-  transform: translateY(100%) rotate(-15deg);
-}
-.bam-cancer-wrap [data-scroll-show].map-talk-block.scrollShowActive, .bam-cancer-wrap [data-scroll-show].info-left.scrollShowActive {
-  animation: shake 1s forwards;
-}
-.bam-cancer-wrap [data-scroll-show].map-talk-block.scrollShowActive img {
-  transform-origin: right bottom;
-  animation: notice 2.5s 2s infinite;
-}
-.bam-cancer-wrap .bam-cancer-title {
-  display: block;
-  width: 30%;
-}
-.bam-cancer-wrap .kv {
-  position: relative;
-}
-.bam-cancer-wrap .kv .front {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.bam-cancer-wrap .kv .balloon,
-.bam-cancer-wrap .kv .bike-1,
-.bam-cancer-wrap .kv .bike-2 {
-  pointer-events: none;
-  position: absolute;
-  width: 6%;
-}
-.bam-cancer-wrap .kv .balloon {
-  top: 35%;
-  left: 58%;
-  animation: balloon 3s infinite alternate;
-}
-.bam-cancer-wrap .kv .bike-1 {
-  top: 64%;
-  left: 28%;
-  animation: bikeone 10s infinite;
-}
-.bam-cancer-wrap .kv .bike-2 {
-  top: 71%;
-  left: 53%;
-  animation: biketwo 8s infinite;
-}
-.bam-cancer-wrap .kv h1 {
-  position: absolute;
-  width: 28%;
-  top: 15%;
-  left: 6%;
-}
-.bam-cancer-wrap .kv h2 {
-  position: absolute;
-  color: #288fad;
-  font-size: 1.65vw;
-  top: 65%;
-  right: 4%;
-  font-weight: 500;
-}
-.bam-cancer-wrap .kv .kv-href p {
-  position: absolute;
-  width: 12%;
-}
-.bam-cancer-wrap .kv .kv-href p:nth-child(1) {
-  top: 42%;
-  left: 22.5%;
-}
-.bam-cancer-wrap .kv .kv-href p:nth-child(2) {
-  top: 12%;
-  left: 35%;
-}
-.bam-cancer-wrap .kv .kv-href p:nth-child(3) {
-  top: 15%;
-  left: 53%;
-}
-.bam-cancer-wrap .kv .kv-href p:nth-child(4) {
-  top: 42%;
-  left: 64%;
-}
-.bam-cancer-wrap .kv .kv-href p:nth-child(4) a {
-  right: 0;
-  left: auto;
-}
-.bam-cancer-wrap .kv .kv-href a {
-  position: absolute;
-  width: 88%;
-  height: 23%;
-  border-radius: 10vw;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-.bam-cancer-wrap .map {
-  position: relative;
-}
-.bam-cancer-wrap .map .map-top {
-  position: relative;
-  background: linear-gradient(to bottom, #FFF 75%, #e6f0f3);
-}
-.bam-cancer-wrap .map .map-top .map-talk,
-.bam-cancer-wrap .map .map-top .map-route {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.bam-cancer-wrap .map .map-top .map-talk-block {
-  position: absolute;
-  width: 24%;
-  top: 32.5%;
-  left: 14%;
-}
-.bam-cancer-wrap .map .map-top .bam-cancer-title {
-  position: absolute;
-  top: 15%;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-.bam-cancer-wrap .map .map-top .bam-cancer-bird {
-  position: absolute;
-  top: 15%;
-  left: 66%;
-  width: 4%;
-}
-.bam-cancer-wrap .map .map-top .map-swiper {
-  position: absolute;
-  width: 38%;
-  top: 32%;
-  right: 15%;
-  overflow: hidden;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper {
-  overflow: visible;
-  padding: 3% 10%;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide {
-  border-radius: 1.5vw;
-  padding: 10% 10% 5% 10%;
-  background: #FFF;
-  box-shadow: 0 0.25vw 1vw rgba(0, 0, 0, 0.25);
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide h3 {
-  width: 70%;
-  margin: auto;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
-  width: 100%;
-  gap: 5%;
-  margin: 5% 0;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article img {
-  width: 35%;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p {
-  flex: 1 0 0;
-  font-size: 1.45vw;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p span {
-  color: #fe7c3a;
-  font-weight: 500;
-  font-size: 1.15em;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-slide p.des {
-  font-size: 1vw;
-  text-align: center;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev,
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
-  width: 12%;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev {
-  left: 3%;
-}
-.bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
-  right: 3%;
-}
-.bam-cancer-wrap .map .map-bottom {
-  position: relative;
-  background: #e6f0f3;
-}
-.bam-cancer-wrap .map .map-bottom .bam-cancer-title {
-  position: absolute;
-  top: 9.5%;
-  margin: auto;
-  right: 0;
-  left: 0;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a {
-  display: block;
-  position: absolute;
-  border-radius: 1.5vw;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a.active {
-  font-weight: 500;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a.active p::before, .bam-cancer-wrap .map .map-bottom .map-des a.active p::after {
-  opacity: 1;
-  transition: opacity 0.25s;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a:nth-child(1) {
-  top: 10%;
-  left: 23.5%;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a:nth-child(2) {
-  top: 11%;
-  left: 66%;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a:nth-child(3) {
-  top: 59%;
-  left: 69.25%;
-}
-.bam-cancer-wrap .map .map-bottom .map-des a:nth-child(4) {
-  top: 55%;
-  left: 41%;
-}
-.bam-cancer-wrap .map .map-bottom .map-des p {
-  z-index: 1;
-  position: relative;
-  padding: 0.75vw 1.5vw;
-  background: #FFF;
-  border-radius: 1.5vw;
-  font-size: 1.5vw;
-  color: #fe7c3a;
-  border: 2px solid #FFF;
-}
-.bam-cancer-wrap .map .map-bottom .map-des p::before, .bam-cancer-wrap .map .map-bottom .map-des p::after {
-  z-index: -1;
-  position: absolute;
-  display: block;
-  content: "";
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-}
-.bam-cancer-wrap .map .map-bottom .map-des p::before {
-  width: calc(100% + 12px);
-  height: calc(100% + 12px);
-  background: #ffc0a4;
-  border: 3px solid #fe7c3a;
-  border-radius: 1.9vw;
-}
-.bam-cancer-wrap .map .map-bottom .map-des p::after {
-  width: 100%;
-  height: 100%;
-  background: #ffc0a4;
-  border: 2px solid #fe7c3a;
-  border-radius: 1.5vw;
-  background: #FFF;
-}
-.bam-cancer-wrap .map .map-bottom .map-bottom-href a {
-  z-index: 1;
-  position: absolute;
-  display: block;
-  width: 9.75%;
-  height: 7.5%;
-  top: 0;
-  left: 0;
-  border-radius: 10vw;
-}
-.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(1) {
-  top: 22%;
-  left: 23.5%;
-}
-.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(2) {
-  top: 22%;
-  left: 66.15%;
-}
-.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(3) {
-  top: 74.8%;
-  left: 69%;
-}
-.bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(4) {
-  top: 71%;
-  left: 41%;
-}
-.bam-cancer-wrap .info {
-  position: relative;
-}
-.bam-cancer-wrap .info.protect {
-  background: linear-gradient(to bottom, #e6f0f3, #fff2da 12%);
-}
-.bam-cancer-wrap .info.support {
-  background: linear-gradient(to bottom, #fff2da, #FFFFFF 15%, #FFFFFF 88%, #fcefe6 90%);
-}
-.bam-cancer-wrap .info.recover {
-  background: #fcefe6;
-}
-.bam-cancer-wrap .info .bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.bam-cancer-wrap .info .bam-cancer-title {
-  margin-left: 15%;
-  padding-top: 8%;
-}
-.bam-cancer-wrap .info .info-wrap {
-  width: 75%;
-  height: 30vw;
-  margin-left: 15%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.bam-cancer-wrap .info .info-wrap .info-left {
-  width: 40%;
-}
-.bam-cancer-wrap .info .info-wrap .info-left article {
-  position: relative;
-  color: #FFF;
-  border-radius: 1.5vw;
-  background: #288fad;
-  padding: 5%;
-  margin-top: 5%;
-}
-.bam-cancer-wrap .info .info-wrap .info-left article::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 4vw;
-  height: 4vw;
-  bottom: 0;
-  left: 15%;
-  transform: translateY(calc(100% - 1px));
-}
-.bam-cancer-wrap .info .info-wrap .info-left article h3 {
-  font-size: 1.5vw;
-  font-weight: 500;
-  margin-bottom: 1.5%;
-}
-.bam-cancer-wrap .info .info-wrap .info-right {
-  width: 60%;
-  margin-top: -9%;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab {
-  z-index: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab a {
-  position: relative;
-  display: block;
-  width: 7vw;
-  height: 7vw;
-  border-radius: 50%;
-  box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.15);
-  background: #FFF;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab a.active img {
-  filter: none;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab a.active p {
-  color: #FFF;
-  background: #fe7c3a;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab a img {
-  display: block;
-  margin: auto;
-  margin-top: 10%;
-  width: 45%;
-  filter: hue-rotate(-180deg) brightness(0.9);
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-tab a p {
-  position: absolute;
-  border-radius: 10vw;
-  font-weight: 500;
-  color: #288fad;
-  background: #FFF;
-  padding: 8% 16%;
-  font-size: 1.25vw;
-  white-space: nowrap;
-  left: 50%;
-  bottom: -5%;
-  transform: translate(-50%, 0);
-  box-shadow: 0 0.35vw 1.5vw rgba(0, 0, 0, 0.15);
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper {
-  position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-  padding: 3% 15%;
-  text-align: center;
-  color: #288fad;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper {
-  overflow: visible;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide {
-  position: relative;
-  padding: 5% 0;
-  background: #FFF;
-  border-radius: 1.5vw;
-  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.25);
-  font-weight: 500;
-  overflow: hidden;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide.disabled {
-  cursor: default;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide.disabled p {
-  filter: grayscale(1);
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide img {
-  display: block;
-  width: 80%;
-  margin: auto;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 6vw;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5vw;
-  height: 5vw;
-  font-size: 0.9vw;
-  padding-left: 5%;
-  padding-top: 3%;
-  line-height: 125%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  color: #FFF;
-  background: #288fad;
-  border-top-left-radius: 100%;
-  transition: opacity 0.5s;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev) {
-  pointer-events: none;
-  opacity: 0;
-  transform: scale(0) !important;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide-prev {
-  pointer-events: none;
-  opacity: 0.75;
-  transform: translate3d(80%, 0, 0) scale(0.8) !important;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide-next {
-  pointer-events: none;
-  opacity: 0.75;
-  transform: translate3d(-80%, 0, 0) scale(0.8) !important;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev,
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
-  width: 10%;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev {
-  left: 4%;
-}
-.bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
-  right: 4%;
-}
-.bam-cancer-wrap .insure {
-  padding: 8% 0;
-}
-.bam-cancer-wrap .insure .bam-cancer-title {
-  margin-left: 15%;
-}
-.bam-cancer-wrap .insure .insure-wrap {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.bam-cancer-wrap .insure .insure-wrap .insure-block {
-  position: relative;
-  width: 49%;
-  border-radius: 1.5vw;
-  text-align: center;
-  margin-top: 10%;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
-}
-.bam-cancer-wrap .insure .insure-wrap .insure-block img {
-  display: block;
-  margin: auto;
-  width: 85%;
-  border-radius: 1.5vw;
-  margin-top: -12%;
-}
-.bam-cancer-wrap .insure .insure-wrap .insure-block h3 {
-  font-weight: 500;
-  color: #288fad;
-  font-size: 1.75vw;
-  margin: 3% 0 1.5% 0;
-}
-.bam-cancer-wrap .insure .insure-wrap .insure-block a {
-  width: 35%;
-  display: block;
-  padding: 2.5% 0;
-  margin: auto;
-  border-radius: 1.25vw;
-  color: #FFF;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.25);
-  background: linear-gradient(45deg, #f4996b, #f5af8b);
-  transform: translateY(50%);
-}
-.bam-cancer-wrap .notice {
-  position: relative;
-  background: linear-gradient(to bottom, #FFF, #e6f0f3 8%);
-  padding: 5% 0;
-}
-.bam-cancer-wrap .notice .bam-cancer-title {
-  margin-left: 15%;
-}
-.bam-cancer-wrap .notice .notice-wrap {
-  position: relative;
-  width: 70%;
-  margin: auto;
-  margin-top: 1.5%;
-}
-.bam-cancer-wrap .notice .notice-wrap .bam-cancer-notice {
-  position: absolute;
-  display: block;
-  width: 43%;
-  right: 5%;
-  top: 0;
-  transform: translateY(-100%);
-}
-.bam-cancer-wrap .notice .notice-wrap article {
-  padding: 3%;
-  border-radius: 2vw;
-  border: 3px solid #a6e6f7;
-  background: #FFF;
-  text-align: justify;
-}
-.bam-cancer-wrap .notice .notice-wrap article a {
-  color: #288fad;
-  border-bottom: 1px solid #288fad;
-}
-.bam-cancer-wrap .notice .notice-wrap article ul {
-  margin-left: 1.5vw;
-}
-.bam-cancer-wrap .notice .notice-wrap article ul li {
-  margin: 1.5% 0;
-}
-.bam-cancer-wrap .notice .notice-wrap article ul li::marker {
-  color: #288fad;
-}
-.bam-cancer-wrap .guide-lightbox {
-  display: none;
-  z-index: 99;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.75);
-}
-.bam-cancer-wrap .guide-lightbox .guide-close {
-  position: absolute;
-  top: -8%;
-  right: -1.5%;
-  width: 5%;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  border: 3px solid #a6e6f7;
-  background: #FFF;
-  transform: translate(-50%, -50%);
-  border-radius: 2vw;
-  padding: 3% 3% 0 3%;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block h4 {
-  text-align: center;
-  font-size: 2vw;
-  color: #25a7db;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block h4 img {
-  display: inline-block;
-  width: 4.5%;
-  vertical-align: middle;
-  margin-right: 1%;
-  transform: translateY(-12%);
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 1.5%;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub {
-  position: relative;
-  width: 33.3%;
-  height: 25vw;
-  border-right: 1px solid #a6e6f7;
-  padding: 0 3%;
-  padding-bottom: 8%;
-  font-weight: 500;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub:last-child {
-  border: 0;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article {
-  margin: 10% 0;
-  position: relative;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-q {
-  display: inline-block;
-  background: #e6f0f3;
-  padding: 1% 5%;
-  border-radius: 5vw;
-  color: #288fad;
-  transition: background 0.5s, color 0.5s;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-a {
-  position: absolute;
-  top: 95%;
-  left: 5%;
-  display: block;
-  width: 100%;
-  color: #25a7db;
-  transform-origin: left;
-  transform: scale(0.8);
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article .guide-sub-a img {
-  display: inline-block;
-  width: 7%;
-  vertical-align: middle;
-  margin-right: 1%;
-  transform: translateY(-10%);
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  width: 100%;
-  padding: 0 10%;
-  color: #25a7db;
-  transition: opacity 0.5s 0.25s;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des.hide {
-  opacity: 0;
-  transition: opacity 0.25s 0s;
-}
-.bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des img {
-  display: inline-block;
-  width: 7%;
-  vertical-align: middle;
-  margin-right: 1%;
-  transform: translateY(-8%);
-}
-.bam-cancer-wrap .guide-fix {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 50%;
-  padding: 0.75%;
-  background: #FFF;
-  border-radius: 0 1.5vw 1.5vw 0;
-  box-shadow: 0 0.75vw 1.5vw rgba(0, 0, 0, 0.25);
-  transform: translateY(-50%);
-  text-align: center;
-}
-.bam-cancer-wrap .guide-fix a {
-  display: block;
-  padding: 0.25vw 0.5vw;
-  margin: 1vw 0;
-  font-weight: 500;
-  border-radius: 1.25vw;
-  background: #FFF;
-  color: #288fad;
-  transition: background 0.25s, color 0.25s;
-}
-.bam-cancer-wrap .guide-fix a.active {
-  color: #fe7c3a;
-  background: #fdf2dd;
-}
-.bam-cancer-wrap .guide-fix a.active img {
-  filter: none;
-}
-.bam-cancer-wrap .guide-fix a img {
-  display: block;
-  width: 40%;
-  margin: auto;
-  filter: hue-rotate(-180deg) brightness(0.9);
-  transition: filter 0.25s;
-}
-.bam-cancer-wrap .btn-guide {
-  z-index: 3;
-  position: fixed;
-  display: none;
-  width: 10%;
-  right: 1.5%;
-  top: calc(3% + 55px);
-}
-
-@media only screen and (min-width: 1025px) {
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:hover p {
-    opacity: 1;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q:hover {
-    color: #FFF;
-    background: #25a7db;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .bam-cancer-wrap {
-    font-size: 4vw;
-  }
-  @keyframes balloon {
-    to {
-      transform: translateY(-150%);
-    }
-  }
-  @keyframes biketwo {
-    50% {
-      transform: translateX(-225%);
-    }
-    51% {
-      transform: translateX(-225%) scale(-1, 1);
-    }
-    100% {
-      transform: translateX(0%) scale(-1, 1);
-    }
-  }
-  @keyframes jump {
-    to {
-      transform: translateY(-25%) scale(1.02);
-    }
-  }
-  .bam-cancer-wrap .bam-cancer-title {
-    width: 80%;
-  }
-  .bam-cancer-wrap .kv .balloon,
-  .bam-cancer-wrap .kv .bike-1,
-  .bam-cancer-wrap .kv .bike-2 {
-    width: 10%;
-  }
-  .bam-cancer-wrap .kv .balloon {
-    top: 55%;
-    left: 50%;
-  }
-  .bam-cancer-wrap .kv .bike-1 {
-    top: 72%;
-    left: 22%;
-  }
-  .bam-cancer-wrap .kv .bike-2 {
-    top: 76%;
-    left: 50%;
-  }
-  .bam-cancer-wrap .kv h1 {
-    width: 70%;
-    top: 8%;
-    left: 15%;
-  }
-  .bam-cancer-wrap .kv h2 {
-    font-size: 5vw;
-    top: 20%;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-  }
-  .bam-cancer-wrap .kv .kv-href p {
-    width: 25%;
-  }
-  .bam-cancer-wrap .kv .kv-href p:nth-child(1) {
-    top: 46%;
-    left: 5%;
-  }
-  .bam-cancer-wrap .kv .kv-href p:nth-child(2) {
-    top: 36%;
-    left: 25%;
-  }
-  .bam-cancer-wrap .kv .kv-href p:nth-child(3) {
-    top: 38%;
-    left: 56.5%;
-  }
-  .bam-cancer-wrap .kv .kv-href p:nth-child(4) {
-    top: 46.5%;
-    left: 70%;
-  }
-  .bam-cancer-wrap .kv .kv-href a {
-    width: 100%;
-    height: 27%;
-  }
-  .bam-cancer-wrap .map .map-top {
-    background: linear-gradient(to bottom, #FFF 60%, #e6f0f3);
-  }
-  .bam-cancer-wrap .map .map-top .map-talk {
-    top: auto;
-    left: 7%;
-    bottom: 0;
-    width: 65%;
-    height: auto;
-  }
-  .bam-cancer-wrap .map .map-top .map-talk-block {
-    width: 64%;
-    top: 61%;
-    left: 7%;
-  }
-  .bam-cancer-wrap .map .map-top .bam-cancer-title {
-    top: 7%;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper {
-    width: 90%;
-    top: 14%;
-    right: 5%;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper {
-    padding: 3% 12%;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide {
-    border-radius: 5vw;
-    padding: 5%;
-    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.25);
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide h3 {
-    font-size: 8vw;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article {
-    display: block;
-    width: 100%;
-    margin: 1.5% 0;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article img {
-    width: 50%;
-    margin: auto;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p {
-    font-size: 4vw;
-    text-align: center;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide article p span {
-    font-size: 1.2em;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-slide p.des {
-    font-size: 3vw;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev,
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
-    width: 15%;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-button-prev {
-    left: 0%;
-  }
-  .bam-cancer-wrap .map .map-top .map-swiper .swiper-button-next {
-    right: 0;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-front {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-  }
-  .bam-cancer-wrap .map .map-bottom .bam-cancer-title {
-    top: 4.5%;
-    left: 5%;
-    margin-left: 0;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des a {
-    border-radius: 5vw;
-    box-shadow: 0 0.5vw 3vw rgba(0, 0, 0, 0.25);
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(1) {
-    top: 21.5%;
-    left: 11.5%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(2) {
-    top: 25.5%;
-    left: 58%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(3) {
-    top: 59%;
-    left: 61%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des a:nth-child(4) {
-    top: 62.5%;
-    left: 7%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des p {
-    padding: 1.5vw 4vw;
-    border-radius: 5vw;
-    font-size: 4vw;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des p::before {
-    border-radius: 6vw;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-des p::after {
-    border-radius: 5vw;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-bottom-href a {
-    width: 25%;
-    height: 7.5%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(1) {
-    top: 32%;
-    left: 11%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(2) {
-    top: 36.5%;
-    left: 55%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(3) {
-    top: 70%;
-    left: 59%;
-  }
-  .bam-cancer-wrap .map .map-bottom .map-bottom-href a:nth-child(4) {
-    top: 73.5%;
-    left: 7%;
-  }
-  .bam-cancer-wrap .info.protect {
-    background: linear-gradient(to bottom, #e6f0f3, #fff2da 8%);
-  }
-  .bam-cancer-wrap .info.support {
-    background: linear-gradient(to bottom, #fff2da, #FFFFFF 15%);
-  }
-  .bam-cancer-wrap .info.support article::after {
-    left: 30% !important;
-    transform: translateY(calc(100% - 1px)) scale(-1, 1) !important;
-  }
-  .bam-cancer-wrap .info.recover {
-    background: linear-gradient(to bottom, #FFFFFF, #fcefe6 12%);
-  }
-  .bam-cancer-wrap .info.recover article::after {
-    left: 65% !important;
-    transform: translateY(calc(100% - 1px)) scale(-1, 1) !important;
-  }
-  .bam-cancer-wrap .info .bg {
-    bottom: 40%;
-  }
-  .bam-cancer-wrap .info .bam-cancer-title {
-    margin-left: 5%;
-    padding-top: 12%;
-  }
-  .bam-cancer-wrap .info .info-wrap {
-    width: 90%;
-    height: 150vw;
-    margin: auto;
-    display: block;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-left {
-    width: 100%;
-    margin-top: 5%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-left article {
-    border-radius: 5vw;
-    padding: 5%;
-    margin-top: 0;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-left article::after {
-    width: 12vw;
-    height: 12vw;
-    bottom: 0;
-    left: 15%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-left article h3 {
-    font-size: 5vw;
-    margin-bottom: 1.5%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right {
-    width: 100%;
-    margin-top: 40%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-tab {
-    gap: 8%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-tab a {
-    width: 24vw;
-    height: 24vw;
-    box-shadow: 0 0 5vw rgba(0, 0, 0, 0.15);
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-tab a img {
-    margin-top: 10%;
-    width: 50%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-tab a p {
-    font-size: 4.5vw;
-    bottom: -10%;
-    box-shadow: 0 0.5vw 5vw rgba(0, 0, 0, 0.15);
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper {
-    width: 100%;
-    padding: 3% 12%;
-    margin-top: 5%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide {
-    border-radius: 5vw;
-    padding-bottom: 10%;
-    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.25);
-    font-size: 3.5vw;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide article {
-    height: 12vw;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide p {
-    width: 10vw;
-    padding-right: 1%;
-    height: 11vw;
-    font-size: 2.5vw;
-    line-height: 110%;
-    opacity: 0.75;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-slide:not(.swiper-slide-active) p {
-    opacity: 0;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev,
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
-    width: 15%;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-prev {
-    left: 0;
-  }
-  .bam-cancer-wrap .info .info-wrap .info-right .info-swiper .swiper-button-next {
-    right: 0;
-  }
-  .bam-cancer-wrap .insure {
-    padding: 15% 0;
-    background: linear-gradient(to bottom, #fcefe6, #FFFFFF 8%);
-  }
-  .bam-cancer-wrap .insure .bam-cancer-title {
-    margin-left: 5%;
-    margin-bottom: -5%;
-  }
-  .bam-cancer-wrap .insure .insure-wrap {
-    width: 90%;
-    flex-wrap: wrap;
-  }
-  .bam-cancer-wrap .insure .insure-wrap .insure-block {
-    width: 100%;
-    border-radius: 5vw;
-    margin-top: 25%;
-    box-shadow: 0 0.5vw 3vw rgba(0, 0, 0, 0.25);
-  }
-  .bam-cancer-wrap .insure .insure-wrap .insure-block img {
-    border-radius: 5vw;
-  }
-  .bam-cancer-wrap .insure .insure-wrap .insure-block h3 {
-    font-size: 5vw;
-  }
-  .bam-cancer-wrap .insure .insure-wrap .insure-block a {
-    width: 40%;
-    border-radius: 3.5vw;
-    box-shadow: 0 0.5vw 3vw rgba(0, 0, 0, 0.25);
-  }
-  .bam-cancer-wrap .notice {
-    background: linear-gradient(to bottom, #FFF, #e6f0f3 8%);
-    padding: 40% 0 15% 0;
-  }
-  .bam-cancer-wrap .notice .bam-cancer-title {
-    margin-left: 5%;
-  }
-  .bam-cancer-wrap .notice .notice-wrap {
-    width: 90%;
-  }
-  .bam-cancer-wrap .notice .notice-wrap .bam-cancer-notice {
-    width: 85%;
-  }
-  .bam-cancer-wrap .notice .notice-wrap article {
-    padding: 5%;
-    border-radius: 5vw;
-    border: 2px solid #a6e6f7;
-  }
-  .bam-cancer-wrap .notice .notice-wrap article ul {
-    margin-left: 4vw;
-  }
-  .bam-cancer-wrap .notice .notice-wrap article ul li {
-    margin: 3% 0;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-close {
-    top: -7%;
-    right: -3%;
-    width: 15%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block {
-    width: 90%;
-    border-radius: 5vw;
-    padding: 3%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block h4 {
-    position: relative;
-    font-size: 6vw;
-    margin-top: 5%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block h4 img {
-    position: absolute;
-    width: 15%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    transform: translateY(-100%);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex {
-    display: block;
-    margin-top: 5%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub {
-    width: 100%;
-    height: auto;
-    border-right: 0;
-    border-bottom: 1px solid #a6e6f7;
-    padding: 0 3%;
-    font-weight: 500;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub article {
-    margin: 4% 0;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q {
-    width: 70%;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q.active {
-    animation: jump 0.5s 2 alternate;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub .guide-sub-q .guide-sub-a {
-    display: none !important;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des {
-    bottom: 50%;
-    width: 25%;
-    left: auto;
-    right: 0;
-    padding: 0;
-    text-align: center;
-    transform: translateY(90%);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des img {
-    position: absolute;
-    width: 30%;
-    margin: 0;
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des img:nth-child(1) {
-    top: 50%;
-    left: 0;
-    transform: translate(-75%, -100%);
-  }
-  .bam-cancer-wrap .guide-lightbox .guide-block .guide-flex .guide-sub a.des img:nth-child(2) {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
-  }
-  .bam-cancer-wrap .btn-guide {
-    width: 25%;
-    top: calc(1.5% + 55px);
-  }
-}/*# sourceMappingURL=index.css.map */
-
-.bam-cancer-wrap{margin-top: 55px;}
-.enjoy-editor .bam-cancer-wrap img {max-width: none;}
-.enjoy-editor .bam-cancer-wrap span {display: inline;}
+.bam-five-wrap{margin-top: 55px;}
+.enjoy-editor .bam-five-wrap img {max-width: none;}
+.enjoy-editor .bam-five-wrap span {display: inline;}
 body {line-height: normal;}
 body::after {display: none;}
 main {padding-top: 0}
@@ -1292,359 +18,211 @@ main .container {max-width: none; padding: 0; margin: 0}
 p {margin-bottom: 0}
 
 
-.info-left article::after {
-    background: url('https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-talk.png') no-repeat center center;
+.info {
+  background: url('https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-info-bg.png') no-repeat bottom center;
+  background-size: contain;
+}
+@media only screen and (max-width: 1024px) {
+  .info {
+    background: url('https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-info-bg-m.png') no-repeat bottom center;
     background-size: contain;
+  }
 }
 
 </style>
 
-<div class="bam-cancer-wrap">
-  <section class="kv" data-scroll-show-parent>
-      <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv.jpg">
-      <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-m.jpg">
-      <div class="kv-href for-pc">
-          <p data-scroll-show="1000"><a data-scroll="0" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-1.png" ></p>
-          <p data-scroll-show="1250"><a data-scroll="1" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-2.png" ></p>
-          <p data-scroll-show="1500"><a data-scroll="2" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-3.png" ></p>
-          <p data-scroll-show="1750"><a data-scroll="3" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-4.png" ></p>
+<div class="bam-five-wrap">
+
+  <a class="bam-five-hamburger" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-hamburger.png"></a>
+  <a class="bam-five-badge" href="https://onelink.to/sdrqy2" target="_blank" rel="noreferrer noopener"><img class="for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-badge.png"><img class="for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-badge-m.png"></a>
+
+  <div class="bam-five-menu">
+      <a class="bam-five-close" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-close.png"></a>
+      <div>
+          <a href="" class="yellow" data-target="task1">註冊抽任天堂Switch健身遊戲組<p>會員大募集</p></a>
+          <a href="" class="yellow" data-target="task2">走路抽新加坡機票<p>年末走路派對</p></a>
+          <a href="" class="yellow" data-target="task3">減齡抽北海道機票<p>保戶旅行咖</p></a>
+          <a href="" data-target="bam">健康守護圈</a>
+          <a href="" data-target="rule">活動注意事項</a>
+          <a href="" data-target="top"><img style="display: block; width: 1.5em; transform: scale(1, -1); margin: -0.25em auto;" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-more.svg">TOP</a>
       </div>
-      <div class="kv-href for-m">
-          <p data-scroll-show="1000"><a data-scroll="0" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-1-m.png" ></p>
-          <p data-scroll-show="1250"><a data-scroll="1" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-2-m.png" ></p>
-          <p data-scroll-show="1500"><a data-scroll="2" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-3-m.png" ></p>
-          <p data-scroll-show="1750"><a data-scroll="3" href=""></a><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-4-m.png" ></p>
-      </div>
-      <img class="fullimg front for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-front.png">
-      <img class="fullimg front for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-kv-front-m.png">
-      <img class="fullimg balloon" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-balloon.svg">
-      <img class="fullimg bike-1" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-bike-1.svg">
-      <img class="fullimg bike-2" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-bike-2.svg">
-      <h1 data-scroll-show><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title.png"></h1>
-      <h2 data-scroll-show="500">健康守護圈一路陪你平安走過防<br>癌、抗癌至康復，迎接新人生！</h2>
+  </div>
+
+  <section class="kv" data-pin="banner">
+      <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-bg.jpg">
+      <img class="kv-dog fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-dog.png">
+      <img class="kv-title fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-tite.png">
+      <img class="kv-prize fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-prize.png">
+      <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-bg-m.jpg">
+      <img class="kv-dog fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-dog-m.png">
+      <img class="kv-title fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-tite-m.png">
+      <img class="kv-prize fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-kv-prize-m.png">
   </section>
 
-  <section class="map">
-      <div class="map-top">
-          <img class="fullimg for-pc" style="visibility: hidden;" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-route-1.png">
-          <img class="fullimg for-m" style="visibility: hidden;" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-route-1-m.png">
-          <img data-scroll-show class="map-talk for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-talk.png">
-          <img class="map-route for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-route-1.png">
-          <img class="map-route for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-route-1-m.png">
-          <img data-scroll-show class="map-talk for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-talk-m.png">
-          <div data-scroll-show class="map-talk-block"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-talk-block.png"></div>
-          <img class="bam-cancer-title" data-pin="cancerdistance" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-1.png">
-          <img class="bam-cancer-bird for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-bird.png">
-          <div class="map-swiper">
-              <div class="swiper">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                          <h3><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-1.png"></h3>
-                          <article>
-                              <p>全球<span>每5人就有1人</span>罹患癌症，你擔心自己的健康嗎？</p>
-                              <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-icon-1.png">
-                          </article>
-                          <p class="des">資料來源：世界衛生組織</p>
-                      </div>
-                      <div class="swiper-slide">
-                          <h3><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-2.png"></h3>
-                          <article>
-                              <p>自費醫療項目要價<span>超過新台幣100萬</span>，你準備好了嗎？</p>
-                              <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-icon-2.png">
-                          </article>
-                          <p class="des">資料來源：衛福部</p>
-                      </div>
-                      <div class="swiper-slide">
-                          <h3><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-3.png"></h3>
-                          <article>
-                              <p><span>30-50%</span>的癌症病例可以預防，你知道怎麼做嗎？</p>
-                              <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-icon-3.png">
-                          </article>
-                          <p class="des">資料來源：世界衛生組織</p>
-                      </div>
+  <section class="prize">
+      <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-bg.png">
+      <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-bg-m.png">
+
+      <img class="cloud cloud-1" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+      <img class="cloud cloud-2" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+      <img class="cloud cloud-3" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+      <img class="cloud cloud-4" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+      <img class="cloud cloud-5" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-2.png">
+      <img class="cloud cloud-6" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+      <img class="cloud cloud-7" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-2.png">
+      <img class="cloud cloud-8" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-cloud-1.png">
+
+      <div class="prize-1" data-scroll-show data-pin="task1">
+          <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-1.png">
+          <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-1-m.png">
+      </div>
+      <div class="prize-2" data-scroll-show data-pin="task2">
+          <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-2.png">
+          <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-2-m.png">
+      </div>
+      <div class="prize-3" data-scroll-show data-pin="task3">
+          <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-3.png">
+          <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prize-3-m.png">
+      </div>
+  </section>
+
+  <section class="info" data-pin="bam" data-scroll-show-parent>
+      <h2 data-scroll-show>健康守護圈</h2>
+      <div class="info-swiper" data-scroll-show>
+          <div class="swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-slide-3.jpg"></div>
+                      <h3>加入會員，好禮月月抽</h3>
+                      <a href="https://health.nanshanlife.com.tw/主題服務/加入南山會員，享優惠賺點數" target="_blank" rel="noreferrer noopener">立即註冊</a>
                   </div>
-                  <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                  <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
+                  <div class="swiper-slide">
+                      <div><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-slide-1.jpg"></div>
+                      <h3>運動知識補給站</h3>
+                      <a href="https://health.nanshanlife.com.tw/Search/看健康/運動傷害" target="_blank" rel="noreferrer noopener">線上進修</a>
+                  </div>
+                  <div class="swiper-slide">
+                      <div><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-slide-2.jpg"></div>
+                      <h3>健康運動服務站</h3>
+                      <a href="https://health.nanshanlife.com.tw/Search/找健康/運動健身" target="_blank" rel="noreferrer noopener">了解方案</a>
+                  </div>
+                  <div class="swiper-slide">
+                      <div><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-slide-4.jpg"></div>
+                      <h3>健康運動，你做對了嗎</h3>
+                      <a href="https://health.nanshanlife.com.tw/主題服務/健康運動，你做對了嗎" target="_blank" rel="noreferrer noopener">打破迷思</a>
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="map-bottom" data-scroll-show-parent data-pin="cancermap">
-          <img class="fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map.png">
-          <img class="fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-m.png">
-          <img class="map-front fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-map-front-m.png">
-          <img class="bam-cancer-title for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-2.png">
-          <img class="bam-cancer-title for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-2-m.png">
-          <div class="map-des">
-              <a href="" data-scroll-show="250" data-scroll="0"><p>要怎麼<br class="for-m">預防癌症？</p></a>
-              <a href="" data-scroll-show="500" data-scroll="1"><p>罹患癌症<br class="for-m">怎麼辦？</p></a>
-              <a href="" data-scroll-show="750" data-scroll="2"><p>癌後如何快速<br>重回健康？</p></a>
-              <a href="" data-scroll-show="1000" data-scroll="3"><p>癌症專屬商品<br>及暖心服務</p></a>
-          </div>
-          <div class="map-bottom-href">
-              <a href="" data-scroll="0"></a>
-              <a href="" data-scroll="1"></a>
-              <a href="" data-scroll="2"></a>
-              <a href="" data-scroll="3"></a>
-          </div>
+          <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-prev.svg"></div>
+          <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-next.svg"></div>
       </div>
   </section>
 
-  <section class="protect info" data-scroll-target="0" data-pin="cancerprevent">
-      <img class="bg fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-protect-bg.png">
-      <img class="bg fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-protect-bg-m.png">
-      <img class="bam-cancer-title" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-3.png">
-      <div class="info-wrap">
-          <div class="info-left" data-scroll-show>
+  <section class="notice" data-pin="rule">
+      <h2>活動注意事項</h2>
+      <article>
+          1、 活動期間（2024/10/1~12/31）內，用戶於BAM活力洋溢 APP完成指定條件者，即可參加抽獎：<br>
+          。『BAM會員大募集』：註冊成為BAM活力洋溢 APP用戶可獲得1次抽獎機會；共抽出5名用戶獲得Nintendo Switch主機單機及健身環組（價值新台幣12,980元）。<br>
+          。『年末走路派對』：BAM活力洋溢 APP用戶之個人總步數每達成5萬步即可獲得1次抽獎機會，至多獲得5次抽獎機會；共抽出3名用戶獲得星宇航空新加坡單人來回機票（價值新台幣15,000元，相關使用辦法請詳雄獅官方網站），每一APP帳號不可重複獲獎。<br>
+          。『減齡旅行咖』：BAM活力洋溢 APP用戶且完成指定保險商品（請詳第2點說明）驗證之用戶於活動期間任1天減齡1歲即可獲得1次抽獎機會；驗證1項商品擁有一次參加資格/2項商品擁有兩次參加資格…以此類推，至多可驗證21項商品，即擁有21次抽獎機會；共抽出10名用戶獲得星宇航空北海道單人來回機票（價值新台幣23,000元，相關使用辦法請詳雄獅官方網站），每一APP帳號不可重複獲獎。<br>
+          2、 『 減齡旅行咖』符合活動規則之商品：<br>
+          <table>
+              <tr><th colspan="2" style="text-align: center; font-weight: normal;">商品名稱</th></tr>
+              <tr><td>南山人壽活力洋溢3重大疾病保險</td><td>HDD</td></tr>
+              <tr><td>南山人壽活力洋溢2重大疾病終身保險</td><td>HPDD</td></tr>
+              <tr><td>南山人壽活力洋溢特定重大傷病定期健康保險</td><td>10TSDD</td></tr>
+              <tr><td>南山人壽美力相守癌症定期健康保險</td><td>20HTSC</td></tr>
+              <tr><td>南山人壽情溢相挺癌症定期健康保險</td><td>20HTBC</td></tr>
+              <tr><td>南山人壽長青安溢醫療定期健康保險</td><td>SHI</td></tr>
+              <tr><td>南山人壽精彩雙保精選傷病定期保險</td><td>TED35</td></tr>
+              <tr><td>南山人壽增心陪伴長期照顧保險</td><td>PILTC</td></tr>
+              <tr><td>南山人壽溢路相守長期照顧終身健康保險</td><td>HRLTC</td></tr>
+              <tr><td>南山人壽溢路守護長期照顧終身健康保險</td><td>HLTC</td></tr>
+              <tr><td>南山人壽全心守護醫療終身保險(繳費10年)</td><td>10PCHI</td></tr>
+              <tr><td>南山人壽全心守護醫療終身保險</td><td>20PCHI</td></tr>
+              <tr><td>南山人壽好安心手術醫療終身保險</td><td>NPSI</td></tr>
+              <tr><td>南山人壽溢心守護終身醫療保險</td><td>HPHI</td></tr>
+              <tr><td>南山人壽全心溢靠醫療終身保險</td><td>HPCHI</td></tr>
+              <tr><td>南山人壽溢同安心手術醫療終身保險</td><td>HPSI</td></tr>
+              <tr><td>南山人壽精選傷病定期保險【含(2)】</td><td>TED</td></tr>
+              <tr><td>南山人壽全心溢靠2醫療保險</td><td>HPCHI2</td></tr>
+              <tr><td>南山人壽溢同安心2手術醫療保險</td><td>HPSI2</td></tr>
+              <tr><td>南山人壽溢心守護2醫療保險</td><td>HPHI2</td></tr>
+              <tr><td>南山人壽溢路相守2長期照顧保險</td><td>HRLTC2</td></tr>
+          </table>
+          3、 『減齡旅行咖』中獎人如因撤銷、解除、變更原有保險契約、於活動期間截止後經一個月仍未經本公司核保完成、有不符合本活動辦法之情事、未具備本活動辦法之資格、使用不法或不符合活動辦法而成就資格者，即自始或溯及喪失中獎資格，已發出獎品將予以追回；若已發出之獎品已不存在者，本公司將追回同等價值之價金。<br>
+          4、 活動對象於參加活動同時，即同意接受本活動辦法、注意事項之規範及其他有關之規定，如有違反，即自始或溯及喪失參加資格；如為中獎者，則自動喪失中獎資格，已發出獎品將予以追回；若已發出之獎品已不存在者，本公司將追回同等價值之價金。本公司不另行公告或通知。<br>
+          5、 活動對象於參加活動同時，即同意南山人壽於本活動之目的範圍內蒐集、處理、利用活動對象之個人資料。南山人壽得因本活動之需要，依個人資料保護相關規定，於參加者同意之期間內，以電子檔或紙本形式於我國境內蒐集、處理、利用其個人資料。但南山人壽於未經參加者之同意下，不得利用參加者之個人資料進行其他商業行銷行為。參加者可自由選擇是否提供完整個人資訊，惟若資訊不完整者，將無法參加本活動、不具備本活動之領獎資格。<br>
+          6、 南山人壽有權檢視得獎情況是否有人為操作、透過任何電腦程式或其他不正手法參與活動之行為（包含但不限於以非正當手法冒用或盜用他人身分者／以同一裝置，不同帳號重複獲取獎勵者），對於以偽造、詐欺、遺漏或其他不正當之方式意圖兌領之參加者，南山人壽有權撤銷其得獎資格並追回已發送獎項或拒絕其參與本活動；受領之獎項已不存在者，本公司將追回其市價之價額。<br>
+          7、 本活動如有任何因電腦、網路、電話、技術、通訊、郵寄、遞送或其他不可歸責於南山人壽之事由，致參與者所寄出、填寫或登錄之資料有遺失、錯誤、無法辨識或毀損等情形，南山人壽不負任何法律責任。<br>
+          8、 活動獎項不得要求折換現金、更換獎品、不得要求兌換為現金或任何其他商品或服務，僅得受領實體獎品且獎項顏色、款式採隨機出貨，南山人壽保留更換為等值獎項之權利。倘因所提供資料不正確、不完整致無法參加本活動者，即喪失領取獎項權利。<br>
+          9、 來回機票以雄獅旅遊兌獎憑證形式提供，憑券可兌換台灣雄獅旅遊之「指定國外航程來回機票」乙張（未含兩地機場稅、附加燃油稅及兵險費用），憑證指定抵換機票之有效期日為 2025年 01 月 01 日至 2026 年 03 月 31 日止。詳細機票使用規則及票價內容，請參考雄獅旅遊網站公告。如選擇之旅遊商品價格高於本券價值時，須由持券人自行補足差額，如低於本券價值時，恕不退差價，兌換內容以雄獅官網公告為主。<br>
+          10、 本活動屬機會中獎性質，所有獎品均應遵守中華民國稅法相關規定辦理相關程序。獎品價值在新臺幣1,000元以上者需開立扣繳憑單，請中獎人配合繳交身分證影印本作為申報依據。若如果獲獎人或中獎人是我國境內居住的個人，或在我國境內有固定營業場所的營利事業、或於一課稅年度內在臺灣地區居留、停留合計滿183天之大陸地區人民及在臺灣地區有固定營業場所之大陸地區法人、團體或其他機構，且獎品價值在新臺幣20,010元以上，中獎人須繳納相當於獎品價值10%之機會中獎稅，並憑繳款後稅單收執聯正本領取贈品；中獎人若為非中華民國境內居住之個人（即在中華民國境內居住未達183天之本國人及外國人） 或是在國內沒有固定營業場所的營利事業、或於一課稅年度內在臺灣地區居留、停留合計未滿183天之大陸地區人民及在臺灣地區無固定營業場所之大陸地區法人、團體或其他機構，不論中獎獎品價值，均須先就中獎所得扣繳20％機會中獎稅金，始可領獎，本公司並將依法開立所得稅扣繳憑單。如稅捐法規有更新或變動者，依變動後之規定辦理。若未能依法繳納應繳稅額或若任一欄位或資料不實、錯誤或不完整者，將自始或溯及被取消中獎資格。已領取獎項者，南山人壽將追回已發送獎項或拒絕其參與本活動；受領之獎項已不存在者，本公司將追回其市價之價額。<br>
+          11、 南山人壽非獎品製造者或提供者，與各項獎品或服務之製造或提供廠商無任何代理、委任、承攬、僱傭或合夥關係，且本活動獎品之保固期限均依廠商出廠時實際提供者為準。相關使用規定或商品使用說明，悉以廠商規定為準。得獎者如因本活動各項獎品、服務或保固發生任何爭議，概與南山人壽無關。<br>
+          12、 南山人壽保有對本活動辦法之最終解釋及更改權利，如本活動因不可抗拒之特殊原因無法執行時，南山人壽有權取消、終止、修改、調整或暫停本活動，活動內容如有任何異動將公布於南山人壽企業網站，不另行個別通知。<br>
+          13、 中獎者若未於得獎通知期限內完成相關作業，或獎項無法成功投遞者，視同放棄領取獎項之權利，本獎項將不再遞補，且南山人壽均無須負擔任何責任。寄送地址限台灣本島、澎湖、金門以及馬祖地區，海外地區恕無法配送。南山人壽保留取消發放資格或追回已發送獎項、等值價金之權利。<br>
+          14、 本活動將於2025/2/28前進行抽獎作業，並由本公司法務及稽核人員見證；於抽獎作業結束後15個工作日後，將於本公司官網（https://www.nanshanlife.com.tw/nanshanlife/）公布中獎名單，並以E-mail或簡訊通知中獎人。中獎人須於接獲通知10日日曆日內完成領獎，逾期視同自動放棄中獎資格。抽獎日期及中獎名單公告日如遇不可抗力因素致無法如期辦理抽獎或公告時，本公司將於該因素消滅後辦理抽獎或公告。<br>
+      </article>
+      <a class="notice-more" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-more.svg"></a>
+  </section>
+
+  <section class="win" data-scroll-show-parent data-pin="list">
+      <h2><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-star.png">得獎公告<img style="transform: scale(-1, 1);" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-star.png"></h2>
+      <div class="win-flex">
+          <a href="ss" data-scroll-show target="_blank" rel="noreferrer noopener">
+              <img class="for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-1.png">
+              <img class="for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-1-m.png">
               <article>
-                  <h3>精準預防掌握防癌密碼！</h3>
-                  從日常飲食、運動著手增強免疫力，更能透過專業腫瘤細胞或基因檢測幫助您及早發現癌症徵兆，降低罹癌風險！
+                  <h4>註冊抽</h4>
+                  <p>任天堂Switch健身遊戲組</p>
               </article>
-          </div>
-          <div class="info-right">
-              <div class="info-tab">
-                  <a class="active" href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-2.png">
-                      <p>專業檢驗</p>
-                  </a>
-                  <a href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-1.png">
-                      <p>日常生活</p>
-                  </a>
-              </div>
-              <div>
-                  <div class="info-swiper">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E5%BE%AA%E7%92%B0%E8%85%AB%E7%98%A4%E7%B4%B0%E8%83%9E%E6%AA%A2%E6%B8%AC%E6%9C%8D%E5%8B%99" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-1-1.png"><article>榮文生醫<br class="for-m">－循環腫瘤細胞檢測</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E3%80%90%E7%B2%BE%E6%BA%96%E9%A0%90%E9%98%B2%E3%80%91%E5%81%A5%E5%BA%B7%E9%A2%A8%E9%9A%AA%E9%AB%94%E8%B3%AA%E8%A9%95%E4%BC%B0%7CGoL_Life_Focus%E7%96%BE%E7%97%85%E6%98%93%E6%84%9F%E6%80%A7%E5%9F%BA%E5%9B%A0%E7%84%A6%E9%BB%9E" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-1-2.png"><article>金萬林<br class="for-m">－健康風險體質評估</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E7%99%8C%E7%97%87%E5%AE%88%E8%AD%B7%20(%E9%81%BA%E5%82%B3%E6%80%A7%E7%99%8C%E7%97%87%E5%9F%BA%E5%9B%A0%E7%AF%A9%E6%AA%A2)" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-1-3.png"><article>訊聯基因<br class="for-m">－遺傳性癌症基因篩檢</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/Search/%E6%89%BE%E5%81%A5%E5%BA%B7/%E5%81%A5%E6%AA%A2" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-1-4.png"><article>健檢套組<br class="for-m">－南山保戶專屬</article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-                  <div class="info-swiper" style="display: none;">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a href="" target="_blank" rel="noreferrer noopener" class="swiper-slide disabled"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-2-1.png"><article>喬山健康科技<br class="for-m">－居家運動健身</article><p>敬請<br>期待</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/BAM%E6%B4%BB%E5%8A%9B%E6%B4%8B%E6%BA%A2APP" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-2-2.png"><article>BAM－運動管理APP</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/Search/%E6%89%BE%E5%81%A5%E5%BA%B7/None/cofit" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-2-3.png"><article>Cofit－營養健康指導</article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="support info" data-scroll-target="1" data-pin="anticancer">
-      <img class="bg fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-support-bg.png">
-      <img class="bg fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-support-bg-m.png">
-      <img class="bam-cancer-title" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-4.png">
-      <div class="info-wrap">
-          <div class="info-left" data-scroll-show>
+          </a>
+          <a href="" data-scroll-show="250" target="_blank" rel="noreferrer noopener">
+              <img class="for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-2.png">
+              <img class="for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-2-m.png">
               <article>
-                  <h3>術前術後抗癌祕訣公開！</h3>
-                  透過術前疾病第二意見諮詢，面對醫療重大決策更安心，術後保持正確飲食和照顧，有效提升抗癌力！
+                  <h4>走路抽</h4>
+                  <p>新加坡機票</p>
               </article>
-          </div>
-          <div class="info-right">
-              <div class="info-tab">
-                  <a class="active" href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-3.png">
-                      <p>術前諮詢</p>
-                  </a>
-                  <a href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-4.png">
-                      <p>術後照顧</p>
-                  </a>
-              </div>
-              <div>
-                  <div class="info-swiper">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a style="color: #ff978d" href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E7%96%BE%E7%97%85%E7%AC%AC%E4%BA%8C%E6%84%8F%E8%A6%8B%E8%AB%AE%E8%A9%A2" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-3-1.png"><article>暖心關懷<br>疾病第二意見專家諮詢<br>－醫療決策諮詢</article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-                  <div class="info-swiper" style="display: none;">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a style="color: #ff978d" href="https://health.nanshanlife.com.tw/找健康/HOPE暖心關懷包" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-4-1.png"><article>暖心關懷<br>Hope暖心關懷包<br>－抗癌路上的療癒關懷</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E4%B9%B3%E7%99%8C%E8%A1%93%E5%BE%8C%E8%BC%94%E5%8A%A9%E6%A9%9F%E8%83%BD%E5%85%A7%E8%A1%A3" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-4-2.png"><article>IMOSA<br class="for-m">－醫療輔助機能內衣</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E5%B1%85%E5%AE%B6%E7%85%A7%E9%A1%A7(%E4%B8%80%E8%88%AC%E4%BF%9D%E6%88%B6)" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-4-3.png"><article>家天使<br class="for-m">－就診、居家照護平台</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/search/%E6%89%BE%E5%81%A5%E5%BA%B7/None/%E6%A1%82%E5%86%A0" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-4-4.png"><article>桂冠－均衡營養健康餐</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E8%BC%94%E5%85%B7%E6%83%85%E5%A0%B1%E5%B9%B3%E5%8F%B0-%E4%BF%9D%E6%88%B6%E5%B0%88%E5%B1%AC%E5%84%AA%E6%83%A0" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-4-5.png"><article>輔具家－輔具情報</article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="recover info" data-scroll-target="2" data-pin="cancerrecover">
-      <img class="bg fullimg for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-recover-bg.png">
-      <img class="bg fullimg for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-recover-bg-m.png">
-      <img class="bam-cancer-title" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-5.png">
-      <div class="info-wrap">
-          <div class="info-left" data-scroll-show>
+          </a>
+          <a href="" data-scroll-show="500" target="_blank" rel="noreferrer noopener">
+              <img class="for-pc fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-3.png">
+              <img class="for-m fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-win-3-m.png">
               <article>
-                  <h3>全面守護輕鬆恢復健康！</h3>
-                  癌症治療後復健工作不可少，透過身心靈追蹤及物理治療，讓癌症治療效果加倍，向癌症復發say no！
+                  <h4>減齡抽</h4>
+                  <p>北海道機票</p>
               </article>
-          </div>
-          <div class="info-right">
-              <div class="info-tab">
-                  <a class="active" href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-3.png">
-                      <p>復健復能</p>
-                  </a>
-                  <a href="">
-                      <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-info-icon-4.png">
-                      <p>身心調適</p>
-                  </a>
-              </div>
-              <div>
-                  <div class="info-swiper">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E6%99%BA%E8%83%BD%E5%BE%A9%E5%81%A5%E8%AA%B2%E7%A8%8B" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-5-1.png"><article>生生優動<br class="for-m">－運動、物理治療</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/Youdon%20APP%20%E5%81%A5%E5%BA%B7%E4%BC%B4%E6%82%A8%E5%90%8C%E8%A1%8C" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-5-2.png"><article>梅科科技<br>－Youdon APP健康伴您同行</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E5%B1%85%E5%AE%B6%E5%BE%A9%E8%83%BD-%E6%84%9B%E8%BF%AA%E6%A8%82" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-5-3.png"><article>愛迪樂－居家職能治療</article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-                  <div class="info-swiper" style="display: none;">
-                      <div class="swiper">
-                          <div class="swiper-wrapper">
-                              <a href="https://health.nanshanlife.com.tw/%E6%89%BE%E5%81%A5%E5%BA%B7/%E7%B7%9A%E4%B8%8A%E5%BF%83%E7%90%86%E8%AB%AE%E8%A9%A2" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-6-1.png"><article>FarHugs－線上心理諮詢</article><p>了解<br>更多</p></a>
-                              <a href="https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E9%81%A0%E8%B7%9D%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86" target="_blank" rel="noreferrer noopener" class="swiper-slide"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-logo-6-2.png"><article>遠距健管團隊<br>－遠距健康管理<br></article><p>了解<br>更多</p></a>
-                          </div>
-                      </div>
-                      <div class="swiper-button swiper-button-prev"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-prev.png"></div>
-                      <div class="swiper-button swiper-button-next"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-next.png"></div>
-                  </div>
-              </div>
-          </div>
+          </a>
       </div>
   </section>
 
-  <section class="insure" data-scroll-target="3" data-pin="cancercare">
-      <img class="bam-cancer-title" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-6.png">
-      <div class="insure-wrap" data-scroll-show-parent>
-          <div class="insure-block" data-scroll-show>
-              <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-insure-1.jpg">
-              <h3>南山人壽暖心關懷服務</h3>
-              <p>成為你在抗癌路上的最佳後盾</p>
-              <a href="https://health.nanshanlife.com.tw/%E4%B8%BB%E9%A1%8C%E6%9C%8D%E5%8B%99/%E6%9A%96%E5%BF%83%E9%97%9C%E6%87%B7%E6%9C%8D%E5%8B%99" target="_blank" rel="noreferrer noopener">了解更多</a>
-          </div>
-          <div class="insure-block" data-scroll-show="500">
-              <img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-insure-2.jpg">
-              <h3>南山癌症醫療保單推薦</h3>
-              <p>做好防癌防護網，轉移罹癌風險</p>
-              <a href="https://www.nanshanlife.com.tw/nanshanlife/products-health?fixedTabIndex=4" target="_blank" rel="noreferrer noopener">了解更多</a>
-          </div>
-      </div>
-  </section>
-
-  <section class="notice">
-      <img class="bam-cancer-title" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-title-7.png">
-      <div class="notice-wrap">
-          <img class="bam-cancer-notice for-pc" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-notice.png">
-          <img class="bam-cancer-notice for-m" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-notice-m.png">
+  <section class="bamapp" data-pin="download">
+      <h2>BAM活力洋溢APP</h2>
+      <div class="bamapp-flex">
           <article>
-              <ul>
-                  <li>專案內容、詳細規定依各特約營運業者為準，活動內容如有任何異動不另行個別通知；本公司享有對本活動解釋、取消、終止、更改或暫停之權利。</li>
-                  <li>健康守護圈之加值服務或合作廠商提供之產品、服務或優惠訊息等，均非屬保險契約權利義務之一部分。本公司與合作廠商間無代理或類似關係，合作廠商提供之產品、服務或優惠訊息，係由合作廠商各自提供及負責。</li>
-                  <li>參加本專案者，必須遵守本專案注意事項及其他有關之規定，如有違反，立即自動喪失本專案資格。</li>
-                  <li>參加本專案者保證所有填寫或提出之資料均為真實且正確，並未有冒用或盜用任何第三人之資料，如有不實或不正確之情事時，將自動喪失本專案資格，南山人壽不負任何責任，且如因此致生損害於南山人壽或任何第三人時，參加本專案者應負一切相關責任。</li>
-                  <li>為保護您的權益，請詳閱<a href="https://www.nanshanlife.com.tw/nsclub/privacyPolicy" target="_blank" rel="noreferrer noopener">南山人壽個人資料保護聲明</a>。</li>
-                  <li>如有因不可歸責於南山人壽之事由，致參加本專案者所登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況時，南山人壽不負任何法律或賠償責任，參加者亦不得因此異議。</li>
-              </ul>
+              <a class="bamapp-logo" href="https://www.nanshanlife.com.tw/nanshanlife/" target="_blank" rel="noreferrer noopener"><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-bam-logo.png"></a>
+              BAM活力洋溢APP以直覺化、遊戲化的方式，幫助用戶了解自身健康狀態，設定身體健康、心靈健康、睡眠健康、飲食營養、人際社交等五大類型健康促進任務，達成任務即可解鎖寶箱賺積分，再到獎勵商城換好禮。<br>
+              <br>
+              掃描QRcode下載APP，一起越玩越減齡、越玩越健康！<br>
+              <a class="bamapp-more" href="https://onelink.to/sdrqy2" target="_blank" rel="noreferrer noopener">瞭解更多 ></a>
           </article>
+          <div>
+              <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-bam-qr.png">
+              <a class="bamapp-href-apple" href="https://onelink.to/sdrqy2" target="_blank" rel="noreferrer noopener"></a>
+              <a class="bamapp-href-google" href="https://onelink.to/sdrqy2" target="_blank" rel="noreferrer noopener"></a>
+          </div>
       </div>
   </section>
 
-  <div class="guide-lightbox">
-      <div class="guide-block">
-          <a class="guide-close" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-close.png"></a>
-          <h4><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-light.png">癌的常見問題</h4>
-          <div class="guide-flex">
-              <div class="guide-sub">
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="0" data-tab="0" data-slide="0">如何第一時間發現癌症？</a>
-                      <a class="guide-sub-a" href="" data-scroll="0"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-1.png">防癌保健<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="0" data-tab="1" data-slide="0">做什麼運動可以防癌？</a>
-                      <a class="guide-sub-a" href="" data-scroll="0"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-1.png">防癌保健<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="0" data-tab="1" data-slide="2">飲食要從何開始改善？</a>
-                      <a class="guide-sub-a" href="" data-scroll="0"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-1.png">防癌保健<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <a href="" data-scroll="0" class="des"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-1.png">防癌保健</a>
-              </div>
-              <div class="guide-sub">
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="1" data-tab="0" data-slide="0">罹癌治療方法怎麼選擇？</a>
-                      <a class="guide-sub-a" href="" data-scroll="1"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="1" data-tab="1" data-slide="3">術後要怎麼吃才安心？</a>
-                      <a class="guide-sub-a" href="" data-scroll="1"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="1" data-tab="1" data-slide="2">照護幫手在哪裡？</a>
-                      <a class="guide-sub-a" href="" data-scroll="1"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="1" data-tab="1" data-slide="4">如何挑選正確的輔具？</a>
-                      <a class="guide-sub-a" href="" data-scroll="1"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <a href="" data-scroll="1" class="des"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援</a>
-              </div>
-              <div class="guide-sub">
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="2" data-tab="1" data-slide="0">身心靈壓力找誰說？</a>
-                      <a class="guide-sub-a" href="" data-scroll="2"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-3.png">癌後康復<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <article>
-                      <a class="guide-sub-q" href="" data-scroll="2" data-tab="0" data-slide="0">如何復健讓我好的更快？</a>
-                      <a class="guide-sub-a" href="" data-scroll="2"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-3.png">癌後康復<img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"></a>
-                  </article>
-                  <a href="" data-scroll="2" class="des"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-arrow.png"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-3.png">癌後康復</a>
-              </div>
-          </div>
+  <div class="bam-five-lightbox">
+      <div>
+          <a class="bam-five-lightbox-close" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-five-close.png"></a>
+          目前尚未開獎<br>敬請期待
       </div>
   </div>
-
-  <div class="guide-fix for-pc">
-      <a class="active" href="" data-scroll="0"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-1.png">防癌保健</a>
-      <a href="" data-scroll="1"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-2.png">抗癌支援</a>
-      <a href="" data-scroll="2"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-3.png">癌後康復</a>
-      <a href="" data-scroll="3"><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide-4.png">暖心小站</a>
-  </div>
-  
-  <a class="btn-guide" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-cancer-2024-icon-guide.png"></a>
 </div>
 
-
-<script nonce="rAnd0m123">var headerHeight;
-  var mapInterval;
-  var swipers = [];
-  var mapSwiper;
-  
+<script nonce="rAnd0m123">
   $(function() {
       // for nanshan
       if($('header').length > 0) {
@@ -1652,85 +230,33 @@ p {margin-bottom: 0}
       } else {
           headerHeight = 0;
       }
-  
-  
+      $('.bam-five-wrap').css('padding-top', headerHeight)
+
       scrollEffect();
       $(window).scroll(function() {
           scrollEffect();
       })
-  
-      mapSwiper = new Swiper('.map-swiper .swiper', {
-          spaceBetween: 15,
-          effect: 'fade',
-          fadeEffect: {
-              crossFade: true,
-          },
+
+      new Swiper('.info-swiper .swiper', {
+          spaceBetween: 0,
+          slidesPerView: 1,
+          centeredSlides: true,
+          loop: true,
           navigation: {
-              nextEl: '.map-swiper .swiper-button-next',
-              prevEl: '.map-swiper .swiper-button-prev',
+              nextEl: '.info-swiper .swiper-button-next',
+              prevEl: '.info-swiper .swiper-button-prev',
+          },
+          breakpoints: {
+              1025: {
+                  slidesPerView: 3
+              }
           }
       });
-  
-      $('.info-swiper').each(function(index) {
-          $(this).addClass('info-swiper-'+index);
-          $(this).attr('data-swiper', index);
-          var _swiper = new Swiper('.info-swiper-'+index+' .swiper', {
-              effect: 'coverflow',
-              speed: 500,
-              allowTouchMove: false,
-              coverflowEffect: {
-                  slideShadows: false,
-              },
-              runCallbacksOnInit: true,
-              navigation: {
-                  nextEl: '.info-swiper-'+index+' .swiper-button-next',
-                  prevEl: '.info-swiper-'+index+' .swiper-button-prev',
-              }
-          });
-          swipers.push(_swiper);
-      })
-  
-      var mapArticle = 0;
-      runInterval();
-      function runInterval() {
-          mapInterval = setInterval(function() {
-              $('.map-des a').removeClass('active');
-              $('.map-des a').eq(mapArticle).addClass('active');
-              mapArticle ++;
-              if(mapArticle == $('.map-des a').length) {
-                  mapArticle = 0;
-              }
-          }, 2000)
-      }
-  
-      $('.map-bottom-href a, .map-des a').hover(function() {
-          if(window.innerWidth > 1024) {
-              clearInterval(mapInterval)
-              $('.map-des a').removeClass('active');
-              $('.map-des a').eq($(this).index()).addClass('active');
-          }
-      }, function() {
-          if(window.innerWidth > 1024) {
-              runInterval();
-              $('.map-des a').removeClass('active');
-              mapArticle = $(this).index();
-          }
-      })
-  
-      $('.guide-sub-q, .guide-sub-a').hover(function() {
-          $(this).closest('article').find('.guide-sub-a').stop().fadeIn(250);
-          $(this).closest('.guide-sub').find('a.des').addClass('hide');
-      }, function() {
-          $(this).closest('article').find('.guide-sub-a').stop().fadeOut();
-          $(this).closest('.guide-sub').find('a.des').removeClass('hide');
-      })
-      $('.guide-sub-a').hide();
-  
+
       urlDetect();
   })
-  
-  var infoBadge, introBadge, qEffect, infoEffect, introEffect, introClick, infoClick, linkEffect = false;
-  
+
+
   $(document)
   .on('click', 'a', function(e) {
       if($(this).attr('href').length == 0) {
@@ -1741,49 +267,35 @@ p {margin-bottom: 0}
   .on('mousedown', 'img', function(e) {
       e.preventDefault();
   })
-  .on('click', '.info-tab a', function() {
-      if(!$(this).hasClass('active')) {
-          $(this).closest('.info-wrap').find('.info-tab a').removeClass('active');
-          $(this).addClass('active');
-          $(this).closest('.info-wrap').find('.info-swiper').hide();
-          $(this).closest('.info-wrap').find('.info-swiper:nth-child('+parseInt($(this).index()+1)+')').fadeIn();
-      }
-  })
-  .on('click', '.btn-guide', function() {
+  .on('click', '.bam-five-hamburger', function() {
       $('body').addClass('fix');
-      $('.guide-lightbox').fadeIn();
-      if(window.innerWidth <= 1024) {
-          $('.guide-sub-q').removeClass('active');
-          setTimeout(function() {
-              $('.guide-sub-q').each(function(index) {
-                  setTimeout(function() {
-                      $(this).addClass('active')
-                  }.bind(this), index*250)
-              })
-          }, 500)
-      }
+      $('.bam-five-menu').stop().fadeIn();
   })
-  .on('click', '.guide-close, [data-scroll]', function() {
+  .on('click', '.bam-five-close, .bam-five-lightbox-close, [data-target]', function() {
       $('body').removeClass('fix');
-      $('.guide-lightbox').fadeOut();
+      $('.bam-five-menu, .bam-five-lightbox').stop().fadeOut();
   })
-  .on('click', '[data-scroll]', function() {
-      if($(this).hasClass('guide-sub-q') && window.innerWidth <= 1024) {
-          $('body, html').animate({ scrollTop: $('[data-scroll-target="'+$(this).data('scroll')+'"]').offset().top - headerHeight + $($('[data-scroll-target="'+$(this).data('scroll')+'"]')).height() - window.innerHeight }, 1000)
+  .on('click', '[data-target]', function() {
+      if($(this).data('target') == 'top') {
+          $('body, html').animate({ scrollTop: 0 }, 1000);
       } else {
-          $('body, html').animate({ scrollTop: $('[data-scroll-target="'+$(this).data('scroll')+'"]').offset().top - headerHeight }, 1000)
+          $('body, html').animate({ scrollTop: $('[data-pin="'+$(this).data('target')+'"]').offset().top - headerHeight }, 1000);
       }
   })
-  .on('click', '.guide-sub-q', function() {
-      var _thisBlock = $('[data-scroll-target='+$(this).data('scroll')+']');
-      var _thisSwiper = _thisBlock.find('.info-swiper').eq($(this).data('tab')).data('swiper');
-      _thisBlock.find('.info-tab a').removeClass('active');
-      _thisBlock.find('.info-tab a').eq($(this).data('tab')).addClass('active');
-      _thisBlock.find('.info-swiper').hide();
-      _thisBlock.find('.info-swiper').eq($(this).data('tab')).show();
-      swipers[_thisSwiper].slideTo($(this).data('slide'));
+  .on('click', '.win-flex a',function() {
+      if(!$(this).attr('href').length > 0) {
+          $('body').addClass('fix');
+          $('.bam-five-lightbox').stop().fadeIn();
+          return false
+      }
   })
-  
+  .on('click', '.notice-more', function() {
+      $(this).toggleClass('active');
+      $('.notice article').stop().slideToggle();
+      $('body, html').animate({ scrollTop: $('.notice').offset().top - headerHeight }, 750);
+  })
+  .on('click', '')
+
   function scrollEffect() {
       $('[data-scroll-show-parent]').each(function() {
           if($(window).scrollTop() > $(this).offset().top - $(window).height()*0.75) {
@@ -1819,72 +331,19 @@ p {margin-bottom: 0}
               }
           }
       })
-  
-      if($(window).scrollTop() > $('.map-bottom').offset().top - $(window).height()*0.25 && $(window).scrollTop() < $('.insure').offset().top + $('.insure').height()) {
-          $('.btn-guide, .guide-fix').fadeIn();
-      } else {
-          $('.btn-guide, .guide-fix').fadeOut();
-      }
-  
-      $('[data-scroll-target]').each(function() {
-          if($(window).scrollTop() > $(this).offset().top - headerHeight - 1 && $(window).scrollTop() < $(this).offset().top + $(this).height() - headerHeight - 1) {
-              $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').addClass('active');
-          } else {
-              $('.guide-fix [data-scroll="'+$(this).data('scroll-target')+'"]').removeClass('active');
-          }
-      })
   }
-  
-  
+
+
   function urlDetect() {
       if(window.location.href.indexOf('pin') > 0) {
           var _url = new URL(window.location.href);
           var _searchParams = _url.searchParams.get('pin');
           if($('[data-pin="'+_searchParams+'"]').length > 0) {
-              $('body, html').animate({ scrollTop: $('[data-pin="'+_searchParams+'"]').offset().top - headerHeight }, 1000);
-          }
-          // 我們與癌的距離
-          if(_searchParams == 'distancepeople') {
-              $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
-              mapSwiper.slideTo(0);
-          }
-          if(_searchParams == 'distancecost') {
-              $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
-              mapSwiper.slideTo(1);
-          }
-          if(_searchParams == 'distancehelp') {
-              $('body, html').animate({ scrollTop: $('.bam-cancer-title').offset().top - headerHeight }, 1000);
-              mapSwiper.slideTo(2);
-          }
-          // 機構連結
-          var _infoParent, _infoTab, _infoSwiper, _infoSlide;
-          if(_searchParams == 'goodfuture') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 0 };
-          if(_searchParams == 'kimforest') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 1 };
-          if(_searchParams == 'gga') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 2 };
-          if(_searchParams == 'healthcheck') { _infoParent = 0; _infoTab = 0; _infoSwiper = 0; _infoSlide = 3 };
-          if(_searchParams == 'johnson') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 0 };
-          if(_searchParams == 'bam') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 1 };
-          if(_searchParams == 'cofit') { _infoParent = 0; _infoTab = 1; _infoSwiper = 1; _infoSlide = 2 };
-          if(_searchParams == 'secondopinion') { _infoParent = 1; _infoTab = 0; _infoSwiper = 2; _infoSlide = 0 };
-          if(_searchParams == 'hope') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 0 };
-          if(_searchParams == 'imosa') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 1 };
-          if(_searchParams == 'homeangel') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 2 };
-          if(_searchParams == 'laurel') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 3 };
-          if(_searchParams == 'athome') { _infoParent = 1; _infoTab = 1; _infoSwiper = 3; _infoSlide = 4 };
-          if(_searchParams == 'aicarept') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 0 };
-          if(_searchParams == 'mecotech') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 1 };
-          if(_searchParams == 'adlers') { _infoParent = 2; _infoTab = 0; _infoSwiper = 4; _infoSlide = 2 };
-          if(_searchParams == 'farhugs') { _infoParent = 2; _infoTab = 1; _infoSwiper = 5; _infoSlide = 0 };
-          if(_searchParams == 'telehealthcheck') { _infoParent = 2; _infoTab = 1; _infoSwiper = 5; _infoSlide = 1 };
-          if(_infoParent !== undefined && _infoTab !== undefined && _infoSwiper !== undefined && _infoSlide !== undefined) {
-              $('body, html').animate({ scrollTop: $('.info').eq(_infoParent).offset().top - headerHeight }, 1000);
-              console.log(_infoParent, _infoTab, _infoSwiper, _infoSlide)
-              $('.info').eq(_infoParent).find('.info-tab a').removeClass('active');
-              $('.info').eq(_infoParent).find('.info-tab a').eq(_infoTab).addClass('active');
-              $('.info').eq(_infoParent).find('.info-swiper').hide();
-              $('.info').eq(_infoParent).find('.info-swiper').eq(_infoTab).show();
-              swipers[_infoSwiper].slideTo(_infoSlide);
+              setTimeout(function() {
+                  $('body, html').animate({ scrollTop: $('[data-pin="'+_searchParams+'"]').offset().top - headerHeight }, 1000);
+              }, 250)
           }
       }
-  }  
+  }
+
 </script>
