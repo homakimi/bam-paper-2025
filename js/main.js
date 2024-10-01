@@ -5,7 +5,6 @@ $(function() {
     } else {
         headerHeight = 0;
     }
-    $('.bam-five-wrap').css('padding-top', headerHeight)
 
     scrollEffect();
     $(window).scroll(function() {
