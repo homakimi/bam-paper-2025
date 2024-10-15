@@ -1,607 +1,117 @@
 @import 'style'
 
-$blue: #0096e7
-$water: #028cd6
-$dark: #006fbc
-$orange: #ff9600
-$yellow: #ffe000
-$bg: #ffe985
+$shadow: #d6cece
+$main: #f26162
+$yellow: #fffac1
+$light: #0c0c08
+$black: #423737
 
 .bam-five-wrap
-    color: #626262
-    font-size: 1.25vw
-    letter-spacing: 0.1vw
-    h2
-        font-size: 2.5vw
-        color: #FFF
-        text-shadow: 2px 2px 0 $dark, 2px -2px 0 $dark, -2px 2px 0 $dark, -2px -2px 0 $dark, 0 -2px 0 $dark, 0 2px 0 $dark, 2px 0 0 $dark, -2px 0 0 $dark
-        font-weight: normal
-        text-align: center
-        img
-            position: relative
-            display: inline-block
-            width: 2.25vw
-            vertical-align: middle
-            top: -0.25vw
-            margin: 0 1.5%! important
-
-    [data-scroll-show]
-        transition: opacity 1s, transform 1s
-        &.scrollShowActive
-            opacity: 1! important
-            transform: translate(0, 0)! important
-
-    .bam-five-hamburger,
-    .bam-five-badge
-        z-index: 3
-        position: fixed
-        display: block
-        width: 4vw
-        top: 75px
-        right: 1%
-
-    .bam-five-badge
-        width: 6vw
-        right: 0
-        top: calc(75px + 5.5vw)
-
-    .bam-five-menu
-        display: none
-        z-index: 99
-        position: fixed
-        width: 100%
-        height: 100%
-        background: $blue
-        .bam-five-close
-            position: absolute
-            top: 5%
-            right: 5%
-            width: 3%
-            filter: brightness(0) invert(1)
-        div
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-            width: 100%
-            height: 100%
-            color: #FFF
-            text-align: center
-            a
-                position: relative
-                display: block
-                font-size: 2.5vw
-                padding: 1.5% 0
-                width: 50%
-                margin: 0 auto
-                &:last-child::before
-                    display: none
-                &::before
-                    display: block
-                    content: ''
-                    position: absolute
-                    bottom: -1px
-                    left: 0
-                    right: 0
-                    height: 1px
-                    width: 30vw
-                    margin: auto
-                    background: #FFF
-                    opacity: 0.35
-                &.yellow
-                    color: $yellow
-                p
-                    color: #FFF
-                    font-size: 1.35vw
-
-    .bam-five-lightbox
-        display: none
-        z-index: 99
-        position: fixed
-        width: 100%
-        height: 100%
-        top: 0
-        lef: 0
-        background: rgba(31, 130, 198, 0.75)
-        > div
-            position: absolute
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-            width: 25vw
-            height: 25vw
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            background: #FFF
-            box-shadow: 0 0 2vw rgba(0,0,0,0.5)
-            border-radius: 3vw
-            text-align: center
-            font-size: 2vw
-            color: $blue
-            font-weight: bold
-            .bam-five-lightbox-close
-                position: absolute
-                display: block
-                right: 8%
-                top: 8%
-                width: 8%
-
-
-    @keyframes popin
-        from
-            transform: scale(0) rotate(-35deg)
-        to
-            transform: scale(1) rotate(0deg)
-            
-    @keyframes fadein
-        to
-            opacity: 1
-            transform: translateY(0) scale(1)
-            
+    color: $black
+    font-size: 1.65vw
     .kv
         position: relative
-        width: 100%
-        padding-top: percentage(926/1920)
-        img
+        .kv-back,
+        .kv-block,
+        .kv-title,
+        .kv-front
             position: absolute
             top: 0
             left: 0
-        .kv-dog
-            transform: translateY(100%)
-            animation: fadein 1s forwards 0.5s
-        .kv-title
-            transform: scale(0)
-            animation: popin 0.5s forwards 1s
-        .kv-prize
-            transform: translateY(100%)
-            animation: fadein 1s forwards 1s
 
-    .prize
-        position: relative
-        margin-top: -26vw
-        overflow: hidden
-        &::before
-            z-index: -1
-            position: absolute
-            display: block
-            content: ''
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background: $bg
-        .prize-1,
-        .prize-2,
-        .prize-3
-            display: block
-            position: absolute
-            width: 85%
-            left: 6%
-            transform: translateX(100vw)
-        .prize-1
-            top: 22%
-        .prize-2
-            top: 40%
-        .prize-3
-            top: 61.5%
-        .cloud
-            display: block
-            position: absolute
-            &.cloud-1
-                width: 7%
-                top: 24%
-                left: 12%
-                opacity: 0.2
-                transform: translateX(100%)
-                animation: cloud 5s -1s linear alternate infinite
-            &.cloud-2
-                width: 7%
-                top: 19.5%
-                left: 86%
-                opacity: 0.1
-                transform: translateX(-100%)
-                animation: cloud 3s -2s linear alternate infinite
-            &.cloud-3
-                width: 20%
-                top: 36.5%
-                left: 83%
-                opacity: 0.35
-                transform: translateX(50%)
-                animation: cloud 7s -2s linear alternate infinite
-            &.cloud-4
-                width: 15%
-                top: 38.75%
-                left: 88%
-                opacity: 0.5
-                transform: translateX(50%)
-                animation: cloud 6s -3s linear alternate infinite
-            &.cloud-5
-                width: 12%
-                top: 63%
-                left: 5%
-                opacity: 0.25
-                transform: translateX(50%)
-                animation: cloud 6s -3s linear alternate infinite
-            &.cloud-6
-                width: 10%
-                top: 60%
-                left: 82%
-                opacity: 0.25
-                transform: translateX(75%)
-                animation: cloud 5s -3s linear alternate infinite
-            &.cloud-7
-                width: 9%
-                top: 86%
-                left: 41%
-                opacity: 0.35
-                transform: translateX(-100%)
-                animation: cloud 5s -3s linear alternate infinite
-            &.cloud-8
-                width: 17%
-                top: 84%
-                left: 85%
-                opacity: 0.5
-                transform: translateX(50%)
-                animation: cloud 6s -4s linear alternate infinite
-            @keyframes cloud
-                to
-                    transform: translateX(0)
-                    
-
-    .info
-        width: 100%
-        text-align: center
-        padding: 5% 0 1.5% 0
-        margin-top: -3%
-        background-color: $bg
-        box-shadow: 0 1.5vw 1.5vw -0.5vw rgba(0,0,0,0.25)
-        h2
-            opacity: 0
-            transform: translateY(50px)
-        .info-swiper
-            position: relative
-            overflow: hidden
-            opacity: 0
-            transform: translateY(50px)
-            .swiper-button-prev,
-            .swiper-button-next
-                width: 4vw
-                top: 29%
-                transform: none
-                margin: 0
-            .swiper-button-prev
-                left: 2%
-            .swiper-button-next
-                right: 2%
-            .swiper
-                width: 95%
-                margin: auto
-                padding: 3% 0
-                .swiper-slide
-                    color: $water
-                    &.swiper-slide-active
-                        div
-                            transform: none
-                            &::after
-                                opacity: 0
-                        h3
-                            opacity: 1
-                        a
-                            opacity: 1
-                            pointer-events: all
-                    div
-                        position: relative
-                        border-radius: 1.5vw
-                        transform: scale(0.9)
-                        box-shadow: 0 1.5vw 1vw -1vw rgba(0,0,0,0.5)
-                        overflow: hidden
-                        transition: transform 0.5s
-                        &::after
-                            position: absolute
-                            display: block
-                            content: ''
-                            width: 100%
-                            height: 100%
-                            top: 0
-                            left: 0
-                            background: rgba(0,0,0,0.35)
-                    h3
-                        font-size: 2vw
-                        font-weight: normal
-                        margin: 8% 0 5% 0
-                        opacity: 0
-                        transition: opacity 0.5s
-                    a
-                        display: block
-                        width: 9vw
-                        border: 2px solid $water
-                        background: #FFF
-                        padding: 1.5% 0
-                        margin: auto
-                        border-radius: 5vw
-                        opacity: 0
-                        pointer-events: none
-                        transition: opacity 0.5s
-
-    .notice
-        position: relative
-        border-radius: 0 0 4vw 4vw
-        overflow: hidden
-        padding: 3% 0 1.5% 0
-        color: #FFF
-        &::before
-            z-index: -1
-            display: block
-            position: absolute
-            content: ''
-            width: 100%
-            height: 100%
-            top: 0
-            left: 0
-            background: $blue
-        .notice-more
-            display: block
-            width: 5%
-            margin: auto
-            opacity: 0.75
-            &.active
-                transform: scale(1, -1)
-        article
-            display: none
-            width: 80%
-            margin: auto
-            padding: 1.5% 0
-            text-align: justify
-            line-height: 175%
-            table
-                border-collapse: collapse
-                border: 1px solid #FFF
-                margin: 1% 0
-                td, th
-                    border: 1px solid #FFF
-                    padding: 1% 2%
-                    white-space: nowrap
-                td
-                    &:nth-child(1)
-                        width: 30vw
-                td
-                    &:nth-child(2)
-                        width: 12vw
-
-    .win
-        padding: 5% 0
-        background: #FFF
-        .win-flex
-            display: flex
-            justify-content: space-between
-            align-items: center
-            padding: 0 5%
-            margin-top: 1.5%
-            a
-                position: relative
-                display: block
-                width: 32%
-                opacity: 0
-                transform: translateY(50px)
-                article
-                    position: absolute
-                    top: 60%
-                    left: 57%
-                    transform: translate(-50%, -50%)
-                    white-space: nowrap
-                    h4
-                        font-size: 2vw
-                        color: $dark
-                    p
-                        color: $orange
-                        font-size: 1.35vw
-                        font-weight: bold
-
-    .bamapp
-        background: #b6e9ff
-        padding: 3% 5%
-        color: #000
-        .bamapp-flex
+    .intro
+        background: $yellow
+        .intro-flex
             display: flex
             justify-content: space-between
             align-items: flex-end
-            gap: 8%
-            margin: 5% 0
-            div
-                position: relative
-                width: 40%
-                a
-                    position: absolute
-                    display: block
-                    width: 46%
-                    padding-top: 54%
-                    top: 0
-                    left: 0
-                    &.bamapp-href-google
-                        left: 54%
-            article
-                flex: 1 0 0
-                text-align: justify
-                line-height: 175%
-                .bamapp-logo
-                    display: block
-                    width: 30%
-                    margin-bottom: 3%
-                .bamapp-more
-                    display: inline-block
-                    color: #dd398b
-                    border-bottom: 1px solid #dd398b
-
-// @media only screen and (min-width: 1025px)
-    
-
-@media only screen and (max-width: 1024px)
-    .bam-five-wrap
-        font-size: 3.25vw
-        letter-spacing: 0
-        h2
-            font-size: 5.5vw
-            img
-                width: 5vw
-                margin: 0 3%! important
-
-        .bam-five-hamburger,
-        .bam-five-badge
-            width: 10vw
-            top: 65px
-            right: 2%
-        .bam-five-badge
-            width: 14vw
-            right: 0
-            top: calc(65px + 12vw)
-
-        .bam-five-menu
-            .bam-five-close
-                top: 3%
-                width: 8%
-            div
-                a
-                    font-size: 6vw
-                    padding: 3% 0
-                    width: 100%
-                    &::before
-                        width: 75vw
-                    p
-                        font-size: 3.75vw
-
-        .bam-five-lightbox
-            > div
-                width: 60vw
-                height: 80vw
-                border-radius: 5vw
-                font-size: 5vw
-                .bam-five-lightbox-close
-                    width: 10%
-
-        .kv
-            padding-top: percentage(1170/750)
-
-        .prize
-            margin-top: -26.5vw
-            .prize-1,
-            .prize-2,
-            .prize-3
-                width: 100%
-                left: 0
-            .prize-1
-                top: 8%
-            .prize-2
-                top: 30.5%
-            .prize-3
-                top: 57%
-            .cloud
-                &.cloud-1
-                    width: 10%
-                    top: 10%
-                    left: 25%
-                &.cloud-2
-                    width: 15%
-                    top: 12%
-                    left: 50%
-                &.cloud-3
-                    width: 20%
-                    top: 32%
-                    left: 80%
-                &.cloud-4
-                    width: 15%
-                    top: 33%
-                    left: 84%
-                &.cloud-5
-                    width: 12%
-                    top: 34%
-                    left: 35%
-                &.cloud-6
-                    top: 61%
-                    left: 45%
-                &.cloud-7
-                    width: 20%
-                    top: 58%
-                    left: 5%
-                    transform: translate(50%)
-                &.cloud-8
-                    width: 15%
-                    top: 89%
-                    left: 30%
-
-        .info
-            padding: 8% 0
-            .info-swiper
-                .swiper-button-prev,
-                .swiper-button-next
-                    width: 8vw
-                .swiper
-                    width: 75%
-                    overflow: visible
-                    .swiper-slide
-                        div
-                            border-radius: 5vw
-                            box-shadow: 0 1.5vw 3vw -1vw rgba(0,0,0,0.5)
-                        h3
-                            font-size: 4.5vw
-                            margin: 5% 0
-                        a
-                            width: 25vw
-                            font-size: 3.5vw
-
-        .notice
-            border-radius: 0 0 10vw 10vw
-            padding: 5% 0 3% 0
-            .notice-more
-                width: 8%
-            article
-                width: 90%
-                table
-                    margin: 3% 0
-                    width: 100%
+            width: 80%
+            margin: auto
+            padding-top: 3%
+            .intro-left
+                width: 45%
+                h2
                     font-size: 3vw
-                    td
-                        &:nth-child(1)
-                            width: 50%
-                    td
-                        &:nth-child(2)
-                            width: 15%
-
-        .win
-            padding: 8% 0
-            .win-flex
-                display: block
-                padding: 0 18%
-                margin-top: 3%
-                a
-                    width: 100%
-                    margin: 3% 0
-                    article
-                        top: 74%
-                        left: 50%
-                        transform: translate(-50%, -50%)
-                        white-space: nowrap
-                        text-align: center
-                        h4
-                            font-size: 6vw
-                        p
-                            font-size: 4vw
-
-        .bamapp
-            padding: 8% 5%
-            .bamapp-flex
-                display: block
-                margin-top: 8%
-                div
-                    width: 80%
-                    margin: auto
-                    margin-right: 0
-                    margin-top: -6vw
                 article
-                    width: 100%
-                    padding-right: 10%
-                    .bamapp-logo
-                        width: 55%
-                    .bamapp-more
-                        margin-top: 5vw
+                    text-align: justify
+                    line-height: 150%
+                    margin-top: 5%
+                .intro-people
+                    position: relative
+                    width: 85%
+                    margin: auto
+                    margin-top: 10%
+                    p
+                        position: absolute
+                        top: 39%
+                        left: 72%
+                        white-space: nowrap
+                        transform: translate(-50%, -50%)
+            .intro-right
+                width: 50%
+                border: 2px solid $black
+                border-radius: 1.5vw
+                .intro-tab-swiper
+                    position: relative
+                    border-radius: 1.5vw 1.5vw 0 0
+                    overflow: hidden
+                    .swiper-slide
+                        color: #FFF
+                        background: #CCC
+                        border: 2px solid transparent
+                        border-top: 0
+                        text-align: center
+                        padding: 1.5% 0
+                        line-height: 125%
+                        &.swiper-slide-active
+                            border-color: $black
+                .intro-swiper
+                    position: relative
+                    background: #FFF
+                    border-radius: 0 0 1.5vw 1.5vw
+                    .swiper-button
+                        width: 10%
+                        top: 60%
+                    .swiper-button-prev
+                        left: -5%
+                    .swiper-button-next
+                        right: -5%
+                    .swiper-slide
+                        article
+                            display: flex
+                            justify-content: center
+                            align-items: flex-start
+                            flex-wrap: wrap
+                            width: 100%
+                            height: 4vw
+                            gap: 1vw
+                            margin: 5% 0
+                            p
+                                position: relative
+                                padding-left: 1.25vw
+                                &::before
+                                    position: absolute
+                                    display: block
+                                    content: ''
+                                    width: 1vw
+                                    height: 1vw
+                                    background: $main
+                                    border-radius: 100%
+                                    top: 50%
+                                    left: 0
+                                    transform: translateY(-50%)
+                        .intro-img-block
+                            position: relative
+                            width: 20vw
+                            height: 20vw
+                            border: 2px solid $black
+                            border-radius: 100%
+                            margin: 5% auto
+                            box-shadow: 0.5vw 0.5vw 0 $shadow
+                            img
+                                display: block
+                                position: absolute
+                                width: 90%
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%, -50%)

@@ -11,19 +11,25 @@ $(function() {
         scrollEffect();
     })
 
-    new Swiper('.info-swiper .swiper', {
+    var introTabSwiper = new Swiper('.intro-tab-swiper .swiper', {
         spaceBetween: 0,
         slidesPerView: 1,
         centeredSlides: true,
         loop: true,
-        navigation: {
-            nextEl: '.info-swiper .swiper-button-next',
-            prevEl: '.info-swiper .swiper-button-prev',
-        },
         breakpoints: {
             1025: {
                 slidesPerView: 3
             }
+        }
+    });
+
+    var introSwiper = new Swiper('.intro-swiper .swiper', {
+        spaceBetween: 0,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.intro-swiper .swiper-button-next',
+            prevEl: '.intro-swiper .swiper-button-prev',
         }
     });
 
