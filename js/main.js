@@ -15,6 +15,8 @@ $(function() {
         spaceBetween: 0,
         slidesPerView: 1,
         centeredSlides: true,
+        slideToClickedSlide: true,
+        speed: 500,
         loop: true,
         breakpoints: {
             1025: {
@@ -26,12 +28,21 @@ $(function() {
     var introSwiper = new Swiper('.intro-swiper .swiper', {
         spaceBetween: 0,
         centeredSlides: true,
+        allowTouchMove: false,
+        speed: 500,
         loop: true,
         navigation: {
             nextEl: '.intro-swiper .swiper-button-next',
             prevEl: '.intro-swiper .swiper-button-prev',
         }
     });
+
+    introTabSwiper.on('slideChangeTransitionStart', function() {
+        introSwiper.slideToLoop(introTabSwiper.realIndex);
+    })
+    introSwiper.on('slideChangeTransitionStart', function() {
+        introTabSwiper.slideToLoop(introSwiper.realIndex);
+    })
 
     urlDetect();
 })

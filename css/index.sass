@@ -3,12 +3,19 @@
 $shadow: #d6cece
 $main: #f26162
 $yellow: #fffac1
-$light: #0c0c08
+$light: #fffdeb
 $black: #423737
 
 .bam-five-wrap
     color: $black
     font-size: 1.65vw
+    h2.title
+        font-size: 3vw
+    .bg-words
+        display: inline-block
+        padding: 3%
+        color: #FFF
+
     .kv
         position: relative
         .kv-back,
@@ -30,8 +37,6 @@ $black: #423737
             padding-top: 3%
             .intro-left
                 width: 45%
-                h2
-                    font-size: 3vw
                 article
                     text-align: justify
                     line-height: 150%
@@ -63,8 +68,10 @@ $black: #423737
                         text-align: center
                         padding: 1.5% 0
                         line-height: 125%
+                        transition: color 0.5s, border 0.5s
                         &.swiper-slide-active
                             border-color: $black
+                            color: $black
                 .intro-swiper
                     position: relative
                     background: #FFF
@@ -77,15 +84,31 @@ $black: #423737
                     .swiper-button-next
                         right: -5%
                     .swiper-slide
+                        transition: transform 0.5s
+                        &.swiper-slide-prev
+                            transform: translateX(35%)
+                            transition: transform 0.5s
+                        &.swiper-slide-next
+                            transform: translateX(-35%)
+                            transition: transform 0.5s
+                        &.swiper-slide-active
+                            article
+                                opacity: 1
+                            .intro-img-block
+                                border-color: $black
+                                box-shadow: 0.5vw 0.5vw 0 $shadow
+                                img
+                                    opacity: 1
                         article
                             display: flex
                             justify-content: center
-                            align-items: flex-start
+                            align-items: center
                             flex-wrap: wrap
-                            width: 100%
-                            height: 4vw
-                            gap: 1vw
+                            height: 2vw
+                            gap: 0 1vw
                             margin: 5% 0
+                            opacity: 0
+                            transition: opacity 0.5s
                             p
                                 position: relative
                                 padding-left: 1.25vw
@@ -104,14 +127,49 @@ $black: #423737
                             position: relative
                             width: 20vw
                             height: 20vw
-                            border: 2px solid $black
+                            border: 2px solid transparent
                             border-radius: 100%
-                            margin: 5% auto
-                            box-shadow: 0.5vw 0.5vw 0 $shadow
+                            margin: 3% auto
+                            box-shadow: 0.5vw 0.5vw 0 rgba(255,255,255,0)
+                            transition: border 0.5s, box-shadow 0.5s
                             img
                                 display: block
                                 position: absolute
                                 width: 90%
                                 top: 50%
                                 left: 50%
+                                opacity: 0
                                 transform: translate(-50%, -50%)
+                                transition: opacity 0.5s
+
+    .info
+        padding: 5% 0
+        background: $light
+        .info-flex
+            display: flex
+            justify-content: space-between
+            align-content: center
+            width: 80%
+            margin: auto
+            .info-left
+                width: 48%
+                p
+                    font-size: 2vw
+                    font-weight: normal
+                    margin-top: 3%
+                img
+                    display: block
+                    width: 85%
+                    margin-top: 5%
+            .info-right
+                width: 52%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                flex-wrap: wrap
+                a
+                    display: block
+                    width: 24%
+                    text-align: center
+                    img
+                        margin-bottom: 2%
