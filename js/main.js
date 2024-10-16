@@ -44,6 +44,18 @@ $(function() {
         introTabSwiper.slideToLoop(introSwiper.realIndex);
     })
 
+    $('.ng-swiper').each(function(index) {
+        $(this).addClass('ng-swiper-'+index);
+        new Swiper('.ng-swiper-'+index+' .swiper', {
+            spaceBetween: 0,
+            speed: 500,
+            navigation: {
+                nextEl: '.ng-swiper-'+index+' .swiper-button-next',
+                prevEl: '.ng-swiper-'+index+' .swiper-button-prev',
+            }
+        });
+    })
+
     urlDetect();
 })
 

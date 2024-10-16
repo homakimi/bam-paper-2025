@@ -119,11 +119,11 @@ body.fix {
 .bam-five-wrap .intro .intro-flex .intro-right {
   width: 50%;
   border: 2px solid #423737;
-  border-radius: 1.5vw;
+  border-radius: 2vw;
 }
 .bam-five-wrap .intro .intro-flex .intro-right .intro-tab-swiper {
   position: relative;
-  border-radius: 1.5vw 1.5vw 0 0;
+  border-radius: 2vw 2vw 0 0;
   overflow: hidden;
 }
 .bam-five-wrap .intro .intro-flex .intro-right .intro-tab-swiper .swiper-slide {
@@ -143,7 +143,7 @@ body.fix {
 .bam-five-wrap .intro .intro-flex .intro-right .intro-swiper {
   position: relative;
   background: #FFF;
-  border-radius: 0 0 1.5vw 1.5vw;
+  border-radius: 0 0 2vw 2vw;
 }
 .bam-five-wrap .intro .intro-flex .intro-right .intro-swiper .swiper-button {
   width: 10%;
@@ -172,6 +172,7 @@ body.fix {
 .bam-five-wrap .intro .intro-flex .intro-right .intro-swiper .swiper-slide.swiper-slide-active .intro-img-block {
   border-color: #423737;
   box-shadow: 0.5vw 0.5vw 0 #d6cece;
+  overflow: hidden;
 }
 .bam-five-wrap .intro .intro-flex .intro-right .intro-swiper .swiper-slide.swiper-slide-active .intro-img-block img {
   opacity: 1;
@@ -261,4 +262,423 @@ body.fix {
 }
 .bam-five-wrap .info .info-flex .info-right a img {
   margin-bottom: 2%;
+}
+.bam-five-wrap .ng {
+  background: #fffdeb;
+  padding: 3% 20%;
+}
+.bam-five-wrap .ng .ng-top {
+  margin: 3% 0;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a {
+  position: relative;
+  display: block;
+  width: 25%;
+  text-align: center;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a.active img {
+  transform: scale(1.2);
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a.active .ng-img-active {
+  opacity: 1;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a.active p {
+  opacity: 0;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a.active h3 {
+  opacity: 1;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a img {
+  display: block;
+  width: 100%;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a .ng-img-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.bam-five-wrap .ng .ng-top .ng-top-flex a h3 {
+  position: absolute;
+  font-size: 2.5vw;
+  font-weight: normal;
+  padding: 5%;
+  bottom: 0;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 18vw;
+  margin: 3% 0;
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fffac1;
+  box-shadow: 0.5vw 0.5vw 0 #d6cece;
+  border: 2px solid #423737;
+  text-align: center;
+  border-radius: 2vw;
+  width: 40%;
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-left img {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 0;
+  transform: translate(-70%, -50%);
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-left p {
+  display: inline-block;
+  font-size: 1.5vw;
+  margin: 1.5% 0;
+  position: relative;
+  padding-left: 1.25vw;
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-left p::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1vw;
+  height: 1vw;
+  background: #f26162;
+  border-radius: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-left p::before {
+  width: 0.8vw;
+  height: 0.8vw;
+}
+.bam-five-wrap .ng .ng-top .ng-top-info-flex .ng-top-info-right {
+  position: relative;
+  background: #FFF;
+  box-shadow: 0.5vw 0.5vw 0 #d6cece;
+  border: 2px solid #423737;
+  text-align: center;
+  border-radius: 2vw;
+  width: 55%;
+}
+.bam-five-wrap .ng .ng-bottom h2 {
+  width: 55%;
+  text-align: center;
+  transform: translateY(100%);
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-left {
+  width: 55%;
+  background: #FFF;
+  box-shadow: 0.5vw 0.5vw 0 #d6cece;
+  border: 2px solid #423737;
+  border-radius: 2vw;
+  height: 18vw;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right {
+  width: 38%;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right > div img {
+  display: block;
+  width: 60%;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right article {
+  position: relative;
+  background: #fffac1;
+  box-shadow: 0.5vw 0.5vw 0 #d6cece;
+  border: 2px solid #423737;
+  text-align: center;
+  border-radius: 2vw;
+  width: 100%;
+  font-size: 1.5vw;
+  padding: 8% 3%;
+  margin-top: 5%;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right article p {
+  display: inline-block;
+  margin: 1.5%;
+  position: relative;
+  padding-left: 1.25vw;
+}
+.bam-five-wrap .ng .ng-bottom .ng-bottom-flex .ng-bottom-right article p::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1vw;
+  height: 1vw;
+  background: #f26162;
+  border-radius: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.bam-five-wrap .ng .ng-swiper,
+.bam-five-wrap .ng .swiper {
+  position: relative;
+  height: 100%;
+}
+.bam-five-wrap .ng .swiper-button {
+  width: 10%;
+}
+.bam-five-wrap .ng .swiper-button-prev {
+  left: -5%;
+}
+.bam-five-wrap .ng .swiper-button-next {
+  right: -5%;
+}
+.bam-five-wrap .ng .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10%;
+  line-height: 150%;
+}
+.bam-five-wrap .ng .swiper-slide img {
+  display: block;
+  width: 70%;
+}
+.bam-five-wrap .ng .swiper-slide p {
+  margin: 1.5% 0;
+}
+.bam-five-wrap .tutorial {
+  position: relative;
+  background: #dff3fe;
+}
+.bam-five-wrap .tutorial .tutorial-deco {
+  display: block;
+  position: absolute;
+  width: 20%;
+  top: 5%;
+  left: 40%;
+}
+.bam-five-wrap .tutorial h3 {
+  position: absolute;
+  margin: auto;
+  top: 37.5%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #0479af;
+  font-size: 3vw;
+}
+.bam-five-wrap .tutorial .tutorial-img img {
+  position: absolute;
+  display: block;
+}
+.bam-five-wrap .tutorial .tutorial-img img:nth-child(1) {
+  top: 10%;
+  left: 7%;
+  width: 36%;
+}
+.bam-five-wrap .tutorial .tutorial-img img:nth-child(2) {
+  top: 50%;
+  left: 15%;
+  width: 32.5%;
+}
+.bam-five-wrap .tutorial .tutorial-img img:nth-child(3) {
+  top: 11%;
+  left: 57%;
+  width: 36%;
+}
+.bam-five-wrap .tutorial .tutorial-img img:nth-child(4) {
+  top: 50%;
+  left: 51.5%;
+  width: 30%;
+}
+.bam-five-wrap .tutorial .tutorial-href a {
+  position: absolute;
+  display: block;
+  border-radius: 7vw;
+}
+.bam-five-wrap .tutorial .tutorial-href a:nth-child(1) {
+  top: 10%;
+  left: 7%;
+  width: 28%;
+  height: 38%;
+}
+.bam-five-wrap .tutorial .tutorial-href a:nth-child(2) {
+  top: 11%;
+  left: 64.5%;
+  width: 28%;
+  height: 38%;
+}
+.bam-five-wrap .tutorial .tutorial-href a:nth-child(3) {
+  top: 51%;
+  left: 15%;
+  width: 32%;
+  height: 42.5%;
+}
+.bam-five-wrap .tutorial .tutorial-href a:nth-child(4) {
+  top: 52%;
+  left: 51.5%;
+  width: 30%;
+  height: 39%;
+}
+.bam-five-wrap .plan {
+  background: #fffac1;
+}
+.bam-five-wrap .plan .habit-btn {
+  z-index: 1;
+  position: relative;
+  display: block;
+  border-radius: 1.25vw;
+  padding: 1.25% 0;
+  width: 10vw;
+  text-align: center;
+  color: #FFF;
+  font-weight: normal;
+  margin: 3% auto;
+}
+.bam-five-wrap .plan .habit-btn::before {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  content: "";
+  background: #37aadf;
+  width: 100%;
+  height: 100%;
+  top: 8%;
+  left: 2%;
+  border-radius: 1.25vw;
+}
+.bam-five-wrap .plan .habit-btn::after {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 1.25vw;
+  border: 2px solid #423737;
+}
+.bam-five-wrap .plan .plan-wrap {
+  padding: 3% 10%;
+}
+.bam-five-wrap .plan .plan-wrap h2 {
+  text-align: center;
+  color: #0479af;
+}
+.bam-five-wrap .plan .plan-wrap h2 img {
+  display: block;
+  width: 20%;
+  margin: auto;
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5%;
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex > div {
+  position: relative;
+  width: 32.5%;
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex > div h3 {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  font-size: 1.65vw;
+  transform: translateY(-50%);
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex > div > div {
+  width: 100%;
+  padding-top: 50%;
+  border: 2px solid #423737;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  border-radius: 2vw;
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex > div h4 {
+  font-size: 1.65vw;
+  color: #37aadf;
+  margin: 5% 0 3% 0;
+  padding: 0 1.5%;
+}
+.bam-five-wrap .plan .plan-wrap .plan-flex > div p {
+  font-size: 1.25vw;
+  text-align: justify;
+  line-height: 135%;
+  padding: 0 1.5%;
+}
+.bam-five-wrap .plan .plan-info {
+  position: relative;
+  background: #FFF;
+  border: 2px solid #423737;
+  border-radius: 2vw;
+  padding: 0% 3%;
+}
+.bam-five-wrap .plan .plan-info .habit-more {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+}
+.bam-five-wrap .plan .plan-info .habit-more::before {
+  background: #f26162;
+}
+.bam-five-wrap .plan .plan-info article > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 3% 0;
+}
+.bam-five-wrap .plan .plan-info article > div h3 {
+  font-size: 1.65vw;
+  width: 12%;
+  padding: 1%;
+  text-align: center;
+  margin-top: 0.5%;
+}
+.bam-five-wrap .plan .plan-info article > div > div {
+  width: 72%;
+  font-size: 1.35vw;
+  line-height: 150%;
+  margin: 0 1%;
+}
+.bam-five-wrap .plan .plan-info article > div > div .plan-info-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1%;
+  margin: 1.5% 0;
+}
+.bam-five-wrap .plan .plan-info article > div > div .plan-info-flex img {
+  display: block;
+  width: 2.5vw;
+}
+.bam-five-wrap .plan .plan-info article > div > div .plan-info-flex h4 {
+  color: #37aadf;
+  font-size: 1.65vw;
+  white-space: nowrap;
+}
+.bam-five-wrap .plan .plan-info article > div > div .plan-info-flex p {
+  flex: 1 0 0;
 }/*# sourceMappingURL=index.css.map */
