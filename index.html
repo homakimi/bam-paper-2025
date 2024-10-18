@@ -14,12 +14,18 @@
                 background: url('img/bam-habit-word-bg.png') no-repeat center center;
                 background-size: 100% 100%;
             }
+            .bg-words-blue {
+                background: url('img/bam-habit-word-bg-blue.png') no-repeat center center;
+                background-size: 100% 100%;
+            }
             .notice article::after {
                 background: url('img/bam-habit-dot.png') repeat center center;
                 background-size: 1vw 1vw;
-
             }
             @media only screen and (max-width: 1024px) {
+                .notice article::after {
+                    background-size: 2.5vw 2.5vw;
+                }
             }
         </style>
     </head>
@@ -27,11 +33,16 @@
         <div class="bam-habit-wrap">
 
             <section class="kv">
-                <img class="fullimg" src="img/bam-habit-kv-bg.jpg">
-                <img class="kv-back fullimg" src="img/bam-habit-kv-back.png">
-                <img class="kv-block fullimg" src="img/bam-habit-kv-block.png">
-                <img class="kv-title fullimg" src="img/bam-habit-kv-title.png">
-                <img class="kv-front fullimg" src="img/bam-habit-kv-front.png">
+                <img class="fullimg for-pc" src="img/bam-habit-kv-bg.jpg">
+                <img class="kv-back fullimg for-pc" src="img/bam-habit-kv-back.png">
+                <img class="kv-block fullimg for-pc" src="img/bam-habit-kv-block.png">
+                <img class="kv-title fullimg for-pc" src="img/bam-habit-kv-title.png">
+                <img class="kv-front fullimg for-pc" src="img/bam-habit-kv-front.png">
+                <img class="fullimg for-m" src="img/bam-habit-kv-bg-m.jpg">
+                <img class="kv-back fullimg for-m" src="img/bam-habit-kv-back-m.png">
+                <img class="kv-block fullimg for-m" src="img/bam-habit-kv-block-m.png">
+                <img class="kv-title fullimg for-m" src="img/bam-habit-kv-title-m.png">
+                <img class="kv-front fullimg for-m" src="img/bam-habit-kv-front-m.png">
                 <a class="kv-vid" href=""><img src="img/bam-habit-vid-btn.png"></a>
             </section>
 
@@ -39,14 +50,14 @@
                 <div class="intro-flex">
                     <div class="intro-left">
                         <h2 class="title">什麼是生活習慣病？</h2>
-                        <article>生活習慣病這個名詞源自於日本，西元1996年日本厚生省將大家所認知的成人疾病或慢性病，正式更名為生活習慣病。包含國人最擔心得到的癌症或是心血管疾病、糖尿病及其他慢性疾病。</article>
+                        <article class="for-pc">生活習慣病這個名詞源自於日本，西元1996年日本厚生省將大家所認知的成人疾病或慢性病，正式更名為生活習慣病。包含國人最擔心得到的癌症或是心血管疾病、糖尿病及其他慢性疾病。</article>
                         <div class="intro-people">
                             <img class="fullimg" src="img/bam-habit-intro-people.png">
                             <p>生活習慣病是危害<br>國人健康的頭號殺手</p>
                         </div>
                     </div>
                     <div class="intro-right">
-
+                        <article class="for-m">生活習慣病這個名詞源自於日本，西元1996年日本厚生省將大家所認知的成人疾病或慢性病，正式更名為生活習慣病。包含國人最擔心得到的癌症或是心血管疾病、糖尿病及其他慢性疾病。</article>
                         <div class="intro-tab-swiper">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -57,6 +68,8 @@
                                     <a href="" class="swiper-slide" style="background: #f3797a;">Level 5<br>失能/死亡</a>
                                 </div>
                             </div>
+                            <div class="swiper-button swiper-button-prev for-m"><img class="fullimg" src="img/bam-habit-prev.png"></div>
+                            <div class="swiper-button swiper-button-next for-m"><img class="fullimg" src="img/bam-habit-next.png"></div>
                         </div>
                         <div class="intro-swiper">
                             <div class="swiper">
@@ -83,8 +96,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
-                            <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
+                            <div class="swiper-button swiper-button-prev for-pc"><img class="fullimg" src="img/bam-habit-prev.png"></div>
+                            <div class="swiper-button swiper-button-next for-pc"><img class="fullimg" src="img/bam-habit-next.png"></div>
                         </div>
                     </div>
                 </div>
@@ -94,8 +107,12 @@
                 <div class="info-flex">
                     <div class="info-left">
                         <h2 class="title">生活習慣大哉問</h2>
-                        <p class="bg-words">我覺得我最難改的NG習慣是哪一個？</p>
-                        <img src="img/bam-habit-q-people.png">
+                        <p class="bg-words for-pc">我覺得我最難改的NG習慣是哪一個？</p>
+                        <p class="bg-words for-m">我覺得我最難改的</p>
+                        <br class="for-m">
+                        <p class="bg-words for-m"><img src="img/bam-habit-title-deco-1.png"><img src="img/bam-habit-title-deco-2.png">NG習慣是哪一個?</p>
+                        <img class="for-pc" src="img/bam-habit-q-people.png">
+                        <img class="for-m" src="img/bam-habit-q-people-m.png">
                     </div>
                     <div class="info-right">
                         <a href="" data-card="1"><img class="habit-card-back fullimg" src="img/bam-habit-q-1.png"><img class="habit-card fullimg" src="img/bam-habit-q-1-card.png">常熬夜</a>
@@ -114,29 +131,33 @@
                 <h2 class="title" style="text-align: center;">這些<img style="display: inline-block; width: 2em; transform: translateY(20%); margin: 0 0.2em;" src="img/bam-habit-ng.png">行為 你做了幾項？</h2>
                 <div class="ng-top">
                     <div class="ng-top-flex">
-                        <a class="active" href="">
+                        <a class="ng-a-top active" href="">
                             <img class="ng-img" src="img/bam-habit-ng-1.png">
                             <img class="ng-img-active" src="img/bam-habit-ng-1-active.png">
                             <p>缺乏運動</p><h3 class="bg-words">缺乏運動</h3>
+                            <img class="ng-arrow arrow-down for-m" src="img/bam-habit-arrow.png">
                         </a>
-                        <a href="">
+                        <a class="ng-a-top" href="">
                             <img class="ng-img" src="img/bam-habit-ng-2.png">
                             <img class="ng-img-active" src="img/bam-habit-ng-2-active.png">
                             <p>不健康飲食</p><h3 class="bg-words">不健康飲食</h3>
+                            <img class="ng-arrow arrow-down for-m" src="img/bam-habit-arrow.png">
                         </a>
-                        <a href="">
+                        <a class="ng-a-bottom" href="">
                             <img class="ng-img" src="img/bam-habit-ng-3.png">
                             <img class="ng-img-active" src="img/bam-habit-ng-3-active.png">
                             <p>不良生活作息</p><h3 class="bg-words">不良生活作息</h3>
+                            <img class="ng-arrow arrow-top for-m" src="img/bam-habit-arrow.png">
                         </a>
-                        <a href="">
+                        <a class="ng-a-bottom" href="">
                             <img class="ng-img" src="img/bam-habit-ng-4.png">
                             <img class="ng-img-active" src="img/bam-habit-ng-4-active.png">
                             <p>過度壓力</p><h3 class="bg-words">過度壓力</h3>
+                            <img class="ng-arrow arrow-top for-m" src="img/bam-habit-arrow.png">
                         </a>
                     </div>
                     <!-- info -->
-                    <div>
+                    <div class="ng-top-info-wrap">
                         <div class="ng-top-info-flex">
                             <div class="ng-top-info-left">
                                 <img src="img/bam-habit-arrow.png">
@@ -251,7 +272,7 @@
                         <div class="ng-bottom-right">
                             <div>
                                 <img src="img/bam-habit-ng-people.png">
-                                <p class="bg-words">健康疑惑</p>
+                                <p class="bg-words">健康疑惑<img class="for-m" src="img/bam-habit-arrow.png"></p>
                             </div>
                             <article>
                                 <p>衛教諮詢</p>
@@ -278,26 +299,50 @@
             </section>
 
             <section class="tutorial">
-                <img style="opacity: 0;" class="fullimg" src="img/bam-habit-tutorial-full.jpg">
-                <img class="tutorial-deco" src="img/bam-habit-tutorial.png">
+                <img style="opacity: 0;" class="fullimg for-pc" src="img/bam-habit-tutorial-full.jpg">
+                <img class="tutorial-deco for-pc" src="img/bam-habit-tutorial.png">
+                <img class="tutorial-deco for-m" src="img/bam-habit-tutorial-m.png">
                 <h3>守護圈專家教你<br>戰勝心血管疾病</h3>
-                <div class="tutorial-img">
+                <div class="tutorial-img for-pc">
                     <img src="img/bam-habit-tutorial-1.png">
                     <img src="img/bam-habit-tutorial-2.png">
                     <img src="img/bam-habit-tutorial-3.png">
                     <img src="img/bam-habit-tutorial-4.png">
                 </div>
-                <div class="tutorial-href">
+                <div class="tutorial-href for-pc">
                     <a href="" target="_blank" rel="noreferrer noopener"></a>
                     <a href="" target="_blank" rel="noreferrer noopener"></a>
                     <a href="" target="_blank" rel="noreferrer noopener"></a>
                     <a href="" target="_blank" rel="noreferrer noopener"></a>
                 </div>
+                <div class="tutorial-swiper for-m">
+                    <div class="tutorial-dot"><p class="active"></p><p class="active"></p><p class="active"></p><p class="active"></p><p class="active"></p></div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <a href="" target="_blank" rel="noreferrer noopener" class="swiper-slide">
+                                <img class="fullimg" src="img/bam-habit-tutorial-1-m.png">
+                            </a>
+                            <a href="" target="_blank" rel="noreferrer noopener" class="swiper-slide">
+                                <img class="fullimg" src="img/bam-habit-tutorial-2-m.png">
+                            </a>
+                            <a href="" target="_blank" rel="noreferrer noopener" class="swiper-slide">
+                                <img class="fullimg" src="img/bam-habit-tutorial-3-m.png">
+                            </a>
+                            <a href="" target="_blank" rel="noreferrer noopener" class="swiper-slide">
+                                <img class="fullimg" src="img/bam-habit-tutorial-4-m.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-block">
+                        <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
+                        <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
+                    </div>
+                </div>
             </section>
 
             <section class="plan">
                 <div class="plan-wrap">
-                    <h2 class="title"><img src="img/bam-habit-plan.png">保險保障專家教你 提供保險規劃建議</h2>
+                    <h2 class="title"><img src="img/bam-habit-plan.png">保險保障專家教你<br class="for-m"> 提供保險規劃建議</h2>
                     <div class="plan-flex">
                         <div>
                             <h3 class="bg-words">保夠再保本</h3>
@@ -323,11 +368,12 @@
                     <div class="plan-info">
                         <article>
                             <div>
-                                <h3 class="bg-words">商品介紹</h3>
+                                <h3 class="bg-words-blue">商品介紹</h3>
                                 <div>「南山人壽心心相惜生活習慣健康保險」保障範圍涵蓋由不良習慣引發的心血管疾病，針對不同輕度／重度特定疾病提供一次性給付，並就特定手術、處置及醫材有相應補助。</div>
+                                <a class="habit-btn habit-more for-m" href="https://www.nanshanlife.com.tw/nanshanlife/product/103/427" target="_blank" rel="noreferrer noopener">了解更多</a>
                             </div>
                             <div>
-                                <h3 class="bg-words">商品特色</h3>
+                                <h3 class="bg-words-blue">商品特色</h3>
                                 <div>
                                     <div class="plan-info-flex">
                                         <img style="opacity: 0.4;" src="img/bam-habit-heart.png">
@@ -348,7 +394,7 @@
                                 </div>
                             </div>
                         </article>
-                        <a class="habit-btn habit-more" href="https://www.nanshanlife.com.tw/nanshanlife/product/103/427" target="_blank" rel="noreferrer noopener">了解更多</a>
+                        <a class="habit-btn habit-more for-pc" href="https://www.nanshanlife.com.tw/nanshanlife/product/103/427" target="_blank" rel="noreferrer noopener">了解更多</a>
                     </div>
                 </div>
             </section>

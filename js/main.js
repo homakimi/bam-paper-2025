@@ -13,15 +13,20 @@ $(function() {
 
     var introTabSwiper = new Swiper('.intro-tab-swiper .swiper', {
         spaceBetween: 0,
-        slidesPerView: 1,
-        centeredSlides: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
         slideToClickedSlide: true,
         speed: 500,
         loop: true,
         breakpoints: {
             1025: {
+                centeredSlides: true,
                 slidesPerView: 3
             }
+        },
+        navigation: {
+            nextEl: '.intro-tab-swiper .swiper-button-next',
+            prevEl: '.intro-tab-swiper .swiper-button-prev',
         }
     });
 
@@ -56,7 +61,34 @@ $(function() {
         });
     })
 
+    var tutorialSwiper = new Swiper('.tutorial-swiper .swiper', {
+        spaceBetween: 0,
+        speed: 500,
+        loop: true,
+        navigation: {
+            nextEl: '.tutorial-swiper .swiper-button-next',
+            prevEl: '.tutorial-swiper .swiper-button-prev',
+        }
+    });
+
+    tutorialSwiper.on('slideChangeTransitionStart', function() {
+        $('.tutorial-dot p').removeClass('active');
+        setTimeout(function() {
+            $('.tutorial-dot p').addClass('active');
+        }, 100)
+    })
+
     urlDetect();
+
+    $('.tutorial-href a').hover(function() {
+        if(window.innerWidth > 1024) {
+            $('.tutorial-img img').eq($(this).index()).addClass('hover');
+        }
+    }, function() {
+        if(window.innerWidth > 1024) {
+            $('.tutorial-img img').eq($(this).index()).removeClass('hover');
+        }
+    })
 })
 
 
