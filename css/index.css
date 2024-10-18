@@ -61,6 +61,10 @@ body.fix {
     display: none !important;
   }
 }
+body {
+  background: #fffac1;
+}
+
 .bam-habit-wrap {
   color: #423737;
   font-size: 1.65vw;
