@@ -32,6 +32,26 @@ $black: #423737
 .bam-habit-wrap
     color: $black
     font-size: 1.65vw
+    [data-scroll-show]
+        transform: translateY(3vw)
+        opacity: 0
+        transition: opacity 1s, transform 1s
+        &.scrollShowActive
+            transform: translate(0)
+            opacity: 1! important
+
+    @keyframes show
+        to
+            opacity: 1
+            transform: none
+    @keyframes talk
+        0%
+            transform: rotate(45deg)
+        70%
+            transform: rotate(-8deg)
+        100%
+            transform: rotate(0)
+
     h2.title
         font-size: 3vw
     .bg-words,
@@ -75,6 +95,8 @@ $black: #423737
             border: 2px solid $black
     .kv
         position: relative
+        padding-top: percentage(833/1920)
+        .kv-img,
         .kv-back,
         .kv-block,
         .kv-title,
@@ -82,6 +104,16 @@ $black: #423737
             position: absolute
             top: 0
             left: 0
+        .kv-block
+            transform: scale(0)
+            animation: show 0.5s 0.5s forwards
+        .kv-title
+            transform: scale(0)
+            animation: show 0.5s 0.75s forwards
+        .kv-back,
+        .kv-front
+            opacity: 0
+            animation: show 0.5s 1.25s forwards
         .kv-vid
             display: block
             position: absolute
@@ -119,6 +151,14 @@ $black: #423737
                     width: 85%
                     margin: auto
                     margin-top: 10%
+                    .intro-block
+                        position: absolute
+                        top: 0
+                        left: 0
+                        transform-origin: left top
+                        opacity: 0
+                        &.scrollShowActive
+                            animation: talk 1s forwards
                     p
                         position: absolute
                         top: 39%
@@ -434,7 +474,7 @@ $black: #423737
             img
                 position: absolute
                 display: block
-                transition: transform 0.5s
+                transition: transform 0.5s, opacity 0.5s
                 &.hover
                     transform: translateY(-0.5vw)
                 &:nth-child(1)
@@ -502,7 +542,19 @@ $black: #423737
                         top: 0
                         left: 3%
                         font-size: 1.65vw
+                        transform-origin: left bottom
                         transform: translateY(-50%)
+                        &.scrollShowActive
+                            animation: plantalk 1s forwards
+
+                        @keyframes plantalk
+                            0%
+                                transform: rotate(45deg) translateY(-50%)
+                            70%
+                                transform: rotate(-8deg) translateY(-50%)
+                            100%
+                                transform: rotate(0) translateY(-50%)
+
                     > div
                         width: 100%
                         padding-top: 50%
@@ -559,6 +611,13 @@ $black: #423737
                             img
                                 display: block
                                 width: 2.5vw
+                                transform: scale(1)
+                                &.scrollShowActive
+                                    animation: heart 0.25s 1s 4 alternate
+                                @keyframes heart
+                                    to
+                                        transform: scale(1.2)
+                                        
                             h4
                                 color: $sky
                                 font-size: 1.65vw
@@ -725,6 +784,8 @@ $black: #423737
     .bam-habit-wrap
         color: $black
         font-size: 4vw
+        [data-scroll-show]
+            transform: translateY(10vw)
         h2.title
             font-size: 7.5vw
         .bg-words
@@ -741,6 +802,7 @@ $black: #423737
             &::after
                 border-radius: 3vw
         .kv
+            padding-top: percentage(1235/760)
             .kv-vid
                 width: 52%
                 height: 20%
@@ -895,6 +957,10 @@ $black: #423737
                                 transform: scale(1.1)
                             .ng-arrow
                                 opacity: 1
+                                &.arrow-down
+                                    transform: rotate(90deg) translate(0)
+                                &.arrow-top
+                                    transform: rotate(-90deg) translate(0)
                         .ng-img,
                         .ng-img-active
                             transform: scale(1)
@@ -929,12 +995,13 @@ $black: #423737
                             right: 0
                             margin: auto
                             opacity: 0
+                            transition: opacity 0.5s, transform 0.5s
                             &.arrow-down
                                 bottom: -20%
-                                transform: rotate(90deg)
+                                transform: rotate(90deg) translateX(-50%)
                             &.arrow-top
                                 top: -20%
-                                transform: rotate(-90deg)
+                                transform: rotate(-90deg) translateX(-50%)
                 .ng-top-info-wrap
                     position: absolute
                     top: 28%
@@ -1059,8 +1126,9 @@ $black: #423737
                 width: 85%
                 margin: auto
             h3
-                position: static
+                position: relative
                 margin: auto
+                top: 0
                 margin-top: -10%
                 font-size: 7.5vw
                 line-height: 125%
