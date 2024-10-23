@@ -49,6 +49,15 @@ $(function() {
         introTabSwiper.slideToLoop(introSwiper.realIndex);
     })
 
+    new Swiper('.invest-swiper .swiper', {
+        spaceBetween: 0,
+        speed: 500,
+        navigation: {
+            nextEl: '.invest-swiper .swiper-button-next',
+            prevEl: '.invest-swiper .swiper-button-prev',
+        }
+    });
+
     $('.ng-swiper').each(function(index) {
         $(this).addClass('ng-swiper-'+index);
         new Swiper('.ng-swiper-'+index+' .swiper', {
@@ -102,6 +111,9 @@ $(document)
 .on('mousedown', 'img', function(e) {
     e.preventDefault();
 })
+.on('click', '[data-go]', function() {
+    $('body, html').animate({ scrollTop: $('[data-pin="'+$(this).data('go')+'"]').offset().top - headerHeight }, 1000);
+})
 .on('click', '.kv-vid', function() {
     $('body').addClass('fix');
     $('.lightbox-vid').fadeIn();
@@ -109,7 +121,7 @@ $(document)
 })
 .on('click', '.lightbox-close', function() {
     $('body').removeClass('fix');
-    $('.lightbox-vid, .lightbox-card').fadeOut();
+    $('.lightbox-vid, .lightbox-card, .lightbox-invest').fadeOut();
     $('[data-card]').removeClass('active');
     yplayers[0].pauseVideo();
 })
@@ -125,6 +137,7 @@ $(document)
     if(!$(this).hasClass('active')) {
         $('[data-card]').removeClass();
         $(this).addClass('active');
+        recordToSheet($(this).text());
         setTimeout(function() {
             $('body').addClass('fix');
             $('.lightbox-card').fadeIn();
@@ -132,6 +145,12 @@ $(document)
             $('[data-card-target="'+$(this).data('card')+'"]').show();
         }.bind(this), 500)
     }
+})
+.on('click', '[data-invest]', function() {
+    $('body').addClass('fix');
+    $('.lightbox-invest').fadeIn();
+    $('[data-invest-target]').hide();
+    $('[data-invest-target="'+$(this).data('invest')+'"]').show();
 })
 
 
@@ -226,3 +245,16 @@ window.onload = firstScriptTag.parentNode.insertBefore(ytag, firstScriptTag);
 window.addEventListener('load', mainVisualResize);
 window.addEventListener('resize', mainVisualResize);
 
+
+// google sheet
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx_IA73l4HBtQhYkq6D5r5wRCx50AvtD_mjguDnPJirH1tcHqhqRl0ge1ytnd1Ckpke5Q/exec';
+function recordToSheet(cardData) {
+    const params = new URLSearchParams();
+    params.append('cardData', cardData);
+    $.ajax({
+        url: scriptURL,
+        data: {
+            "name": cardData,
+        },
+    });
+};

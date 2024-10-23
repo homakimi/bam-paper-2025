@@ -22,6 +22,18 @@
                 background: url('img/bam-habit-dot.png') repeat center center;
                 background-size: 1vw 1vw;
             }
+            .invest-a.yellow {
+                background: url('img/bam-habit-invest-book-yellow.png') no-repeat center center;
+                background-size: contain;
+            }
+            .invest-a.blue {
+                background: url('img/bam-habit-invest-book-blue.png') no-repeat center center;
+                background-size: contain;
+            }
+            .invest-a.wait {
+                background: url('img/bam-habit-invest-book-wait.png') no-repeat center center;
+                background-size: contain;
+            }
             @media only screen and (max-width: 1024px) {
                 .notice article::after {
                     background-size: 2.5vw 2.5vw;
@@ -31,22 +43,25 @@
     </head>
     <body>
         <div class="bam-habit-wrap">
-
             <section class="kv">
-                <img class="kv-img fullimg for-pc" src="img/bam-habit-kv-bg.jpg">
+                <img class="kv-img fullimg for-pc" src="img/bam-habit-kv-bg-temp.jpg">
                 <img class="kv-back fullimg for-pc" src="img/bam-habit-kv-back.png">
                 <img class="kv-block fullimg for-pc" src="img/bam-habit-kv-block.png">
                 <img class="kv-title fullimg for-pc" src="img/bam-habit-kv-title.png">
                 <img class="kv-front fullimg for-pc" src="img/bam-habit-kv-front.png">
-                <img class="kv-img fullimg for-m" src="img/bam-habit-kv-bg-m.jpg">
+                <img class="kv-img fullimg for-m" src="img/bam-habit-kv-bg-m-temp.jpg">
                 <img class="kv-back fullimg for-m" src="img/bam-habit-kv-back-m.png">
                 <img class="kv-block fullimg for-m" src="img/bam-habit-kv-block-m.png">
                 <img class="kv-title fullimg for-m" src="img/bam-habit-kv-title-m.png">
                 <img class="kv-front fullimg for-m" src="img/bam-habit-kv-front-m.png">
-                <a class="kv-vid" href=""><img src="img/bam-habit-vid-btn.png"></a>
+                <!-- <a class="kv-vid" href=""><img src="img/bam-habit-vid-btn.png"></a> -->
+                <a class="kv-a-1" href="" data-go="intro"><!--生活習慣病--></a>
+                <a class="kv-a-2" href="" data-go="info"><!--不良生活習慣--></a>
+                <a class="kv-a-3" href="" data-go="invest"><!--調查數據大公開--></a>
+                <a class="kv-a-4" href="" data-go="tutorial"><!--專家解方--></a>
             </section>
 
-            <section class="intro" data-scroll-show-parent>
+            <section class="intro" data-scroll-show-parent data-pin="intro">
                 <div class="intro-flex">
                     <div class="intro-left">
                         <h2 class="title">什麼是生活習慣病？</h2>
@@ -64,11 +79,11 @@
                         <div class="intro-tab-swiper">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
-                                    <a href="" class="swiper-slide" style="background: #ffebeb;">Level 1<br>NG習慣</a>
-                                    <a href="" class="swiper-slide" style="background: #f7cdce;">Level 2<br>亞健康</a>
-                                    <a href="" class="swiper-slide" style="background: #f5bfc0;">Level 3<br>疾病</a>
-                                    <a href="" class="swiper-slide" style="background: #f29b9c;">Level 4<br>嚴重併發症</a>
-                                    <a href="" class="swiper-slide" style="background: #f3797a;">Level 5<br>失能/死亡</a>
+                                    <a href="" class="swiper-slide">Level 1<br>NG習慣</a>
+                                    <a href="" class="swiper-slide">Level 2<br>亞健康</a>
+                                    <a href="" class="swiper-slide">Level 3<br>疾病</a>
+                                    <a href="" class="swiper-slide">Level 4<br>嚴重併發症</a>
+                                    <a href="" class="swiper-slide">Level 5<br>失能/死亡</a>
                                 </div>
                             </div>
                             <div class="swiper-button swiper-button-prev for-m"><img class="fullimg" src="img/bam-habit-prev.png"></div>
@@ -106,7 +121,7 @@
                 </div>
             </section>
 
-            <section class="info">
+            <section class="info" data-pin="info">
                 <div class="info-flex">
                     <div class="info-left">
                         <h2 class="title">生活習慣大哉問</h2>
@@ -126,6 +141,160 @@
                         <a href="" data-card="6"><img class="habit-card-back fullimg" src="img/bam-habit-q-6.png"><img class="habit-card fullimg" src="img/bam-habit-q-6-card.png">少喝水</a>
                         <a href="" data-card="7"><img class="habit-card-back fullimg" src="img/bam-habit-q-7.png"><img class="habit-card fullimg" src="img/bam-habit-q-7-card.png">愛甜食</a>
                         <a href="" data-card="8"><img class="habit-card-back fullimg" src="img/bam-habit-q-8.png"><img class="habit-card fullimg" src="img/bam-habit-q-8-card.png">抽煙喝酒</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="invest" data-pin="invest" data-scroll-show-parent>
+                <div class="invest-flex">
+                    <h2 class="title">調查<br class="for-pc">大公開</h2>
+                    <div class="invest-main for-pc" data-scroll-show>
+                        <img class="fullimg" src="img/bam-habit-invest-bg.png">
+                        <div class="invest-a-block">
+                            <a class="invest-a yellow" href="" data-invest="1">
+                                <h4>敬請期待</h4>
+                                <h3>運動習慣</h3>
+                                <article>缺乏運動<br>又坐得久</article>
+                            </a>
+                            <a class="invest-a blue" href="" data-invest="2">
+                                <h4>敬請期待</h4>
+                                <h3>飲食習慣</h3>
+                                <article>吃三餐及宵夜<br>的習慣</article>
+                            </a>
+                            <a class="invest-a blue" href="" data-invest="3">
+                                <h4>敬請期待</h4>
+                                <h3>飲食習慣</h3>
+                                <article>甜食、含糖飲<br>料已成為日常</article>
+                            </a>
+                            <a class="invest-a blue" href="" data-invest="4">
+                                <h4>敬請期待</h4>
+                                <h3>睡眠習慣</h3>
+                                <article>晚睡又睡不飽</article>
+                            </a>
+                            <a class="invest-a blue" href="" data-invest="5">
+                                <h4>敬請期待</h4>
+                                <h3>睡眠習慣</h3>
+                                <article>國人有<br>失眠的困擾</article>
+                            </a>
+                            <a class="invest-a yellow wait" href="" data-invest="6">
+                                <h4>敬請期待</h4>
+                                <h3>NG習慣</h3>
+                                <article>從生活NG習慣<br>看健康信心</article>
+                            </a>
+                            <a class="invest-a yellow wait" href="" data-invest="7">
+                                <h4>敬請期待</h4>
+                                <h3>NG習慣</h3>
+                                <article>沒做健檢的<br>人NG習慣<br>比例較高</article>
+                            </a>
+                            <a class="invest-a blue wait" href="" data-invest="8">
+                                <h4>敬請期待</h4>
+                                <h3>健康風險<br>疾病排行榜</h3>
+                            </a>
+                            <a class="invest-a yellow wait" href="" data-invest="9">
+                                <h4>敬請期待</h4>
+                                <h3>生重病<br>不敢休息的<br>國人比例</h3>
+                            </a>
+                            <a class="invest-a blue wait" href="" data-invest="10">
+                                <h4>敬請期待</h4>
+                                <h3>為促進健康<br>每月願意<br>花費的金額</h3>
+                            </a>
+                            <a class="invest-a yellow wait" href="" data-invest="11">
+                                <h4>敬請期待</h4>
+                                <h3>醫療需求及<br>保險缺口</h3>
+                            </a>
+                            <a class="invest-a blue wait" href="" data-invest="12">
+                                <h4>敬請期待</h4>
+                                <h3>願意購買<br>保險的<br>時機點</h3>
+                            </a>
+                        </div>
+                        <img class="invest-front fullimg" src="img/bam-habit-invest-front.png">
+                    </div>
+
+                    <div class="invest-main for-m">
+                        <img class="fullimg" src="img/bam-habit-invest-bg-m.png">
+                        <div class="invest-swiper" data-scroll-show>
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="invest-a-block">
+                                            <a class="invest-a yellow" href="" data-invest="1">
+                                                <h4>敬請期待</h4>
+                                                <h3>運動習慣</h3>
+                                                <article>缺乏運動<br>又坐得久</article>
+                                            </a>
+                                            <a class="invest-a blue" href="" data-invest="2">
+                                                <h4>敬請期待</h4>
+                                                <h3>飲食習慣</h3>
+                                                <article>吃三餐及宵夜<br>的習慣</article>
+                                            </a>
+                                            <a class="invest-a blue" href="" data-invest="3">
+                                                <h4>敬請期待</h4>
+                                                <h3>飲食習慣</h3>
+                                                <article>甜食、含糖飲<br>料已成為日常</article>
+                                            </a>
+                                            <a class="invest-a blue" href="" data-invest="4">
+                                                <h4>敬請期待</h4>
+                                                <h3>睡眠習慣</h3>
+                                                <article>晚睡又睡不飽</article>
+                                            </a>
+                                            <a class="invest-a blue" href="" data-invest="5">
+                                                <h4>敬請期待</h4>
+                                                <h3>睡眠習慣</h3>
+                                                <article>國人有<br>失眠的困擾</article>
+                                            </a>
+                                            <a class="invest-a yellow wait" href="" data-invest="6">
+                                                <h4>敬請期待</h4>
+                                                <h3>NG習慣</h3>
+                                                <article>從生活NG習慣<br>看健康信心</article>
+                                            </a>
+                                        </div>
+                                        <img class="invest-front" src="img/bam-habit-invest-front-m.png">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="invest-a-block">
+                                            <a class="invest-a yellow wait" href="" data-invest="7">
+                                                <h4>敬請期待</h4>
+                                                <h3>NG習慣</h3>
+                                                <article>沒做健檢的<br>人NG習慣<br>比例較高</article>
+                                            </a>
+                                            <a class="invest-a blue wait" href="" data-invest="8">
+                                                <h4>敬請期待</h4>
+                                                <h3>健康風險<br>疾病排行榜</h3>
+                                            </a>
+                                            <a class="invest-a yellow wait" href="" data-invest="9">
+                                                <h4>敬請期待</h4>
+                                                <h3>生重病<br>不敢休息的<br>國人比例</h3>
+                                            </a>
+                                            <a class="invest-a blue wait" href="" data-invest="10">
+                                                <h4>敬請期待</h4>
+                                                <h3>為促進健康<br>每月願意<br>花費的金額</h3>
+                                            </a>
+                                            <a class="invest-a yellow wait" href="" data-invest="11">
+                                                <h4>敬請期待</h4>
+                                                <h3>醫療需求及<br>保險缺口</h3>
+                                            </a>
+                                            <a class="invest-a blue wait" href="" data-invest="12">
+                                                <h4>敬請期待</h4>
+                                                <h3>願意購買<br>保險的<br>時機點</h3>
+                                            </a>
+                                        </div>
+                                        <img class="invest-front" src="img/bam-habit-invest-front-m.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-block">
+                                <div class="swiper-button swiper-button-prev"><img class="fullimg" src="img/bam-habit-prev.png"></div>
+                                <div class="swiper-button swiper-button-next"><img class="fullimg" src="img/bam-habit-next.png"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="invest-talk">
+                        <img class="fullimg" src="img/bam-habit-invest-deco.png">
+                        <div class="invest-block" data-scroll-show="500">
+                            <img class="fullimg" src="img/bam-habit-invest-block.png">
+                            <p>精選12大數據<br>帶您了解國人生活習慣</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -246,18 +415,15 @@
                         <div class="ng-top-info-flex" style="display: none;">
                             <div class="ng-top-info-left">
                                 <img src="img/bam-habit-arrow.png">
-                                <p>常熬夜、晚睡</p>
-                                <p>抽煙、喝酒、吃檳榔</p>
-                                <p>時常久坐</p>
-                                <p>不愛刷牙</p>
-                                <p>便秘</p>
+                                <p>累積壓力</p>
+                                <p>心情鬱悶</p>
                             </div>
                             <div class="ng-top-info-right">
                                 <div class="ng-swiper">
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
                                             <a href="https://health.nanshanlife.com.tw/找健康/線上心理諮詢" target="_blank" rel="noreferrer noopener" class="swiper-slide">
-                                                <img src="img/bam-habit-logo-4.jpg">
+                                                <img src="img/bam-habit-logo-5.jpg">
                                                 <p>Farhugs遠距抱抱－線上心理諮詢</p>
                                             </a>
                                         </div>
@@ -301,7 +467,7 @@
                 </div>
             </section>
 
-            <section class="tutorial" data-scroll-show-parent>
+            <section class="tutorial" data-scroll-show-parent data-pin="tutorial">
                 <img style="opacity: 0;" class="fullimg for-pc" src="img/bam-habit-tutorial-full.jpg">
                 <img data-scroll-show class="tutorial-deco for-pc" src="img/bam-habit-tutorial.png">
                 <img data-scroll-show class="tutorial-deco for-m" src="img/bam-habit-tutorial-m.png">
@@ -443,6 +609,14 @@
                     <a class="lightbox-close" href=""><img src="img/bam-habit-close.svg"></a>
                 </div>
             </div>
+
+            <div class="lightbox-invest">
+                <div class="lightbox-invest-wrap">
+                    <div data-invest-target="1"><h4>運動習慣｜缺乏運動又坐得久</h4><img class="fullimg" src="img/bam-habit-invest-lightbox-1.png"></div>
+                    <a class="lightbox-close" href=""><img src="img/bam-habit-close.svg"></a>
+                </div>
+            </div>
         </div>
     </body>
+    
 </html>
