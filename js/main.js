@@ -251,10 +251,11 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbx_IA73l4HBtQhYkq6D5r
 function recordToSheet(cardData) {
     const params = new URLSearchParams();
     params.append('cardData', cardData);
+    var _d = new Date();
     $.ajax({
         url: scriptURL,
         data: {
-            "name": cardData,
+            "name": _d.getFullYear()+'/'+parseInt(_d.getMonth()+1)+'/'+_d.getDate()+' '+_d.getHours()+':'+_d.getMinutes()+'｜'+cardData,
         },
     });
 };
