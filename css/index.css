@@ -144,12 +144,11 @@ body {
 .bam-habit-wrap .kv {
   position: relative;
   padding-top: 43.3854166667%;
+  background: #fffac1;
 }
-.bam-habit-wrap .kv .kv-img,
-.bam-habit-wrap .kv .kv-back,
 .bam-habit-wrap .kv .kv-block,
-.bam-habit-wrap .kv .kv-title,
-.bam-habit-wrap .kv .kv-front {
+.bam-habit-wrap .kv .kv-title {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -161,11 +160,6 @@ body {
 .bam-habit-wrap .kv .kv-title {
   transform: scale(0);
   animation: show 0.5s 0.75s forwards;
-}
-.bam-habit-wrap .kv .kv-back,
-.bam-habit-wrap .kv .kv-front {
-  opacity: 0;
-  animation: show 0.5s 1.25s forwards;
 }
 .bam-habit-wrap .kv .kv-vid {
   display: block;
@@ -191,30 +185,34 @@ body {
 .bam-habit-wrap .kv .kv-a-4 {
   display: block;
   position: absolute;
+  opacity: 0;
+  animation: show 0.5s 1.25s forwards;
+}
+.bam-habit-wrap .kv .kv-a-1 img,
+.bam-habit-wrap .kv .kv-a-2 img,
+.bam-habit-wrap .kv .kv-a-3 img,
+.bam-habit-wrap .kv .kv-a-4 img {
+  transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1 {
-  width: 6%;
-  height: 9%;
-  top: 10%;
-  left: 27%;
+  width: 11.5%;
+  top: 11%;
+  left: 21%;
 }
 .bam-habit-wrap .kv .kv-a-2 {
-  width: 8%;
-  height: 10%;
-  top: 59%;
-  left: 15%;
+  width: 19%;
+  top: 53.5%;
+  left: 15.7%;
 }
 .bam-habit-wrap .kv .kv-a-3 {
-  width: 8%;
-  height: 10%;
-  top: 83%;
-  left: 45%;
+  width: 13.5%;
+  top: 64%;
+  left: 38.5%;
 }
 .bam-habit-wrap .kv .kv-a-4 {
-  width: 8%;
-  height: 6%;
-  top: 12%;
-  left: 70%;
+  width: 17%;
+  top: 12.5%;
+  left: 64%;
 }
 .bam-habit-wrap .intro {
   background: #fffac1;
@@ -245,6 +243,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   transform-origin: left top;
   opacity: 0;
 }
@@ -1230,6 +1229,12 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
+  .bam-habit-wrap .kv-a-1:hover img,
+  .bam-habit-wrap .kv-a-2:hover img,
+  .bam-habit-wrap .kv-a-3:hover img,
+  .bam-habit-wrap .kv-a-4:hover img {
+    transform: scale(1.05);
+  }
   .bam-habit-wrap .kv-vid:hover img {
     transform: translate(-50%, -50%) scale(1.1);
   }
@@ -1297,28 +1302,24 @@ body {
     display: none;
   }
   .bam-habit-wrap .kv .kv-a-1 {
-    width: 15%;
-    height: 8%;
-    top: 4%;
-    left: 26%;
+    width: 30%;
+    top: 3.5%;
+    left: 9%;
   }
   .bam-habit-wrap .kv .kv-a-2 {
-    width: 20%;
-    height: 8%;
-    top: 60.5%;
-    left: 39%;
+    width: 50%;
+    top: 51.5%;
+    left: 6%;
   }
   .bam-habit-wrap .kv .kv-a-3 {
-    width: 20%;
-    height: 8%;
-    top: 10%;
-    left: 74%;
+    width: 41%;
+    top: 2%;
+    left: 51%;
   }
   .bam-habit-wrap .kv .kv-a-4 {
-    width: 20%;
-    height: 6%;
-    top: 54%;
-    left: 78%;
+    width: 43%;
+    top: 55.5%;
+    left: 53%;
   }
   .bam-habit-wrap .intro {
     background: linear-gradient(to bottom, #fffac1 92.5%, #fffdeb 92.5%);
