@@ -904,7 +904,7 @@ body {
   height: 39%;
 }
 .bam-habit-wrap .plan {
-  background: linear-gradient(to bottom, #fffac1 30%, #fffdeb 30%, #fffdeb 60%, #fffac1 60%);
+  background: linear-gradient(to bottom, #fffac1 30%, #fffdeb 30%, #fffdeb 58%, #fffac1 58%);
 }
 .bam-habit-wrap .plan .plan-wrap {
   padding: 3% 10%;
@@ -1010,7 +1010,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 1%;
-  margin: 1.5% 0;
 }
 .bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex img {
   display: block;
@@ -1031,8 +1030,22 @@ body {
   white-space: nowrap;
 }
 .bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 4vw;
+  position: relative;
   flex: 1 0 0;
+  line-height: 125%;
   text-align: justify;
+}
+.bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex p span {
+  position: absolute;
+  font-size: 0.75em;
+  color: #f26162;
+  bottom: 0;
+  left: 0;
+  transform: translateY(25%);
 }
 .bam-habit-wrap .notice {
   background: #fffac1;
@@ -1167,10 +1180,10 @@ body {
   background: rgba(0, 0, 0, 0.9);
 }
 .bam-habit-wrap .lightbox-invest .lightbox-close {
-  top: 2.5%;
+  top: 0;
   bottom: auto;
   left: auto;
-  transform: translate(35%, 0%);
+  transform: translate(35%, -50%);
   border: 3px solid #423737;
 }
 .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap {
@@ -1183,11 +1196,16 @@ body {
 .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap [data-invest-target] {
   display: none;
   width: 100%;
+  position: relative;
 }
 .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap [data-invest-target] h4 {
+  position: absolute;
+  bottom: 101.5%;
+  left: 1.5%;
   color: #FFF;
   font-size: 2vw;
-  margin: 0 0 1.5% 1.5%;
+  width: 90%;
+  line-height: 135%;
   font-weight: normal;
 }
 .bam-habit-wrap .lightbox-close {
@@ -1943,6 +1961,14 @@ body {
   .bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex h4 {
     font-size: 5vw;
   }
+  .bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex p {
+    display: block;
+    min-height: auto;
+  }
+  .bam-habit-wrap .plan .plan-info article > div > div .plan-info-flex p span {
+    position: static;
+    transform: none;
+  }
   .bam-habit-wrap .notice {
     padding: 5% 0 15% 0;
   }
@@ -1976,6 +2002,26 @@ body {
     width: 85%;
     height: 0;
     padding-top: 120%;
+  }
+  .bam-habit-wrap .lightbox-invest .lightbox-close {
+    width: 10vw;
+    height: 10vw;
+    transform: translate(10%, -100%);
+  }
+  .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap {
+    width: 95%;
+    top: 45%;
+  }
+  .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap [data-invest-target] h4 {
+    font-size: 4vw;
+  }
+  .bam-habit-wrap .lightbox-invest .lightbox-invest-wrap .bam-habit-zoom {
+    position: absolute;
+    display: block;
+    width: 20%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 125%);
   }
   .bam-habit-wrap .lightbox-close {
     width: 50px;
