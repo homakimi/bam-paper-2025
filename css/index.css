@@ -194,9 +194,15 @@ body {
 .bam-habit-wrap .kv .kv-a-4 img {
   transition: transform 0.5s;
 }
+.bam-habit-wrap .kv .kv-a-1.active img,
+.bam-habit-wrap .kv .kv-a-2.active img,
+.bam-habit-wrap .kv .kv-a-3.active img,
+.bam-habit-wrap .kv .kv-a-4.active img {
+  transform: scale(1.1);
+}
 .bam-habit-wrap .kv .kv-a-1 {
-  width: 11.5%;
-  top: 11%;
+  width: 12.5%;
+  top: 10%;
   left: 21%;
 }
 .bam-habit-wrap .kv .kv-a-2 {
@@ -267,6 +273,18 @@ body {
   border-radius: 2vw 2vw 0 0;
   overflow: hidden;
 }
+.bam-habit-wrap .intro .intro-flex .intro-right .intro-tab-swiper.disabled-next .swiper-button-next {
+  pointer-events: none;
+  filter: grayscale(1);
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+.bam-habit-wrap .intro .intro-flex .intro-right .intro-tab-swiper.disabled-prev .swiper-button-prev {
+  pointer-events: none;
+  filter: grayscale(1);
+  opacity: 0.25;
+  filter: grayscale(1);
+}
 .bam-habit-wrap .intro .intro-flex .intro-right .intro-tab-swiper .swiper-slide {
   color: #FFF;
   border: 2px solid transparent;
@@ -286,6 +304,16 @@ body {
   position: relative;
   background: #FFF;
   border-radius: 0 0 2vw 2vw;
+}
+.bam-habit-wrap .intro .intro-flex .intro-right .intro-swiper.disabled-next .swiper-button-next {
+  pointer-events: none;
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+.bam-habit-wrap .intro .intro-flex .intro-right .intro-swiper.disabled-prev .swiper-button-prev {
+  pointer-events: none;
+  opacity: 0.25;
+  filter: grayscale(1);
 }
 .bam-habit-wrap .intro .intro-flex .intro-right .intro-swiper .swiper-button {
   width: 10%;
@@ -440,15 +468,18 @@ body {
 .bam-habit-wrap .invest .invest-flex {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   width: 80%;
   margin: auto;
 }
 .bam-habit-wrap .invest .invest-flex h2 {
+  z-index: 1;
+  position: absolute;
   flex: 1 0 0;
-  margin-top: 5%;
-  margin-left: 3%;
+  top: 15%;
+  left: 0;
+  padding-left: 3%;
 }
 .bam-habit-wrap .invest .invest-flex .invest-talk {
   position: absolute;
@@ -609,10 +640,16 @@ body {
   align-items: center;
 }
 .bam-habit-wrap .ng .ng-top .ng-top-flex a {
+  z-index: 1;
   position: relative;
   display: block;
   width: 25%;
   text-align: center;
+  filter: grayscale(0.75);
+  transition: filter 0.5s;
+}
+.bam-habit-wrap .ng .ng-top .ng-top-flex a.active {
+  filter: grayscale(0);
 }
 .bam-habit-wrap .ng .ng-top .ng-top-flex a.active .ng-img,
 .bam-habit-wrap .ng .ng-top .ng-top-flex a.active .ng-img-active {
@@ -1302,9 +1339,9 @@ body {
     display: none;
   }
   .bam-habit-wrap .kv .kv-a-1 {
-    width: 30%;
+    width: 31%;
     top: 3.5%;
-    left: 9%;
+    left: 10%;
   }
   .bam-habit-wrap .kv .kv-a-2 {
     width: 50%;
@@ -1483,10 +1520,6 @@ body {
     width: 100%;
   }
   .bam-habit-wrap .invest .invest-flex h2 {
-    z-index: 1;
-    position: absolute;
-    margin-top: 0;
-    margin-left: 0;
     text-align: center;
     width: 100%;
     top: 5%;
