@@ -169,6 +169,10 @@ body {
   top: 64%;
   left: 62.25%;
   border-radius: 2vw;
+  opacity: 0;
+  animation: show 0.5s 1.25s forwards;
+}
+.bam-habit-wrap .kv .kv-vid img {
   transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1,
@@ -1261,10 +1265,8 @@ body {
   .bam-habit-wrap .kv-a-1:hover img,
   .bam-habit-wrap .kv-a-2:hover img,
   .bam-habit-wrap .kv-a-3:hover img,
-  .bam-habit-wrap .kv-a-4:hover img {
-    transform: scale(1.05);
-  }
-  .bam-habit-wrap .kv-vid:hover {
+  .bam-habit-wrap .kv-a-4:hover img,
+  .bam-habit-wrap .kv-vid:hover img {
     transform: scale(1.05);
   }
   .bam-habit-wrap .intro .intro-tab-swiper .swiper-slide:hover {

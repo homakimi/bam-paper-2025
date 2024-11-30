@@ -119,15 +119,16 @@ body
             top: 64%
             left: 62.25%
             border-radius: 2vw
-            transition: transform 0.5s
-            // img
-            //     display: block
-            //     position: absolute
-            //     top: 46%
-            //     left: 50%
-            //     width: 30%
-            //     transform: translate(-50%, -50%)
-            //     transition: transform 0.5s
+            opacity: 0
+            animation: show 0.5s 1.25s forwards
+            img
+                // display: block
+                // position: absolute
+                // top: 46%
+                // left: 50%
+                // width: 30%
+                // transform: translate(-50%, -50%)
+                transition: transform 0.5s
         .kv-a-1,
         .kv-a-2,
         .kv-a-3,
@@ -995,14 +996,11 @@ body
         .kv-a-1,
         .kv-a-2,
         .kv-a-3,
-        .kv-a-4
+        .kv-a-4,
+        .kv-vid
             &:hover
                 img
                     transform: scale(1.05)
-        .kv-vid:hover
-            transform: scale(1.05)
-            // img
-                // transform: translate(-50%, -50%) scale(1.1)
         .intro
             .intro-tab-swiper
                 .swiper-slide:hover
