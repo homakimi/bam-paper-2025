@@ -169,14 +169,6 @@ body {
   top: 64%;
   left: 62.25%;
   border-radius: 2vw;
-}
-.bam-habit-wrap .kv .kv-vid img {
-  display: block;
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  width: 30%;
-  transform: translate(-50%, -50%);
   transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1,
@@ -1272,8 +1264,8 @@ body {
   .bam-habit-wrap .kv-a-4:hover img {
     transform: scale(1.05);
   }
-  .bam-habit-wrap .kv-vid:hover img {
-    transform: translate(-50%, -50%) scale(1.1);
+  .bam-habit-wrap .kv-vid:hover {
+    transform: scale(1.05);
   }
   .bam-habit-wrap .intro .intro-tab-swiper .swiper-slide:hover {
     color: #423737 !important;
@@ -1331,12 +1323,9 @@ body {
   .bam-habit-wrap .kv .kv-vid {
     width: 52%;
     height: 20%;
-    top: 75%;
+    top: 77%;
     left: 6.25%;
     border-radius: 5vw;
-  }
-  .bam-habit-wrap .kv .kv-vid img {
-    display: none;
   }
   .bam-habit-wrap .kv .kv-a-1 {
     width: 31%;
@@ -1354,6 +1343,7 @@ body {
     left: 51%;
   }
   .bam-habit-wrap .kv .kv-a-4 {
+    z-index: 1;
     width: 43%;
     top: 55.5%;
     left: 53%;
