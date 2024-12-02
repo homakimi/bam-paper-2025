@@ -11,7 +11,7 @@ $(function() {
         setInterval(function() {
             $('.kv-a-'+kvIndex).removeClass('active');
             kvIndex ++;
-            if(kvIndex > 4) kvIndex = 0;
+            if(kvIndex > 5) kvIndex = 0;
             $('.kv-a-'+kvIndex).addClass('active');
         }, 1000)    
     }, 1500)

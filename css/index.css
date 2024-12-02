@@ -169,16 +169,12 @@ body {
   top: 64%;
   left: 62.25%;
   border-radius: 2vw;
-  opacity: 0;
-  animation: show 0.5s 1.25s forwards;
-}
-.bam-habit-wrap .kv .kv-vid img {
-  transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1,
 .bam-habit-wrap .kv .kv-a-2,
 .bam-habit-wrap .kv .kv-a-3,
-.bam-habit-wrap .kv .kv-a-4 {
+.bam-habit-wrap .kv .kv-a-4,
+.bam-habit-wrap .kv .kv-a-5 {
   display: block;
   position: absolute;
   opacity: 0;
@@ -187,13 +183,15 @@ body {
 .bam-habit-wrap .kv .kv-a-1 img,
 .bam-habit-wrap .kv .kv-a-2 img,
 .bam-habit-wrap .kv .kv-a-3 img,
-.bam-habit-wrap .kv .kv-a-4 img {
+.bam-habit-wrap .kv .kv-a-4 img,
+.bam-habit-wrap .kv .kv-a-5 img {
   transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1.active img,
 .bam-habit-wrap .kv .kv-a-2.active img,
 .bam-habit-wrap .kv .kv-a-3.active img,
-.bam-habit-wrap .kv .kv-a-4.active img {
+.bam-habit-wrap .kv .kv-a-4.active img,
+.bam-habit-wrap .kv .kv-a-5.active img {
   transform: scale(1.1);
 }
 .bam-habit-wrap .kv .kv-a-1 {
