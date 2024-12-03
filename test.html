@@ -178,19 +178,11 @@ body {
   left: 62.25%;
   border-radius: 2vw;
 }
-.bam-habit-wrap .kv .kv-vid img {
-  display: block;
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  width: 30%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.5s;
-}
 .bam-habit-wrap .kv .kv-a-1,
 .bam-habit-wrap .kv .kv-a-2,
 .bam-habit-wrap .kv .kv-a-3,
-.bam-habit-wrap .kv .kv-a-4 {
+.bam-habit-wrap .kv .kv-a-4,
+.bam-habit-wrap .kv .kv-a-5 {
   display: block;
   position: absolute;
   opacity: 0;
@@ -199,13 +191,15 @@ body {
 .bam-habit-wrap .kv .kv-a-1 img,
 .bam-habit-wrap .kv .kv-a-2 img,
 .bam-habit-wrap .kv .kv-a-3 img,
-.bam-habit-wrap .kv .kv-a-4 img {
+.bam-habit-wrap .kv .kv-a-4 img,
+.bam-habit-wrap .kv .kv-a-5 img {
   transition: transform 0.5s;
 }
 .bam-habit-wrap .kv .kv-a-1.active img,
 .bam-habit-wrap .kv .kv-a-2.active img,
 .bam-habit-wrap .kv .kv-a-3.active img,
-.bam-habit-wrap .kv .kv-a-4.active img {
+.bam-habit-wrap .kv .kv-a-4.active img,
+.bam-habit-wrap .kv .kv-a-5.active img {
   transform: scale(1.1);
 }
 .bam-habit-wrap .kv .kv-a-1 {
@@ -1277,11 +1271,9 @@ body {
   .bam-habit-wrap .kv-a-1:hover img,
   .bam-habit-wrap .kv-a-2:hover img,
   .bam-habit-wrap .kv-a-3:hover img,
-  .bam-habit-wrap .kv-a-4:hover img {
-    transform: scale(1.05);
-  }
+  .bam-habit-wrap .kv-a-4:hover img,
   .bam-habit-wrap .kv-vid:hover img {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.05);
   }
   .bam-habit-wrap .intro .intro-tab-swiper .swiper-slide:hover {
     color: #423737 !important;
@@ -1339,12 +1331,9 @@ body {
   .bam-habit-wrap .kv .kv-vid {
     width: 52%;
     height: 20%;
-    top: 75%;
+    top: 77%;
     left: 6.25%;
     border-radius: 5vw;
-  }
-  .bam-habit-wrap .kv .kv-vid img {
-    display: none;
   }
   .bam-habit-wrap .kv .kv-a-1 {
     width: 31%;
@@ -1362,6 +1351,7 @@ body {
     left: 51%;
   }
   .bam-habit-wrap .kv .kv-a-4 {
+    z-index: 1;
     width: 43%;
     top: 55.5%;
     left: 53%;
@@ -2072,6 +2062,7 @@ body {
   }
 }/*# sourceMappingURL=index.css.map */
 
+
 .bam-habit-wrap{margin-top: 55px;}
 .enjoy-editor .bam-habit-wrap img {max-width: none;}
 .enjoy-editor .bam-habit-wrap span {display: inline;}
@@ -2131,7 +2122,7 @@ p {margin-bottom: 0}
       <a class="kv-a-2 for-m" data-go="info" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-kv-2-m.png"></a>
       <a class="kv-a-3 for-m" data-go="invest" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-kv-3-m.png"></a>
       <a class="kv-a-4 for-m" data-go="tutorial" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-kv-4-m.png"></a>
-      <!-- <a class="kv-vid" href=""><img src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-vid-btn.png"></a> -->
+      <a class="kv-a-5 kv-vid" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-vid-btn.png"></a>
   </section>
 
   <section class="intro" data-scroll-show-parent data-pin="intro">
@@ -2142,8 +2133,8 @@ p {margin-bottom: 0}
               <div class="intro-people">
                   <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-intro-people.png">
                   <div class="intro-block" data-scroll-show>
-                    <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-intro-block.png">
-                    <p>生活習慣病危害國人<br>健康，不可輕忽</p>
+                      <img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-intro-block.png">
+                      <p>生活習慣病危害國人<br>健康，不可輕忽</p>
                   </div>
               </div>
           </div>
@@ -2672,7 +2663,7 @@ p {margin-bottom: 0}
 
   <div class="lightbox-vid">
       <div class="yt-wrap">
-          <div class="ytVideo" data-videoid="8OcowJR9kxE"></div>
+          <div class="ytVideo" data-videoid="7gvqaGC_EC4"></div>
           <a class="lightbox-close" href=""><img class="fullimg" src="https://nanshanhealthyblob.blob.core.windows.net/others/bam-habit-close.svg"></a>
       </div>
   </div>
@@ -2711,6 +2702,7 @@ p {margin-bottom: 0}
   </div>
 </div>
 
+
 <script nonce="rAnd0m123">
 $(function() {
     // for nanshan
@@ -2725,7 +2717,7 @@ $(function() {
         setInterval(function() {
             $('.kv-a-'+kvIndex).removeClass('active');
             kvIndex ++;
-            if(kvIndex > 4) kvIndex = 0;
+            if(kvIndex > 5) kvIndex = 0;
             $('.kv-a-'+kvIndex).addClass('active');
         }, 1000)    
     }, 1500)
@@ -2976,6 +2968,7 @@ function mainVisualResize() {
     1920 > e || (t.style.width = e + 'px', t.style.height = Math.floor(e / 16 * 9) + 'px')
 }
 var yplayer, ytag = document.createElement('script');
+ytag.setAttribute('nonce', 'rAnd0m123');
 ytag.src = 'https://www.youtube.com/iframe_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 window.onload = firstScriptTag.parentNode.insertBefore(ytag, firstScriptTag);
@@ -2996,5 +2989,6 @@ function recordToSheet(cardData) {
         },
     });
 };
+
 
 </script>
